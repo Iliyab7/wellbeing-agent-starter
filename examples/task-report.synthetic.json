@@ -1,0 +1,17 @@
+{
+  "task_id": "synthetic-analysis",
+  "role": "analyst",
+  "policy_revision": 1,
+  "observations": [
+    "One synthetic observation is in scope."
+  ],
+  "uncertainty": [
+    "One selected observation cannot establish a personal trend."
+  ],
+  "requested_decisions": [],
+  "evidence_ids": [
+    "synthetic-0"
+  ],
+  "result": "Synthetic fixture report for ledger tests. No native agent was run.",
+  "receipt_ref": "synthetic fixture receipt; not real execution"
+}

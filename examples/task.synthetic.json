@@ -1,0 +1,16 @@
+{
+  "id": "synthetic-analysis",
+  "role": "analyst",
+  "goal": "Explain what the selected synthetic observation can and cannot establish",
+  "purpose": "Synthetic pilot: understand recorded daily energy and sleep observations",
+  "evidence_ids": [
+    "synthetic-0"
+  ],
+  "acceptance": [
+    "Preserve source and uncertainty",
+    "Do not diagnose or infer causality",
+    "Do not mark the user as having implemented a plan"
+  ],
+  "requested_output": "An observation, limitations, and any actual decision needed",
+  "deadline": null
+}

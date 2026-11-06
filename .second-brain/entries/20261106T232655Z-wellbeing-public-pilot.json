@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "20261106T232655Z-wellbeing-public-pilot",
+  "repository": "Iliyab7/wellbeing-agent-starter",
+  "occurred_at": "2026-11-06T23:26:55.084Z",
+  "title": "Prepared portable Wellbeing pilot and developer handoff",
+  "summary": "Created a self-contained host bootstrap, four responsibility definitions, seven skills, role/task/report contracts and local reference runtime grounded in the current design.",
+  "outcome": "66 local automated tests and 37 synthetic CLI commands passed. Public package includes source traceability and an explicitly model-based protocol review. Real vendor-host execution remains a participant pilot activity.",
+  "status": "local-tested",
+  "decisions": [
+    "Host assistant is Chief of Staff outside Manager, Analyst and Coach.",
+    "Use native roles only with observed capabilities; otherwise disclose virtual roles.",
+    "Keep per-participant consent, evidence, task reports and retention outside the public checkout.",
+    "Internal manager review is distinct from report receipt, task closure, human delivery and observed outcome."
+  ],
+  "blockers": [],
+  "next_actions": [
+    "Run the portable entrypoint in the participant's actual host and record observed capabilities and feedback.",
+    "Implement and verify production adapters only within a concrete authorized environment."
+  ],
+  "evidence": [
+    "qa/verification.json",
+    "qa/protocol-smoke.json",
+    "docs/requirements-traceability.md",
+    "docs/orchestration-playbook-fa.md",
+    "docs/harvey-handoff.md"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "template_only": true,
+  "kind": "conceptual_host_packet_not_cli_input",
+  "task_id": null,
+  "created_at": null,
+  "sender": null,
+  "recipient": null,
+  "purpose": null,
+  "question": null,
+  "why_it_matters": null,
+  "relevant_goal": null,
+  "permission_evidence": [],
+  "allowed_actions": [],
+  "minimum_observations": [],
+  "confirmed_context": [],
+  "hypotheses": [],
+  "uncertainty": [],
+  "requested_output": null,
+  "expires_or_review_trigger": null,
+  "receipt": {
+    "preparation": "template_only",
+    "acknowledged": null,
+    "result_ready": null,
+    "delivered": null,
+    "read": null
+  },
+  "note": "Use the local CLI packet/verify-packet commands for validated runtime packets. This informal template grants no access and sends nothing."
+}

@@ -1,0 +1,154 @@
+{
+  "type": "object",
+  "properties": {
+    "purpose": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "retention_days": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 36500,
+      "description": "Participant-selected; upper bound is technical, never a default."
+    },
+    "valid_until": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Explicit null means ongoing until revoked; offsets required otherwise."
+    },
+    "journal": {
+      "type": "boolean"
+    },
+    "team_recipients": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "chief_of_staff",
+          "manager",
+          "analyst",
+          "coach"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,79}$"
+          },
+          "metrics": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 40
+            },
+            "propertyNames": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,79}$"
+            }
+          },
+          "analyze": {
+            "type": "boolean"
+          },
+          "recipients": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "chief_of_staff",
+                "manager",
+                "analyst",
+                "coach"
+              ]
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "metrics",
+          "analyze",
+          "recipients"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "authority": {
+      "type": "object",
+      "properties": {
+        "draft_plans": {
+          "type": "boolean"
+        },
+        "create_subagents": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "draft_plans",
+        "create_subagents"
+      ],
+      "additionalProperties": false
+    },
+    "attention": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "on_request",
+            "agreed_schedule"
+          ]
+        },
+        "quiet_start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:[01]\\d|2[0-3]):[0-5]\\d$"
+        },
+        "quiet_end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:[01]\\d|2[0-3]):[0-5]\\d$"
+        },
+        "max_daily": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "required": [
+        "mode",
+        "quiet_start",
+        "quiet_end",
+        "max_daily"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "purpose",
+    "retention_days",
+    "valid_until",
+    "journal",
+    "team_recipients",
+    "sources",
+    "authority",
+    "attention"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Explicit participant policy for the local reference runtime"
+}

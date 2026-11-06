@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "role": {
+      "enum": [
+        "manager",
+        "analyst",
+        "coach"
+      ]
+    },
+    "policy_revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "maxItems": 100
+    },
+    "uncertainty": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "maxItems": 100
+    },
+    "requested_decisions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "maxItems": 100
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      },
+      "maxItems": 100
+    },
+    "result": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 10000
+    },
+    "receipt_ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    }
+  },
+  "required": [
+    "task_id",
+    "role",
+    "policy_revision",
+    "observations",
+    "uncertainty",
+    "requested_decisions",
+    "evidence_ids",
+    "result",
+    "receipt_ref"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,38 @@
+{
+  "purpose": "Synthetic pilot: understand recorded daily energy and sleep observations",
+  "retention_days": 30,
+  "valid_until": null,
+  "journal": true,
+  "team_recipients": [
+    "chief_of_staff",
+    "manager",
+    "analyst",
+    "coach"
+  ],
+  "sources": [
+    {
+      "id": "manual",
+      "metrics": {
+        "sleep_hours": "hours",
+        "energy": "score_1_5"
+      },
+      "analyze": true,
+      "recipients": [
+        "chief_of_staff",
+        "manager",
+        "analyst",
+        "coach"
+      ]
+    }
+  ],
+  "authority": {
+    "draft_plans": true,
+    "create_subagents": true
+  },
+  "attention": {
+    "mode": "on_request",
+    "quiet_start": null,
+    "quiet_end": null,
+    "max_daily": null
+  }
+}

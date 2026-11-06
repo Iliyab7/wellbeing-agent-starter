@@ -1,0 +1,33 @@
+{
+  "template_only": true,
+  "kind": "actual_host_instance_receipt_template_not_cli_config",
+  "package_version": null,
+  "source_commit": null,
+  "host": {"label": null, "provider_exposure": null, "mode": null, "capability_record_reference": null},
+  "instances": [
+    {
+      "role": null,
+      "actual_instance_id": null,
+      "virtual_label": null,
+      "lifecycle_state": "not_created",
+      "created_at": null,
+      "creation_tool_receipt_reference": null,
+      "role_instruction": {"path": null, "version_or_hash": null, "attachment_evidence": null},
+      "skills": [],
+      "capabilities_actually_exposed": [],
+      "context_inheritance": null,
+      "technical_isolation_verified": false,
+      "allowed_purpose": null,
+      "allowed_data_scope": [],
+      "allowed_recipients": [],
+      "permission_reference": null,
+      "retention_and_expiry": null,
+      "readiness_probe": {"synthetic": true, "request_reference": null, "response_reference": null, "result": "not_tested"},
+      "active_task_ids": [],
+      "last_verified_at": null,
+      "cancellation": {"requested_at": null, "tool_receipt_reference": null, "termination_verified": false}
+    }
+  ],
+  "skill_receipt_fields": ["path", "version_or_hash", "loaded_or_attached_at", "attachment_evidence", "verification_state"],
+  "note": "Use real IDs/receipts only after actual tool operations. In virtual mode use virtual_label and leave actual_instance_id null. Loading instructions is not global skill installation. Never store credentials in receipts."
+}

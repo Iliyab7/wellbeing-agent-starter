@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0",
+  "source_revision": "e43881ec638d7d01afbe4a609954577f187b1558",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "00da0cfcafb61f1198fcf46b775c0bd797419e66a5b7ffca3fb34a231b0d6e15"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "9195feceea281907aedae1af07eb9fcb17467cfa92a1fec9824227b9849cac6d"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "8992bcc3b10794f447ad8d59326e405305ca492a30c873ad8f99835a63d385b4"
+    },
+    {
+      "path": ".second-brain/entries/20261106T232655Z-wellbeing-public-pilot.json",
+      "sha256": "6ab48a8a92318a41114eccd880a6db6b48190da1d8fe70b74802bf8590ebd5a4"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "c72bf6924e197be7b479d360f4f963ac36eaecb1c62fbe5c0391a7966921dfa4"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "c48b7f561ebc5596f13b6bec227380963c2e982595a15b0876dfca7cb75a2e64"
+    },
+    {
+      "path": "CHAT-STARTER.md",
+      "sha256": "a3f82bd290abaae0d11d32d8d43930fa8bb730cf0584d8abafbcd9c9998fccd1"
+    },
+    {
+      "path": "README.en.md",
+      "sha256": "ecb08dc15e7a1e0b281007bd05fb208c7048b05d8553f146effcb6bebe440f4a"
+    },
+    {
+      "path": "README.md",
+      "sha256": "cc9e409c4a0aab4466a155bab62fa64a69d7050b9b2ddc31288357ae04cec994"
+    },
+    {
+      "path": "START-HERE.md",
+      "sha256": "e23b8eeb977f87ad481626d02f0abcf47bd455b59088d57b78c4383370e1709d"
+    },
+    {
+      "path": "VERSION",
+      "sha256": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67"
+    },
+    {
+      "path": "adapters/dot.md",
+      "sha256": "7333daa929f752714949c00215f5f78b6c861ff545fbe3c9e0fd09a081b58c12"
+    },
+    {
+      "path": "adapters/grok.md",
+      "sha256": "f081e534b6479a225b763ff3877ffac8d65d595aca13f95be2b311080d7188d2"
+    },
+    {
+      "path": "adapters/host-capabilities.md",
+      "sha256": "6be375c578113bd4ff04f351fdf52341533ffa1d5aad7e3685baada341659fe6"
+    },
+    {
+      "path": "agents/analyst.md",
+      "sha256": "2c70e28abf944f59fc96271e49ea19a5676e886b130f6ca7b55f0c2f69d6804c"
+    },
+    {
+      "path": "agents/chief-of-staff.md",
+      "sha256": "239dbd834943e58f98a78e8a4da33e0a0c8605b1c7e497d662cdbfd6a7a94f0b"
+    },
+    {
+      "path": "agents/coach.md",
+      "sha256": "176de16e7719f4ceb6c1718a59c589bade5b0a792c01b6ad17f6b0b068e2f523"
+    },
+    {
+      "path": "agents/manager.md",
+      "sha256": "686cabf9f4a3f2386ab7a222089a13ec0dcdde570c8e24f2bfd6c79c32fe3382"
+    },
+    {
+      "path": "agents/registry.json",
+      "sha256": "25ad36be22c57ad0b558363168bcefd54a73bdab69ddcba8a68e2deefb3a7b93"
+    },
+    {
+      "path": "agents/team-blueprint.json",
+      "sha256": "002b07c5f7f99e6ecbdb499520aedf5b6d771d9d176f84c5d207676250fc0abf"
+    },
+    {
+      "path": "docs/acceptance-tests.md",
+      "sha256": "fe87e446bdbf188fddf7483beef09a731484605328351d19778fdf645a0110b7"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "146baa3bb9af5fb21aaf78dab18317df9341aea6485f70b90ce706773698d4f1"
+    },
+    {
+      "path": "docs/harvey-handoff.md",
+      "sha256": "30f25a06d1b00734b4f4a33bb17b6c2a1a4bf196b27636a002a69a91002c7d55"
+    },
+    {
+      "path": "docs/orchestration-playbook-fa.md",
+      "sha256": "3bd1663937048cc770a0ba3b1b764c02c362d6efed5757552f3d8018d09f5259"
+    },
+    {
+      "path": "docs/participant-pilot-fa.md",
+      "sha256": "2fecd0fdedc56c726d3c741611e3f5dd251a039274106561e0df0d1a82a5a56a"
+    },
+    {
+      "path": "docs/privacy-and-safety.md",
+      "sha256": "6414455624b8a6461b96a572c22cfffe984ee17df807bc368a72fe7c0eb049db"
+    },
+    {
+      "path": "docs/requirements-traceability.md",
+      "sha256": "893896c13607ded2dd787b81d2d0547fe61d0169db1339bb770fffd4c261866b"
+    },
+    {
+      "path": "docs/runtime.md",
+      "sha256": "52e183e8ebdde0e14254abad45231297bf5df15b4cd3c95996e119a7e5784ff6"
+    },
+    {
+      "path": "docs/source-analysis.md",
+      "sha256": "ee2499954253e1331cb7c78b6d102209ba9c534bb8f406c0ffb9eacb165cbe05"
+    },
+    {
+      "path": "examples/policy.synthetic.json",
+      "sha256": "8c45ffec55779a46bcccf839f6b912aa0aa58b3c20c696e13ad17088450f1b39"
+    },
+    {
+      "path": "examples/task-report.synthetic.json",
+      "sha256": "f70fc47bf5c8ee06889dabd7d2c7d73823e6c5e7b60d51a85c3236e733064e54"
+    },
+    {
+      "path": "examples/task.synthetic.json",
+      "sha256": "c58d8ee421c0f671e0e0f1b1ce0ff45cab03071cf4a04a1e0b29ede5c6191f6d"
+    },
+    {
+      "path": "prompts/BOOTSTRAP-EN.md",
+      "sha256": "6eba5a05fd07c1fe69a1b4a00975697e3a20cb3262969294ea5c266827e638fb"
+    },
+    {
+      "path": "prompts/BOOTSTRAP-FA.md",
+      "sha256": "e0148edd3322229fdfb2a95fa7a0faa65eaadb20e3b0efa06da4c2d2fce618de"
+    },
+    {
+      "path": "prompts/RESUME-FA.md",
+      "sha256": "cf53bc8011c9d98308150f51e241c43feff1c8fd47df2b9445fc4bddb0aab20f"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "51372f48aeee62029c04eac28383778bc932952b599a0e920e0dabf16517b0f7"
+    },
+    {
+      "path": "qa/protocol-smoke.json",
+      "sha256": "ee3f9524f43437cdd3101c6087affe64bb158ae4fe4afd65a51c394e7694e32a"
+    },
+    {
+      "path": "qa/verification.json",
+      "sha256": "c42666c124c3fb79c3cb015a75eacab3384c0ae2c393a03639d0ad7cd648776b"
+    },
+    {
+      "path": "schemas/policy.schema.json",
+      "sha256": "8a9328e39720e4bd142533b409d7c48112429dc8db9f059ad14c067991d4f155"
+    },
+    {
+      "path": "schemas/record.schema.json",
+      "sha256": "b215147c3c7706694c16e2ef9fe003f618ad0fcfea31191640962ad9d8db3c07"
+    },
+    {
+      "path": "schemas/task-contract.schema.json",
+      "sha256": "d09972d8752f586f1456e82bfd056d870ee9f5d3ae773c76cbaa9e44176c285d"
+    },
+    {
+      "path": "schemas/task-report.schema.json",
+      "sha256": "4d9e97a9921c0758b46c39dab022a27bb23c1124a6a6fc56fc86842b105f97b7"
+    },
+    {
+      "path": "scripts/build_release.py",
+      "sha256": "c63bb864e2dbe2455154384e0d6b0000cd381536508c234c6ecce4cb75d0bc68"
+    },
+    {
+      "path": "scripts/demo.py",
+      "sha256": "8d5901df7cba1fde8fed792209170e84c188ab6cfb06f64ef338c30108bfea97"
+    },
+    {
+      "path": "scripts/validate_package.py",
+      "sha256": "2c5317032df3f9c03505e670b0cc01ecb9d441658b598e444de314070e256a6d"
+    },
+    {
+      "path": "skills/wellbeing-analyze/SKILL.md",
+      "sha256": "b8c79f6aca70c0e93668de07d6968d68cdcd6d2585140dbaa218db700ffe4b77"
+    },
+    {
+      "path": "skills/wellbeing-analyze/references/quality.md",
+      "sha256": "8870ba9e55ff4c270fe16c3b8f12e28d0ccf1c1a8118c2f95a491d79df19bd08"
+    },
+    {
+      "path": "skills/wellbeing-coach/SKILL.md",
+      "sha256": "36090f4b317fc15e348b9247ec6b38096cbaa01d4aeee5c0127a106c56d9cf35"
+    },
+    {
+      "path": "skills/wellbeing-coach/references/coaching.md",
+      "sha256": "b957d255012177f90f95121394cb9e0f83a2ef8324b76a1051d81c9a00bd4250"
+    },
+    {
+      "path": "skills/wellbeing-domain-context/SKILL.md",
+      "sha256": "75495adaf4362502acb7beda572d6e53be824d5ca302abe3298e259dcb1cb0ac"
+    },
+    {
+      "path": "skills/wellbeing-domain-context/references/domains.md",
+      "sha256": "ff159014859fe4805b41a0d94b42b78fcff2fa78d91c26137896c92389ad5a3e"
+    },
+    {
+      "path": "skills/wellbeing-host-operations/SKILL.md",
+      "sha256": "a873ae7d4ff04c885f93c71f81c3c964200060969f2e83092931c8b56db31066"
+    },
+    {
+      "path": "skills/wellbeing-host-operations/references/lifecycle.md",
+      "sha256": "3a274e128685804257352fbf110934555d34d753763fbd46bc3571b38cd74396"
+    },
+    {
+      "path": "skills/wellbeing-intake/SKILL.md",
+      "sha256": "f3ad165c13ccced7f4bb16e827d62aa0871cebd1cda49c41bb29d1dec1e89af0"
+    },
+    {
+      "path": "skills/wellbeing-intake/references/examples.md",
+      "sha256": "378fc4213da73d39a2bc99ed8b9b96db6aa08ddda1066cdb7823dacae348c461"
+    },
+    {
+      "path": "skills/wellbeing-orchestrate/SKILL.md",
+      "sha256": "236231b7cf40aad3ab5cc45817f285fb2622e098df242883a6844313306a7574"
+    },
+    {
+      "path": "skills/wellbeing-orchestrate/references/routing.md",
+      "sha256": "9f05a9967acc3f8a220dcb3da3ea6bf90c0058ca53e73f74a7af66a28912aff1"
+    },
+    {
+      "path": "skills/wellbeing-review/SKILL.md",
+      "sha256": "b4aa130db59a4ffbf4f2a9e0e7c07d9480d48e2d665b1cbc8de75050ba200c54"
+    },
+    {
+      "path": "skills/wellbeing-review/references/review.md",
+      "sha256": "9aa8607fe886f9ef7aa40cc8d5c77ee80ffdd6a608934940bbf6971b64ef3005"
+    },
+    {
+      "path": "templates/agent-instance-registry.json",
+      "sha256": "5272783393923cc44c8b8749035bd953161926286b3b95b41b345643780cedbc"
+    },
+    {
+      "path": "templates/capability-report.json",
+      "sha256": "da5d4d6e9fb7db33187b1cd55ca9cdbc1869e0a9733ced51f49b5f97088a7ff5"
+    },
+    {
+      "path": "templates/handoff-packet.json",
+      "sha256": "dab116b156ffe81d70cee64db4ddf0b5db57af5ba8e377939a2c2e021078da78"
+    },
+    {
+      "path": "templates/participant-charter.md",
+      "sha256": "bf9d6b8ca4354a97351a60a9efea6c3a032aa882f3069640cc26c585c828f104"
+    },
+    {
+      "path": "templates/private-session.md",
+      "sha256": "cf6eefee5593528bb0b3f3813d792ac56818a2783cd8e615a93ad1f1a2157cfb"
+    },
+    {
+      "path": "templates/task-contract.json",
+      "sha256": "6a2aa5ed891bc4952a555a79f5cf445e49de737d7ff0ce730ea9e32667f1530a"
+    },
+    {
+      "path": "templates/task-report.json",
+      "sha256": "ad2743e08bf42b6e3956732d4fa807e1895792088adec82b785ae629ff93d7a9"
+    },
+    {
+      "path": "templates/test-feedback.md",
+      "sha256": "84cfb1843e1a6d75a7b19f386901f606a5befe0a54d062d8ef31686e22b69131"
+    },
+    {
+      "path": "tests/test_cli_encoding.py",
+      "sha256": "55c93857cd753d8e40985071bc0bb83bad37f8735cc10586fb3ac7c551df98c3"
+    },
+    {
+      "path": "tests/test_core.py",
+      "sha256": "380e9fb1d6ef7e9c95ee713258e3099b8028fda4563df4394f53478d4c96f358"
+    },
+    {
+      "path": "tests/test_independent_review.py",
+      "sha256": "f50ddf19e32c0915b4f74030f3fa46f82cdd1411983e008baa1cf872de28530f"
+    },
+    {
+      "path": "tests/test_orchestration_review.py",
+      "sha256": "9f2f8ba6c2e5bd1ddda52705e6616ab2115ac50686d9f60b1de2a9879a593f56"
+    },
+    {
+      "path": "tests/test_package_validator.py",
+      "sha256": "4f93374d60acb6e293b85def951a9727dbabee9e45c79a6ff3d9f99edb711e7d"
+    },
+    {
+      "path": "wellbeing/__init__.py",
+      "sha256": "202b7163b995a2df80efcb76ccae0b3b55fd9309d3a152f876ece0d2b4a5e6b1"
+    },
+    {
+      "path": "wellbeing/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "wellbeing/cli.py",
+      "sha256": "a0531d805fe694b20430c1b30e83360e9b9199d63c72ecda0f0cf51c694d1e71"
+    },
+    {
+      "path": "wellbeing/core.py",
+      "sha256": "3820d910edf0fd4d80d98b0d0995c960adcc9e7897f8e402b7555828d059aefb"
+    },
+    {
+      "path": "wellbeing/tasks.py",
+      "sha256": "1c2ddf762cc8c8d8f3b86fc35be38f86995228ea54d03b47e96c56a4ee25ac10"
+    }
+  ]
+}

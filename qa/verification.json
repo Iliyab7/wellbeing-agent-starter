@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0",
+  "verified_at": "2026-11-06T23:33:34.061212+00:00",
+  "scope": "local reference-runtime and portable-package verification",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux"
+  },
+  "source_review": {
+    "repository": "Iliyab7/wellbeing-agent-definition",
+    "revision": "e43881ec638d7d01afbe4a609954577f187b1558",
+    "tracked_files": 137,
+    "byte_exact_text_files": 121,
+    "independent_markdown_read": 64,
+    "generated_context_pack": "verified against 11 canonical documents",
+    "raw_meeting_transcripts_read": 2,
+    "binary_files_inventoried_not_visually_reaudited": 16,
+    "public_requirements": 37
+  },
+  "checks": [
+    {
+      "name": "unit and regression tests",
+      "command": "python -m unittest discover -s tests -v",
+      "status": "passed",
+      "tests": 66,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "synthetic CLI lifecycle",
+      "command": "python scripts/demo.py",
+      "status": "passed",
+      "commands": 37,
+      "network_calls": 0,
+      "live_host_agents_tested": false
+    },
+    {
+      "name": "model protocol review",
+      "artifact": "qa/protocol-smoke.json",
+      "status": "passed_model_based_review",
+      "evidence_level": "model_based_synthetic_review",
+      "live_vendor_validation": false,
+      "cases": 16,
+      "failed_cases": 0
+    }
+  ],
+  "review_fixes": [
+    "Unit changes no longer relabel old numeric observations.",
+    "Finite input values cannot overflow the descriptive mean.",
+    "Record corrections cannot silently deduplicate away the corrected record.",
+    "Task retention is enforced through direct API operations as well as the CLI.",
+    "Task context returns detached data and only selected authorized evidence.",
+    "ASCII-safe JSON output preserves Persian while preventing post-commit failures under legacy console encodings."
+  ],
+  "publication_checks": "Run scripts/validate_package.py against the final manifest. Hosted CI separately exercises Ubuntu Python 3.11/3.12/3.13 and Windows Python 3.12; local results do not assert those hosted outcomes.",
+  "not_tested": [
+    "Real Dot or Grok account execution",
+    "Real native agent provisioning or cross-provider data isolation",
+    "Real wearable/calendar connectors, reminders or external writes",
+    "Participant usefulness, clinical efficacy, production readiness"
+  ],
+  "data_boundary": "All runtime and protocol test inputs are synthetic. No private source transcript or participant state is distributed."
+}

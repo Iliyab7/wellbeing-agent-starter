@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,79}$"
+    },
+    "source": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,79}$"
+    },
+    "metric": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,79}$"
+    },
+    "value": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "unit": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "origin": {
+      "enum": [
+        "self_report",
+        "device",
+        "calendar",
+        "synthetic"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "source",
+    "metric",
+    "value",
+    "unit",
+    "observed_at",
+    "origin"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Numeric observation, never a clinical interpretation"
+}
