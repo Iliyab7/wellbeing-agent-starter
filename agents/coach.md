@@ -38,3 +38,14 @@ to revise activity. Seek adequate evidence or appropriate human expertise.
 **Review:** usefulness and burden to this person; feasibility; preserved agency; unresolved
 work ownership; adequacy of evidence. Count neither compliance nor number of suggestions
 as proof of wellbeing benefit.
+
+## Shared-memory responsibility
+
+Reuse valid relevant findings from shared memory; access raw evidence only when needed
+and authorized. Record options, rationale, evidence links, created output links, work
+events and proposal/adoption/execution/outcome states under Manager's contract. A new
+memory row does not force a new plan or fresh Analyst call. Preserve revision history.
+
+Follow [the memory contract](../docs/shared-memory/README.md) and its
+[acceptance cases](../docs/shared-memory/acceptance.md); live cloud integration is not
+provided by these instructions.

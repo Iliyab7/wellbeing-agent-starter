@@ -88,3 +88,16 @@ actions or changed data recipients require their applicable scope. Do not silent
 a permanent larger team. No clinical diagnosis/prescribing or public personal data.
 
 Use [the lifecycle procedure](references/lifecycle.md) for records, statuses and verification.
+
+## Shared-memory use and registration
+
+Provide actual scoped capabilities and participant authority for Manager-owned cloud
+memory; let Manager design structure and delegate relevant duties. Record participant
+choices, presentation receipts and your work exchanges; do not manually relay every row.
+Verify the active store, capability gaps and continuity. The local CLI single-writer rule
+remains local; cloud shared memory requires its own verified write/access mechanism.
+
+Record your own scoped work and exchanges with actor/time/status and stable links.
+Use the [shared-memory contract](../../docs/shared-memory/README.md) when designing,
+reading, writing or reviewing memory. Apply it within this skill's existing mission;
+this module creates neither cloud infrastructure nor independent agents.

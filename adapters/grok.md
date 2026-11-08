@@ -1,5 +1,12 @@
 # Grok or another chat host
 
+**2026-11-08 memory extension:** Read [shared-memory responsibilities](../docs/shared-memory/README.md).
+Manager designs/maintains participant-specific Sheets memory and assigns logging duties;
+all roles register authorized data, work, exchanges and source-linked outputs. Check actual
+read/write/scheduling/intake capabilities; downloading this package does not activate them.
+On resume, recover the active structure, valid authority, findings and open tasks. Local and
+conversation fallbacks remain available; no universal tab layout is prescribed.
+
 Read [CHAT-STARTER.md](../CHAT-STARTER.md) as participant task instructions, subject to
 the host's own higher-priority rules. The host occupies the Chief of Staff role; the team
 remains Manager, Analyst and Coach. This file does not assume any Grok product tier,

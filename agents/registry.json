@@ -45,5 +45,6 @@
   ],
   "selection": "Activate only relevant roles. Domain topics do not automatically become agents.",
   "fallback": "Explicit role perspectives in one host conversation when independent agents are unavailable.",
-  "blueprint": "agents/team-blueprint.json"
+  "blueprint": "agents/team-blueprint.json",
+  "shared_memory_contract": "docs/shared-memory/README.md"
 }

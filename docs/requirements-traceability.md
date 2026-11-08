@@ -73,3 +73,13 @@ All seven current conceptual scenarios remain acceptance cases. Their descriptio
 | [Acceptance tests](acceptance-tests.md), [participant pilot guide](participant-pilot-fa.md) | Real-host execution, source scenario coverage and participant evaluation |
 
 `scripts/validate_package.py` checks package integrity and public packaging concerns; the runtime test suite checks implemented deterministic behavior. Neither check substitutes for the host exercise and participant acceptance.
+
+## 2026-11-08 participant-directed design extension
+
+M01–M09 in [shared memory](shared-memory/README.md) record the current user's new design
+direction: Sheets shared memory; Manager-designed individual structure and duties; all-role
+data/work/exchange logs; traceable results and recovery; automatic selected Shortcuts intake.
+This is a new requirement, not a quotation from the historical Kazemi sources. It is mapped
+to agents/, the blueprint, all seven role skills, CHAT-STARTER, architecture, adapters,
+handoff and [MB01–MB15](shared-memory/acceptance.md). Status: protocol/documentation;
+live cloud adapter, scheduler, phone shortcut and participant trial remain unimplemented/unverified.

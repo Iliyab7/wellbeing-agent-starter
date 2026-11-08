@@ -109,3 +109,12 @@ Where a host supports genuine subagents, it can create the role instances and su
 The public package cannot itself connect a participant's Apple Health account, grant access to a calendar, install private memory, or ensure a host will run tomorrow. Those require the participant's environment and observed integration receipts. The development handoff specifies the implementation boundary rather than disguising missing integration as success.
 
 The next empirical question is whether the three-role arrangement provides better context preservation, answer quality and follow-through than a manager with one generalist. Compare the same scenarios, record duplicate work, latency, cost and user preference, and change the arrangement only for a demonstrated reason. More agents are not evidence of better help.
+
+## Later design direction — 2026-11-08
+
+The participant explicitly requested Manager-owned Google Sheets shared memory with
+participant-specific structure, every-role work/exchange registration and automatic
+selected Shortcuts/Health intake. This is a later design extension, not an inference
+attributed to the earlier source meetings. The public-safe normative adaptation is
+[the memory contract](shared-memory/README.md); no private transcript or account data
+is copied here. Role count and independent responsibilities remain unchanged.

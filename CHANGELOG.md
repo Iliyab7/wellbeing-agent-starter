@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-08 — shared-memory design and host protocol
+
+- Integrate Manager-owned participant-specific Google Sheets memory into current roles,
+  blueprint, seven skills, self-contained starter, workflows and entry points.
+- Define every-role data/work/exchange registration, traceable source/result links,
+  role-duty versions, automatic selected iPhone intake and MB01–MB15 acceptance scenarios.
+- Preserve local CLI behavior and single-writer lock; cloud integration remains future work.
+- No real participant data, cloud credentials or live-integration success is included.
+
 ## 0.1.0 — 2026-11-07
 
 - Initial public pilot package derived from the current private definition revision `e43881ec638d7d01afbe4a609954577f187b1558`.

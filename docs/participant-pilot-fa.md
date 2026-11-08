@@ -1,5 +1,12 @@
 # راهنمای اولین تست شخصی
 
+**2026-11-08 memory extension:** Read [shared-memory responsibilities](../docs/shared-memory/README.md).
+Manager designs/maintains participant-specific Sheets memory and assigns logging duties;
+all roles register authorized data, work, exchanges and source-linked outputs. Check actual
+read/write/scheduling/intake capabilities; downloading this package does not activate them.
+On resume, recover the active structure, valid authority, findings and open tasks. Local and
+conversation fallbacks remain available; no universal tab layout is prescribed.
+
 هدف این تست این است که ببینی این همراهی برای **خودت** مفید است یا نه: آیا از
 هدف تو شروع می‌کند، درست می‌فهمد، کمک قابل استفاده می‌دهد، و بی‌دلیل مزاحم نمی‌شود؟
 تعداد ایجنت‌ها یا طول گزارش معیار موفقیت نیست.

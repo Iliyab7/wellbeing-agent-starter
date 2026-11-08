@@ -41,3 +41,15 @@ gets an appropriate immediate human-facing response, not a routine agent queue.
 **Success:** the participant understands the result and next step, useful work has an
 owner, choices remain theirs, and no capability or outcome was fabricated. When a host
 cannot save state, give an honest session-only limit and an optional private checkpoint.
+
+## Shared-memory responsibility
+
+Provide actual scoped capabilities and participant authority for Manager-owned cloud
+memory; let Manager design structure and delegate relevant duties. Record participant
+choices, presentation receipts and your work exchanges; do not manually relay every row.
+Verify the active store, capability gaps and continuity. The local CLI single-writer rule
+remains local; cloud shared memory requires its own verified write/access mechanism.
+
+Follow [the memory contract](../docs/shared-memory/README.md) and its
+[acceptance cases](../docs/shared-memory/acceptance.md); live cloud integration is not
+provided by these instructions.

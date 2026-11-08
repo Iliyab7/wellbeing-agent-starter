@@ -1,5 +1,12 @@
 # ادامه در چت تازه یا دستیار دیگر
 
+**2026-11-08 memory extension:** Read [shared-memory responsibilities](../docs/shared-memory/README.md).
+Manager designs/maintains participant-specific Sheets memory and assigns logging duties;
+all roles register authorized data, work, exchanges and source-linked outputs. Check actual
+read/write/scheduling/intake capabilities; downloading this package does not activate them.
+On resume, recover the active structure, valid authority, findings and open tasks. Local and
+conversation fallbacks remain available; no universal tab layout is prescribed.
+
 این متن را همراه با **نسخهٔ خصوصی و حداقلی** وضعیت قبلی بده. فایل وضعیت شخصی را
 در GitHub، Issue یا لینک عمومی نگذار. برای رفتن به سرویس دیگر، فقط اطلاعاتی را
 منتقل کن که می‌خواهی همان سرویس ببیند.

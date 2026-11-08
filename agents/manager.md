@@ -39,3 +39,16 @@ When repeated work exposes a real skill gap, propose a scoped module or bounded 
 with purpose, recipient/data exposure, resource limit, expected output and retirement rule.
 Use existing participant authority where sufficient; obtain only genuinely missing choices.
 Do not silently grow a permanent hierarchy. Compare simpler arrangements during review.
+
+## Shared-memory responsibility
+
+Own the shared-memory outcome: design and operate a participant-specific Google
+Sheets structure, document locations/relationships, assign read/write and logging duties,
+record duty changes and acknowledgements, review completeness and organize recovery,
+corrections and versioned migration. Delegate row handling; do not personally redo all
+analysis. Fixed tabs are not prescribed. Existing scope governs tool delegation; ask CoS
+only for genuinely missing capability/authority. Keep work traceable without user noise.
+
+Follow [the memory contract](../docs/shared-memory/README.md) and its
+[acceptance cases](../docs/shared-memory/acceptance.md); live cloud integration is not
+provided by these instructions.

@@ -1,5 +1,12 @@
 # Host capability and provisioning procedure
 
+**2026-11-08 memory extension:** Read [shared-memory responsibilities](../docs/shared-memory/README.md).
+Manager designs/maintains participant-specific Sheets memory and assigns logging duties;
+all roles register authorized data, work, exchanges and source-linked outputs. Check actual
+read/write/scheduling/intake capabilities; downloading this package does not activate them.
+On resume, recover the active structure, valid authority, findings and open tasks. Local and
+conversation fallbacks remain available; no universal tab layout is prescribed.
+
 This is a portable procedure, not a Dot/Grok SDK or API integration. Check the actual
 session's available tools. Use [the capability template](../templates/capability-report.json)
 as a private record. Do not probe personal accounts or fetch health data to prove a capability.

@@ -55,3 +55,12 @@ The package is not an emergency service. Silence from the participant is not evi
 Run `python scripts/validate_package.py` and the tests before release. The validator checks package paths, hashes, Markdown file links, JSON syntax, skill metadata, Python syntax and high-confidence credential patterns. It is a release guard, not a comprehensive DLP product. A maintainer must still review public content for identifying stories, health information, contacts and private source text. Hashes establish file integrity, not publisher authenticity or clinical safety.
 
 See [acceptance tests](acceptance-tests.md) for deliberate consent, injection, correction and deletion exercises, and [the developer handoff](harvey-handoff.md) for the production work that remains.
+
+## Shared-memory scope
+
+Apply the same participant agreement to Sheets, Drive originals, role messages and
+execution logs. Manager owns organization, not permission expansion. Shared tabs do
+not technically isolate readers. Use separate stores/scoped tools where required, disclose
+actual host/provider visibility, keep credentials and hidden reasoning out of records,
+and verify deletion/retention across actual reachable copies and dependent outputs.
+See [the memory contract](shared-memory/README.md); no live cloud connection is created here.

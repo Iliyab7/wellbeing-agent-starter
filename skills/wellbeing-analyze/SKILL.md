@@ -41,3 +41,16 @@ proposals should be reviewed. Stop use of a revoked source and honor the agreed 
 of stored/derived data. Keep only authorized private records; never publish personal data.
 
 Read [quality cases](references/quality.md) before handling ambiguous comparisons.
+
+## Shared-memory use and registration
+
+Read scoped authorized evidence from the active memory; record source-linked findings,
+trends, uncertainty, checks, work events and reports under Manager's current contract.
+Keep raw evidence separate, mark superseded findings and tell Manager which downstream
+plans depend on corrected evidence. Claim reads/analysis completion only with the actual
+evidence available. Do not fetch the whole shared dossier by default.
+
+Record your own scoped work and exchanges with actor/time/status and stable links.
+Use the [shared-memory contract](../../docs/shared-memory/README.md) when designing,
+reading, writing or reviewing memory. Apply it within this skill's existing mission;
+this module creates neither cloud infrastructure nor independent agents.

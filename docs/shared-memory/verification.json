@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-11-08T08:23:19.038137+00:00",
+  "scope": "documentation integration and unchanged local runtime regression",
+  "checks": {
+    "local_unit_tests": {
+      "passed": 66,
+      "failed": 0
+    },
+    "synthetic_cli_commands": {
+      "passed": 37,
+      "network_calls": 0
+    },
+    "memory_contract_parity": "identical across both repositories",
+    "context_pack": "matches 13 canonical documents",
+    "acceptance_scenarios": {
+      "defined": 15,
+      "live_executed": 0
+    }
+  },
+  "limitations": [
+    "No live Sheets or Drive intake deployed",
+    "No iPhone shortcut installed or tested",
+    "Prior protocol-smoke.json remains evidence for its original source snapshot; no new host trial claimed"
+  ]
+}

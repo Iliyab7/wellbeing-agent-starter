@@ -92,6 +92,28 @@ Internal work and user-facing notifications are separate. A participant may choo
 
 The initial release does not promise these production integrations. A host adapter is a capability and behavior contract, not an undocumented vendor API implementation. A connector failure must remain visible as a limitation; it must not become a fabricated empty-data success.
 
+## Shared cloud memory within the existing roles
+
+Manager owns the design and operation of participant-specific Sheets memory, including
+structure, duty assignments and change history; all roles record their scoped actions
+and exchanges. CoS supplies valid authority/capabilities and normal participant contact.
+The intake worker is tooling, not an automatically added agent. Raw shortcut records,
+findings and plans remain distinct and linked. Runtime telemetry complements actor
+reports. Use [the contract](shared-memory/README.md) and [acceptance](shared-memory/acceptance.md).
+The local CLI single-writer rule below remains local; this update implements no cloud adapter.
+
+```mermaid
+flowchart TD
+  I["Authorized iPhone data"] --> W["Intake tooling"]
+  W --> H["Private shared memory"]
+  M["Manager: structure and duties"] <--> H
+  A["Analyst: scoped evidence"] <--> H
+  C["Coach: help and follow-through"] <--> H
+  E["CoS: authority and contact"] <--> M
+```
+
+Arrows show possible scoped access, not a mandatory sequence or security boundary.
+
 ## State and evidence
 
 Keep the public package immutable during a participant trial. Store private participant records outside the Git checkout; never commit them or attach them to public issues. The minimum useful state contains the active goal, consent and authority, relevant dated observations, open tasks, proposal status, feedback and the next agreed checkpoint. See [runtime.md](runtime.md) for the implemented local representation and commands, and [private-session.md](../templates/private-session.md) for the conversational representation. These representations are separate contracts, not interchangeable files.

@@ -49,3 +49,10 @@ role arrangement if coordination costs outweigh benefit; do not claim the three-
 proposal has proven superiority. Use a real scheduler receipt before claiming future work.
 
 Read [review cases](references/review.md) for practical acceptance checks.
+
+## Shared-memory use and registration
+
+Review whether Manager-owned memory remains complete, appropriately scoped, resumable and source-linked. Check the responsible member's work/exchange records, actual receipts, corrections, duty versions and unresolved outcomes. Return a specific gap to its owner; do not assume the reviewer becomes the memory owner.
+
+Use the [memory contract](../../docs/shared-memory/README.md) within existing authority.
+Live cloud integration is not supplied by this module.

@@ -166,6 +166,61 @@ about recorded activity can use Analyst only. A simpler version of an already ch
 routine can use Coach with valid existing context. Manager can answer from a valid prior
 result. Sleep, activity, food and everyday mood are skills/topics, not automatic new agents.
 
+## 4M. Shared memory and automatic intake — self-contained requirement
+
+The chosen cloud-memory target is Google Sheets, operated by the team without making
+the participant maintain tables. Manager owns designing, creating, documenting and
+maintaining its participant-specific structure: tabs, record relationships, views and
+read/write responsibilities. Do not prescribe a universal workbook or fixed tab names.
+Manager may assign related operational duties within existing scope, record their
+version/effective time/acknowledgement and revise them as needs change. This does not
+grant new sources, recipients, costs or external-action authority.
+
+All roles record authorized incoming data, working messages/handoffs, assignments,
+acknowledgements, actions/source checks, reports, reviews, corrections, findings,
+trends, proposals, output links, failures and open/completed work. Preserve actor,
+stable identity, source, event/observation and receipt/recording times with timezone,
+status, summary and evidence/task/output links as applicable; unknown stays unknown.
+Keep raw evidence, interpretations and plans distinct. Link each result back to its
+inputs and the assignment/role version in effect. Store work messages or sufficient
+authorized retrievable references, not secrets or hidden chain-of-thought. Runtime
+receipts and role assertions are different evidence; a claimed read is not proof.
+
+Analyst reads scoped raw evidence and records revisable findings and dependencies.
+Coach reuses valid relevant understanding, consults authorized raw data if necessary,
+and records help and follow-through. Manager reviews quality and ownership without
+forcing every new record through every role. CoS provides authorized capabilities and
+normal participant contact; it need not manually relay every row. Shared memory does
+not authorize all roles to see everything; tabs do not create read isolation.
+
+Automatic entry of selected Apple Health/Shortcuts data is a target. Either private
+Drive files plus an intake worker or an authenticated receiver may feed Sheets,
+according to actual capabilities and Manager's scoped design. Preserve metric meaning,
+units, time window, provenance and aggregation; a shortcut-produced daily total is
+already aggregated. A reusable shortcut still needs per-person destinations/permissions
+and personal place triggers configured. File delivery, sheet import, analyst read,
+analysis completion and Manager acceptance are separate observable milestones.
+
+A sheet is not a scheduler or agent runtime. Verify real reads/writes and readback,
+deduplication, concurrency control, retry reconciliation, interruption recovery,
+schema migrations, dependent-finding correction and actual revocation/deletion scope.
+Execution tools should record observable start/tool/result/error/end events; missing
+telemetry remains explicit. If an action succeeded but logging failed, reconcile it
+before retrying. A log entry is not independent proof of correct analysis or benefit.
+
+Resume from valid goals/authority, structure, roles, evidence and open tasks; do not
+make the participant repeat known context. Keep active state and authorized history
+understandable and preserve references across structural changes. Logging is not a
+participant notification. No active cloud memory, shortcut, watcher or background
+execution may be claimed until actually provisioned and verified. Conversation/local
+fallback remains useful. CoS is still the single writer of the existing local CLI
+ledger; that local implementation rule does not dictate cloud ownership. Select the
+active store and explicit migration boundary; never invent local/cloud synchronization.
+
+When repository files are available, use [the detailed contract](docs/shared-memory/README.md)
+and [acceptance cases](docs/shared-memory/acceptance.md). Their information categories
+are requirements, not fixed tabs. No live cloud integration is implemented by this update.
+
 ## 4A. Operate the host team, not just its descriptions
 
 The CoS owns **actual host operations**: capability discovery, role preparation/creation,

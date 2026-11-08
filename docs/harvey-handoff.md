@@ -1,5 +1,12 @@
 # Harvey / development-team handoff
 
+**2026-11-08 memory extension:** Read [shared-memory responsibilities](../docs/shared-memory/README.md).
+Manager designs/maintains participant-specific Sheets memory and assigns logging duties;
+all roles register authorized data, work, exchanges and source-linked outputs. Check actual
+read/write/scheduling/intake capabilities; downloading this package does not activate them.
+On resume, recover the active structure, valid authority, findings and open tasks. Local and
+conversation fallbacks remain available; no universal tab layout is prescribed.
+
 ## What is being delivered
 
 A portable initial-test package for a personal Wellbeing team. The participant's existing assistant acts as Chief of Staff; Dot is the requested first host, while another assistant can use the same protocol if it has sufficient capabilities. The proposed internal team consists of Manager, Analyst and Coach. This is a pilot implementation of the documented design, with an inspectable Python reference harness and a conversation-only path.
@@ -81,3 +88,13 @@ The current goal, useful sources and metrics, permitted recipients, storage/rete
 Keep source changes small enough to review. Run tests after meaningful code changes; run package validation after regenerating the manifest. A manifest mismatch is a release defect, not something to bypass by disabling checks. Release archives must contain only the public package; exclude private states, exports, original meeting transcripts, provider tokens and local review material.
 
 Record observed verification against the exact release. CI verifies only the checks it runs. A local test pass, a GitHub push, an agent-generated transcript and a live participant trial are different evidence. Use synthetic minimal reproductions in public issues. Keep private feedback in the participant's chosen private channel; do not publish it by default.
+
+## Shared-memory integration workstream
+
+Implement the [memory/intake contract](shared-memory/README.md) as a host adapter with
+Manager-owned schema/duty decisions and real worker receipts. Deliver actual capabilities
+for Sheets read/write/readback, scoped access, role work/exchange logging, selected iPhone
+intake, replay/concurrency safety, versioned migration, correction/revocation/deletion and
+resume. Keep Manager organization separate from physical execution; retain the working
+local reference path. Demonstrate [MB01–MB15](shared-memory/acceptance.md) with recorded
+evidence; unexecuted cases remain unverified. Do not hardcode per-person tabs or place locations.

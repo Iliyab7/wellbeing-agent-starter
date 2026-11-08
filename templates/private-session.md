@@ -51,3 +51,13 @@ Resume rule: check current validity and source availability, preserve establishe
 choices and do not repeat a full intake. The participant's newer instructions override
 this checkpoint. Moving to a new host/provider/recipient requires the applicable scope;
 the existence of this file is not blanket permission to share it onward.
+
+## Active shared-memory checkpoint, when selected
+
+- Actual store and structure-map location/version (not a prescribed set of tabs):
+- Manager owner; per-role read/write and logging duties, versions and acknowledgements:
+- Actual connector/scheduler/intake receipts, last successful import and known gaps:
+- Relevant data/finding/task/output IDs; superseded dependencies; unresolved write outcomes:
+- Active local or cloud authority and explicit migration boundary:
+
+This is a private host checkpoint, not direct CLI input and not proof the store exists.

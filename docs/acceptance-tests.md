@@ -68,3 +68,11 @@ For the **initial personal trial**, require a working no-tool start, a clean syn
 For **developer handoff**, require reproducible commands, a pinned source/release manifest, clear open integration work, acceptance cases, and actual verification evidence. Do not relabel the package as a deployed production service.
 
 Compare the three-role proposal with “Manager + one generalist” on the same synthetic tasks if complexity becomes costly. Record quality, duplicated work, interaction count, latency/cost if observable, and participant preference. No superiority claim is made before that comparison.
+
+## Shared-memory and iPhone-intake acceptance
+
+Run [MB01–MB15](shared-memory/acceptance.md) for the added Manager-owned memory contract.
+Cover individual structure/duties, data-to-output lineage, role exchanges, actual receipt
+evidence, retries/concurrency, correction/revocation, migration, restart and locked/offline
+phone behavior. These are host/integration scenarios; the current local Python tests do
+not establish live Sheets or phone success. Their live status remains not run.

@@ -1,5 +1,7 @@
 # Wellbeing Agent Starter
 
+**2026-11-08 design update:** [Shared cloud memory and automatic intake](docs/shared-memory/README.md) are integrated into the existing roles and starter protocol. Manager owns participant-specific Sheets organization; every role records its work. The local runtime remains implemented; live Sheets/Drive watchers and iPhone intake remain integration work, not activated features.
+
 A portable initial-test kit for a personal assistant acting as Chief of Staff. Dot (or another capable host) replaces the original ELHAM interface and coordinates a Wellbeing Manager, Analyst and Coach. Roles are responsibilities, not a compulsory pipeline. The participant chooses goals, data access, recipients, authority, retention and contact preferences.
 
 ## Start a personal pilot

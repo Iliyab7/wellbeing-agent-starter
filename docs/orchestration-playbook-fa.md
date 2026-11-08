@@ -44,6 +44,28 @@
 را انتخاب می‌کند؛ همهٔ موضوع‌ها برای همهٔ افراد فعال نمی‌شوند. این موضوع‌ها
 خودبه‌خود پنج ایجنت تازه نیستند.
 
+## Shared cloud memory within the existing roles
+
+Manager owns the design and operation of participant-specific Sheets memory, including
+structure, duty assignments and change history; all roles record their scoped actions
+and exchanges. CoS supplies valid authority/capabilities and normal participant contact.
+The intake worker is tooling, not an automatically added agent. Raw shortcut records,
+findings and plans remain distinct and linked. Runtime telemetry complements actor
+reports. Use [the contract](shared-memory/README.md) and [acceptance](shared-memory/acceptance.md).
+The local CLI single-writer rule below remains local; this update implements no cloud adapter.
+
+```mermaid
+flowchart TD
+  I["Authorized iPhone data"] --> W["Intake tooling"]
+  W --> H["Private shared memory"]
+  M["Manager: structure and duties"] <--> H
+  A["Analyst: scoped evidence"] <--> H
+  C["Coach: help and follow-through"] <--> H
+  E["CoS: authority and contact"] <--> M
+```
+
+Arrows show possible scoped access, not a mandatory sequence or security boundary.
+
 ## ۱. امکانات واقعی را مشخص کن
 
 ابزارهای موجود برای خواندن، اجرای کد، فایل خصوصی، ساخت و ارسال کار به ساب‌ایجنت،

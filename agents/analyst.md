@@ -35,3 +35,15 @@ No independent routine messaging or background monitoring outside the agreed ser
 **Exit:** return an evidence-backed answer, a useful limitation, or a specific justified
 request. “No meaningful new evidence” is a valid result. Finding a problem every time
 is not a performance goal.
+
+## Shared-memory responsibility
+
+Read scoped authorized evidence from the active memory; record source-linked findings,
+trends, uncertainty, checks, work events and reports under Manager's current contract.
+Keep raw evidence separate, mark superseded findings and tell Manager which downstream
+plans depend on corrected evidence. Claim reads/analysis completion only with the actual
+evidence available. Do not fetch the whole shared dossier by default.
+
+Follow [the memory contract](../docs/shared-memory/README.md) and its
+[acceptance cases](../docs/shared-memory/acceptance.md); live cloud integration is not
+provided by these instructions.

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "20261108T082319Z-shared-memory-contract",
+  "repository": "Iliyab7/wellbeing-agent-starter",
+  "occurred_at": "2026-11-08T08:23:19.038137+00:00",
+  "title": "Integrate Manager-owned shared memory and iPhone intake contract",
+  "summary": "Connected participant-specific Sheets memory responsibilities to roles, entry points, continuation and acceptance documents. Preserved existing local reference runtime.",
+  "outcome": "Documentation and cross-repository parity checked; 66 local tests and 37 synthetic CLI commands passed. Fifteen new memory scenarios are specifications, not live passes.",
+  "status": "local-tested",
+  "decisions": [
+    "Manager owns participant-specific structure and logging duties; fixed tabs are not prescribed",
+    "All roles record scoped work and exchanges; runtime receipts remain distinct from assertions",
+    "Local single-writer behavior is separate from future cloud implementation"
+  ],
+  "blockers": [],
+  "next_actions": [
+    "Implement and verify the chosen cloud intake and memory adapter in an authorized host"
+  ],
+  "evidence": [
+    "docs/shared-memory/README.md",
+    "docs/shared-memory/acceptance.md",
+    "docs/shared-memory/verification.json"
+  ]
+}

@@ -5,19 +5,67 @@
   "host_label": null,
   "mode": "unselected",
   "capabilities": {
-    "repository_read": {"state": "unverified", "evidence": null},
-    "file_read": {"state": "unverified", "evidence": null},
-    "local_execution": {"state": "unverified", "evidence": null},
-    "private_files": {"state": "unverified", "evidence": null},
-    "durable_continuity": {"state": "unverified", "evidence": null},
-    "native_subagents": {"state": "unverified", "evidence": null},
-    "scheduler": {"state": "unverified", "evidence": null},
-    "notifications": {"state": "unverified", "evidence": null},
-    "export_delete": {"state": "unverified", "evidence": null}
+    "repository_read": {
+      "state": "unverified",
+      "evidence": null
+    },
+    "file_read": {
+      "state": "unverified",
+      "evidence": null
+    },
+    "local_execution": {
+      "state": "unverified",
+      "evidence": null
+    },
+    "private_files": {
+      "state": "unverified",
+      "evidence": null
+    },
+    "durable_continuity": {
+      "state": "unverified",
+      "evidence": null
+    },
+    "native_subagents": {
+      "state": "unverified",
+      "evidence": null
+    },
+    "scheduler": {
+      "state": "unverified",
+      "evidence": null
+    },
+    "notifications": {
+      "state": "unverified",
+      "evidence": null
+    },
+    "export_delete": {
+      "state": "unverified",
+      "evidence": null
+    },
+    "sheets_read_write_readback": {
+      "state": "unverified",
+      "evidence": null
+    },
+    "private_drive_intake": {
+      "state": "unverified",
+      "evidence": null
+    },
+    "execution_event_logging": {
+      "state": "unverified",
+      "evidence": null
+    },
+    "write_concurrency_and_reconciliation": {
+      "state": "unverified",
+      "evidence": null
+    }
   },
   "connectors": [],
   "native_roles": [],
   "scheduled_jobs": [],
-  "allowed_states": ["available", "unavailable", "unverified", "blocked"],
+  "allowed_states": [
+    "available",
+    "unavailable",
+    "unverified",
+    "blocked"
+  ],
   "note": "No capability or permission is granted by this template. Avoid secrets and personal data in receipts."
 }

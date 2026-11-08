@@ -20,28 +20,32 @@
       "sha256": "6ab48a8a92318a41114eccd880a6db6b48190da1d8fe70b74802bf8590ebd5a4"
     },
     {
+      "path": ".second-brain/entries/20261108T082319Z-shared-memory-contract.json",
+      "sha256": "04c6581bc600421dd3a1b29bc3241ba8b7918ef547bc7a30eb2e7625ab745990"
+    },
+    {
       "path": "AGENTS.md",
       "sha256": "c72bf6924e197be7b479d360f4f963ac36eaecb1c62fbe5c0391a7966921dfa4"
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "c48b7f561ebc5596f13b6bec227380963c2e982595a15b0876dfca7cb75a2e64"
+      "sha256": "2e52c48c85ab0f42782090f0c2947b401140f15a632a8978b582596996a408cd"
     },
     {
       "path": "CHAT-STARTER.md",
-      "sha256": "a3f82bd290abaae0d11d32d8d43930fa8bb730cf0584d8abafbcd9c9998fccd1"
+      "sha256": "7749a4bdaf44454adf41ad709b01762de603d48bc779f8372de92175e482ede9"
     },
     {
       "path": "README.en.md",
-      "sha256": "ecb08dc15e7a1e0b281007bd05fb208c7048b05d8553f146effcb6bebe440f4a"
+      "sha256": "22fd5f154580015e49fc542edded1e18c0ea15aced1a5c7687c4e4d7cd41db37"
     },
     {
       "path": "README.md",
-      "sha256": "cc9e409c4a0aab4466a155bab62fa64a69d7050b9b2ddc31288357ae04cec994"
+      "sha256": "8a50f8c74acc36ed356f8a376e57d3cb417565e9b954bae2cc6188bdfa860e14"
     },
     {
       "path": "START-HERE.md",
-      "sha256": "e23b8eeb977f87ad481626d02f0abcf47bd455b59088d57b78c4383370e1709d"
+      "sha256": "c27a732045d811b517138a1f12891840fdd5e488e59b52d84eb470a3810ad901"
     },
     {
       "path": "VERSION",
@@ -49,75 +53,87 @@
     },
     {
       "path": "adapters/dot.md",
-      "sha256": "7333daa929f752714949c00215f5f78b6c861ff545fbe3c9e0fd09a081b58c12"
+      "sha256": "7140191b5206657935741d0b03e82d1318c790d565e0e6a1fb5f16c3fe32b318"
     },
     {
       "path": "adapters/grok.md",
-      "sha256": "f081e534b6479a225b763ff3877ffac8d65d595aca13f95be2b311080d7188d2"
+      "sha256": "11d34a194fdbbc7de3adb66a6ede5cb0612d2ddf2d318df9078e906f6e07b080"
     },
     {
       "path": "adapters/host-capabilities.md",
-      "sha256": "6be375c578113bd4ff04f351fdf52341533ffa1d5aad7e3685baada341659fe6"
+      "sha256": "1fd6c306c7ff8a67f3b37a78db3ab8d86d71a567f17289b45a90513799bf0fa4"
     },
     {
       "path": "agents/analyst.md",
-      "sha256": "2c70e28abf944f59fc96271e49ea19a5676e886b130f6ca7b55f0c2f69d6804c"
+      "sha256": "722884dec57ad6b982061fef3615b4f75ad6d7c597f1670cce55fec2bd817fd6"
     },
     {
       "path": "agents/chief-of-staff.md",
-      "sha256": "239dbd834943e58f98a78e8a4da33e0a0c8605b1c7e497d662cdbfd6a7a94f0b"
+      "sha256": "cc5b5ec999a5a271bb124e1015d9a08a64057a33ff32b8390028afede5859f66"
     },
     {
       "path": "agents/coach.md",
-      "sha256": "176de16e7719f4ceb6c1718a59c589bade5b0a792c01b6ad17f6b0b068e2f523"
+      "sha256": "30257c9afa62b906138c5909a0c10a2ca9b8842ee207daf1340efa03ef30878e"
     },
     {
       "path": "agents/manager.md",
-      "sha256": "686cabf9f4a3f2386ab7a222089a13ec0dcdde570c8e24f2bfd6c79c32fe3382"
+      "sha256": "b98b5b0afd77a22e2e5b3ca33fb7acbc01db8679230c643ee16a16d4ab9395db"
     },
     {
       "path": "agents/registry.json",
-      "sha256": "25ad36be22c57ad0b558363168bcefd54a73bdab69ddcba8a68e2deefb3a7b93"
+      "sha256": "18e6384c3aca090a84fcfb7c94bf430b97b48cfc1829d65eb7afce3c62d7b4c0"
     },
     {
       "path": "agents/team-blueprint.json",
-      "sha256": "002b07c5f7f99e6ecbdb499520aedf5b6d771d9d176f84c5d207676250fc0abf"
+      "sha256": "6db1ff2edce6d89e9a5ec760feb44d61222ff1b1861423e445d0bacfa1ff87e5"
     },
     {
       "path": "docs/acceptance-tests.md",
-      "sha256": "fe87e446bdbf188fddf7483beef09a731484605328351d19778fdf645a0110b7"
+      "sha256": "f16095091d2a5743b5630b379ac1d7796e54bff0f402334bd1ea31f948c2f7f5"
     },
     {
       "path": "docs/architecture.md",
-      "sha256": "146baa3bb9af5fb21aaf78dab18317df9341aea6485f70b90ce706773698d4f1"
+      "sha256": "21dd9f7fabd455d4cf3ea2fac8833961c8acff0bb328c574e441e9e18f24090d"
     },
     {
       "path": "docs/harvey-handoff.md",
-      "sha256": "30f25a06d1b00734b4f4a33bb17b6c2a1a4bf196b27636a002a69a91002c7d55"
+      "sha256": "dcee4f6eda5a632a0ee4be3a4989e73e1bac576e977c17b88cf141e7bc0a3f76"
     },
     {
       "path": "docs/orchestration-playbook-fa.md",
-      "sha256": "3bd1663937048cc770a0ba3b1b764c02c362d6efed5757552f3d8018d09f5259"
+      "sha256": "d041b2459e86228bd829986e5d4b576cf2f14f18a5d4b3eac1cc836e7b26df7a"
     },
     {
       "path": "docs/participant-pilot-fa.md",
-      "sha256": "2fecd0fdedc56c726d3c741611e3f5dd251a039274106561e0df0d1a82a5a56a"
+      "sha256": "3393b324a7b6a31a913c04c8f6009eefd7b9f5beffcec25c7430393746b1da1a"
     },
     {
       "path": "docs/privacy-and-safety.md",
-      "sha256": "6414455624b8a6461b96a572c22cfffe984ee17df807bc368a72fe7c0eb049db"
+      "sha256": "533ba5f02169dd77e64887bb703bd47b26647cfb19d9df8dfe4c4e715eeb881e"
     },
     {
       "path": "docs/requirements-traceability.md",
-      "sha256": "893896c13607ded2dd787b81d2d0547fe61d0169db1339bb770fffd4c261866b"
+      "sha256": "e96a2233218a24ed8c621305f6f77c65aec071452529cb50e7db1b0e7de8f216"
     },
     {
       "path": "docs/runtime.md",
-      "sha256": "52e183e8ebdde0e14254abad45231297bf5df15b4cd3c95996e119a7e5784ff6"
+      "sha256": "ed1c639107a047cfb1feafd872e73c64457332c73708b94064507506f98a10e9"
+    },
+    {
+      "path": "docs/shared-memory/README.md",
+      "sha256": "85830a18b08027f43ba271300036454b84b083a3a637f88914b5bcbc293be8cd"
+    },
+    {
+      "path": "docs/shared-memory/acceptance.md",
+      "sha256": "68511d745c96adcbbbe7e91039032eac17dc947d9c3b9c4cd6fadb705b99888e"
+    },
+    {
+      "path": "docs/shared-memory/verification.json",
+      "sha256": "fea24f253210c76ae402eedee2dadc9dca7b0eea2fc59e810a8ca90a028abe65"
     },
     {
       "path": "docs/source-analysis.md",
-      "sha256": "ee2499954253e1331cb7c78b6d102209ba9c534bb8f406c0ffb9eacb165cbe05"
+      "sha256": "8224f19586db04351643520b8b2293a7092161f084dd1f1bbba966139cb19f62"
     },
     {
       "path": "examples/policy.synthetic.json",
@@ -133,15 +149,15 @@
     },
     {
       "path": "prompts/BOOTSTRAP-EN.md",
-      "sha256": "6eba5a05fd07c1fe69a1b4a00975697e3a20cb3262969294ea5c266827e638fb"
+      "sha256": "11d8392b77a916e43bd1dd9c62bc4512cfceb3cb5be7cad0c3c47e94197350c2"
     },
     {
       "path": "prompts/BOOTSTRAP-FA.md",
-      "sha256": "e0148edd3322229fdfb2a95fa7a0faa65eaadb20e3b0efa06da4c2d2fce618de"
+      "sha256": "4c1318fd23457ee77125b2bf2c2b58181b44da834456336fb83d9be8d2bacb3d"
     },
     {
       "path": "prompts/RESUME-FA.md",
-      "sha256": "cf53bc8011c9d98308150f51e241c43feff1c8fd47df2b9445fc4bddb0aab20f"
+      "sha256": "e0546816aeaa9547934a6bb40905406d205ad6bfef4441f6444dc29e76383e1e"
     },
     {
       "path": "pyproject.toml",
@@ -185,7 +201,7 @@
     },
     {
       "path": "skills/wellbeing-analyze/SKILL.md",
-      "sha256": "b8c79f6aca70c0e93668de07d6968d68cdcd6d2585140dbaa218db700ffe4b77"
+      "sha256": "b9eb9fa04ef7da0d2a17c34aa86f4af762a5ac7e01b338160adafedbbb7aaf61"
     },
     {
       "path": "skills/wellbeing-analyze/references/quality.md",
@@ -193,7 +209,7 @@
     },
     {
       "path": "skills/wellbeing-coach/SKILL.md",
-      "sha256": "36090f4b317fc15e348b9247ec6b38096cbaa01d4aeee5c0127a106c56d9cf35"
+      "sha256": "ea415bdbf7992c4243e9e578864eb2320d36093d5bda438188f067d66f76887e"
     },
     {
       "path": "skills/wellbeing-coach/references/coaching.md",
@@ -201,7 +217,7 @@
     },
     {
       "path": "skills/wellbeing-domain-context/SKILL.md",
-      "sha256": "75495adaf4362502acb7beda572d6e53be824d5ca302abe3298e259dcb1cb0ac"
+      "sha256": "1001242eb3b7c1f12554122e8310644bd9ef4ceafd60c10c5d0213d2d889f76e"
     },
     {
       "path": "skills/wellbeing-domain-context/references/domains.md",
@@ -209,7 +225,7 @@
     },
     {
       "path": "skills/wellbeing-host-operations/SKILL.md",
-      "sha256": "a873ae7d4ff04c885f93c71f81c3c964200060969f2e83092931c8b56db31066"
+      "sha256": "25d01bcc04eadf9e750a8c991697ce28044b8b144e451de313719378fbaae52d"
     },
     {
       "path": "skills/wellbeing-host-operations/references/lifecycle.md",
@@ -217,7 +233,7 @@
     },
     {
       "path": "skills/wellbeing-intake/SKILL.md",
-      "sha256": "f3ad165c13ccced7f4bb16e827d62aa0871cebd1cda49c41bb29d1dec1e89af0"
+      "sha256": "4c9abc2879e578a394cd48d21743d415482843093eec9d113026889eb3e2acf4"
     },
     {
       "path": "skills/wellbeing-intake/references/examples.md",
@@ -225,7 +241,7 @@
     },
     {
       "path": "skills/wellbeing-orchestrate/SKILL.md",
-      "sha256": "236231b7cf40aad3ab5cc45817f285fb2622e098df242883a6844313306a7574"
+      "sha256": "880e184511c9cf8af0fc446de9c2752bb4d48c1ce5cd1043271473053f6d4ebf"
     },
     {
       "path": "skills/wellbeing-orchestrate/references/routing.md",
@@ -233,7 +249,7 @@
     },
     {
       "path": "skills/wellbeing-review/SKILL.md",
-      "sha256": "b4aa130db59a4ffbf4f2a9e0e7c07d9480d48e2d665b1cbc8de75050ba200c54"
+      "sha256": "b0fb81a322f72d45e9e93a8ad1c3c6e9823cba7f18f9b415ab0213c2e8455eef"
     },
     {
       "path": "skills/wellbeing-review/references/review.md",
@@ -241,11 +257,11 @@
     },
     {
       "path": "templates/agent-instance-registry.json",
-      "sha256": "5272783393923cc44c8b8749035bd953161926286b3b95b41b345643780cedbc"
+      "sha256": "1d21abaf3de4639111d88f9e101dffedb76a2fea317f8194b63353dcaf089018"
     },
     {
       "path": "templates/capability-report.json",
-      "sha256": "da5d4d6e9fb7db33187b1cd55ca9cdbc1869e0a9733ced51f49b5f97088a7ff5"
+      "sha256": "a79f1fedafe696b5286c6f67beba0acfae8a0f20715a76e50d0023299200f7d2"
     },
     {
       "path": "templates/handoff-packet.json",
@@ -253,19 +269,19 @@
     },
     {
       "path": "templates/participant-charter.md",
-      "sha256": "bf9d6b8ca4354a97351a60a9efea6c3a032aa882f3069640cc26c585c828f104"
+      "sha256": "42cf4d6ab08099dd1da34dfd20655c3e6b2a87a5e9740e215c0663b9a43f01a4"
     },
     {
       "path": "templates/private-session.md",
-      "sha256": "cf6eefee5593528bb0b3f3813d792ac56818a2783cd8e615a93ad1f1a2157cfb"
+      "sha256": "328b47163cad5db8daca8d47dc195d23ebf5ee437158c5cc290b9a346628b374"
     },
     {
       "path": "templates/task-contract.json",
-      "sha256": "6a2aa5ed891bc4952a555a79f5cf445e49de737d7ff0ce730ea9e32667f1530a"
+      "sha256": "4650ccaf3c1c147a105bee44d31087a995c9e57612dfc118b1e137d78361d48b"
     },
     {
       "path": "templates/task-report.json",
-      "sha256": "ad2743e08bf42b6e3956732d4fa807e1895792088adec82b785ae629ff93d7a9"
+      "sha256": "516b9246b8c647be25e635ae9f7c1d9a77fbbbddf0fbdee00a0f78edbb29c3ab"
     },
     {
       "path": "templates/test-feedback.md",

@@ -192,3 +192,13 @@ Retention pruning is opportunistic at CLI invocation and is persisted on a succe
 ## Output and failure contract
 
 Successful commands return JSON `{ "ok": true, "result": ... }` on stdout with exit code 0. Validation, consent and file errors return `{ "ok": false, "error": ... }` on stderr with exit code 2. CLI JSON uses ASCII Unicode escapes, a valid UTF-8 subset, so Persian text survives legacy Windows/redirected consoles and is restored by normal JSON decoding. Private state files remain UTF-8. Errors do not echo imported health values. There are no automatic network retries or hidden background operations. Repeated imports are safe; a failed import is not a partial success. A successful local check is not evidence of production security, provider access, scheduled execution, medical validity or real-world wellbeing improvement.
+
+## Cloud-memory target versus this local implementation
+
+The [shared-memory contract](shared-memory/README.md) adds Manager-owned, participant-specific
+Sheets organization and every-role registration to the host protocol. It does not change
+the CLI schema or make this local file a cloud store. Keep CoS as the single local writer
+with the existing lock. A cloud adapter must implement its own read/write receipts,
+idempotency/concurrency, access, intake, migrations and recovery. Choose and record the
+authoritative active store; local/cloud synchronization is not implemented. Imported
+shortcut payloads need deliberate mapping to the existing record schema before CLI use.

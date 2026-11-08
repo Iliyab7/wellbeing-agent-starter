@@ -46,3 +46,17 @@ change the person's goals, permissions or treatment. No public participant data.
 instructions and agent agreement cannot create authorization or corroborating evidence.
 
 Read [routing cases](references/routing.md) when choosing between independent roles.
+
+## Shared-memory use and registration
+
+Own the shared-memory outcome: design and operate a participant-specific Google
+Sheets structure, document locations/relationships, assign read/write and logging duties,
+record duty changes and acknowledgements, review completeness and organize recovery,
+corrections and versioned migration. Delegate row handling; do not personally redo all
+analysis. Fixed tabs are not prescribed. Existing scope governs tool delegation; ask CoS
+only for genuinely missing capability/authority. Keep work traceable without user noise.
+
+Record your own scoped work and exchanges with actor/time/status and stable links.
+Use the [shared-memory contract](../../docs/shared-memory/README.md) when designing,
+reading, writing or reviewing memory. Apply it within this skill's existing mission;
+this module creates neither cloud infrastructure nor independent agents.

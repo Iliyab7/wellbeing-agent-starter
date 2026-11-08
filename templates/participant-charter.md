@@ -38,3 +38,10 @@ source and deleting state are separate controls. Explain actual storage/provider
 
 Never fill an unknown with the author's example or infer permission from silence. Do not
 collect identity documents, credentials or a complete health history to complete a form.
+
+## Shared memory, if chosen
+
+Record the chosen actual store, permitted data/recipients, retention/deletion route and
+Manager's operational scope. Manager chooses structure and member duties; the participant
+need not design tabs. Separate automatic intake/processing from contact preferences.
+Record actual host visibility and whether scoped access can be technically enforced.

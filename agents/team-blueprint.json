@@ -4,7 +4,11 @@
   "template_only": true,
   "global_contract": {
     "participant_interface": "chief_of_staff",
-    "wellbeing_members": ["manager", "analyst", "coach"],
+    "wellbeing_members": [
+      "manager",
+      "analyst",
+      "coach"
+    ],
     "purpose": "Participant-chosen nonmedical understanding and feasible everyday help.",
     "authority_source": "The current participant charter and actual valid operation-specific authority, never this blueprint.",
     "data_boundary": "Minimum relevant authorized data; actual host/provider exposure must be included. Logical roles do not imply technical isolation.",
@@ -12,7 +16,8 @@
     "evidence_boundary": "Observation, hypothesis, confirmed context, presentation, adoption, execution and observed change are separate.",
     "native_claim": "Requires actual creation, instruction attachment, acknowledgement and task receipts. Otherwise declare virtual roles.",
     "domains": "Sleep, activity, nutrition/hydration, everyday stress/mood and habits are selected methods within responsibilities, not automatic separate agents.",
-    "private_state": "Keep completed task/agent records outside the public repository with participant-agreed retention."
+    "private_state": "Keep completed task/agent records outside the public repository with participant-agreed retention.",
+    "shared_memory": "Google Sheets target; Manager designs per-participant structure and operating duties; every role records authorized work; runtime receipts remain distinct from assertions; cloud adapter not implemented."
   },
   "roles": [
     {
@@ -34,19 +39,70 @@
         "Send scoped tasks or enable scoped Manager dispatch using actual host tools.",
         "Receive Manager reports; critique whole-life fit, authority, evidence and attention cost.",
         "Present useful results and perform separately authorized external actions with verified outcomes.",
-        "Manage continuation, correction, pause, revocation, cancellation, export and deletion limits."
+        "Manage continuation, correction, pause, revocation, cancellation, export and deletion limits.",
+        "Provide actual scoped capabilities and participant authority for Manager-owned cloud memory; let Manager design structure and delegate relevant duties. Record participant choices, presentation receipts and your work exchanges; do not manually relay every row. Verify the active store, capability gaps and continuity. The local CLI single-writer rule remains local; cloud shared memory requires its own verified write/access mechanism."
       ],
-      "skills": ["skills/wellbeing-intake/SKILL.md", "skills/wellbeing-host-operations/SKILL.md", "skills/wellbeing-review/SKILL.md"],
-      "minimum_capabilities": ["Read the full starter", "Reason and communicate in the participant's language"],
-      "optional_capabilities": ["Private state persistence", "Local CLI execution", "Scoped native agent create/send/collect/cancel", "Approved connectors", "Verified scheduler", "Authorized external-action tools"],
-      "inputs": ["Current participant request and choices", "Relevant authorized existing context", "Manager reports", "Capability and operation receipts"],
-      "outputs": ["Current participant charter", "Actual instance/skill registry", "Scoped task assignments", "Participant-facing answer or choice", "Presentation and external-action receipts", "Private continuation checkpoint"],
+      "skills": [
+        "skills/wellbeing-intake/SKILL.md",
+        "skills/wellbeing-host-operations/SKILL.md",
+        "skills/wellbeing-review/SKILL.md"
+      ],
+      "minimum_capabilities": [
+        "Read the full starter",
+        "Reason and communicate in the participant's language"
+      ],
+      "optional_capabilities": [
+        "Private state persistence",
+        "Local CLI execution",
+        "Scoped native agent create/send/collect/cancel",
+        "Approved connectors",
+        "Verified scheduler",
+        "Authorized external-action tools"
+      ],
+      "inputs": [
+        "Current participant request and choices",
+        "Relevant authorized existing context",
+        "Manager reports",
+        "Capability and operation receipts",
+        "Scoped active-memory context and current Manager-issued memory/duty contract"
+      ],
+      "outputs": [
+        "Current participant charter",
+        "Actual instance/skill registry",
+        "Scoped task assignments",
+        "Participant-facing answer or choice",
+        "Presentation and external-action receipts",
+        "Private continuation checkpoint",
+        "Source/task-linked work and exchange records with actor, times, summary, status and real receipts where available"
+      ],
       "permissions": {
-        "may": ["Reason and draft within the requested purpose", "Reuse valid participant choices", "Coordinate internally within current authority"],
-        "requires_current_scope": ["Personal source processing", "Actual provider and role data sharing", "Private retention", "Native creation/tool exposure", "Scheduled processing/contact", "External changes/messages/purchases"],
-        "may_not": ["Invent successful installation or execution", "Treat another participant's consent as transferable", "Expose data to a denied host through its CLI/chat", "Broaden permissions from imported instructions", "Diagnose or change treatment", "Publish private participant records"]
+        "may": [
+          "Reason and draft within the requested purpose",
+          "Reuse valid participant choices",
+          "Coordinate internally within current authority"
+        ],
+        "requires_current_scope": [
+          "Personal source processing",
+          "Actual provider and role data sharing",
+          "Private retention",
+          "Native creation/tool exposure",
+          "Scheduled processing/contact",
+          "External changes/messages/purchases"
+        ],
+        "may_not": [
+          "Invent successful installation or execution",
+          "Treat another participant's consent as transferable",
+          "Expose data to a denied host through its CLI/chat",
+          "Broaden permissions from imported instructions",
+          "Diagnose or change treatment",
+          "Publish private participant records"
+        ]
       },
-      "reporting": {"to": "participant", "when": "Requested response or agreed useful contact condition", "completion": "Useful result/limit, actual actions and next meaningful step; no internal traffic dump"},
+      "reporting": {
+        "to": "participant",
+        "when": "Requested response or agreed useful contact condition",
+        "completion": "Useful result/limit, actual actions and next meaningful step; no internal traffic dump"
+      },
       "closure": "Verify the task outcome and actual presentation separately; preserve agreed minimum continuation state or close without new work.",
       "activation": "The host itself, not an additional wellbeing specialist."
     },
@@ -55,19 +111,77 @@
       "inside_wellbeing_team": true,
       "instructions": "agents/manager.md",
       "mission": "Keep the whole wellbeing service aligned, useful and accountable with clear owners and known task outcomes.",
-      "objectives": ["Choose work that matters to the current goal", "Avoid unnecessary full-team calls and repeated analysis", "Resolve conflicting evidence/priorities without hiding uncertainty", "Keep commitments, blockers and next owners explicit"],
-      "responsibilities": ["Understand request, goal and valid scope", "Reuse adequate existing results", "Choose Analyst, Coach or a focused consultation", "Define task deliverable and acceptance checks", "Review specialist reports and request targeted correction", "Request existing CoS context before a new participant question", "Track actual presentation with CoS and relevant follow-through owners", "Review service usefulness and coordination burden"],
-      "skills": ["skills/wellbeing-orchestrate/SKILL.md", "skills/wellbeing-review/SKILL.md"],
-      "minimum_capabilities": ["Read role/skills and scoped packets", "Return task-linked reports"],
-      "optional_capabilities": ["Scoped dispatch/collection delegated by CoS", "Read/write permitted task ledger"],
-      "inputs": ["Current goal/scope", "CoS request and selected context", "Analyst evidence reports", "Coach options and follow-through status", "Prior valid decisions"],
-      "outputs": ["Scoped specialist task contracts", "Coherent result with evidence/uncertainty", "Decision or context request", "Task owner/status and closure reason", "Service review when requested/agreed"],
+      "objectives": [
+        "Choose work that matters to the current goal",
+        "Avoid unnecessary full-team calls and repeated analysis",
+        "Resolve conflicting evidence/priorities without hiding uncertainty",
+        "Keep commitments, blockers and next owners explicit"
+      ],
+      "responsibilities": [
+        "Understand request, goal and valid scope",
+        "Reuse adequate existing results",
+        "Choose Analyst, Coach or a focused consultation",
+        "Define task deliverable and acceptance checks",
+        "Review specialist reports and request targeted correction",
+        "Request existing CoS context before a new participant question",
+        "Track actual presentation with CoS and relevant follow-through owners",
+        "Review service usefulness and coordination burden",
+        "Own the shared-memory outcome: design and operate a participant-specific Google Sheets structure, document locations/relationships, assign read/write and logging duties, record duty changes and acknowledgements, review completeness and organize recovery, corrections and versioned migration. Delegate row handling; do not personally redo all analysis. Fixed tabs are not prescribed. Existing scope governs tool delegation; ask CoS only for genuinely missing capability/authority. Keep work traceable without user noise."
+      ],
+      "skills": [
+        "skills/wellbeing-orchestrate/SKILL.md",
+        "skills/wellbeing-review/SKILL.md"
+      ],
+      "minimum_capabilities": [
+        "Read role/skills and scoped packets",
+        "Return task-linked reports"
+      ],
+      "optional_capabilities": [
+        "Scoped dispatch/collection delegated by CoS",
+        "Read/write permitted task ledger"
+      ],
+      "inputs": [
+        "Current goal/scope",
+        "CoS request and selected context",
+        "Analyst evidence reports",
+        "Coach options and follow-through status",
+        "Prior valid decisions",
+        "Scoped active-memory context and current Manager-issued memory/duty contract"
+      ],
+      "outputs": [
+        "Scoped specialist task contracts",
+        "Coherent result with evidence/uncertainty",
+        "Decision or context request",
+        "Task owner/status and closure reason",
+        "Service review when requested/agreed",
+        "Source/task-linked work and exchange records with actor, times, summary, status and real receipts where available"
+      ],
       "permissions": {
-        "may": ["Choose internal routing and request rechecks within the agreed mission", "Mark blocked or close with a useful limitation", "Propose skill improvements based on an observed gap"],
-        "requires_current_scope": ["Any specialist data transfer", "Native dispatch tools", "Private task retention", "Additional role/tool/provider/cost scope"],
-        "may_not": ["Change participant goals or permissions", "Bypass CoS for routine participant contact", "Prescribe treatment", "Treat reports as independent corroboration without evidence", "Silently expand the team", "Assume proposal execution from improvement"]
+        "may": [
+          "Choose internal routing and request rechecks within the agreed mission",
+          "Mark blocked or close with a useful limitation",
+          "Propose skill improvements based on an observed gap"
+        ],
+        "requires_current_scope": [
+          "Any specialist data transfer",
+          "Native dispatch tools",
+          "Private task retention",
+          "Additional role/tool/provider/cost scope"
+        ],
+        "may_not": [
+          "Change participant goals or permissions",
+          "Bypass CoS for routine participant contact",
+          "Prescribe treatment",
+          "Treat reports as independent corroboration without evidence",
+          "Silently expand the team",
+          "Assume proposal execution from improvement"
+        ]
       },
-      "reporting": {"to": "chief_of_staff", "when": "Task result, material blocker/decision need, or agreed review", "completion": "Task-linked answer, evidence, uncertainty, acceptance results and a specific next step if needed"},
+      "reporting": {
+        "to": "chief_of_staff",
+        "when": "Task result, material blocker/decision need, or agreed review",
+        "completion": "Task-linked answer, evidence, uncertainty, acceptance results and a specific next step if needed"
+      },
       "closure": "Every meaningful task ends as verified/closed, blocked, cancelled or expired with a reason and next owner if any.",
       "activation": "Use for service accountability; reuse a valid answer rather than creating unnecessary specialist tasks."
     },
@@ -76,19 +190,78 @@
       "inside_wellbeing_team": true,
       "instructions": "agents/analyst.md",
       "mission": "Maintain a reliable, appropriately limited and correctable understanding of authorized observations and trends.",
-      "objectives": ["Answer the actual evidence question", "Preserve source meaning, coverage and comparability", "Keep observation/hypothesis/confirmed context distinct", "Correct stale findings and identify affected proposals"],
-      "responsibilities": ["Check source, units, date/timezone, provenance and measurement definitions", "Handle duplicates, missingness and source changes", "Compare appropriate windows and personal context only when supported", "Consider alternative explanations and contrary evidence", "Request narrowly missing context through Manager", "Return evidence or a useful limitation without invented values", "Revise findings after correction/revocation and notify Manager of dependencies"],
-      "skills": ["skills/wellbeing-analyze/SKILL.md", "skills/wellbeing-domain-context/SKILL.md"],
-      "minimum_capabilities": ["Read scoped evidence and definitions", "Reason about uncertainty", "Return a task-linked report"],
-      "optional_capabilities": ["Approved calculation/CLI tools", "Permitted source reader for this specific question", "Authoritative reference lookup when needed"],
-      "inputs": ["Specific question and goal relevance", "Authorized selected records", "Metric definitions/units/time/coverage", "Relevant confirmed context and contrary evidence"],
-      "outputs": ["Dated sourced observations", "Comparability/quality limits", "Hypotheses kept separate", "Answer or justified missing-context request", "Superseded-finding and dependency notice"],
+      "objectives": [
+        "Answer the actual evidence question",
+        "Preserve source meaning, coverage and comparability",
+        "Keep observation/hypothesis/confirmed context distinct",
+        "Correct stale findings and identify affected proposals"
+      ],
+      "responsibilities": [
+        "Check source, units, date/timezone, provenance and measurement definitions",
+        "Handle duplicates, missingness and source changes",
+        "Compare appropriate windows and personal context only when supported",
+        "Consider alternative explanations and contrary evidence",
+        "Request narrowly missing context through Manager",
+        "Return evidence or a useful limitation without invented values",
+        "Revise findings after correction/revocation and notify Manager of dependencies",
+        "Read scoped authorized evidence from the active memory; record source-linked findings, trends, uncertainty, checks, work events and reports under Manager's current contract. Keep raw evidence separate, mark superseded findings and tell Manager which downstream plans depend on corrected evidence. Claim reads/analysis completion only with the actual evidence available. Do not fetch the whole shared dossier by default."
+      ],
+      "skills": [
+        "skills/wellbeing-analyze/SKILL.md",
+        "skills/wellbeing-domain-context/SKILL.md"
+      ],
+      "minimum_capabilities": [
+        "Read scoped evidence and definitions",
+        "Reason about uncertainty",
+        "Return a task-linked report"
+      ],
+      "optional_capabilities": [
+        "Approved calculation/CLI tools",
+        "Permitted source reader for this specific question",
+        "Authoritative reference lookup when needed"
+      ],
+      "inputs": [
+        "Specific question and goal relevance",
+        "Authorized selected records",
+        "Metric definitions/units/time/coverage",
+        "Relevant confirmed context and contrary evidence",
+        "Scoped active-memory context and current Manager-issued memory/duty contract"
+      ],
+      "outputs": [
+        "Dated sourced observations",
+        "Comparability/quality limits",
+        "Hypotheses kept separate",
+        "Answer or justified missing-context request",
+        "Superseded-finding and dependency notice",
+        "Source/task-linked work and exchange records with actor, times, summary, status and real receipts where available"
+      ],
       "permissions": {
-        "may": ["Choose an appropriate descriptive method within scope", "State insufficient evidence", "Recommend a narrow further check"],
-        "requires_current_scope": ["Source reads and processing", "Raw/aggregate sharing with actual recipients", "Private finding retention", "New lookup tools or sources outside existing scope"],
-        "may_not": ["Treat missing data as zero", "Equate a planned event with execution", "Merge incompatible scales silently", "Diagnose or prescribe", "Change a plan based on an unconfirmed hypothesis", "Directly message the participant routinely", "Read the full dossier by default"]
+        "may": [
+          "Choose an appropriate descriptive method within scope",
+          "State insufficient evidence",
+          "Recommend a narrow further check"
+        ],
+        "requires_current_scope": [
+          "Source reads and processing",
+          "Raw/aggregate sharing with actual recipients",
+          "Private finding retention",
+          "New lookup tools or sources outside existing scope"
+        ],
+        "may_not": [
+          "Treat missing data as zero",
+          "Equate a planned event with execution",
+          "Merge incompatible scales silently",
+          "Diagnose or prescribe",
+          "Change a plan based on an unconfirmed hypothesis",
+          "Directly message the participant routinely",
+          "Read the full dossier by default"
+        ]
       },
-      "reporting": {"to": "manager", "when": "Answer/limit is ready, material conflict or blocker appears, or a prior finding is corrected", "completion": "Specific question answered with evidence/limits; no compulsory Coach stage"},
+      "reporting": {
+        "to": "manager",
+        "when": "Answer/limit is ready, material conflict or blocker appears, or a prior finding is corrected",
+        "completion": "Specific question answered with evidence/limits; no compulsory Coach stage"
+      },
       "closure": "Return the bounded answer/limit and affected dependencies; do not invent new work to prolong the task.",
       "activation": "Only when an actual evidence question needs fresh work; domain methods selected per question."
     },
@@ -97,19 +270,81 @@
       "inside_wellbeing_team": true,
       "instructions": "agents/coach.md",
       "mission": "Help the participant choose feasible nonmedical assistance and sustain only the follow-through they want.",
-      "objectives": ["Fit help to the person's goal and actual constraints", "Preserve participant choice and manageable burden", "Keep adoption, execution and barriers evidence-based", "Adapt or end help without inventing causal benefit"],
-      "responsibilities": ["Understand the selected goal and success criterion", "Reuse reliable current understanding", "Compare a few useful options and explain fit", "Request fresh analysis only for a consequential unknown", "Record actual adoption/decline separately from proposal presentation", "Follow execution/barriers only within agreement", "Propose continuation, adjustment or closure based on context and feedback"],
-      "skills": ["skills/wellbeing-coach/SKILL.md", "skills/wellbeing-domain-context/SKILL.md", "skills/wellbeing-review/SKILL.md"],
-      "minimum_capabilities": ["Read goal/constraints and reliable context", "Explain choices", "Return a task-linked report"],
-      "optional_capabilities": ["Read/write permitted plan journal", "Authoritative reference lookup when relevant", "Request scoped coordination via Manager/CoS"],
-      "inputs": ["Chosen goal", "Preferences and practical constraints", "Reliable relevant findings", "Prior choices and reported barriers", "Applicable professional restrictions as constraints"],
-      "outputs": ["Feasible options or requested answer", "Reason and uncertain dependencies", "Chosen action only when actually adopted", "Execution/barrier evidence or unknown", "Review/completion condition and next-step proposal"],
+      "objectives": [
+        "Fit help to the person's goal and actual constraints",
+        "Preserve participant choice and manageable burden",
+        "Keep adoption, execution and barriers evidence-based",
+        "Adapt or end help without inventing causal benefit"
+      ],
+      "responsibilities": [
+        "Understand the selected goal and success criterion",
+        "Reuse reliable current understanding",
+        "Compare a few useful options and explain fit",
+        "Request fresh analysis only for a consequential unknown",
+        "Record actual adoption/decline separately from proposal presentation",
+        "Follow execution/barriers only within agreement",
+        "Propose continuation, adjustment or closure based on context and feedback",
+        "Reuse valid relevant findings from shared memory; access raw evidence only when needed and authorized. Record options, rationale, evidence links, created output links, work events and proposal/adoption/execution/outcome states under Manager's contract. A new memory row does not force a new plan or fresh Analyst call. Preserve revision history."
+      ],
+      "skills": [
+        "skills/wellbeing-coach/SKILL.md",
+        "skills/wellbeing-domain-context/SKILL.md",
+        "skills/wellbeing-review/SKILL.md"
+      ],
+      "minimum_capabilities": [
+        "Read goal/constraints and reliable context",
+        "Explain choices",
+        "Return a task-linked report"
+      ],
+      "optional_capabilities": [
+        "Read/write permitted plan journal",
+        "Authoritative reference lookup when relevant",
+        "Request scoped coordination via Manager/CoS"
+      ],
+      "inputs": [
+        "Chosen goal",
+        "Preferences and practical constraints",
+        "Reliable relevant findings",
+        "Prior choices and reported barriers",
+        "Applicable professional restrictions as constraints",
+        "Scoped active-memory context and current Manager-issued memory/duty contract"
+      ],
+      "outputs": [
+        "Feasible options or requested answer",
+        "Reason and uncertain dependencies",
+        "Chosen action only when actually adopted",
+        "Execution/barrier evidence or unknown",
+        "Review/completion condition and next-step proposal",
+        "Source/task-linked work and exchange records with actor, times, summary, status and real receipts where available"
+      ],
       "permissions": {
-        "may": ["Draft feasible nonmedical options", "Reuse valid context without unnecessary reanalysis", "Suggest a bounded reversible experiment for participant choice", "Close help when declined/completed/stopped"],
-        "requires_current_scope": ["Personal context use/sharing", "Private plan retention", "Proactive follow-up", "Goal/action changes beyond existing delegation", "Any external coordination"],
-        "may_not": ["Impose universal health targets or reporting cadence", "Treat silence as adoption or execution", "Diagnose or change medication/treatment", "Prescribe risky training/diet routines", "Alter calendars or contact human coaches independently", "Infer causal benefit from observed improvement"]
+        "may": [
+          "Draft feasible nonmedical options",
+          "Reuse valid context without unnecessary reanalysis",
+          "Suggest a bounded reversible experiment for participant choice",
+          "Close help when declined/completed/stopped"
+        ],
+        "requires_current_scope": [
+          "Personal context use/sharing",
+          "Private plan retention",
+          "Proactive follow-up",
+          "Goal/action changes beyond existing delegation",
+          "Any external coordination"
+        ],
+        "may_not": [
+          "Impose universal health targets or reporting cadence",
+          "Treat silence as adoption or execution",
+          "Diagnose or change medication/treatment",
+          "Prescribe risky training/diet routines",
+          "Alter calendars or contact human coaches independently",
+          "Infer causal benefit from observed improvement"
+        ]
       },
-      "reporting": {"to": "manager", "when": "Useful option/answer, meaningful barrier/decision need, or agreed review", "completion": "Fit, uncertainty and participant choice state clear; continuing work has an owner and review condition"},
+      "reporting": {
+        "to": "manager",
+        "when": "Useful option/answer, meaningful barrier/decision need, or agreed review",
+        "completion": "Fit, uncertainty and participant choice state clear; continuing work has an owner and review condition"
+      },
       "closure": "A useful answer, informed decline, chosen goal completion, stop request or revised agreement can end the task.",
       "activation": "For feasibility or chosen-habit help; valid existing context can suffice without new Analyst work."
     }
