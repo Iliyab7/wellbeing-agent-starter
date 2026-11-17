@@ -1,4 +1,4 @@
-"""Resumable noninteractive private installation; never print credentials to chat."""
+"""Resumable private installation. Output contains paths/status, never credentials."""
 from __future__ import annotations
 import argparse
 import json
@@ -9,73 +9,102 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from wellbeing.database import Database, packed
+from wellbeing.core import atomic_json, read_json
+from wellbeing.database import Database, ROLES, Denied
 from wellbeing.iphone import validate_public_url
 
 
 def bootstrap(home=None, public_url=None):
+    # Validate before creating state, credentials or a venv.
+    chosen = validate_public_url(public_url) if public_url else None
     db = Database(home)
-    cred_file = db.home / 'credentials.private.json'
-    if cred_file.is_symlink():
-        raise ValueError('Refusing symlink credentials')
-    if not cred_file.exists():
-        with db.connect() as c:
-            if c.execute('SELECT COUNT(*) FROM tokens').fetchone()[0]:
-                raise ValueError('Credentials file missing from initialized store; explicit credential recovery needed')
-        credentials = db.provision()
-        fd = os.open(cred_file, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
-        with os.fdopen(fd, 'w', encoding='utf-8') as f:
-            f.write(packed(credentials))
-    else:
-        credentials = json.loads(cred_file.read_text(encoding='utf-8'))
-    # A verified capability is always a host-supplied receipt, never a guessed platform name.
-    cap = db.home / 'capabilities.private.json'
-    if not cap.exists():
-        cap.write_text(packed({'host': 'unknown', 'shell': False, 'native_agents': False,
-                              'scheduler': False, 'whatsapp': False, 'vision': False,
-                              'transcription': False, 'receipts': {}}), encoding='utf-8')
-        cap.chmod(0o600)
-    host_configs = {}
-    for role, token in credentials.items():
-        if role == 'intake':
-            continue
-        host_configs['wellbeing-' + role] = {'command': sys.executable,
-            'args': [str(ROOT / 'scripts' / 'run_mcp.py')],
-            'env': {'WELLBEING_MVP_HOME': str(db.home), 'WELLBEING_ROLE_TOKEN': token}}
-    private_config = db.home / 'mcp.private.json'
-    private_config.write_text(json.dumps({'mcpServers': host_configs}, indent=2), encoding='utf-8')
-    private_config.chmod(0o600)
-    receipt = {'version': '0.2.0', 'private_home': str(db.home), 'database': 'initialized',
-               'credentials': 'preserved_in_private_file', 'mcp_config': str(private_config),
-               'capabilities': 'awaiting_actual_host_probe', 'agents': 'definitions_ready_not_spawned',
-               'iphone': 'awaiting_public_https_and_device_permissions',
-               'channel': 'awaiting_host_connector_receipt', 'health_records': 'not_inferred',
-               'serve_command': [sys.executable, str(ROOT / 'scripts' / 'run_server.py')],
-               'required_environment': {'WELLBEING_MVP_HOME': str(db.home)}}
-    if public_url:
-        receipt['public_url'] = validate_public_url(public_url)
-        receipt['required_environment']['WELLBEING_PUBLIC_URL'] = receipt['public_url']
-        receipt['iphone'] = 'awaiting_reachability_probe_then_pairing'
-    (db.home / 'setup.private.json').write_text(json.dumps(receipt, indent=2), encoding='utf-8')
-    return receipt
+    lock = db.home / '.bootstrap-lock'
+    try:
+        fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
+    except FileExistsError as exc:
+        raise ValueError('Bootstrap active or stale lock; investigate before retry') from exc
+    try:
+        os.close(fd)
+        credentials_path = db.home / 'credentials.private.json'
+        setup_path = db.home / 'setup.private.json'
+        for path in (credentials_path, setup_path, db.home / 'mcp.private.json', db.home / 'capabilities.private.json'):
+            if path.is_symlink():
+                raise ValueError('Refusing symlink private configuration')
+        old_setup = read_json(setup_path) if setup_path.exists() else {}
+        if chosen is None and old_setup.get('public_url'):
+            chosen = validate_public_url(old_setup['public_url'])
+        if credentials_path.exists():
+            credentials = read_json(credentials_path)
+            if not isinstance(credentials, dict) or set(credentials) != set(ROLES):
+                raise ValueError('Incomplete credentials file; explicit recovery needed')
+            for role, token in credentials.items():
+                try:
+                    principal = db.principal(token)
+                except Denied:
+                    # Pairing deliberately rotates intake; its old bootstrap copy is not restored.
+                    if role == 'intake':
+                        continue
+                    raise ValueError('Role credential invalid; explicit recovery needed') from None
+                if principal['role'] != role or principal['participant'] != 'owner':
+                    raise ValueError('Credential identity mismatch; explicit recovery needed')
+        else:
+            with db.connect() as c:
+                if c.execute('SELECT COUNT(*) FROM participants').fetchone()[0] or c.execute('SELECT COUNT(*) FROM tokens').fetchone()[0]:
+                    raise ValueError('Credentials missing from existing store; explicit recovery needed')
+            credentials = db.provision()
+            atomic_json(credentials_path, credentials)
+        caps = db.home / 'capabilities.private.json'
+        if not caps.exists():
+            atomic_json(caps, {'status': 'awaiting_actual_host_probe', 'receipts': {}})
+        required = {'WELLBEING_MVP_HOME': str(db.home)}
+        if chosen:
+            required['WELLBEING_PUBLIC_URL'] = chosen
+        servers = {}
+        for role, token in credentials.items():
+            if role != 'intake':
+                servers['wellbeing-' + role] = {'command': sys.executable,
+                    'args': [str(ROOT / 'scripts' / 'run_mcp.py')],
+                    'env': {**required, 'WELLBEING_ROLE_TOKEN': token}}
+        mcp_path = db.home / 'mcp.private.json'
+        atomic_json(mcp_path, {'mcpServers': servers})
+        receipt = {'version': '0.2.0', 'private_home': str(db.home), 'database': 'initialized',
+            'credentials': 'preserved_in_private_file', 'mcp_config': str(mcp_path),
+            'capabilities': 'actual_host_receipts_required', 'agents': 'definitions_not_spawned',
+            'iphone': 'awaiting_actual_device_intake', 'channel': 'actual_host_connector_required',
+            'scheduler': 'external_registration_required', 'encryption_at_rest': 'not_provided',
+            'serve_command': [sys.executable, str(ROOT / 'scripts' / 'run_server.py')],
+            'host_tick_command': [sys.executable, str(ROOT / 'scripts' / 'host_tick.py'), '--help'],
+            'required_environment': required}
+        if chosen:
+            receipt['public_url'] = chosen
+        atomic_json(setup_path, receipt)
+        return receipt
+    finally:
+        lock.unlink(missing_ok=True)
 
 
 def main():
-    p = argparse.ArgumentParser()
-    p.add_argument('--home')
-    p.add_argument('--public-url')
-    p.add_argument('--install', action='store_true', help='Install pinned optional runtime in a private venv')
-    args = p.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--home'); parser.add_argument('--public-url')
+    parser.add_argument('--install', action='store_true')
+    args = parser.parse_args()
+    if args.public_url:
+        validate_public_url(args.public_url)
     if args.install:
         import venv
-        private_home = Database(args.home).home
-        venv_dir = private_home / 'runtime-venv'
-        venv.create(venv_dir, with_pip=True)
-        python = venv_dir / ('Scripts/python.exe' if os.name == 'nt' else 'bin/python')
-        subprocess.run([str(python), '-m', 'pip', 'install', '-r', str(ROOT / 'requirements-mvp.txt')], check=True)
-        subprocess.run([str(python), __file__, '--home', str(private_home)] + (['--public-url', args.public_url] if args.public_url else []), check=True)
-        return
-    print(json.dumps(bootstrap(args.home, args.public_url), ensure_ascii=True, indent=2))
+        db = Database(args.home); runtime = db.home / 'runtime-venv'
+        if runtime.is_symlink():
+            raise ValueError('Refusing symlink runtime directory')
+        python = runtime / ('Scripts/python.exe' if os.name == 'nt' else 'bin/python')
+        if not python.exists():
+            venv.create(runtime, with_pip=True)
+        subprocess.run([str(python), '-m', 'pip', 'install', '--disable-pip-version-check', '-r', str(ROOT / 'requirements-mvp.txt')], check=True)
+        command = [str(python), str(Path(__file__).resolve()), '--home', str(db.home)]
+        if args.public_url:
+            command += ['--public-url', args.public_url]
+        subprocess.run(command, check=True)
+    else:
+        print(json.dumps(bootstrap(args.home, args.public_url), ensure_ascii=True, indent=2))
 
 
 if __name__ == '__main__':

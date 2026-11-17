@@ -1,14 +1,14 @@
-"""Official SDK stdio tools; role credential supplied by private host configuration."""
+"""Official MCP v1 SDK stdio interface. Stdout belongs exclusively to the protocol."""
 import os
 from mcp.server.fastmcp import FastMCP
 from .database import Database
-from .service import Service
+from .service import Service, require_role
 
 
-def create_mcp(home=None, token=None):
-    db = Database(home)
-    service = Service(db)
-    credential = token or os.environ.get('WELLBEING_ROLE_TOKEN', '')
+def create_mcp(home=None, token=None, public_url=None):
+    db = Database(home); service = Service(db)
+    credential = token if token is not None else os.environ.get('WELLBEING_ROLE_TOKEN', '')
+    base = public_url if public_url is not None else os.environ.get('WELLBEING_PUBLIC_URL', '')
     mcp = FastMCP('Wellbeing MVP')
 
     def principal():
@@ -16,65 +16,94 @@ def create_mcp(home=None, token=None):
 
     @mcp.tool()
     def wellbeing_status() -> dict:
-        """Actual intake freshness, roles and pending delivery count; not health interpretation."""
+        """Scoped observations and actual receipts; transport does not establish device acceptance."""
         return service.status(principal())
 
     @mcp.tool()
     def wellbeing_records(category: str | None = None, metric: str | None = None, limit: int = 100) -> list:
-        """Read only role-authorized Health evidence, preserving source, units and timestamps."""
+        """Read role-authorized Health evidence without summing or interpreting unknown values."""
         return service.records(principal(), category, metric, limit)
 
     @mcp.tool()
     def wellbeing_entries(kind: str | None = None) -> list:
-        """Read role-scoped meal/workout/context/findings or restricted emotional notes."""
+        """Read scoped entries. Ordinary host/manager reads exclude emotional notes."""
         return service.entries(principal(), kind)
 
     @mcp.tool()
     def wellbeing_record_entry(entry: dict) -> dict:
-        """Persist a real source-message-backed report, correction, finding, plan or prepared packet.
+        """Store source-message-backed entry/correction. Host supplies real vision/transcription.
 
-        Meal: {id,kind:'meal',payload:{meal,occurred_at,source_kind,description,...}}.
-        Photo nutrients require nutrient_certainty:'estimate'. Do not fabricate transcription.
+        Meal payload requires meal,occurred_at with timezone,source_kind; photo_estimate
+        requires nutrient_certainty=estimate. Skipped/declined meals are not zero food.
         """
         return service.write_entry(principal(), entry)
 
     @mcp.tool()
-    def wellbeing_task(operation: str, task: dict) -> dict | None:
-        """Create/claim/report/review/close bounded team work; actual host performs inference.
+    def wellbeing_tasks() -> list:
+        """List scoped task IDs and states; definitions are not spawned agents."""
+        return service.tasks(principal())
 
-        create: id,role,objective,acceptance,evidence_ids. claim: {}. report: id,
-        claim_token,result,uncertainty. review: id,decision accept/revise,reason. close: id.
+    @mcp.tool()
+    def wellbeing_task(operation: str, task: dict) -> dict | None:
+        """create/claim/get/report/review/close bounded work. Claim returns minimum evidence.
+
+        create: id,role,objective,acceptance,evidence_ids. report: id,claim_token,result,
+        uncertainty. review: id,decision accept/revise,reason. Different role reviews.
         """
         return service.task(principal(), operation, task)
 
     @mcp.tool()
     def wellbeing_packet() -> dict:
-        """Get evidence and prepared sections for Manager/CoS newsletter; not a diagnosis."""
+        """Get prepared sections and scoped evidence for the host's attention decision."""
         return service.packet(principal())
 
     @mcp.tool()
     def wellbeing_configure(settings: dict) -> dict:
-        """Apply participant-authorized scope/timezone/meal times/pause. Only host or manager.
+        """Apply actual participant choices. Scope reductions invalidate derived copies.
 
-        Setting scopes cancels stale queued tasks and packets; confirm actual data recipients.
+        Capability status verified requires receipt_ref and checked_at. Native instances
+        require instance_id and receipt_ref. These are host attestations, not native creation.
         """
         return service.configure(principal(), settings)
 
     @mcp.tool()
-    def wellbeing_delivery_claim() -> list:
-        """Host claims pending packets. Send through real authorized channel; ack actual receipt.
+    def wellbeing_pairing() -> dict:
+        """Create private expiring single-use phone setup link using configured public HTTPS URL."""
+        return service.create_pairing(principal(), base)
 
-        No call to this tool sends a WhatsApp message. Host must have a real connector.
+    @mcp.tool()
+    def wellbeing_delivery_claim() -> list:
+        """Claim pending output for actual host channel. Never automatically resend expired leases.
+
+        Use idempotency_key with channel if supported. Send before lease_until, respect
+        cancellation and reconcile uncertain results. This tool itself sends nothing.
         """
-        p = principal()
-        if p['role'] == 'host':
-            service.tick(p['participant'])
+        p = principal(); require_role(p, 'host'); service.active(p)
+        service.tick(p['participant'])
         return service.claim_outbox(p)
 
     @mcp.tool()
     def wellbeing_delivery_ack(delivery: dict) -> dict:
-        """Record actual channel receipt with id,claim_token,receipt_ref; not read/adoption."""
+        """Record actual receipt_ref plus id and claim_token; delivery does not establish reading."""
         return service.acknowledge(principal(), delivery)
+
+    @mcp.tool()
+    def wellbeing_delivery_reconcile(delivery: dict) -> dict:
+        """Host supplies id,outcome delivered/not_sent/unknown,receipt_ref after channel lookup.
+
+        Retry only after confirmed not_sent. Unknown stays uncertain without auto resend.
+        """
+        return service.reconcile_delivery(principal(), delivery)
+
+    @mcp.tool()
+    async def wellbeing_opengym(operation: str, arguments: dict) -> dict:
+        """Optional configured OpenGym read/search/preview. Writes and media extraction disabled."""
+        from .opengym import OpenGym
+        p = principal(); require_role(p, 'host', 'manager', 'analyst', 'coach')
+        cfg = service.active(p)
+        if not cfg['opengym']['enabled']:
+            return {'status': 'not_configured'}
+        return await OpenGym.from_environment(db.home).run(operation, arguments)
 
     return mcp
 

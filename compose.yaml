@@ -1,0 +1,40 @@
+# First initialize explicitly:
+# docker compose run --rm wellbeing python scripts/bootstrap.py --home /state --public-url https://YOUR-APPROVED-HOST
+# Then: docker compose up -d --build
+# Import role credentials through private host configuration; never paste them into this file.
+# Bind an existing HTTPS reverse proxy to 127.0.0.1:8787. Phone acceptance remains separate.
+# Back up with SQLite online backup after quiescing host delivery; protect volume/backups.
+# A restored backup can contain already-sent outbox rows: reconcile against channel history before enabling delivery.
+services:
+  wellbeing:
+    build: .
+    init: true
+    restart: unless-stopped
+    user: "10001:10001"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    environment:
+      WELLBEING_MVP_HOME: /state
+      WELLBEING_PUBLIC_URL: ${WELLBEING_PUBLIC_URL:?Set an approved stable HTTPS URL}
+      WELLBEING_BIND: 0.0.0.0
+      PORT: "8787"
+    ports:
+      - "127.0.0.1:8787:8787"
+    volumes:
+      - wellbeing-private:/state
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    healthcheck:
+      test: ["CMD", "python", "-c", "import json,urllib.request; r=json.load(urllib.request.urlopen('http://127.0.0.1:8787/healthz',timeout=3)); raise SystemExit(0 if r.get('ok') else 1)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    logging:
+      driver: local
+      options:
+        max-size: "5m"
+        max-file: "2"
+volumes:
+  wellbeing-private:
