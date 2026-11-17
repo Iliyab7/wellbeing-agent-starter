@@ -1,6 +1,6 @@
 # Working on Wellbeing Agent Starter
 
-This public implementation is moving to the 0.2.0 host-installable MVP. Before changing behavior read README.md, START-HERE.md, docs/architecture.md, docs/source-analysis.md and docs/harvey-handoff.md. Participant-host instructions live in INSTALL.md, CHAT-STARTER.md and agents/. During integration, reconcile older design documents with actual runtime source and the current delivery brief; do not present historical intentions as implemented features.
+This public implementation provides the 0.2.0 host-installable MVP with locally verified code and transport; package and live acceptance gates are tracked in qa/mvp-verification.json. Before changing behavior read README.md, START-HERE.md, docs/architecture.md, docs/source-analysis.md and docs/harvey-handoff.md. Participant-host instructions live in INSTALL.md, CHAT-STARTER.md and agents/. During integration, reconcile older design documents with actual runtime source and the current delivery brief; do not present historical intentions as implemented features.
 
 The requested first host is ChatGPT Dot. CoS remains outside the wellbeing team and owns the relationship, authority, coordination and attention gate. Retain Manager, Analyst and Coach as the three core roles and the explicitly requested Emotional Companion as a fourth bounded responsibility. Roles are not a mandatory pipeline; domains do not each need permanent agents. Team work returns ready packets/links. Native workers require actual host support and creation receipts; otherwise disclose virtual roles.
 

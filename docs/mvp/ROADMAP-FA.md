@@ -4,7 +4,7 @@
 
 ## وضعیت فعلی و مسیر منتخب
 
-هماهنگ‌کننده در `2026-11-17T13:48:05Z` اجرای ۱۱۵ unittest در 9.049s با نتیجهٔ OK و یک skip مربوط به Windows symlink، همچنین loopback TCP/restart smoke و legacy demo موفق را ثبت کرده است. سه دقت زمانی غذا و نگاشت catalog چهارمسئولیتی به سه نقش legacy، بدون گسترش مجوزهای legacy، پیاده و محلی آزموده شده‌اند. این شاهد کد و دادهٔ ساختگی است؛ گوشی، Dot، WhatsApp، HTTPS واقعی، Docker، OpenGym زنده و backup/restore هنوز تأیید نشده‌اند. سوابق قبلی در [QA](../../qa/mvp-verification.json) نگه داشته شوند؛ نتیجهٔ نهایی بسته پس از اصلاح باقی‌مانده و بررسی ترکیبی ثبت می‌شود.
+نسخهٔ ۰٫۲٫۰، سه دقت زمانی غذا، سازگاری catalog با legacy و اصلاح reminder محلی تأیید شده‌اند. نتایج واقعی bridge/app گزارش‌شدهٔ هماهنگ‌کننده در [QA](../../qa/mvp-verification.json) ثبت‌اند: suite ترکیبی ۱۲۴تایی، TCP/restart smoke، demo و validator ساختار/لینک/metadata موفق؛ سپس suite نصب‌شده و no-site پس از تغییر صرفاً fixture موفق بوده‌اند، با skipهای آشکار. preflight ساخت، اعتبارسنجی ۱۲۷ فایل، build تکرارپذیر و اعتبارسنجی نسخهٔ استخراج‌شده موفق است؛ وضعیت بازبینی نهایی metadata پس از تغییر شواهد در QA مرجع است. کد ورودی canonical برابر `0c0bfe0ee62d061d66feec76e6c4048d44973521` پس از آزمون bytes معادل بسته شده است. گوشی، حساب Dot/native workers، کانال/زمان‌بند، HTTPS واقعی، Docker، OpenGym زنده و backup/restore تأیید نشده‌اند.
 
 پیش از اعلام نصب، Dot خواندن مخزن و اجرای مأموریت Work/Codex را واقعاً بررسی کند. مسیر پیش‌فرض، سرویس Python خصوصی روی محیط ماندگارِ مجاز، intake با HTTPS پایدار و احراز هویت، و executor محدودِ واگذارشده از Dot است. cloud task را سرور ورودی دائمی فرض نمی‌کنیم. محل hosting، مالک و حساب در دسترس هنوز gate باز است. [قرارداد میزبان](host-contract.md) و [استقرار](deployment.md) روش اجرا را مشخص می‌کنند؛ شرکت‌کننده بین MCP و API انتخاب نمی‌کند.
 
@@ -24,7 +24,7 @@ HAE به دلیل اپ موجود، REST و setup links مستند انتخاب 
 | ۶. تاریخچه و ادامه | زمینهٔ اولیه و اصلاح قابل اعتماد | import محدود در سقف retention با batching، سپس بازپخش اخیر؛ تکرار، correction، تأخیر و خطای منبع بررسی شوند. |
 | ۷. نقش و بسته | نتیجهٔ آماده با بار توجه کم | task محدود فقط برای مسئولیت لازم، report/review/close؛ Manager بخش فارسی آماده بسازد و CoS ارائه/تعویق را تصمیم بگیرد. |
 | ۸. غذا و تماس | ثبت ساده در کانال فعلی | photo/voice/text واقعی، ID پایدار و اصلاح همان entry؛ زمان‌های انتخابی وعده‌ها، quiet hours، budget، stop و send با receipt مستقل. |
-| ۹. عملیات و بسته | موفقیت ظاهری حذف شود | اصلاح reminder باقی‌مانده، backup/restore ایزوله، revoke/delete و uncertain-send؛ سپس پذیرش و build/validate همان revision. |
+| ۹. عملیات و بسته | موفقیت ظاهری حذف شود | اصلاح reminder و preflight بسته تأیید شده‌اند؛ بازبینی نهایی metadata در QA؛ backup/restore ایزوله و uncertain-send واقعی و پذیرش جدا لازم‌اند. |
 
 فرمان نصب از root:
 
@@ -79,7 +79,7 @@ exact، `occurred_at` دارای timezone نگه می‌دارد و `occurred_da
 
 unknown هیچ‌یک از occurred_at/occurred_date را ندارد و reminder تاریخ‌دار را سرکوب نمی‌کند. day فقط reminder همان روز و همان meal را سرکوب می‌کند. correction با همان ID انجام شود. ثبت/خواندن این سه حالت محلی آزموده شده است؛ آزمون کانال و فهم رسانهٔ واقعی جداست.
 
-یک اصلاح باقی‌مانده: اگر وعدهٔ امروز reminder هرگز ارسال‌نشده را cancelled کرده و سپس به روز قبل یا unknown اصلاح شود، rearm صحیح آن reminder تحت patch و regression مستقل است. عبور این اصلاح هنوز ثبت نشده؛ baseline ۱۱۵ آزمون شاهد آن نیست. reminder ارسال‌شده/نامعلوم نباید با این اصلاح خودکار دوباره ارسال شود.
+اصلاح rearm پیاده و با ۹ regression در suite ۱۲۴تایی محلی تأیید شده است: اگر وعدهٔ امروز reminder هرگز ارسال‌نشده را cancelled کرده و سپس به روز قبل یا unknown اصلاح شود، فقط reminder واجد شرایط زیر gateهای فعلی زمان، quiet hours و budget دوباره pending می‌شود. delivered/uncertain و شاهد lease/claim/receipt قبلی مانع تکرار خودکارند؛ ارسال کور مجاز نیست.
 
 مقدار و مواد نامعلوم unknown بمانند؛ nutrients عکس estimate هستند و label/weighed فقط به اندازهٔ شاهد اعتبار دارند. skipped/declined یا توقف یادآوری صفر کالری و شکست شرکت‌کننده نیست. گزارش غذا هدف کاهش وزن یا رژیم محدودکننده ایجاد نمی‌کند.
 
@@ -101,7 +101,7 @@ scope فعلی پیش از کار بررسی شود. تغییر scope derived co
 
 نمایش خصوصی: یک نمونهٔ انتخابی گوشی → receipt → readback پس از restart → replay/correction → task/review → بخش فارسی آماده → تصمیم CoS و در صورت اختیار send واقعی با receipt. یک «صبحانهٔ امروز» بدون ساعت، correction و توقف یادآوری هم نشان داده شود. شرکت‌کننده فایده و بار توجه را ارزیابی کند؛ نگهداری شواهد شخصی نیازمند توافق است. repo عمومی فقط fixture و خلاصهٔ پالایش‌شده دارد.
 
-پس از ادغام اصلاح باقی‌مانده، با وابستگی‌های pinشده از root اجرا شود:
+آزمون‌های محلی ثبت شده‌اند؛ برای تکرار بررسی و تکمیل gate بسته، با وابستگی‌های pinشده از root اجرا شود:
 
 ```text
 python -m unittest discover -s tests -v
@@ -111,4 +111,4 @@ python scripts/build_release.py
 python scripts/validate_package.py
 ```
 
-نسخه/hash، محیط، نتیجه، failure و skip در QA ثبت شوند. مسیر standard-library قدیمی بدون وابستگی HTTP/MCP usable بماند. build/manifest موفق جای پذیرش گوشی، Dot یا کانال نیست. کارگر این آرتیفکت ابزار اجرا نکرده؛ نتایج بالا اجرای واقعیِ گزارش‌شدهٔ هماهنگ‌کننده‌اند.
+نسخه، محیط، نتیجه، failure و skip در QA ثبت شوند. digest آرشیو داخل QA بسته قرار نگیرد؛ artifact_sha256 null بماند و digest بیرون بسته در `dist/SHA256SUMS.txt` و GitHub asset ارائه شود. مسیر no-site قدیمی با skipهای توضیح‌داده‌شده موفق بوده؛ ۱۶ خطای timezone تلاش قبلی با UTC در fixtureهای عمومی/بین‌شرکت‌کننده اصلاح شد و فقط دو مورد واقعی bootstrap پیش‌فرض تهران بدون IANA data شرطی skip می‌شوند. نصب خصوصی، تکرار bootstrap با نسخهٔ ۰٫۲ و حفظ credentials، و health محلی مشاهده شده‌اند. CI دارای dependency install و TCP smoke است ولی اجرای remote تأیید نشده. build/manifest جای پذیرش گوشی، Dot یا کانال نیست؛ کارگر آرتیفکت ابزار اجرا نکرده است.

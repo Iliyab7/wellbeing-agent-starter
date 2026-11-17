@@ -1,87 +1,298 @@
 {
   "schema_version": 1,
   "version": "0.2.0",
-  "status": "final_composed_verification_pending",
-  "readiness": "code_acceptance_pending_coordinator_checks",
-  "evidence_origin": "Coordinator-supplied observations; artifact worker executed no tools or tests.",
+  "status": "local_synthetic_and_package_verified_live_acceptance_pending",
+  "readiness": "local_code_and_transport_verified_live_acceptance_pending",
+  "evidence_origin": "Actual bridge/app executions reported by the coordinator; artifact workers executed no tools or tests.",
+  "input_code_revision": "0c0bfe0ee62d061d66feec76e6c4048d44973521",
+  "revision_boundary": "The canonical code commit was sealed after equivalent tested source bytes. Observation times identify the executions; this is not a claim that those executions ran against an already sealed commit. Final evidence/manifest commits may follow.",
   "observed_baselines": [
     {
       "observed_at": "2026-11-17T12:34:27Z",
-      "source": "coordinator verification report supplied with the task",
-      "scope": "integrated runtime synthetic baseline before final release composition",
+      "source": "coordinator-supplied historical observation",
+      "scope": "synthetic runtime baseline before final composition",
       "unittest": {
-        "command": "python -m unittest discover -s tests -v",
         "status": "passed",
         "tests_run": 92,
         "skipped": 1,
         "duration_seconds": 7.912
       },
       "other_checks": [
-        {"check": "actual loopback TCP HTTP and restart smoke", "status": "passed"},
-        {"check": "legacy CLI demo", "status": "passed"}
+        {
+          "check": "loopback TCP HTTP/restart smoke",
+          "status": "passed"
+        },
+        {
+          "check": "legacy CLI demo",
+          "status": "passed"
+        }
       ],
-      "correction": "Coordinator reported replacing unsupported OpenGym SDK http_client with httpx_client_factory and adding a signature-bound SDK-path regression; subsequent checks passed.",
-      "limits": "Synthetic code/transport observations only; not final composed or live acceptance."
+      "correction": "OpenGym SDK client factory corrected to httpx_client_factory with a signature-bound regression.",
+      "limits": "Historical synthetic/local evidence, superseded for current readiness."
     },
     {
       "observed_at": "2026-11-17T13:17:39Z",
-      "source": "latest coordinator baseline supplied with the task",
-      "scope": "latest reported baseline before final role/documentation/runtime composition",
+      "source": "coordinator-supplied historical observation",
       "unittest": {
-        "command": "python -m unittest discover -s tests -v",
         "status": "passed",
         "tests_run": 104,
         "skipped": 1,
+        "duration_seconds": 9.594,
         "skip_reason": "Windows symlink fixture unavailable"
       },
       "other_checks": [
-        {"check": "actual loopback TCP HTTP and restart smoke", "status": "passed"},
-        {"check": "legacy CLI demo", "status": "passed"}
+        {
+          "check": "loopback TCP HTTP/restart smoke",
+          "status": "passed"
+        },
+        {
+          "check": "legacy CLI demo",
+          "status": "passed"
+        }
       ],
-      "limits": "The role/documentation composition exposed a legacy catalog compatibility regression. Its separately prepared correction and meal precision changes require final composed checks. Exact tested artifact hashes were not supplied."
+      "limits": "Precedes final catalog, meal precision and reminder correction verification."
+    },
+    {
+      "observed_at": "2026-11-17T13:48:05Z",
+      "source": "coordinator-supplied historical observation",
+      "unittest": {
+        "status": "passed",
+        "tests_run": 115,
+        "skipped": 1,
+        "duration_seconds": 9.049,
+        "skip_reason": "Windows symlink fixture unavailable"
+      },
+      "other_checks": [
+        {
+          "check": "loopback TCP HTTP/restart smoke",
+          "status": "passed"
+        },
+        {
+          "check": "legacy CLI demo",
+          "status": "passed"
+        }
+      ],
+      "limits": "Verified temporal precision and legacy catalog projection; precedes reminder rearming fix."
     }
   ],
   "final_composed_verification": {
-    "status": "pending",
+    "status": "passed_local_code_and_package_checks",
     "executed_by_artifact_worker": false,
-    "input_code_revision": null,
+    "input_code_revision": "0c0bfe0ee62d061d66feec76e6c4048d44973521",
     "artifact_sha256": null,
-    "observed_at": null,
-    "results": [],
+    "observed_at": "2026-11-17T14:05:24.386Z",
+    "results": [
+      {
+        "observed_at": "2026-11-17T13:57:19.662Z",
+        "executor": "bridge/app, reported by coordinator",
+        "scope": "Final composed runtime including catalog compatibility, meal precision and minimal eligibility-checked reminder rearming fix with nine regressions.",
+        "checks": [
+          {
+            "command": "python -m unittest discover -s tests -v",
+            "status": "passed",
+            "tests_run": 124,
+            "duration_seconds": 9.225,
+            "skipped": 1,
+            "skip_reason": "Windows symlink fixture unavailable"
+          },
+          {
+            "command": "python scripts/mvp_smoke.py",
+            "status": "passed",
+            "scope": "loopback TCP HTTP and restart"
+          },
+          {
+            "command": "python scripts/demo.py",
+            "status": "passed"
+          },
+          {
+            "check": "public structure/link/metadata validator",
+            "status": "passed",
+            "limits": "Does not establish release build or extracted archive validation."
+          }
+        ],
+        "reminder_boundary": "Correction from today's meal to a previous day or unknown can rearm only an eligible never-sent cancelled reminder. Delivered, uncertain and prior-lease evidence prevent blind resend."
+      },
+      {
+        "observed_at": "2026-11-17T14:05:24.386Z",
+        "executor": "bridge/app, reported by coordinator",
+        "scope": "Only test-fixture portability changed after the preceding observation; runtime unchanged.",
+        "checks": [
+          {
+            "command": "python -m unittest discover -s tests -v",
+            "environment": "optional dependencies installed",
+            "status": "passed",
+            "tests_run": 124,
+            "duration_seconds": 8.652,
+            "skipped": 1,
+            "skip_reason": "Windows symlink fixture unavailable"
+          },
+          {
+            "command": "python -S -m unittest discover -s tests -v",
+            "environment": "no site packages",
+            "status": "passed",
+            "tests_run": 124,
+            "duration_seconds": 6.394,
+            "skipped": 10,
+            "skip_breakdown": {
+              "optional_http_mcp_transport": 7,
+              "bootstrap_cases_requiring_default_Tehran_IANA_data": 2,
+              "windows_symlink": 1
+            }
+          },
+          {
+            "command": "python -S scripts/demo.py",
+            "status": "passed"
+          }
+        ],
+        "corrected_failure": "An earlier no-site attempt had 16 timezone errors. Generic and cross-participant fixtures now use explicit UTC; only two actual default-Tehran bootstrap cases conditionally skip when IANA data is unavailable. Full installed-dependency case coverage was preserved."
+      }
+    ],
+    "local_installation": {
+      "status": "observed_local_only",
+      "observations": [
+        "Private bootstrap --install previously completed.",
+        "Repeat current bootstrap reported version 0.2 and preserved credentials.",
+        "Fresh local v0.2 /healthz was healthy."
+      ],
+      "limits": "Separate coordinator-reported observations without supplied execution timestamps; no real health data or public HTTPS acceptance. Private paths, ports and identifiers are omitted."
+    },
+    "ci": {
+      "configuration": "Main CI includes dependency installation and TCP smoke across the existing matrix.",
+      "remote_execution": "not_observed_at_prepublication_receipt",
+      "results_url": "https://github.com/Iliyab7/wellbeing-agent-starter/actions/workflows/ci.yml"
+    }
+  },
+  "package_checks": {
+    "status": "passed",
+    "input_code_revision": "0c0bfe0ee62d061d66feec76e6c4048d44973521",
+    "artifact_sha256": null,
+    "results": [
+      {
+        "observed_at": "2026-11-17T14:08:12.5805643Z",
+        "executor": "bridge/app, reported by coordinator",
+        "scope": "Release preflight against the canonical source input, before final evidence/Markdown changes only; runtime and build scripts unchanged.",
+        "checks": [
+          {
+            "command": "python scripts/build_release.py --source-revision 0c0bfe0ee62d061d66feec76e6c4048d44973521",
+            "status": "passed"
+          },
+          {
+            "check": "full manifest/hash/public validator",
+            "status": "passed",
+            "files_validated": 127
+          },
+          {
+            "check": "second build produced identical archive SHA",
+            "status": "passed",
+            "scope": "Determinism for unchanged preflight input; no final archive digest claimed."
+          },
+          {
+            "check": "extracted archive validator",
+            "status": "passed",
+            "files_validated": 127
+          }
+        ]
+      }
+    ],
+    "final_metadata_recheck": {
+      "status": "passed",
+      "observed_at": "2026-11-17T14:24:13.6500786Z",
+      "results": [
+        {
+          "status": "passed",
+          "check": "build_release with exact input revision"
+        },
+        {
+          "check": "full public manifest/hash/link/metadata validation",
+          "files_validated": 127,
+          "status": "passed"
+        },
+        {
+          "check": "extracted final evidence archive validation",
+          "files_validated": 127,
+          "status": "passed"
+        }
+      ]
+    },
     "required_commands": [
-      "python -m pip install -r requirements-mvp.txt",
-      "python -m unittest discover -s tests -v",
-      "python scripts/demo.py",
-      "python scripts/mvp_smoke.py",
-      "python scripts/build_release.py --source-revision INPUT_CODE_COMMIT",
+      "python scripts/build_release.py --source-revision 0c0bfe0ee62d061d66feec76e6c4048d44973521",
       "python scripts/validate_package.py"
     ],
     "additional_review": [
-      "Verify tests/test_role_catalog.py and legacy CLI behavior after adding companion to the portable catalog; do not expand legacy consent roles.",
-      "Verify tests/test_meal_precision.py against the integrated runtime.",
-      "Validate the extracted release archive and record the archive SHA-256.",
-      "Record actual failures, skips, dependency versions and exact input revision; do not reuse baseline results for changed artifacts."
-    ]
+      "Revalidate the final extracted release contents after evidence/Markdown changes and record actual results, failures and skips.",
+      "Recheck public structure, links and metadata after applying the final evidence changes.",
+      "The archive digest belongs outside archive-included QA: external dist/SHA256SUMS.txt and the GitHub release asset. Do not embed a final archive hash here."
+    ],
+    "limits": "Local code and package checks passed. Real host/device/channel/operations gates remain unverified. Archive SHA is supplied externally; GitHub CI was not yet observed at this pre-publication receipt."
   },
   "unverified_gates": [
-    {"gate": "public_https_deployment", "status": "unverified", "needed": "Approved always-on host, stable HTTPS, supervised restart and private persistent volume."},
-    {"gate": "backup_restore", "status": "unverified", "needed": "Consistent private SQLite backup and observed restore/readback."},
-    {"gate": "iphone_hae", "status": "unverified", "needed": "Participant-selected permissions, first real upload/readback, history/replay/correction and measured delayed/background catch-up."},
-    {"gate": "chatgpt_dot", "status": "unverified", "needed": "Actual account capability and Work/Codex executor receipts; private service access and scoped role task/report/review."},
-    {"gate": "native_agents", "status": "unverified", "needed": "Actual host creation and execution receipts; otherwise disclose virtual roles."},
-    {"gate": "whatsapp_or_selected_channel", "status": "unverified", "needed": "Authorized real send, receipt and uncertain-send reconciliation; user reading and action remain separate."},
-    {"gate": "durable_host_trigger", "status": "unverified", "needed": "Actual job creation/readback, timezone, cancellation and observed execution if selected."},
-    {"gate": "docker", "status": "unverified", "needed": "Actual image build, startup, restart and persistent-volume check."},
-    {"gate": "opengym_server", "status": "unverified", "needed": "Optional authorized configured-server read/preview and separately permitted write checks."},
-    {"gate": "cloud_memory_mirror", "status": "unimplemented_adapter", "needed": "Selected Sheets/Notion adapter with authorized readback, correction, revocation and deletion; no implicit synchronization."},
-    {"gate": "remote_chatgpt_mcp_oauth", "status": "pending_adapter", "needed": "Authenticated remote MCP transport and OAuth integration; REST/OpenAPI and local stdio do not register web tools."},
-    {"gate": "participant_acceptance", "status": "unverified", "needed": "Agreed purpose/scope/retention/attention and actual usefulness/burden feedback; agreement to retain minimum evidence."}
+    {
+      "gate": "public_https_deployment",
+      "status": "unverified",
+      "needed": "Approved always-on host, stable HTTPS, supervised restart and private persistent volume."
+    },
+    {
+      "gate": "backup_restore",
+      "status": "unverified",
+      "needed": "Consistent private SQLite backup and observed isolated restore/readback."
+    },
+    {
+      "gate": "iphone_hae",
+      "status": "unverified",
+      "needed": "Participant-selected permissions, real upload/readback, history/replay/correction and measured delayed/background behavior."
+    },
+    {
+      "gate": "chatgpt_dot",
+      "status": "unverified",
+      "needed": "Actual account executor/tool receipts and scoped task/report/review."
+    },
+    {
+      "gate": "native_agents",
+      "status": "unverified",
+      "needed": "Actual host creation/execution receipts; otherwise disclose virtual roles."
+    },
+    {
+      "gate": "whatsapp_or_selected_channel",
+      "status": "unverified",
+      "needed": "Authorized real send, receipt and uncertain-send reconciliation."
+    },
+    {
+      "gate": "durable_host_trigger",
+      "status": "unverified",
+      "needed": "Actual selected job creation/readback, timezone, cancellation and observed execution."
+    },
+    {
+      "gate": "docker",
+      "status": "unverified",
+      "needed": "Actual build, startup, restart and persistent-volume checks."
+    },
+    {
+      "gate": "opengym_server",
+      "status": "unverified",
+      "needed": "Optional authorized configured-server read/search/preview; writes and licensed-media extraction remain disabled."
+    },
+    {
+      "gate": "cloud_memory_mirror",
+      "status": "unimplemented_adapter",
+      "needed": "Authorized Sheets/Notion adapter with verified readback, correction, revocation and deletion."
+    },
+    {
+      "gate": "remote_chatgpt_mcp_oauth",
+      "status": "unimplemented_adapter",
+      "needed": "Authenticated remote MCP transport and OAuth integration; local stdio and OpenAPI do not register web tools."
+    },
+    {
+      "gate": "participant_acceptance",
+      "status": "unverified",
+      "needed": "Agreed purpose/scope/retention/attention, usefulness/burden feedback and agreement to retain minimum evidence."
+    }
   ],
   "evidence_policy": [
-    "Synthetic fixtures only in the public repository.",
-    "No credentials, participant state, real health records, private Dot identifiers or transcripts in public evidence.",
-    "Manifest source_revision identifies the input code commit; a later generated-metadata commit may differ.",
-    "Package checks, fixture tests, live transport, device results and participant acceptance are separate evidence levels.",
-    "A second-brain project entry is not private memory synchronization or clinical validation."
+    "Only synthetic fixtures and public-safe project evidence belong in the repository.",
+    "No health records, credentials, private identifiers, machine paths or raw private history.",
+    "source_revision identifies the canonical source input; later evidence/manifest commits may differ.",
+    "Local tests, package checks, remote CI, live host/device results and participant acceptance are separate evidence.",
+    "Delivery, reading, adoption, execution and observed outcome are separate.",
+    "Project evidence does not synchronize participant memory or establish clinical validity."
   ]
 }

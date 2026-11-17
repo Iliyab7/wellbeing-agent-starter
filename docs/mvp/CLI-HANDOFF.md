@@ -10,7 +10,7 @@ ChatGPT Dot is CoS outside the wellbeing team: relationship, authority, coordina
 
 The runtime supplied for integration includes private SQLite primary memory, authenticated selected HAE intake for eight categories, replay/corrections and revisions, scoped reads/entries, task/report/review, temporary pairing, generated HAE setup links and a leased delivery outbox. Meal reporting uses actual host text/vision/transcription capabilities; reminders are optional and retain quiet-hour, budget, suppression and delivery distinctions. OpenGym is optional configured tooling. The coordinator reported correcting its SDK client factory and adding a signature-bound regression.
 
-Bootstrap/dependency installation assets, root setup entrypoints and runtime integration have been prepared; obsolete earlier claims that these files or the SDK fix are missing are superseded. The final composition adds role/catalog reconciliation and meal precision changes. Verify those changes together, including [catalog compatibility tests](../../tests/test_role_catalog.py) and [meal precision tests](../../tests/test_meal_precision.py), before accepting the candidate.
+Bootstrap/dependency installation, root setup entrypoints and runtime integration are implemented. [Catalog compatibility](../../tests/test_role_catalog.py), [meal precision and reminder correction](../../tests/test_meal_precision.py) are locally verified together. The eligibility-checked rearm fix preserves delivered, uncertain and prior-lease evidence; it does not blindly resend. Package and live acceptance remain separate gates.
 
 The standard-library JSON CLI remains a separate reference contract. SQLite state is private and outside the repository; neither state format is implicitly migrated or synchronized. Manager-owned Sheets/Notion mirrors require their own authorized adapter, readback, correction and deletion. There is no verified cloud synchronization.
 
@@ -32,12 +32,13 @@ Use useful ECC architecture/verification and V2 compact entry, progressive skill
 
 ## Observed evidence and current status
 
-The coordinator reported:
+Actual bridge/app executions reported by the coordinator:
 
-- **2026-11-17T12:34:27Z:** 92 unittest tests in 7.912 seconds, one skip; actual loopback TCP HTTP/restart smoke and legacy demo passed.
-- **2026-11-17T13:17:39Z:** latest baseline of 104 tests, one Windows symlink skip; loopback TCP/restart smoke and legacy demo passed.
+- **2026-11-17T13:57:19.662Z:** 124 tests in 9.225s, OK with one Windows symlink skip; loopback TCP HTTP/restart smoke, legacy demo and public structure/link/metadata validator passed.
+- **2026-11-17T14:05:24.386Z:** after fixture-only portability changes, installed 124 tests in 8.652s passed with one skip; no-site `python -S` 124 tests in 6.394s passed with ten explained skips, and the no-site legacy demo passed. Runtime unchanged.
+- **2026-11-17T14:08:12.5805643Z:** release preflight passed build, full manifest/hash/public validation for 127 files, identical archive SHA on second build and extracted archive validation for 127 files. Only final evidence/Markdown changed afterward; runtime/build scripts unchanged.
 
-The role/documentation batch exposed a legacy catalog regression; its separately prepared fix must accept the bounded MVP catalog without expanding legacy permissions. Neither baseline verifies the final composed tree, new release tooling or artifacts. This artifact worker executed no checks and returned unapplied replacements. [QA](../../qa/mvp-verification.json) records the observations and pending results.
+Catalog projection preserves legacy permissions; exact/day/unknown precision and the reminder rearm fix with nine regressions are locally verified. Earlier no-site timezone failures were corrected through explicit UTC generic/cross-participant fixtures; two actual default-Tehran bootstrap cases conditionally skip without IANA data, preserving installed coverage. [QA](../../qa/mvp-verification.json) records historical/current evidence and is authoritative for the final metadata recheck. Artifact workers executed no checks. Live acceptance remains pending.
 
 ## Final local verification
 
@@ -48,13 +49,13 @@ python -m pip install -r requirements-mvp.txt
 python -m unittest discover -s tests -v
 python scripts/demo.py
 python scripts/mvp_smoke.py
-python scripts/build_release.py --source-revision 1c700e30fb172a254bd9884b4c2c98c14a08f0bb
+python scripts/build_release.py --source-revision 0c0bfe0ee62d061d66feec76e6c4048d44973521
 python scripts/validate_package.py
 ```
 
-The explicit revision above is the coordinator-supplied input commit for this composition. Use the actual input code commit if the baseline changes. The builder can discover an exact checkout HEAD; an extracted archive may reuse its manifest's input revision or receive `--source-revision`. The manifest hashes identify packaged bytes; `source_revision` is input provenance, not a claim that uncommitted changes were tested at that commit or that a later metadata commit must equal it. Rebuilding unchanged input is deterministic.
+The explicit revision is the canonical source input sealed after equivalent tested bytes. Use the actual input code commit if source changes. The builder can discover checkout HEAD; an extracted archive may reuse its manifest's input revision or receive `--source-revision`. Manifest hashes identify packaged bytes; `source_revision` is input provenance, not a claim that tests ran against an already sealed commit or that a later evidence/manifest commit must equal it. Rebuilding unchanged input is deterministic.
 
-[The optional helper](../../scripts/ci_mvp.py) checks installed dependency pins and runs the same checks, stopping at the first failing command. It does not install packages or turn skipped tests into passes. Review skip reasons, validate the extracted ZIP, record final input revision/artifact hashes and update QA with actual results. The coordinator adds dependency installation to CI separately. Standard-library reference checks remain usable without HTTP/MCP dependencies.
+[The optional helper](../../scripts/ci_mvp.py) checks installed dependency pins and runs the same checks, stopping at the first failing command. It does not install packages or turn skips into passes. Main CI includes dependency installation and TCP smoke across the existing matrix; remote execution is unverified. Local test/demo/smoke and release preflight results are recorded; QA tracks the final metadata recheck after evidence changes. Leave its artifact_sha256 null and provide the final archive digest externally in `dist/SHA256SUMS.txt` and the GitHub release asset. Standard-library reference checks remain usable with disclosed optional-dependency/IANA skips.
 
 ## Open live gates and next owner
 
@@ -64,4 +65,4 @@ Then use [the acceptance checklist](ACCEPTANCE-FA.md) with one real participant-
 
 Real iPhone/HAE, Dot account execution, WhatsApp, public deployment, Docker, real OpenGym-server behavior and participant usefulness remain unverified. Emotional support is nonclinical; no diagnosis, treatment change or monitored crisis coverage is claimed. Retain live evidence only within participant agreement and outside the public repository.
 
-Next owner: coordinator composes and checks the candidate, records actual failures/skips and reviews the release. Authorized host/operator then closes the separate deployment/device/host/participant gates. Publishing, deployment and account access are outside this artifact worker's scope.
+Next owner: app applies the final evidence correction, rebuilds/revalidates the final archive and extracted contents, and mechanically records actual final_metadata_recheck receipts in QA. Authorized host/operator closes the separate deployment/device/host/channel/participant gates. Publishing, deployment and account access are outside this artifact worker's scope; no publication is claimed.

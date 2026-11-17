@@ -12,7 +12,7 @@
 - Add installation/deployment guidance, source-backed decisions, Persian roadmap, requirements and separate code/device/host acceptance gates.
 - Include installation assets in deterministic release archives, strengthen required-file checks and provide an optional full-check helper.
 
-Coordinator-observed baseline: 104 tests with one Windows symlink skip at 2026-11-17T13:17:39Z, passing loopback TCP/restart smoke and legacy demo. This precedes final composition of the role/documentation/runtime changes and does not verify this release candidate. Final composed checks are pending. Real iPhone/HAE background behavior, Dot account execution, WhatsApp delivery, public HTTPS deployment, Docker and a real OpenGym server remain unverified. See [verification evidence](qa/mvp-verification.json).
+Final local checks: 124 tests with one Windows symlink skip; no-site checks passed with ten explained optional/platform skips. Loopback TCP/restart smoke and legacy demo passed. Release preflight passed deterministic build, 127-file integrity validation and extracted validation. Current receipts and remaining real iPhone, Dot, channel/scheduler, public HTTPS, Docker, OpenGym-server and backup/restore gates are in [verification evidence](qa/mvp-verification.json).
 
 ## 2026-11-08 — shared-memory design and host protocol
 

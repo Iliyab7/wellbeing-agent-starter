@@ -1,14 +1,14 @@
 # پذیرش MVP: شاهد کد، میزبان و گوشی
 
-آخرین baseline تأمین‌شدهٔ هماهنگ‌کننده در `2026-11-17T13:48:05Z`: اجرای ۱۱۵ unittest در 9.049s با OK و یک skip مربوط به Windows symlink؛ loopback TCP/restart smoke و legacy demo نیز موفق بودند. سه دقت زمانی غذا و projection چهارمسئولیتی catalog به سه نقش legacy بدون گسترش مجوزهای legacy محلی آزموده شده‌اند. [QA](../../qa/mvp-verification.json) محل سوابق و ثبت نتیجهٔ نسخهٔ نهایی است.
+نتایج جاری در [QA](../../qa/mvp-verification.json) ثبت‌اند: در `2026-11-17T13:57:19.662Z`، ۱۲۴ تست در 9.225s با یک Windows symlink skip، TCP/restart smoke، demo و validator ساختار/لینک/metadata موفق بودند. پس از تغییر صرفاً fixture، در `2026-11-17T14:05:24.386Z` suite نصب‌شده دوباره ۱۲۴ تست در 8.652s با یک skip موفق بود؛ `python -S` نیز ۱۲۴ تست در 6.394s با ده skip توضیح‌داده‌شده و demo موفق داشت. کد ورودی canonical برابر `0c0bfe0ee62d061d66feec76e6c4048d44973521` است؛ commit پس از آزمون bytes معادل بسته شده است.
 
-این baseline پیش از اصلاح باقی‌ماندهٔ reminder و بررسی نهایی بسته است. کارگر این آرتیفکت هیچ ابزاری اجرا نکرده؛ آزمون‌های گزارش‌شده را هماهنگ‌کننده واقعاً اجرا کرده است. گوشی، Dot، WhatsApp، HTTPS واقعی، Docker، OpenGym زنده و backup/restore هنوز unverified هستند.
+سه دقت غذا، سازگاری catalog و اصلاح rearm با ۹ regression محلی تأیید شده‌اند. preflight در `2026-11-17T14:08:12.5805643Z` شامل build، اعتبارسنجی manifest/hash/public برای ۱۲۷ فایل، SHA یکسان build دوم و اعتبارسنجی ۱۲۷ فایل استخراج‌شده موفق بود. فقط شواهد/Markdown پس از آن تغییر کرده‌اند؛ وضعیت بازبینی نهایی metadata در [QA](../../qa/mvp-verification.json) مرجع است. اجراها متعلق به bridge/app و گزارش‌شدهٔ هماهنگ‌کننده‌اند؛ کارگر آرتیفکت ابزار اجرا نکرده است. گوشی، حساب Dot/native workers، کانال/زمان‌بند، HTTPS واقعی، Docker، OpenGym زنده و backup/restore هنوز unverified هستند؛ آداپتورهای cloud mirror و remote MCP/OAuth پیاده نشده‌اند.
 
 سطوح شاهد: S=fixture/کد، L=محلی/transport، H=میزبان/کانال واقعی، D=گوشی، P=عملیات ماندگار. هر نتیجه revision/hash، محیط، فرمان/عمل، زمان، pass/fail/not-run، محدودیت و مرجع شاهد داشته باشد. شاهد خصوصی فقط طبق توافق شرکت‌کننده نگهداری شود؛ گزارش عمومی دادهٔ سلامت ندارد.
 
 | شناسه/سطح | معیار قابل شکست | وضعیت |
 |---|---|---|
-| A01 S/L | suite، demo، smoke، build و validate روی نسخهٔ ترکیبی؛ مسیر legacy بدون HTTP/MCP usable و skipها آشکار. | baseline محلی موفق؛ final package pending |
+| A01 S/L | suite، demo، smoke، build و validate روی نسخهٔ ترکیبی؛ مسیر legacy بدون HTTP/MCP usable و skipها آشکار. | محلی و preflight بسته موفق؛ وضعیت final_metadata_recheck در QA |
 | A02 L/H | URL root بدون prompt دوم به INSTALL و executor واقعی برسد؛ capability probe، bootstrap دوباره بدون تغییر کلید/داده، readback پس از restart. | local baseline؛ Dot واقعی pending |
 | A03 P/D | مالک و حساب محیط مجاز مشخص؛ supervisor restart شود و HTTPS از گوشی در دسترس باشد؛ cloud task موقت کافی نیست. | pending؛ Docker/template شاهد deployment نیست |
 | A04 D | pairing خصوصی، انتخاب انسانی مجوز/خرید/scope؛ automation مرور و فعال، Manual Upload و تطبیق نمونهٔ گوشی با receipt/readback. | pending |
@@ -23,7 +23,7 @@
 | A13 H | Companion حمایت غیرپزشکی، یادداشت حداقلی و گیرندگان مجاز؛ بدون درمان یا پایش اضطراری خودکار؛ محدودیت میزبان مشترک روشن. | host evaluation pending |
 | A14 S/H | OpenGym not_configured صادقانه؛ initialize/list و mapping reviewed، search واقعی، رد write و عدم استخراج رسانه. | local adapter checks؛ live server pending |
 | A15 P | Connection.backup، restore ایزوله و scoped readback؛ تطبیق scope/token و history ارسال پیش از فعال‌سازی delivery. | procedure موجود؛ اجرا pending |
-| A16 S/L | correction وعدهٔ امروز به روز قبل/unknown، reminder cancelled واجد شرایط و هرگز ارسال‌نشده را درست rearm کند؛ پیام ارسال‌شده/نامعلوم خودکار تکرار نشود. | patch و regression مستقل pending؛ baseline ۱۱۵ شاهد آن نیست |
+| A16 S/L | correction وعدهٔ امروز به روز قبل/unknown، reminder cancelled واجد شرایط و هرگز ارسال‌نشده را درست rearm کند؛ پیام ارسال‌شده/نامعلوم خودکار تکرار نشود. | پیاده و در suite ۱۲۴تایی با ۹ regression محلی تأیید؛ شواهد prior lease/claim/receipt حفظ می‌شوند |
 
 ## پذیرش دقیق غذا
 
@@ -49,11 +49,11 @@
 {"meal":"snack","time_precision":"unknown","source_kind":"self_report"}
 ```
 
-باید هیچ occurrence field نداشته باشد و هیچ reminder تاریخ‌دار را سرکوب نکند. هر نمونه داخل entry با kind=meal و ID پایدار ثبت/readback شود؛ correction همان ID را نگه دارد. A16 ادامهٔ مستقل بررسی correction است، نه نشانهٔ پیاده‌نبودن خود precision.
+باید هیچ occurrence field نداشته باشد و هیچ reminder تاریخ‌دار را سرکوب نکند. هر نمونه داخل entry با kind=meal و ID پایدار ثبت/readback شود؛ correction همان ID را نگه دارد. A16 اکنون محلی تأیید شده است؛ rearm فقط برای reminder هرگز ارسال‌نشده و واجد شرایط با gateهای فعلی است و delivered/uncertain یا شاهد lease قبلی را خودکار تکرار نمی‌کند.
 
 ## بررسی نسخهٔ نهایی
 
-پس از اعمال اصلاح باقی‌مانده و نصب وابستگی‌های pinشده، از root:
+آزمون‌های محلی ثبت شده‌اند؛ برای تکرار بررسی و تکمیل gate بسته، با وابستگی‌های pinشده از root:
 
 ```text
 python -m unittest discover -s tests -v
@@ -63,4 +63,4 @@ python scripts/build_release.py
 python scripts/validate_package.py
 ```
 
-هماهنگ‌کننده نتیجهٔ واقعی و failure/skip را در QA ثبت کند. TestClient شاهد HTTP درون‌فرایندی، smoke شاهد loopback TCP، و MCP subprocess شاهد ابزار محلی است؛ هیچ‌کدام TLS عمومی، iOS background یا ارسال WhatsApp نیستند. بسته/manifest نسخهٔ 0.2.0 و entrypointهای جدید را پوشش دهند. pass نهایی نرم‌افزار جای gateهای H/D/P یا پذیرش فایده توسط شرکت‌کننده نیست.
+هماهنگ‌کننده نتیجهٔ واقعی build/validate و بررسی استخراج را در QA ثبت کند؛ artifact_sha256 داخل QA بسته null بماند و digest بیرون بسته در `dist/SHA256SUMS.txt` و GitHub asset ارائه شود. TestClient شاهد HTTP درون‌فرایندی، smoke شاهد loopback TCP و MCP subprocess شاهد ابزار محلی است؛ هیچ‌کدام TLS عمومی، iOS background یا ارسال WhatsApp نیستند. CI اکنون dependency install و TCP smoke دارد، ولی اجرای remote آن تأیید نشده است. pass نرم‌افزار جای gateهای H/D/P یا پذیرش فایده توسط شرکت‌کننده نیست.

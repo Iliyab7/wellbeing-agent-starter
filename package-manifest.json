@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "version": "0.1.0",
-  "source_revision": "e43881ec638d7d01afbe4a609954577f187b1558",
+  "version": "0.2.0",
+  "source_revision": "0c0bfe0ee62d061d66feec76e6c4048d44973521",
   "files": [
     {
       "path": ".gitattributes",
@@ -9,7 +9,7 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "9195feceea281907aedae1af07eb9fcb17467cfa92a1fec9824227b9849cac6d"
+      "sha256": "d8abbbeee55bb1bd004a9b43b7da5c7b388983538d2b1d077f58d86dff5b30d2"
     },
     {
       "path": ".gitignore",
@@ -24,36 +24,56 @@
       "sha256": "04c6581bc600421dd3a1b29bc3241ba8b7918ef547bc7a30eb2e7625ab745990"
     },
     {
+      "path": ".second-brain/entries/20261117T100000Z-host-installable-mvp.json",
+      "sha256": "68a0fefc84e2858bb9c5a70af26424756ccf39cdf4bdf3bd77db6f70854b4a34"
+    },
+    {
       "path": "AGENTS.md",
-      "sha256": "c72bf6924e197be7b479d360f4f963ac36eaecb1c62fbe5c0391a7966921dfa4"
+      "sha256": "3a6098cce9f6ce3bdee5c24db1044abe968a800aed020014818e8c49bc3d2b62"
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "2e52c48c85ab0f42782090f0c2947b401140f15a632a8978b582596996a408cd"
+      "sha256": "41c4d4c061fd943483f4cd57cb4f55d6261b37c6cc01eb51ac4832c6365e4b43"
     },
     {
       "path": "CHAT-STARTER.md",
-      "sha256": "7749a4bdaf44454adf41ad709b01762de603d48bc779f8372de92175e482ede9"
+      "sha256": "6f22c633cf57dab58a2a9754f297dc02dba71078db2d5ac20091d3452939e402"
+    },
+    {
+      "path": "Dockerfile",
+      "sha256": "3e532d4e3d3aa904c96f46f577e46835ac8676aeb99645fa93b7b48f8de8b588"
+    },
+    {
+      "path": "INSTALL.md",
+      "sha256": "e2690bda20301b46cb288b1983490d538f9c3384859d445ca0a71bb98223e2f9"
     },
     {
       "path": "README.en.md",
-      "sha256": "22fd5f154580015e49fc542edded1e18c0ea15aced1a5c7687c4e4d7cd41db37"
+      "sha256": "82ca921315819dd4adfa4707f89341d0530d57f9ab32ea9b0482cb8309c8cc70"
     },
     {
       "path": "README.md",
-      "sha256": "8a50f8c74acc36ed356f8a376e57d3cb417565e9b954bae2cc6188bdfa860e14"
+      "sha256": "a4e67818fa7ba49127ff40fe0324425b80de5d9bbd9a7a9b328eb47905b664d3"
     },
     {
       "path": "START-HERE.md",
-      "sha256": "c27a732045d811b517138a1f12891840fdd5e488e59b52d84eb470a3810ad901"
+      "sha256": "e5428295ea2b960174f73b7e129b978aad4556dbf89aa2945f34345177357ce5"
     },
     {
       "path": "VERSION",
-      "sha256": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67"
+      "sha256": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9"
+    },
+    {
+      "path": "WORK-PLAN.md",
+      "sha256": "132ab6c32fdc449bb428d00c6302de192694bc061431992c14e949f975a9959d"
+    },
+    {
+      "path": "adapters/chatgpt-dot.md",
+      "sha256": "5133b367f03053997211196d8371d2e36eb23edd66a927d723bfaba4724566df"
     },
     {
       "path": "adapters/dot.md",
-      "sha256": "7140191b5206657935741d0b03e82d1318c790d565e0e6a1fb5f16c3fe32b318"
+      "sha256": "c0de148b98ce8737fe6664824e02ba7d4e949272ef86db7a134abf734894ea7e"
     },
     {
       "path": "adapters/grok.md",
@@ -61,31 +81,39 @@
     },
     {
       "path": "adapters/host-capabilities.md",
-      "sha256": "1fd6c306c7ff8a67f3b37a78db3ab8d86d71a567f17289b45a90513799bf0fa4"
+      "sha256": "ad6a14e9aa82d4243afd3d187ca93f6dcc0d4eb2e0651576f58d936a8e027aca"
     },
     {
       "path": "agents/analyst.md",
-      "sha256": "722884dec57ad6b982061fef3615b4f75ad6d7c597f1670cce55fec2bd817fd6"
+      "sha256": "1aaac30933546d514e272424d3d9117c46732df2a7bac6a92788692817e021f4"
     },
     {
       "path": "agents/chief-of-staff.md",
-      "sha256": "cc5b5ec999a5a271bb124e1015d9a08a64057a33ff32b8390028afede5859f66"
+      "sha256": "c41eb50a0b9ba68e2c8853de4c5beb6248b70e9d0b4c337aef492f104952b136"
     },
     {
       "path": "agents/coach.md",
-      "sha256": "30257c9afa62b906138c5909a0c10a2ca9b8842ee207daf1340efa03ef30878e"
+      "sha256": "f42a9ce7b0809728ded53a3ca89a1277f3213762a43daea86f9c56d9f55ec424"
+    },
+    {
+      "path": "agents/companion.md",
+      "sha256": "d595bceb89087adc0f6b71b6f005058d0b1a04c7e96f50bebac9babed4fc345d"
     },
     {
       "path": "agents/manager.md",
-      "sha256": "b98b5b0afd77a22e2e5b3ca33fb7acbc01db8679230c643ee16a16d4ab9395db"
+      "sha256": "ccfe74eee28dee736eec436ff3da03fc1d7e50655281d77ec9298dc00bbab2b1"
     },
     {
       "path": "agents/registry.json",
-      "sha256": "18e6384c3aca090a84fcfb7c94bf430b97b48cfc1829d65eb7afce3c62d7b4c0"
+      "sha256": "73b9ab3b24f46ec01ffd47912b7be319cea2fe6384419d546484b79a3ed29636"
     },
     {
       "path": "agents/team-blueprint.json",
-      "sha256": "6db1ff2edce6d89e9a5ec760feb44d61222ff1b1861423e445d0bacfa1ff87e5"
+      "sha256": "4f1561f7517df5187a5d2342b258878a94bcf1a63852df4a96b9629699cfa8d7"
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "557f34a79211888d8d362f4d44a310368b737d8d47a46a3aaa433c546428062d"
     },
     {
       "path": "docs/acceptance-tests.md",
@@ -93,11 +121,47 @@
     },
     {
       "path": "docs/architecture.md",
-      "sha256": "21dd9f7fabd455d4cf3ea2fac8833961c8acff0bb328c574e441e9e18f24090d"
+      "sha256": "b7fc88c6f31ffbdabd098a1654c2551b858ac9acc2bd51f813119cd21c774008"
     },
     {
       "path": "docs/harvey-handoff.md",
-      "sha256": "dcee4f6eda5a632a0ee4be3a4989e73e1bac576e977c17b88cf141e7bc0a3f76"
+      "sha256": "925eccc5133948b51fca82ff4463d52b82cf9b1a4da0b920f111fabb992923e6"
+    },
+    {
+      "path": "docs/mvp/ACCEPTANCE-FA.md",
+      "sha256": "d750a5985a976532bb15399648aa15882b2b08386f9ba325c40dcf18bc827604"
+    },
+    {
+      "path": "docs/mvp/CLI-HANDOFF.md",
+      "sha256": "56840496c8746bec2bceed69e53c61646ccab011420cbc598a0ec61d5f1ae882"
+    },
+    {
+      "path": "docs/mvp/ROADMAP-FA.md",
+      "sha256": "28880657999adf7baef2fb374e02aa497a6d22ac87301f7a801d86794596225c"
+    },
+    {
+      "path": "docs/mvp/deployment.md",
+      "sha256": "abe6bfc8f30015102157f44da7e2a5085460a3ba92b82ccead3f38ad7221158d"
+    },
+    {
+      "path": "docs/mvp/host-contract.md",
+      "sha256": "af6e81f3ad9c464a1d585a4bc78f722e36c0e2f95792f4bb85ea3848598f25c1"
+    },
+    {
+      "path": "docs/mvp/opengym.md",
+      "sha256": "da01e0c11fe1cfdfd772e313a7b8934a3868bd44c7909f642a915ea7f087662e"
+    },
+    {
+      "path": "docs/mvp/requirements.json",
+      "sha256": "494ae0b5aad56c5cd6c70142c6c609ffbe61f46c2c432be55071b6dc5930eeac"
+    },
+    {
+      "path": "docs/mvp/research-input.md",
+      "sha256": "96dc32ad89b1fca4d08481e633c6f8f8e6f65d5d03a5280d26274a40edb757f3"
+    },
+    {
+      "path": "docs/mvp/research.md",
+      "sha256": "4f16cf071ece0c345f018d73c0afa298a7ef062d17794ce6c5410f55347c8f80"
     },
     {
       "path": "docs/orchestration-playbook-fa.md",
@@ -117,11 +181,11 @@
     },
     {
       "path": "docs/runtime.md",
-      "sha256": "ed1c639107a047cfb1feafd872e73c64457332c73708b94064507506f98a10e9"
+      "sha256": "1bb24891c6779c68dbea158691a93ae54b52f51fcbbc333a11eaa22854de60b6"
     },
     {
       "path": "docs/shared-memory/README.md",
-      "sha256": "85830a18b08027f43ba271300036454b84b083a3a637f88914b5bcbc293be8cd"
+      "sha256": "18350718bba26e9d25176c4772dd5a9ecd93a61a99e7475bec7c3f91037ebee2"
     },
     {
       "path": "docs/shared-memory/acceptance.md",
@@ -148,6 +212,10 @@
       "sha256": "c58d8ee421c0f671e0e0f1b1ce0ff45cab03071cf4a04a1e0b29ede5c6191f6d"
     },
     {
+      "path": "plugin.json",
+      "sha256": "0fa3b5036fd909f926626368f00a1cd7769bbd4f62d66111fac65e2f25174bc5"
+    },
+    {
       "path": "prompts/BOOTSTRAP-EN.md",
       "sha256": "11d8392b77a916e43bd1dd9c62bc4512cfceb3cb5be7cad0c3c47e94197350c2"
     },
@@ -161,7 +229,11 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "51372f48aeee62029c04eac28383778bc932952b599a0e920e0dabf16517b0f7"
+      "sha256": "ce222c77ccb040aef34ea0659360c88837cd3055e8c6098c2bef2de963bf6dfa"
+    },
+    {
+      "path": "qa/mvp-verification.json",
+      "sha256": "e66d4eac055b8b07c22824eaf00d9377f2f5fc0dab8514a0fbedf8086a93000c"
     },
     {
       "path": "qa/protocol-smoke.json",
@@ -170,6 +242,10 @@
     {
       "path": "qa/verification.json",
       "sha256": "c42666c124c3fb79c3cb015a75eacab3384c0ae2c393a03639d0ad7cd648776b"
+    },
+    {
+      "path": "requirements-mvp.txt",
+      "sha256": "1a3ab051e01e08ee874b90d7d9d60a34c4690efa88b1f54d10df344196c6e5a6"
     },
     {
       "path": "schemas/policy.schema.json",
@@ -188,16 +264,48 @@
       "sha256": "4d9e97a9921c0758b46c39dab022a27bb23c1124a6a6fc56fc86842b105f97b7"
     },
     {
+      "path": "scripts/bootstrap.py",
+      "sha256": "0f0064ff40d1e7ebe0aae9d3a3b93615884809e646a54e47d54d859836d8cc26"
+    },
+    {
       "path": "scripts/build_release.py",
-      "sha256": "c63bb864e2dbe2455154384e0d6b0000cd381536508c234c6ecce4cb75d0bc68"
+      "sha256": "00416f2ed7a616b4eb68683dfbeae7c51d5a39be6730f53be6d2f91d7f7435b3"
+    },
+    {
+      "path": "scripts/ci_mvp.py",
+      "sha256": "3679f419352c3d756de2d58b22ad96cb4240bed78349254c9a56beb90ce9dc45"
+    },
+    {
+      "path": "scripts/container_start.py",
+      "sha256": "f54aeb92d92e501af880953f61d5ca06f0247270a1e9217bd295bc56474cfceb"
     },
     {
       "path": "scripts/demo.py",
       "sha256": "8d5901df7cba1fde8fed792209170e84c188ab6cfb06f64ef338c30108bfea97"
     },
     {
+      "path": "scripts/doctor.py",
+      "sha256": "70d5b18a130d839db8e98c13f37c306cae28a895a0e054602716b0cf21740ebd"
+    },
+    {
+      "path": "scripts/host_tick.py",
+      "sha256": "9af6cb08e1821726ace58ccc1919e7f4dac65bd5a9357653e160a5fde79bc775"
+    },
+    {
+      "path": "scripts/mvp_smoke.py",
+      "sha256": "bb23c9f05d55f3c2e119c01e8afbea1404129ab0a5a5ef5f9aa52e85f9a7b1e9"
+    },
+    {
+      "path": "scripts/run_mcp.py",
+      "sha256": "c4c3fce4230cba9b4518efeb91f70b6fc5e2bdc8202a748ecfe4c798d8d4c22c"
+    },
+    {
+      "path": "scripts/run_server.py",
+      "sha256": "4a7985ec6f39031cb512ca68552242589375f16e8dcf20b12f924da8cacfba1f"
+    },
+    {
       "path": "scripts/validate_package.py",
-      "sha256": "2c5317032df3f9c03505e670b0cc01ecb9d441658b598e444de314070e256a6d"
+      "sha256": "bdf6599b4a9574eddc0509b91d290f4dd4781d22bf9e81a4fa04caeb908b1cb0"
     },
     {
       "path": "skills/wellbeing-analyze/SKILL.md",
@@ -224,6 +332,10 @@
       "sha256": "ff159014859fe4805b41a0d94b42b78fcff2fa78d91c26137896c92389ad5a3e"
     },
     {
+      "path": "skills/wellbeing-emotional-support/SKILL.md",
+      "sha256": "88b2893498b63d95f6f479ecab3e6bc693a05a69731b59188b73e93df6b137e2"
+    },
+    {
       "path": "skills/wellbeing-host-operations/SKILL.md",
       "sha256": "25d01bcc04eadf9e750a8c991697ce28044b8b144e451de313719378fbaae52d"
     },
@@ -232,12 +344,20 @@
       "sha256": "3a274e128685804257352fbf110934555d34d753763fbd46bc3571b38cd74396"
     },
     {
+      "path": "skills/wellbeing-install/SKILL.md",
+      "sha256": "9376083196ce18413610a0e7bc17abaf9160d752cdc3917c28ecdd1a0046555c"
+    },
+    {
       "path": "skills/wellbeing-intake/SKILL.md",
       "sha256": "4c9abc2879e578a394cd48d21743d415482843093eec9d113026889eb3e2acf4"
     },
     {
       "path": "skills/wellbeing-intake/references/examples.md",
       "sha256": "378fc4213da73d39a2bc99ed8b9b96db6aa08ddda1066cdb7823dacae348c461"
+    },
+    {
+      "path": "skills/wellbeing-meal-intake/SKILL.md",
+      "sha256": "e2696ede444ccca4ff4b7b24fc2617d3ea9c3d79840a06a89758578bc69dba61"
     },
     {
       "path": "skills/wellbeing-orchestrate/SKILL.md",
@@ -254,6 +374,10 @@
     {
       "path": "skills/wellbeing-review/references/review.md",
       "sha256": "9aa8607fe886f9ef7aa40cc8d5c77ee80ffdd6a608934940bbf6971b64ef3005"
+    },
+    {
+      "path": "templates/Caddyfile.example",
+      "sha256": "b3778cb446cae4eb71d5b0ebcb7d740c0eace85124ebf3e7901222842eb4294e"
     },
     {
       "path": "templates/agent-instance-registry.json",
@@ -288,6 +412,10 @@
       "sha256": "84cfb1843e1a6d75a7b19f386901f606a5befe0a54d062d8ef31686e22b69131"
     },
     {
+      "path": "tests/test_bootstrap_mvp.py",
+      "sha256": "30b541d8718456b4c1eb8bc4f8059648d2171f50285077c73d9921fc73735bbb"
+    },
+    {
       "path": "tests/test_cli_encoding.py",
       "sha256": "55c93857cd753d8e40985071bc0bb83bad37f8735cc10586fb3ac7c551df98c3"
     },
@@ -296,8 +424,28 @@
       "sha256": "380e9fb1d6ef7e9c95ee713258e3099b8028fda4563df4394f53478d4c96f358"
     },
     {
+      "path": "tests/test_hae_wire.py",
+      "sha256": "778dfd2851dec7d4efad8ac4a41b981e3472cf6e14d6accfc7b730063e3aed52"
+    },
+    {
       "path": "tests/test_independent_review.py",
       "sha256": "f50ddf19e32c0915b4f74030f3fa46f82cdd1411983e008baa1cf872de28530f"
+    },
+    {
+      "path": "tests/test_mcp_mvp.py",
+      "sha256": "e9c0afa31c2dbc1fe9ac4313e2a7d6b1c5e4f587a998c25825167cb4e89c8190"
+    },
+    {
+      "path": "tests/test_meal_precision.py",
+      "sha256": "e6b57407dafbaea5b2fc1c91ce111e661fa847334c71ba610f23aa9d5693332e"
+    },
+    {
+      "path": "tests/test_mvp.py",
+      "sha256": "cfc5a34e589a130c2a7820465497813f9e09e18a92b1ac0fe27aaf08a805afcd"
+    },
+    {
+      "path": "tests/test_opengym_mvp.py",
+      "sha256": "667a733a69040d68294baa0f2f4bc8a248a6a4a5b2d5b68e7e15d56df5706dbb"
     },
     {
       "path": "tests/test_orchestration_review.py",
@@ -308,6 +456,10 @@
       "sha256": "4f93374d60acb6e293b85def951a9727dbabee9e45c79a6ff3d9f99edb711e7d"
     },
     {
+      "path": "tests/test_role_catalog.py",
+      "sha256": "e90159667509be5b677a0536881056945af276a4b94f5ccecb5bc4059898417e"
+    },
+    {
       "path": "wellbeing/__init__.py",
       "sha256": "202b7163b995a2df80efcb76ccae0b3b55fd9309d3a152f876ece0d2b4a5e6b1"
     },
@@ -316,12 +468,40 @@
       "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
     },
     {
+      "path": "wellbeing/api.py",
+      "sha256": "f405245ae9d578c16d7d0aaa4192b49a7dbac1c6a1b751076042d1bd9461ac0e"
+    },
+    {
       "path": "wellbeing/cli.py",
       "sha256": "a0531d805fe694b20430c1b30e83360e9b9199d63c72ecda0f0cf51c694d1e71"
     },
     {
       "path": "wellbeing/core.py",
-      "sha256": "3820d910edf0fd4d80d98b0d0995c960adcc9e7897f8e402b7555828d059aefb"
+      "sha256": "1b176164f5d047959e1f39bc8e33771abe24887168ffc9b1667de0c8d3c86f2e"
+    },
+    {
+      "path": "wellbeing/database.py",
+      "sha256": "2903e59b711127cce6d36352413b0cc23b651177253ecbd5db92007a11249e1e"
+    },
+    {
+      "path": "wellbeing/hae.py",
+      "sha256": "f85cf2635901e388e85985f8f5b0ba0a9241e030150d0ad4dddf7db0e7940d10"
+    },
+    {
+      "path": "wellbeing/iphone.py",
+      "sha256": "33736c8e250689b32bbeb4951b4fbf670f716f70b148d15297e48ff5e4887f36"
+    },
+    {
+      "path": "wellbeing/mcp_server.py",
+      "sha256": "9d40f4b5cc081ceca084f61dfabbd78a9a80814543555fa461cecc50d5c20158"
+    },
+    {
+      "path": "wellbeing/opengym.py",
+      "sha256": "efde9a72999d38ed9be9690588224d7ccf53a84a71f5e125e69f99a985aa5ba6"
+    },
+    {
+      "path": "wellbeing/service.py",
+      "sha256": "0e46a7e68c548585ac9891b819699dae8e2d4be7646359f58f0aee8492bf7777"
     },
     {
       "path": "wellbeing/tasks.py",

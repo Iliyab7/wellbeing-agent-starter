@@ -2,103 +2,211 @@
   "version": "0.2.0",
   "date": "2026-11-17",
   "scope": "MVP implementation and acceptance traceability",
-  "artifact_status": "prepared_for_combined_verification",
+  "artifact_status": "local_code_and_package_verified_live_acceptance_pending",
   "evidence": {
-    "latest_coordinator_baseline": {
-      "at": "2026-11-17T13:48:05Z",
-      "unittest": "115 tests in 9.049s OK, skipped 1 Windows symlink case",
+    "input_code_revision": "0c0bfe0ee62d061d66feec76e6c4048d44973521",
+    "revision_boundary": "Canonical commit sealed after equivalent tested bytes; final evidence/manifest commits may follow.",
+    "latest_coordinator_observation": {
+      "at": "2026-11-17T14:05:24.386Z",
+      "installed_unittest": "124 tests in 8.652s OK, skipped 1 Windows symlink case",
+      "no_site_unittest": "python -S: 124 tests in 6.394s OK, skipped 10: 7 optional HTTP/MCP/transport, 2 default-Tehran bootstrap cases requiring IANA data, 1 Windows symlink",
+      "no_site_legacy_demo": "passed",
+      "boundary": "Only fixture portability changed since composed runtime checks; runtime unchanged. Earlier 16 no-site timezone errors were corrected using explicit UTC generic/cross-participant fixtures and two honest conditional bootstrap skips; installed-dependency coverage preserved."
+    },
+    "composed_runtime_observation": {
+      "at": "2026-11-17T13:57:19.662Z",
+      "unittest": "124 tests in 9.225s OK, skipped 1 Windows symlink case",
       "loopback_tcp_restart_smoke": "passed",
       "legacy_demo": "passed",
-      "boundary": "Reported coordinator execution with synthetic data; precedes the remaining reminder-correction patch and final package checks."
+      "public_structure_link_metadata_validator": "passed",
+      "boundary": "Includes catalog compatibility, meal precision and eligibility-checked reminder rearming with nine regressions. Does not establish release build/extraction or live acceptance."
     },
-    "previous_baselines": "qa/mvp-verification.json",
+    "release_preflight": {
+      "at": "2026-11-17T14:08:12.5805643Z",
+      "status": "passed",
+      "checks": "build_release; full manifest/hash/public validator for 127 files; identical archive SHA on second build; extracted archive validator for 127 files",
+      "boundary": "Preflight preceded final evidence/Markdown changes only; runtime/build scripts unchanged. Consult the QA ledger for the later completed final metadata recheck."
+    },
+    "ledger": "qa/mvp-verification.json",
+    "execution_origin": "Bridge/app executions reported by coordinator; artifact workers ran no tools or tests.",
     "artifact_worker_tests_executed": [],
-    "final_combined_package_checks": "pending_coordinator",
-    "live_phone_dot_whatsapp_https_docker_opengym_backup_restore": "unverified"
+    "package_checks": "passed; final metadata/archive receipt is in qa/mvp-verification.json",
+    "archive_digest": "External dist/SHA256SUMS.txt and GitHub release asset only; archive-included QA artifact_sha256 remains null.",
+    "ci": "Dependency installation and TCP smoke configured across existing matrix; remote execution unverified.",
+    "live_phone_dot_channel_scheduler_https_docker_opengym_backup_restore": "unverified"
   },
   "requirements": [
     {
       "id": "MVP-01",
       "what": "Root URL starts setup after actual host capability discovery, without a second prompt or participant MCP/API choice.",
-      "implementation": ["README.md", "INSTALL.md", "adapters/chatgpt-dot.md", "scripts/bootstrap.py"],
-      "acceptance": ["A02", "A03"],
+      "implementation": [
+        "README.md",
+        "INSTALL.md",
+        "adapters/chatgpt-dot.md",
+        "scripts/bootstrap.py"
+      ],
+      "acceptance": [
+        "A02",
+        "A03"
+      ],
       "status": "instructions_implemented_live_dot_pending"
     },
     {
       "id": "MVP-02",
       "what": "Private transactional SQLite, preserved credentials and restart; legacy standard-library JSON CLI remains a separate contract without implicit migration or cloud synchronization.",
-      "implementation": ["wellbeing/database.py", "scripts/bootstrap.py", "wellbeing/cli.py"],
-      "acceptance": ["A01", "A02", "A15"],
-      "status": "implemented_local_synthetic_verified_live_pending"
+      "implementation": [
+        "wellbeing/database.py",
+        "scripts/bootstrap.py",
+        "wellbeing/cli.py"
+      ],
+      "acceptance": [
+        "A01",
+        "A02",
+        "A15"
+      ],
+      "status": "implemented_local_verified_live_and_restore_pending",
+      "evidence": "Private bootstrap installation observed; repeat current bootstrap reports version 0.2 and preserves credentials; fresh local health check healthy. No-site legacy demo passes."
     },
     {
       "id": "MVP-03",
       "what": "Selected Health history plus incremental/replay, revisions and category/role scopes; all metrics require explicit selection.",
-      "implementation": ["wellbeing/hae.py", "wellbeing/iphone.py", "wellbeing/service.py"],
-      "tests": ["tests/test_hae_wire.py", "tests/test_mvp.py"],
-      "acceptance": ["A04", "A05", "A06", "A07"],
+      "implementation": [
+        "wellbeing/hae.py",
+        "wellbeing/iphone.py",
+        "wellbeing/service.py"
+      ],
+      "tests": [
+        "tests/test_hae_wire.py",
+        "tests/test_mvp.py"
+      ],
+      "acceptance": [
+        "A04",
+        "A05",
+        "A06",
+        "A07"
+      ],
       "status": "implemented_local_synthetic_verified_live_pending",
       "limits": "Plural heartRateNotifications wire alias normalizes to singular internal category and deep-link datatype. Fallback identity is best effort. No server per-metric authorization filter or guaranteed iOS cadence."
     },
     {
       "id": "MVP-04",
       "what": "Manager/Analyst/Coach plus bounded Companion; CoS outside the team, ready packets and no mandatory pipeline or fabricated native creation.",
-      "implementation": ["agents/registry.json", "agents/team-blueprint.json", "wellbeing/core.py", "wellbeing/service.py"],
-      "acceptance": ["A08", "A12", "A13"],
+      "implementation": [
+        "agents/registry.json",
+        "agents/team-blueprint.json",
+        "wellbeing/core.py",
+        "wellbeing/service.py"
+      ],
+      "acceptance": [
+        "A08",
+        "A12",
+        "A13"
+      ],
       "status": "implemented_local_synthetic_verified_live_pending",
-      "evidence": "Coordinator baseline includes tested four-role catalog projection into three legacy roles without expanding legacy permissions."
+      "evidence": "Verified four-role catalog projection into three legacy roles without expanding legacy permissions. Native host creation/execution still requires actual receipts."
     },
     {
       "id": "MVP-05",
       "what": "Correctable meals with exactly three temporal precision values, real host media interpretation, estimated photo nutrients and participant-selected reminders.",
-      "implementation": ["wellbeing/service.py", "skills/wellbeing-meal-intake/SKILL.md", "scripts/host_tick.py"],
-      "acceptance": ["A09", "A10", "A11", "A16"],
-      "status": "meal_precision_implemented_local_synthetic_verified_reminder_correction_pending",
+      "implementation": [
+        "wellbeing/service.py",
+        "skills/wellbeing-meal-intake/SKILL.md",
+        "scripts/host_tick.py"
+      ],
+      "acceptance": [
+        "A09",
+        "A10",
+        "A11",
+        "A16"
+      ],
+      "status": "precision_and_reminder_correction_implemented_local_verified_live_pending",
       "meal_contract": {
-        "meal": ["breakfast", "lunch", "dinner", "snack"],
-        "time_precision": ["exact", "day", "unknown"],
+        "meal": [
+          "breakfast",
+          "lunch",
+          "dinner",
+          "snack"
+        ],
+        "time_precision": [
+          "exact",
+          "day",
+          "unknown"
+        ],
         "exact": "Timezone-bearing occurred_at; no occurred_date; explicit time_precision exact is optional for compatibility.",
         "day": "time_precision day and occurred_date YYYY-MM-DD; supplied or current participant timezone is preserved; no occurred_at.",
         "unknown": "Neither occurred_at nor occurred_date; no dated reminder suppression.",
         "correction": "Reuse the stable entry ID.",
         "nutrients": "photo_estimate source_kind and nutrient_certainty estimate are separate from temporal precision."
       },
-      "remaining_regression": "Correction from current-day meal to previous-day or unknown must correctly rearm only an eligible never-sent cancelled reminder. Separate patch/regression is not verified by the 115-test baseline."
+      "reminder_regression": "Implemented and locally verified with nine regressions in the 124-test suite: current-day to previous-day/unknown correction rearms only eligible never-sent cancelled reminders under current gates; delivered, uncertain and prior-lease evidence prevent blind resend."
     },
     {
       "id": "MVP-06",
       "what": "Leased delivery, actual host receipts and uncertain-send reconciliation; delivery, reading, adoption, execution and outcome remain separate.",
-      "implementation": ["wellbeing/service.py", "wellbeing/mcp_server.py", "scripts/host_tick.py"],
-      "acceptance": ["A11", "A12", "A16"],
-      "status": "queue_implemented_local_synthetic_verified_real_job_channel_pending"
+      "implementation": [
+        "wellbeing/service.py",
+        "wellbeing/mcp_server.py",
+        "scripts/host_tick.py"
+      ],
+      "acceptance": [
+        "A11",
+        "A12",
+        "A16"
+      ],
+      "status": "queue_and_rearm_local_verified_real_job_channel_pending"
     },
     {
       "id": "MVP-07",
       "what": "Optional reviewed OpenGym read/search/preview; writes disabled and native links instead of licensed media forwarding.",
-      "implementation": ["wellbeing/opengym.py"],
-      "acceptance": ["A14"],
+      "implementation": [
+        "wellbeing/opengym.py"
+      ],
+      "acceptance": [
+        "A14"
+      ],
       "status": "adapter_local_checks_verified_live_server_pending"
     },
     {
       "id": "MVP-08",
       "what": "Approved persistent service, stable authenticated HTTPS intake and protected consistent backup/isolated restore.",
-      "implementation": ["Dockerfile", "compose.yaml", "templates/Caddyfile.example", "docs/mvp/deployment.md"],
-      "acceptance": ["A03", "A15"],
-      "status": "templates_and_procedure_present_live_owner_host_and_restore_pending"
+      "implementation": [
+        "Dockerfile",
+        "compose.yaml",
+        "templates/Caddyfile.example",
+        "docs/mvp/deployment.md"
+      ],
+      "acceptance": [
+        "A03",
+        "A15"
+      ],
+      "status": "templates_and_procedure_present_live_deployment_and_restore_unverified"
     },
     {
       "id": "MVP-09",
       "what": "Dot delegates to an executor using private Python/REST or supported local MCP stdio; authenticated ChatGPT web remote MCP/OAuth is a distinct later adapter.",
-      "implementation": ["wellbeing/api.py", "wellbeing/mcp_server.py", "docs/mvp/host-contract.md"],
-      "acceptance": ["A02"],
-      "status": "local_tools_implemented_remote_oauth_not_implemented"
+      "implementation": [
+        "wellbeing/api.py",
+        "wellbeing/mcp_server.py",
+        "docs/mvp/host-contract.md"
+      ],
+      "acceptance": [
+        "A02"
+      ],
+      "status": "local_tools_implemented_dot_account_unverified_remote_oauth_unimplemented"
     },
     {
       "id": "MVP-10",
       "what": "Exact-version release integrity and public-safe continuation evidence, without health data, credentials or raw private source material.",
-      "implementation": ["scripts/build_release.py", "scripts/validate_package.py", "package-manifest.json", "qa/mvp-verification.json"],
-      "acceptance": ["A01"],
-      "status": "final_combined_release_verification_pending_coordinator"
+      "implementation": [
+        "scripts/build_release.py",
+        "scripts/validate_package.py",
+        "package-manifest.json",
+        "qa/mvp-verification.json"
+      ],
+      "acceptance": [
+        "A01"
+      ],
+      "status": "local_release_package_verified_see_qa_for_ci_and_live_gates"
     }
   ],
   "architecture_references": [
@@ -106,8 +214,10 @@
     "Supplied AI Delivery Method V2 delivery-method/memory/verify-close: compact entry, progressive skills, bounded contracts and resumable evidence. Laboratory proposal, not adopted company policy; no global hooks, observers or account settings imported."
   ],
   "verification_required": [
-    "Verify the independent reminder-rearming patch and regression without treating the 115-test baseline as its evidence.",
-    "Run unittest discovery, legacy demo, MVP smoke, release build and package validation on the final combined revision with pinned optional dependencies; record actual failures and skips in QA.",
-    "Retain the zero-dependency legacy path and verify live phone, Dot, channel and operations separately using participant-authorized private evidence."
+    "Apply final evidence changes and revalidate public structure/links/metadata.",
+    "Release preflight passed; rebuild and validate final archive/extracted contents after evidence changes, record actual final_metadata_recheck receipts in QA and keep archive digest external.",
+    "Observe remote CI separately; configuration alone is not execution evidence.",
+    "Keep the standard-library reference route usable and disclose optional-dependency/IANA skips.",
+    "Verify live phone, Dot account/native workers, channel/scheduler, HTTPS, Docker, OpenGym and backup/restore separately with participant-authorized private evidence; cloud mirror and OAuth adapters remain unimplemented."
   ]
 }

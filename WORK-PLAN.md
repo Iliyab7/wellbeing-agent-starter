@@ -4,7 +4,7 @@
 
 The participant gives only the GitHub root URL to ChatGPT Dot. A capable host follows [INSTALL](INSTALL.md), reuses a valid private installation and delegates bounded execution to an actual Work/Codex executor where available. It handles technical choices and asks only for material participant decisions or a genuinely missing connection. A repository URL does not grant tools, account access, permanent compute or device permissions.
 
-Version 0.2.0 is a release candidate pending final composition checks. Runtime implementation and synthetic baseline observations have been supplied by the coordinator; documentation, role configuration, meal precision and legacy catalog compatibility must be checked together before acceptance. No live device/host deployment has been accepted. [QA evidence](qa/mvp-verification.json) is the evidence ledger for these boundaries.
+Version 0.2.0 has locally verified runtime, role/catalog compatibility, meal precision and reminder correction. Canonical source input is `0c0bfe0ee62d061d66feec76e6c4048d44973521`, sealed after equivalent tested bytes. Release preflight passed; [QA evidence](qa/mvp-verification.json) is authoritative for actual executions, skips and the final metadata recheck. Live acceptance remains pending.
 
 ## Work and dependency order
 
@@ -12,13 +12,13 @@ Version 0.2.0 is a release candidate pending final composition checks. Runtime i
 |---|---|---|
 | 1. Source and architecture | Primary-source research, runtime reconciliation and selective ECC/V2 rationale | Review final links and implementation claims against the composed tree |
 | 2. Autonomous entry and executor | Root AI instruction, INSTALL, ChatGPT Dot route, private bootstrap/resume and capability guidance | Fresh bootstrap twice; preserved credentials/state; actual executor receipts |
-| 3. Primary memory and intake | Separate private SQLite service; selected HAE categories; replay, corrections, permissions and retention operations | Final negative/transaction/restart tests and exact-version results |
+| 3. Primary memory and intake | Separate private SQLite service; selected HAE categories; replay, corrections, permissions and retention operations; local checks passed | Real device intake and scoped readback |
 | 4. Phone setup | Protected temporary pairing and generated HAE setup links | Approved stable HTTPS, phone permissions, first upload and delayed/background catch-up |
 | 5. Host tools and work | REST and official SDK local MCP; bounded tasks/reports and leased outbox | Actual host tool access, task/report/review and verified channel receipts |
-| 6. Team configuration | Manager, Analyst, Coach and Companion; CoS outside | Final catalog/blueprint and legacy compatibility checks; native receipts or disclosed virtual roles |
-| 7. Meals and support | Host-assisted meal intake, reminder controls and bounded emotional support | Integrated meal precision tests; participant-approved times, burden and privacy choices |
-| 8. Exercise tools | Optional configured OpenGym bridge and SDK-path regression | Final mock/SDK tests; separately authorized real-server check if selected |
-| 9. Package | 0.2.0 metadata, explicit public roots, integrity validator and CI helper | Build, extracted archive checks and final full-suite/smoke results |
+| 6. Team configuration | Manager, Analyst, Coach and Companion; CoS outside; catalog/legacy compatibility locally verified | Actual host work; native receipts or disclosed virtual roles |
+| 7. Meals and support | Three meal time precisions and reminder rearming locally verified; bounded emotional support defined | Actual media/channel use; participant-approved times, burden and privacy choices |
+| 8. Exercise tools | Optional configured OpenGym bridge and SDK-path regression locally checked | Separately authorized real-server read/search/preview if selected |
+| 9. Package | Release preflight build, 127-file validation, deterministic rebuild and extracted validation passed; CI dependency-install/TCP-smoke configured | Final metadata recheck in QA and observed remote CI execution |
 | 10. One-phone pilot | Persian roadmap and device/host checklist | Actual participant agreement and retained minimum receipts; no inferred passes |
 
 ## Decisions
@@ -42,6 +42,6 @@ Version 0.2.0 is a release candidate pending final composition checks. Runtime i
 
 ## Evidence and remaining work
 
-The coordinator reported 104 tests with one Windows symlink skip at 2026-11-17T13:17:39Z, passing loopback TCP/restart smoke and legacy demo. An earlier SDK mismatch in OpenGym was corrected to `httpx_client_factory` with a signature-bound regression check. These are supplied baseline observations, not tests executed by this artifact worker and not final composed evidence.
+The coordinator reported composed 124-test, TCP/restart smoke, legacy demo and public structure/link/metadata checks passing at 2026-11-17T13:57:19.662Z. After fixture-only portability changes, installed tests passed again at 2026-11-17T14:05:24.386Z: 124 tests, one Windows symlink skip. No-site `python -S` passed 124 tests with ten explained skips and the legacy demo. Earlier 16 no-site timezone errors were corrected; details are in QA. These are bridge/app executions, not artifact-worker executions.
 
-Next: compose all prepared batches, verify the companion compatibility fix preserves legacy permissions, verify meal precision, run the complete release sequence and record exact input revision/artifact hashes. The manifest's `source_revision` identifies the input code commit; it need not equal a later commit containing generated release metadata. Keep final verification evidence separate from real phone, Dot, WhatsApp, Docker, OpenGym-server and deployment acceptance. Publication is outside this worker's scope.
+Release preflight at 2026-11-17T14:08:12.5805643Z passed build, full manifest/hash/public validation for 127 files, an identical archive SHA on rebuild and extracted validation for 127 files. Only final evidence/Markdown changed afterward; runtime/build scripts are unchanged. QA tracks the app's final metadata recheck. Keep QA's archive hash null; provide the final digest externally in `dist/SHA256SUMS.txt` and the GitHub release asset. The manifest's `source_revision` identifies the canonical source input; later evidence/manifest commits may differ. Private bootstrap installation, repeat credential preservation/version 0.2 and fresh local health were observed. Main CI includes dependency installation and TCP smoke; remote execution is unverified. Live prerequisites remain authorized phone/host/HTTPS/channel/operations acceptance. No publication is claimed.
