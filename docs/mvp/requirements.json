@@ -1,0 +1,49 @@
+{
+  "scope": "HAE source-to-wire correction supplement",
+  "date": "2026-11-17",
+  "evidence_status": "unapplied_artifact_unexecuted",
+  "device_verified": false,
+  "requirements": [
+    {
+      "id": "HAE-WIRE-01",
+      "requirement": "Accept all eight documented wire arrays; normalize heartRateNotifications to internal heartRateNotification before authorization and identity generation while preserving the singular deep-link datatype.",
+      "sources": ["https://help.healthyapps.dev/en/health-auto-export/export-format/heart-rate-notifications/", "https://help.healthyapps.dev/en/health-auto-export/automations/deep-link/"],
+      "implementation": ["wellbeing/hae.py", "wellbeing/service.py"],
+      "tests": ["tests/test_hae_wire.py:HAEWireTests.test_all_eight_official_wire_arrays_replay_and_restart", "tests/test_hae_wire.py:HAEWireTests.test_notification_deep_link_datatype_remains_singular", "tests/test_hae_wire.py:HAEWireHTTPTests.test_http_plural_upload_readback_and_retry"]
+    },
+    {
+      "id": "HAE-WIRE-02",
+      "requirement": "Both notification spellings share scope enforcement, transactional deduplication and conflict rejection without duplicate storage or partial writes.",
+      "sources": ["https://help.healthyapps.dev/en/health-auto-export/export-format/heart-rate-notifications/"],
+      "implementation": ["wellbeing/hae.py", "wellbeing/service.py"],
+      "tests": ["tests/test_hae_wire.py:HAEWireTests.test_plural_singular_and_simultaneous_aliases_share_identity", "tests/test_hae_wire.py:HAEWireTests.test_alias_conflicts_are_atomic_and_do_not_record_receipt", "tests/test_hae_wire.py:HAEWireTests.test_aliases_cannot_bypass_permission_and_revocation", "tests/test_hae_wire.py:HAEWireTests.test_concurrent_plural_singular_replays_insert_only_once"]
+    },
+    {
+      "id": "HAE-WIRE-03",
+      "requirement": "Distinguish simultaneous medications by descriptive fields and simultaneous notification types by heartNotification; retain correction revisions when dosage, status or threshold changes.",
+      "sources": ["https://help.healthyapps.dev/en/health-auto-export/export-format/medications/", "https://help.healthyapps.dev/en/health-auto-export/export-format/heart-rate-notifications/"],
+      "implementation": ["wellbeing/hae.py", "wellbeing/service.py"],
+      "tests": ["tests/test_hae_wire.py:HAEWireTests.test_simultaneous_medications_and_notification_types_then_corrections", "tests/test_hae_wire.py:HAEWireTests.test_explicit_source_ids_still_override_fallback_descriptors"],
+      "limits": "Without stable source IDs, changed time/source/descriptors cannot automatically reconcile; indistinguishable simultaneous events remain ambiguous. Existing record IDs are not migrated."
+    },
+    {
+      "id": "HAE-WIRE-04",
+      "requirement": "Parse the documented space-separated numeric timezone offset; preserve unknown event time without inferring it from receipt time or nested measurement epochs.",
+      "sources": ["https://help.healthyapps.dev/en/health-auto-export/export-format/medications/", "https://help.healthyapps.dev/en/health-auto-export/export-format/heart-rate-notifications/"],
+      "implementation": ["wellbeing/service.py"],
+      "tests": ["tests/test_hae_wire.py:HAEWireTests.test_all_eight_official_wire_arrays_replay_and_restart", "tests/test_hae_wire.py:HAEWireTests.test_missing_or_naive_event_is_unknown_not_nested_or_receipt_time"]
+    },
+    {
+      "id": "HAE-WIRE-05",
+      "requirement": "Reject unknown category or unsupported envelope keys explicitly, including mixed known/unknown uploads; accept the documented data wrapper and existing bare category form.",
+      "sources": ["docs/mvp/research.md"],
+      "implementation": ["wellbeing/hae.py"],
+      "tests": ["tests/test_hae_wire.py:HAEWireTests.test_unknown_categories_and_envelope_fields_fail_atomically", "tests/test_hae_wire.py:HAEWireHTTPTests.test_http_plural_permission_and_unknown_category_errors"]
+    }
+  ],
+  "verification_required": [
+    "Apply artifacts and execute full legacy/MVP suite with optional dependencies installed; record failures and skips.",
+    "Run demo, MVP smoke, release build and package validation.",
+    "Keep synthetic application/transport evidence separate from participant-authorized real-device and host acceptance."
+  ]
+}

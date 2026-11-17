@@ -6,6 +6,7 @@ import re
 import secrets
 from .core import participant_zone
 from .database import CATEGORIES, ROLES, Denied, digest, packed, utcnow
+from .hae import fallback_identity, health_data
 from .iphone import export_links, validate_public_url
 
 READ_KINDS = {
@@ -25,6 +26,9 @@ def instant(value):
     if not isinstance(value, str):
         return None
     try:
+        # HAE examples use "YYYY-MM-DD HH:MM:SS +HHMM". Remove only
+        # whitespace before an explicit offset; never assume a missing zone.
+        value = re.sub(r'\s+([+-]\d{2}:?\d{2})$', r'\1', value)
         d = datetime.fromisoformat(value.replace('Z', '+00:00').replace(' ', 'T', 1))
         return d.astimezone(timezone.utc).isoformat() if d.tzinfo and d.utcoffset() is not None else None
     except (ValueError, OverflowError):
@@ -174,13 +178,9 @@ class Service:
 
     def ingest(self, p, payload):
         require_role(p, 'intake', 'host')
-        if not isinstance(payload, dict) or not isinstance(payload.get('data', payload), dict):
-            raise ValueError('Expected Health export object')
+        data = health_data(payload)
         packed(payload)
-        data = payload.get('data', payload)
-        present = set(data) & set(CATEGORIES)
-        if not present:
-            raise ValueError('No supported Health category')
+        present = set(data)
         counts = dict(inserted=0, updated=0, unchanged=0, unknown_time=0, expired=0)
         with self.db.connect() as c:
             cfg = self.active(p, c); pid = p['participant']
@@ -219,11 +219,8 @@ class Service:
                 identity = item.get('id') or item.get('uuid')
                 if identity is not None:
                     text(identity, 500)
-                elif event:
-                    # Values, totals and units are mutable observations, not identity.
-                    identity = {'event_at': event, 'source': item.get('source'), 'name': item.get('name')}
                 else:
-                    identity = item
+                    identity = fallback_identity(category, item, event)
                 rid = digest(packed([category, metric, identity]))
                 body = packed(item)
                 if rid in staged and staged[rid] != body:
