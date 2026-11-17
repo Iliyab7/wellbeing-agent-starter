@@ -1,0 +1,12 @@
+# Optional, untested same-machine HTTPS proxy template.
+# Replace the reserved example hostname with an approved stable domain.
+# Verify DNS, certificate issuance, firewall and phone reachability first.
+# Set WELLBEING_PUBLIC_URL to that HTTPS origin in the private service environment.
+# Run the Python service on 127.0.0.1:8787; do not expose that port publicly.
+# No access log is enabled here: pairing paths contain private single-use secrets.
+# Check upstream proxies/tunnels and diagnostic logging for the same constraint.
+# This file does not install Caddy, register a host job or deploy a service.
+
+wellbeing.example.invalid {
+    reverse_proxy 127.0.0.1:8787
+}

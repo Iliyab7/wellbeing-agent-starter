@@ -515,9 +515,11 @@ def team(state, mode="inline", now=None):
             and isinstance(catalog.get("team"), list)
             and isinstance(catalog.get("interface"), dict), "Invalid role catalog; use an intact source checkout.")
     members = []
+    require(catalog['interface'].get('id') == 'chief_of_staff',
+            "Catalog interface must be chief_of_staff.")
     catalog_roles = set()
     for entry in [catalog["interface"], *catalog["team"]]:
-        require(isinstance(entry, dict) and entry.get("id") in ROLES
+        require(isinstance(entry, dict) and entry.get("id") in (*ROLES, 'companion')
                 and isinstance(entry.get("skills"), list) and isinstance(entry.get("instructions"), str),
                 "Malformed role catalog entry.")
         require(entry["id"] not in catalog_roles, "Duplicate role catalog entry.")
@@ -527,10 +529,16 @@ def team(state, mode="inline", now=None):
             path = ROOT / reference
             require(not Path(reference).is_absolute() and ROOT in path.resolve().parents and path.is_file()
                     and not path.is_symlink(), "Catalog reference is missing or escapes the bundle.")
+        if entry['id'] == 'companion':
+            require(entry['instructions'] == 'agents/companion.md'
+                    and 'skills/wellbeing-emotional-support/SKILL.md' in entry['skills']
+                    and len(entry['skills']) == len(set(entry['skills'])),
+                    "Malformed MVP-only companion definition.")
+            continue  # Valid MVP definition; no legacy permission or capability.
         if entry["id"] in MEMBERS:
             members.append({"role": entry["id"], "instructions": entry["instructions"], "skills": entry["skills"],
                             "status": "not_started", "tools": [], "context": "Explicit scoped packet only"})
-    require(catalog_roles == set(ROLES), "Catalog must contain one interface and the three proposed team roles.")
+    require(catalog_roles - {'companion'} == set(ROLES), "Catalog must contain one interface and the three legacy team roles; only the MVP companion extension is supported.")
     manifest = {"mode": mode, "execution_status": "manifest_only", "host_role": "chief_of_staff",
                 "interface": copy.deepcopy(catalog["interface"]), "members": members,
                 "policy_revision": state["policy_revision"], "created_at": stamp(now),

@@ -12,6 +12,7 @@ import json
 from pathlib import Path, PurePosixPath
 import re
 import sys
+import tomllib
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,9 +33,22 @@ REQUIRED = (
     "wellbeing/__main__.py", "wellbeing/core.py", "wellbeing/cli.py", "wellbeing/tasks.py",
     "schemas/task-contract.schema.json", "schemas/task-report.schema.json",
     "examples/task.synthetic.json", "examples/task-report.synthetic.json",
+    "INSTALL.md", "WORK-PLAN.md", "requirements-mvp.txt", "Dockerfile", "compose.yaml", "plugin.json",
+    "adapters/chatgpt-dot.md", "agents/companion.md",
+    "wellbeing/database.py", "wellbeing/service.py", "wellbeing/hae.py", "wellbeing/api.py",
+    "wellbeing/iphone.py", "wellbeing/mcp_server.py", "wellbeing/opengym.py",
+    "scripts/bootstrap.py", "scripts/doctor.py", "scripts/run_server.py", "scripts/run_mcp.py",
+    "scripts/host_tick.py", "scripts/mvp_smoke.py", "scripts/container_start.py", "scripts/ci_mvp.py",
+    "docs/mvp/CLI-HANDOFF.md", "docs/mvp/research-input.md", "docs/mvp/research.md",
+    "docs/mvp/host-contract.md", "docs/mvp/deployment.md", "docs/mvp/opengym.md",
+    "docs/mvp/ROADMAP-FA.md", "docs/mvp/ACCEPTANCE-FA.md", "docs/mvp/requirements.json",
+    "qa/mvp-verification.json", "tests/test_meal_precision.py", "tests/test_role_catalog.py",
+    "tests/test_mvp.py", "tests/test_hae_wire.py", "tests/test_bootstrap_mvp.py",
+    "tests/test_mcp_mvp.py", "tests/test_opengym_mvp.py",
 )
 SKILLS = ("wellbeing-intake", "wellbeing-orchestrate", "wellbeing-analyze", "wellbeing-coach", "wellbeing-review",
-          "wellbeing-host-operations", "wellbeing-domain-context")
+          "wellbeing-host-operations", "wellbeing-domain-context", "wellbeing-install",
+          "wellbeing-meal-intake", "wellbeing-emotional-support")
 IGNORED_DIRS = {".git", "dist", "build", "__pycache__", ".pytest_cache", ".venv", "venv", ".mypy_cache"}
 PRIVATE_DIRS = {"private", "state", "sessions", "exports", ".wellbeing", "source-review", "meetings", "history"}
 TEXT_SUFFIXES = {".md", ".txt", ".py", ".json", ".yaml", ".yml", ".toml", ".csv", ".html", ".svg", ".mmd"}
@@ -88,7 +102,9 @@ def public_files(root: Path, findings: list[dict]) -> list[Path]:
             fail(findings, "private-path", rel.as_posix(), "Private/source-history artifacts must stay outside this package.")
         if (path.name == ".env" or path.name.startswith(".env.")) and path.name != ".env.example":
             fail(findings, "environment-file", rel.as_posix(), "A real environment file must not be released.")
-        if path.suffix in {".db", ".sqlite", ".sqlite3", ".pem", ".key"}:
+        lower = path.name.lower()
+        if (path.suffix.lower() in {".db", ".sqlite", ".sqlite3", ".pem", ".key"}
+                or any(lower.endswith(suffix) for suffix in (".db-wal", ".db-shm", ".db-journal", ".sqlite-wal", ".sqlite-shm", ".sqlite-journal", ".sqlite3-wal", ".sqlite3-shm", ".sqlite3-journal"))):
             fail(findings, "sensitive-file", rel.as_posix(), "Database/key artifacts are not part of the pilot release.")
         files.append(path)
     return files
@@ -111,7 +127,7 @@ def validate_manifest(root: Path, files: list[Path], findings: list[dict]) -> No
         fail(findings, "manifest-shape", MANIFEST, "Expected schema_version=1 and a files array.")
         return
     if not re.fullmatch(r"[0-9a-f]{40}", str(manifest.get("source_revision", ""))):
-        fail(findings, "source-revision", MANIFEST, "Expected the exact 40-character source commit revision.")
+        fail(findings, "source-revision", MANIFEST, "Expected the exact 40-character input code commit revision.")
     version_file = root / "VERSION"
     if version_file.is_file() and manifest.get("version") != version_file.read_text(encoding="utf-8").strip():
         fail(findings, "version-mismatch", MANIFEST, "Manifest and VERSION differ.")
@@ -266,18 +282,53 @@ def validate_blueprint(root: Path, findings: list[dict]) -> None:
         fail(findings, "blueprint-shape", relative, "Expected a complete versioned blueprint with unique role IDs.")
 
 
+def validate_release_metadata(root: Path, findings: list[dict]) -> None:
+    version_path = root / "VERSION"
+    if not version_path.is_file():
+        return
+    try:
+        version = version_path.read_text(encoding="utf-8").strip()
+        if not re.fullmatch(r"\d+\.\d+\.\d+(?:[-.][a-z0-9.-]+)?", version):
+            fail(findings, "version-format", "VERSION", "Expected a release version.")
+        project = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))
+        if project.get("project", {}).get("version") != version:
+            fail(findings, "version-mismatch", "pyproject.toml", "Project metadata and VERSION differ.")
+        if project.get("project", {}).get("dependencies") != []:
+            fail(findings, "legacy-dependencies", "pyproject.toml", "The reference CLI must retain an empty base dependency list.")
+        requirements = []
+        for line in (root / "requirements-mvp.txt").read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line and not line.startswith("#"):
+                if not re.fullmatch(r"[A-Za-z0-9_.-]+==[A-Za-z0-9_.+-]+", line):
+                    fail(findings, "mvp-dependency-pin", "requirements-mvp.txt", "Expected exact package==version pins.")
+                requirements.append(line)
+        extra = project.get("project", {}).get("optional-dependencies", {}).get("mvp")
+        if not requirements or not isinstance(extra, list) or sorted(extra) != sorted(requirements):
+            fail(findings, "mvp-dependencies", "pyproject.toml", "MVP extra must match requirements-mvp.txt pins.")
+        plugin = parse_json((root / "plugin.json").read_text(encoding="utf-8"))
+        if not isinstance(plugin, dict):
+            raise ValueError("Invalid plugin metadata")
+        if plugin.get("version") != version:
+            fail(findings, "version-mismatch", "plugin.json", "Instruction package metadata and VERSION differ.")
+        if plugin.get("$schema") != "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json" or plugin.get("name") != "wellbeing-agent-starter" or not isinstance(plugin.get("description"), str) or not plugin["description"].strip():
+            fail(findings, "plugin-metadata", "plugin.json", "Expected portable instruction-package metadata; no registration is inferred.")
+    except (OSError, UnicodeError, ValueError, TypeError, KeyError):
+        fail(findings, "release-metadata", "pyproject.toml", "Release metadata must be readable and internally consistent.")
+
+
 def validate(root: Path, *, check_manifest: bool = True, check_required: bool = True) -> dict:
     findings: list[dict] = []
     files = public_files(root, findings)
     if check_required:
         for name in REQUIRED + tuple(f"skills/{name}/SKILL.md" for name in SKILLS):
             if not (root / name).is_file():
-                fail(findings, "required-file", name, "Missing required pilot entry point.")
+                fail(findings, "required-file", name, "Missing required package entry point.")
         if not list((root / "tests").glob("test_*.py")):
             fail(findings, "tests-missing", "tests", "No discoverable unit tests.")
+        validate_release_metadata(root, findings)
     checked_text = 0
     for path in files:
-        if path.suffix not in TEXT_SUFFIXES and path.name not in {"VERSION", ".gitignore", ".gitattributes", "LICENSE"}:
+        if path.suffix not in TEXT_SUFFIXES and path.name not in {"VERSION", ".gitignore", ".gitattributes", "LICENSE", "Dockerfile"}:
             continue
         rel = path.relative_to(root).as_posix()
         try:
@@ -313,7 +364,7 @@ def validate(root: Path, *, check_manifest: bool = True, check_required: bool = 
         "manifest_checked": check_manifest,
         "files_checked": len(files), "text_files_checked": checked_text,
         "findings": findings,
-        "limits": ["No live host, wearable or external-action test.", "Credential patterns do not replace a human privacy review.", "File hashes do not authenticate the publisher."],
+        "limits": ["No live host, wearable or external-action test.", "Credential patterns do not replace a human privacy review.", "File hashes do not authenticate the publisher.", "source_revision identifies the input code commit, not necessarily the later release metadata commit."],
     }
 
 

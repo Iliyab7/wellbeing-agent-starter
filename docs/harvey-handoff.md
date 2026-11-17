@@ -1,100 +1,41 @@
-# Harvey / development-team handoff
+# Development handoff — MVP 0.2
 
-**2026-11-08 memory extension:** Read [shared-memory responsibilities](../docs/shared-memory/README.md).
-Manager designs/maintains participant-specific Sheets memory and assigns logging duties;
-all roles register authorized data, work, exchanges and source-linked outputs. Check actual
-read/write/scheduling/intake capabilities; downloading this package does not activate them.
-On resume, recover the active structure, valid authority, findings and open tasks. Local and
-conversation fallbacks remain available; no universal tab layout is prescribed.
+The active scope is [CLI-HANDOFF](mvp/CLI-HANDOFF.md), reconciled with current runtime source and [AGENTS](../AGENTS.md). Historical roadmap statements are not implementation evidence. The participant supplies only the GitHub root URL; the host immediately follows [INSTALL](../INSTALL.md). ChatGPT Dot is the requested first host via [an actual Work/Codex executor](../adapters/chatgpt-dot.md).
 
-## What is being delivered
+## Delivered contract
 
-A portable initial-test package for a personal Wellbeing team. The participant's existing assistant acts as Chief of Staff; Dot is the requested first host, while another assistant can use the same protocol if it has sufficient capabilities. The proposed internal team consists of Manager, Analyst and Coach. This is a pilot implementation of the documented design, with an inspectable Python reference harness and a conversation-only path.
+CoS remains outside Manager/Analyst/Coach plus bounded Companion. The [catalog](../agents/registry.json) and [blueprint](../agents/team-blueprint.json) define complete responsibilities, minimal inputs/access, skills, reports and closure. Activate relevant roles without a mandatory pipeline. Native workers need actual host creation receipts; virtual perspectives must be disclosed. Team outputs are ready packets/links, not a media-processing burden for CoS.
 
-The desired first user journey is: give the assistant the repository or starter file → discover actual capabilities → reuse authorized context → choose one goal and close missing data/authority decisions → initialize the appropriate role mode → deliver useful, bounded help → review, correct, resume or stop. A participant should not need to understand agent plumbing or maintain three separate conversations.
+The SQLite MVP provides authenticated REST and local official-SDK MCP stdio, selected HAE intake, correction/replay, role entries, leased tasks, meal reminder production, delivery outbox, pairing and logical deletion. Actual reasoning, vision/transcription, channel sends and recurring host registration remain host operations. Optional OpenGym performs reviewed/configured read/search/preview only. The standard-library JSON CLI remains a separate reference contract; no migration or synchronization is implicit.
 
-## Reading and running order
+Read [architecture](architecture.md), [runtime](runtime.md), [memory](shared-memory/README.md), [source analysis](source-analysis.md) and [research input](mvp/research-input.md). Supplied ECC architecture/verification and V2 laboratory references are selectively translated in architecture; they are not adopted company policy, global hooks or extra wellbeing roles.
 
-1. Read [START-HERE](../START-HERE.md), [architecture](architecture.md) and [source analysis](source-analysis.md).
-2. Read [requirements traceability](requirements-traceability.md) to distinguish inherited design, new pilot choices and unresolved production decisions.
-3. Follow [runtime.md](runtime.md) for the actual local CLI and synthetic demo.
-4. Run `python -m unittest discover -s tests -v` and `python scripts/validate_package.py` from the repository root.
-5. Use [CHAT-STARTER.md](../CHAT-STARTER.md) in the chosen host with synthetic inputs. Exercise the [acceptance cases](acceptance-tests.md); retain actual capability receipts.
-6. Begin a personal trial only within the participant's chosen charter and storage environment. Use [the participant guide](participant-pilot-fa.md).
+## Evidence received from coordinator
 
-The Python path needs Python 3.11 or later and uses the standard library. The conversation-only path requires neither a Python installation nor an API key from the participant. Access to a capable assistant remains necessary. Do not request account passwords or put provider keys into this repository.
+At **2026-11-17T13:17:39Z** the coordinator reported **104 unittest tests in 9.594 seconds, OK with one skip**, actual loopback TCP/restart smoke passed and legacy demo passed. This supersedes the earlier 92-test baseline. A separate private local `bootstrap --install` completed, repetition preserved credentials and local `/healthz` was healthy. No private machine paths belong in public evidence.
 
-## Deliverable map
+The HAE wire correction includes the official plural notification name, medication/notification identity discriminators and synthetic tests for all eight primary formats. OpenGym's SDK factory correction and regression were included in the reported baseline. These are received code/synthetic/local observations, not tests executed by the artifact documentation worker or proof for later edits.
 
-| Area | Entry point | Purpose |
-|---|---|---|
-| Participant entry | [START-HERE.md](../START-HERE.md) | Choose the available trial route |
-| One-file host protocol | [CHAT-STARTER.md](../CHAT-STARTER.md) | Start when the host cannot browse/clone a repository |
-| Roles | [registry.json](../agents/registry.json) | Role instructions and responsibilities |
-| Operational definitions | [team blueprint](../agents/team-blueprint.json), [orchestration playbook](orchestration-playbook-fa.md) | Per-agent goals, tasks, access, skills and management lifecycle |
-| Skills | [host operations](../skills/wellbeing-host-operations/SKILL.md), [intake](../skills/wellbeing-intake/SKILL.md), [orchestration](../skills/wellbeing-orchestrate/SKILL.md), [analysis](../skills/wellbeing-analyze/SKILL.md), [coaching](../skills/wellbeing-coach/SKILL.md), [domain context](../skills/wellbeing-domain-context/SKILL.md), [review](../skills/wellbeing-review/SKILL.md) | Reusable behavior under scoped authority |
-| Task/report lifecycle | [task contract](../templates/task-contract.json), [task report](../templates/task-report.json), [instance registry](../templates/agent-instance-registry.json) | Trace assignment, actual dispatch, returned work, verification and closure |
-| Host contracts | [capabilities](../adapters/host-capabilities.md), [Dot](../adapters/dot.md), [Grok](../adapters/grok.md) | Capability discovery and honest fallback |
-| Runtime | [runtime.md](runtime.md) | Implemented commands, state and constraints |
-| Trial records | [participant charter](../templates/participant-charter.md), [feedback](../templates/test-feedback.md) | Private participant agreement and evaluation |
-| Validation | [acceptance tests](acceptance-tests.md), [validator](../scripts/validate_package.py) | Reproducible checks and host evaluation |
-| Release | [package-manifest.json](../package-manifest.json) | Exact package files and hashes |
+**Still unverified:** real iPhone/HAE permissions and uploads, Dot account executor/tool route, WhatsApp or other live channel send, public HTTPS deployment, Docker execution and an actual OpenGym server. No live cloud mirror or recurring host schedule is established. No clinical efficacy is claimed.
 
-The conversational templates and Python input schemas are distinct. Do not feed a host template to the CLI unless its command explicitly accepts that format.
+## Integration and release gates
 
-## Implemented contract versus host responsibility
+With optional dependencies installed, run from the current checkout:
 
-The runtime demonstrates local evidence handling, explicit settings, state transitions and scoped handoffs. The host handles natural-language judgment, role selection, user interaction and any real subagent creation. A role instruction file does not itself create an agent. A generated handoff packet does not itself transfer data. A reminder preference does not itself schedule a job.
+```text
+python -m unittest discover -s tests -v
+python scripts/demo.py
+python scripts/mvp_smoke.py
+python scripts/build_release.py
+python scripts/validate_package.py
+```
 
-For real host actions, distinguish capability availability, an attempted operation, verified success, failure and an unknown result according to observed evidence; use the exact fields defined by the selected adapter or runtime. Only use an actual vendor capability exposed to that host; do not build against a guessed Dot/Grok endpoint. The package does not hardcode model IDs, proprietary SDK versions or external API credentials.
+Record exact revision, environment, actual results, skips and limitations. Standard-library reference checks must remain usable without HTTP/MCP dependencies. Rebuild integrity artifacts after changes; do not bypass manifest validation. The next authorized batch owns detailed roadmap/research, QA evidence, release-tool alignment and the public-safe project evidence entry. No artifact-worker output is applied or tested merely by being returned.
 
-## Operational handoff acceptance
+Then verify one phone and the actual host route before widening scope: stable approved HTTPS; supervised restart and protected backup/restore; selected categories/recipients/retention; bounded history plus incremental replay/correction; durable scoped read after restart; meal photo/voice through actual tools; quiet reminders through a real authorized channel; uncertain-send reconciliation; pause/revocation/deletion and downstream copy handling. Retain manual pilot evidence only with participant agreement.
 
-Demonstrate the whole management loop, not just loading the starter: the host reads the blueprint, loads role skills, creates or selects the appropriate real/virtual instance, assigns a bounded task, records actual dispatch evidence when applicable, receives a structured report, verifies it, requests revision if needed, and closes or schedules an authorized next step. The participant receives useful conclusions through the Chief of Staff instead of managing the internal queue.
+## Exact pending adapter boundary
 
-Trace the same task ID across assignment, report and review. Record actual agent instance IDs only if creation occurred. Keep role authority and participant consent separate from a role's self-reported competence. A prepared local task, a returned report, a verified result, a user-facing delivery and an executed real-world action are separate milestones. Review [A19 and A20](acceptance-tests.md) with synthetic input before personal use.
+ChatGPT web does not read local Codex MCP configuration or convert OpenAPI into tools. Remote authenticated MCP/OAuth is separate follow-up work: add a remote transport adapter such as `wellbeing/remote_mcp.py`, dedicated authentication integration such as `wellbeing/oauth.py`, corresponding remote/auth tests and deployment/registration instructions only after the actual provider/identity design is chosen. Those files do not exist by virtue of this proposal. Implement audience/metadata/PKCE and trusted redirect requirements as applicable; never expose sensitive public MCP without authentication. Current installation uses the verified-capability executor route instead.
 
-## Work to complete for a hosted product
-
-| Workstream | Production acceptance condition |
-|---|---|
-| Host/agent runtime | Verified provisioning, scoped context transfer, cancellation, bounded retries, resource limits and real lifecycle receipts |
-| Private persistence | Participant isolation, appropriate encryption/access control, retention enforcement, corrections, export/deletion and tested restore behavior |
-| Wearable connectors | Real authentication, explicit metric mapping, source/unit/time-zone provenance, deduplication, freshness, permission revocation and failure states |
-| Calendar/actions | Separate read/write authority; consequential operation review as needed; idempotency; no silent duplicate changes |
-| Scheduling | Durable execution, time zones, quiet hours, deduplication, cancellation and honest failed-delivery handling |
-| Observability | Useful operational evidence without personal records in logs; trace task/consent versions and side-effect receipts |
-| Safety and privacy | Adversarial source-content tests, recipient isolation, source revocation, nonclinical boundary review and clear human escalation limits |
-| Evaluation | Repeated synthetic tests plus participant feedback; compare team complexity against a simpler setup |
-
-These are explicit remaining engineering tasks, not hidden prerequisites for a manual conversation-only pilot. A production deployment must name an operational owner and verify its own configuration; this public repository does not create infrastructure automatically.
-
-## Decisions already made for this pilot
-
-- Use the existing three-role proposal, while treating its practical benefit as an experiment.
-- Let the host replace ELHAM as the normal participant-facing Chief of Staff.
-- Start with one chosen goal and whatever useful authorized data exists. A wearable is optional.
-- Support virtual roles when real subagent creation is unavailable; label the mode honestly.
-- Keep private participant state outside the public source checkout. Use synthetic repository fixtures.
-- Make reporting cadence, notifications, sources and action authority participant-specific.
-- Preserve observation/hypothesis/confirmation and delivery/execution/outcome distinctions.
-
-## Decisions to close per participant
-
-The current goal, useful sources and metrics, permitted recipients, storage/retention, available tools, action authority, contact preferences and the next review point. Resolve existing authorized facts first; ask only the material gaps. Do not turn every open design question into a long first-session form.
-
-## Maintenance and release
-
-Keep source changes small enough to review. Run tests after meaningful code changes; run package validation after regenerating the manifest. A manifest mismatch is a release defect, not something to bypass by disabling checks. Release archives must contain only the public package; exclude private states, exports, original meeting transcripts, provider tokens and local review material.
-
-Record observed verification against the exact release. CI verifies only the checks it runs. A local test pass, a GitHub push, an agent-generated transcript and a live participant trial are different evidence. Use synthetic minimal reproductions in public issues. Keep private feedback in the participant's chosen private channel; do not publish it by default.
-
-## Shared-memory integration workstream
-
-Implement the [memory/intake contract](shared-memory/README.md) as a host adapter with
-Manager-owned schema/duty decisions and real worker receipts. Deliver actual capabilities
-for Sheets read/write/readback, scoped access, role work/exchange logging, selected iPhone
-intake, replay/concurrency safety, versioned migration, correction/revocation/deletion and
-resume. Keep Manager organization separate from physical execution; retain the working
-local reference path. Demonstrate [MB01–MB15](shared-memory/acceptance.md) with recorded
-evidence; unexecuted cases remain unverified. Do not hardcode per-person tabs or place locations.
+Task IDs, role instance IDs and receipt references have different meanings. Free-text task reports are host/Manager-visible even when Companion notes are excluded from ordinary entry reads. Minimize sensitive coordination and verify actual exposure. Scope changes and retention may remove derived work conservatively; resume from current state, not stale packets. A restored backup can replay already-sent work, so reconcile channel history before re-enabling delivery.

@@ -2,49 +2,41 @@
   "schema_version": 1,
   "kind": "portable_role_catalog",
   "installation_state": "instructions_only",
-  "note": "This catalog is not evidence of spawned processes, installed skills or active permissions.",
+  "note": "Definitions do not prove loaded skills, active permissions, native workers or persistent execution.",
   "interface": {
     "id": "chief_of_staff",
     "instructions": "agents/chief-of-staff.md",
     "inside_wellbeing_team": false,
-    "skills": [
-      "skills/wellbeing-intake/SKILL.md",
-      "skills/wellbeing-host-operations/SKILL.md",
-      "skills/wellbeing-review/SKILL.md"
-    ]
+    "skills": ["skills/wellbeing-install/SKILL.md", "skills/wellbeing-intake/SKILL.md", "skills/wellbeing-host-operations/SKILL.md", "skills/wellbeing-review/SKILL.md"]
   },
   "team": [
     {
       "id": "manager",
       "instructions": "agents/manager.md",
-      "accountability": "coherent service and owned commitments",
-      "skills": [
-        "skills/wellbeing-orchestrate/SKILL.md",
-        "skills/wellbeing-review/SKILL.md"
-      ]
+      "accountability": "coherent service, memory organization and owned commitments",
+      "skills": ["skills/wellbeing-orchestrate/SKILL.md", "skills/wellbeing-review/SKILL.md"]
     },
     {
       "id": "analyst",
       "instructions": "agents/analyst.md",
       "accountability": "reliable and correctable understanding",
-      "skills": [
-        "skills/wellbeing-analyze/SKILL.md",
-        "skills/wellbeing-domain-context/SKILL.md"
-      ]
+      "skills": ["skills/wellbeing-analyze/SKILL.md", "skills/wellbeing-domain-context/SKILL.md"]
     },
     {
       "id": "coach",
       "instructions": "agents/coach.md",
       "accountability": "feasible chosen help and follow-through",
-      "skills": [
-        "skills/wellbeing-coach/SKILL.md",
-        "skills/wellbeing-domain-context/SKILL.md",
-        "skills/wellbeing-review/SKILL.md"
-      ]
+      "skills": ["skills/wellbeing-coach/SKILL.md", "skills/wellbeing-domain-context/SKILL.md", "skills/wellbeing-meal-intake/SKILL.md", "skills/wellbeing-review/SKILL.md"]
+    },
+    {
+      "id": "companion",
+      "instructions": "agents/companion.md",
+      "accountability": "bounded nonclinical emotional support and its continuity",
+      "skills": ["skills/wellbeing-emotional-support/SKILL.md", "skills/wellbeing-intake/SKILL.md", "skills/wellbeing-review/SKILL.md"]
     }
   ],
-  "selection": "Activate only relevant roles. Domain topics do not automatically become agents.",
-  "fallback": "Explicit role perspectives in one host conversation when independent agents are unavailable.",
+  "selection": "Manager, Analyst and Coach are the core roles; Companion is a fourth bounded responsibility. Activate only relevant roles; no mandatory pipeline or permanent agent per domain.",
+  "fallback": "Disclose virtual role perspectives when native creation is unavailable; conversation alone does not complete MVP installation.",
   "blueprint": "agents/team-blueprint.json",
   "shared_memory_contract": "docs/shared-memory/README.md"
 }

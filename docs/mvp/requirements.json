@@ -1,49 +1,113 @@
 {
-  "scope": "HAE source-to-wire correction supplement",
+  "version": "0.2.0",
   "date": "2026-11-17",
-  "evidence_status": "unapplied_artifact_unexecuted",
-  "device_verified": false,
+  "scope": "MVP implementation and acceptance traceability",
+  "artifact_status": "prepared_for_combined_verification",
+  "evidence": {
+    "latest_coordinator_baseline": {
+      "at": "2026-11-17T13:48:05Z",
+      "unittest": "115 tests in 9.049s OK, skipped 1 Windows symlink case",
+      "loopback_tcp_restart_smoke": "passed",
+      "legacy_demo": "passed",
+      "boundary": "Reported coordinator execution with synthetic data; precedes the remaining reminder-correction patch and final package checks."
+    },
+    "previous_baselines": "qa/mvp-verification.json",
+    "artifact_worker_tests_executed": [],
+    "final_combined_package_checks": "pending_coordinator",
+    "live_phone_dot_whatsapp_https_docker_opengym_backup_restore": "unverified"
+  },
   "requirements": [
     {
-      "id": "HAE-WIRE-01",
-      "requirement": "Accept all eight documented wire arrays; normalize heartRateNotifications to internal heartRateNotification before authorization and identity generation while preserving the singular deep-link datatype.",
-      "sources": ["https://help.healthyapps.dev/en/health-auto-export/export-format/heart-rate-notifications/", "https://help.healthyapps.dev/en/health-auto-export/automations/deep-link/"],
-      "implementation": ["wellbeing/hae.py", "wellbeing/service.py"],
-      "tests": ["tests/test_hae_wire.py:HAEWireTests.test_all_eight_official_wire_arrays_replay_and_restart", "tests/test_hae_wire.py:HAEWireTests.test_notification_deep_link_datatype_remains_singular", "tests/test_hae_wire.py:HAEWireHTTPTests.test_http_plural_upload_readback_and_retry"]
+      "id": "MVP-01",
+      "what": "Root URL starts setup after actual host capability discovery, without a second prompt or participant MCP/API choice.",
+      "implementation": ["README.md", "INSTALL.md", "adapters/chatgpt-dot.md", "scripts/bootstrap.py"],
+      "acceptance": ["A02", "A03"],
+      "status": "instructions_implemented_live_dot_pending"
     },
     {
-      "id": "HAE-WIRE-02",
-      "requirement": "Both notification spellings share scope enforcement, transactional deduplication and conflict rejection without duplicate storage or partial writes.",
-      "sources": ["https://help.healthyapps.dev/en/health-auto-export/export-format/heart-rate-notifications/"],
-      "implementation": ["wellbeing/hae.py", "wellbeing/service.py"],
-      "tests": ["tests/test_hae_wire.py:HAEWireTests.test_plural_singular_and_simultaneous_aliases_share_identity", "tests/test_hae_wire.py:HAEWireTests.test_alias_conflicts_are_atomic_and_do_not_record_receipt", "tests/test_hae_wire.py:HAEWireTests.test_aliases_cannot_bypass_permission_and_revocation", "tests/test_hae_wire.py:HAEWireTests.test_concurrent_plural_singular_replays_insert_only_once"]
+      "id": "MVP-02",
+      "what": "Private transactional SQLite, preserved credentials and restart; legacy standard-library JSON CLI remains a separate contract without implicit migration or cloud synchronization.",
+      "implementation": ["wellbeing/database.py", "scripts/bootstrap.py", "wellbeing/cli.py"],
+      "acceptance": ["A01", "A02", "A15"],
+      "status": "implemented_local_synthetic_verified_live_pending"
     },
     {
-      "id": "HAE-WIRE-03",
-      "requirement": "Distinguish simultaneous medications by descriptive fields and simultaneous notification types by heartNotification; retain correction revisions when dosage, status or threshold changes.",
-      "sources": ["https://help.healthyapps.dev/en/health-auto-export/export-format/medications/", "https://help.healthyapps.dev/en/health-auto-export/export-format/heart-rate-notifications/"],
-      "implementation": ["wellbeing/hae.py", "wellbeing/service.py"],
-      "tests": ["tests/test_hae_wire.py:HAEWireTests.test_simultaneous_medications_and_notification_types_then_corrections", "tests/test_hae_wire.py:HAEWireTests.test_explicit_source_ids_still_override_fallback_descriptors"],
-      "limits": "Without stable source IDs, changed time/source/descriptors cannot automatically reconcile; indistinguishable simultaneous events remain ambiguous. Existing record IDs are not migrated."
+      "id": "MVP-03",
+      "what": "Selected Health history plus incremental/replay, revisions and category/role scopes; all metrics require explicit selection.",
+      "implementation": ["wellbeing/hae.py", "wellbeing/iphone.py", "wellbeing/service.py"],
+      "tests": ["tests/test_hae_wire.py", "tests/test_mvp.py"],
+      "acceptance": ["A04", "A05", "A06", "A07"],
+      "status": "implemented_local_synthetic_verified_live_pending",
+      "limits": "Plural heartRateNotifications wire alias normalizes to singular internal category and deep-link datatype. Fallback identity is best effort. No server per-metric authorization filter or guaranteed iOS cadence."
     },
     {
-      "id": "HAE-WIRE-04",
-      "requirement": "Parse the documented space-separated numeric timezone offset; preserve unknown event time without inferring it from receipt time or nested measurement epochs.",
-      "sources": ["https://help.healthyapps.dev/en/health-auto-export/export-format/medications/", "https://help.healthyapps.dev/en/health-auto-export/export-format/heart-rate-notifications/"],
-      "implementation": ["wellbeing/service.py"],
-      "tests": ["tests/test_hae_wire.py:HAEWireTests.test_all_eight_official_wire_arrays_replay_and_restart", "tests/test_hae_wire.py:HAEWireTests.test_missing_or_naive_event_is_unknown_not_nested_or_receipt_time"]
+      "id": "MVP-04",
+      "what": "Manager/Analyst/Coach plus bounded Companion; CoS outside the team, ready packets and no mandatory pipeline or fabricated native creation.",
+      "implementation": ["agents/registry.json", "agents/team-blueprint.json", "wellbeing/core.py", "wellbeing/service.py"],
+      "acceptance": ["A08", "A12", "A13"],
+      "status": "implemented_local_synthetic_verified_live_pending",
+      "evidence": "Coordinator baseline includes tested four-role catalog projection into three legacy roles without expanding legacy permissions."
     },
     {
-      "id": "HAE-WIRE-05",
-      "requirement": "Reject unknown category or unsupported envelope keys explicitly, including mixed known/unknown uploads; accept the documented data wrapper and existing bare category form.",
-      "sources": ["docs/mvp/research.md"],
-      "implementation": ["wellbeing/hae.py"],
-      "tests": ["tests/test_hae_wire.py:HAEWireTests.test_unknown_categories_and_envelope_fields_fail_atomically", "tests/test_hae_wire.py:HAEWireHTTPTests.test_http_plural_permission_and_unknown_category_errors"]
+      "id": "MVP-05",
+      "what": "Correctable meals with exactly three temporal precision values, real host media interpretation, estimated photo nutrients and participant-selected reminders.",
+      "implementation": ["wellbeing/service.py", "skills/wellbeing-meal-intake/SKILL.md", "scripts/host_tick.py"],
+      "acceptance": ["A09", "A10", "A11", "A16"],
+      "status": "meal_precision_implemented_local_synthetic_verified_reminder_correction_pending",
+      "meal_contract": {
+        "meal": ["breakfast", "lunch", "dinner", "snack"],
+        "time_precision": ["exact", "day", "unknown"],
+        "exact": "Timezone-bearing occurred_at; no occurred_date; explicit time_precision exact is optional for compatibility.",
+        "day": "time_precision day and occurred_date YYYY-MM-DD; supplied or current participant timezone is preserved; no occurred_at.",
+        "unknown": "Neither occurred_at nor occurred_date; no dated reminder suppression.",
+        "correction": "Reuse the stable entry ID.",
+        "nutrients": "photo_estimate source_kind and nutrient_certainty estimate are separate from temporal precision."
+      },
+      "remaining_regression": "Correction from current-day meal to previous-day or unknown must correctly rearm only an eligible never-sent cancelled reminder. Separate patch/regression is not verified by the 115-test baseline."
+    },
+    {
+      "id": "MVP-06",
+      "what": "Leased delivery, actual host receipts and uncertain-send reconciliation; delivery, reading, adoption, execution and outcome remain separate.",
+      "implementation": ["wellbeing/service.py", "wellbeing/mcp_server.py", "scripts/host_tick.py"],
+      "acceptance": ["A11", "A12", "A16"],
+      "status": "queue_implemented_local_synthetic_verified_real_job_channel_pending"
+    },
+    {
+      "id": "MVP-07",
+      "what": "Optional reviewed OpenGym read/search/preview; writes disabled and native links instead of licensed media forwarding.",
+      "implementation": ["wellbeing/opengym.py"],
+      "acceptance": ["A14"],
+      "status": "adapter_local_checks_verified_live_server_pending"
+    },
+    {
+      "id": "MVP-08",
+      "what": "Approved persistent service, stable authenticated HTTPS intake and protected consistent backup/isolated restore.",
+      "implementation": ["Dockerfile", "compose.yaml", "templates/Caddyfile.example", "docs/mvp/deployment.md"],
+      "acceptance": ["A03", "A15"],
+      "status": "templates_and_procedure_present_live_owner_host_and_restore_pending"
+    },
+    {
+      "id": "MVP-09",
+      "what": "Dot delegates to an executor using private Python/REST or supported local MCP stdio; authenticated ChatGPT web remote MCP/OAuth is a distinct later adapter.",
+      "implementation": ["wellbeing/api.py", "wellbeing/mcp_server.py", "docs/mvp/host-contract.md"],
+      "acceptance": ["A02"],
+      "status": "local_tools_implemented_remote_oauth_not_implemented"
+    },
+    {
+      "id": "MVP-10",
+      "what": "Exact-version release integrity and public-safe continuation evidence, without health data, credentials or raw private source material.",
+      "implementation": ["scripts/build_release.py", "scripts/validate_package.py", "package-manifest.json", "qa/mvp-verification.json"],
+      "acceptance": ["A01"],
+      "status": "final_combined_release_verification_pending_coordinator"
     }
   ],
+  "architecture_references": [
+    "Supplied ECC architect and verification-loop: modular boundaries, least privilege, failure-revealing checks and exact-version evidence.",
+    "Supplied AI Delivery Method V2 delivery-method/memory/verify-close: compact entry, progressive skills, bounded contracts and resumable evidence. Laboratory proposal, not adopted company policy; no global hooks, observers or account settings imported."
+  ],
   "verification_required": [
-    "Apply artifacts and execute full legacy/MVP suite with optional dependencies installed; record failures and skips.",
-    "Run demo, MVP smoke, release build and package validation.",
-    "Keep synthetic application/transport evidence separate from participant-authorized real-device and host acceptance."
+    "Verify the independent reminder-rearming patch and regression without treating the 115-test baseline as its evidence.",
+    "Run unittest discovery, legacy demo, MVP smoke, release build and package validation on the final combined revision with pinned optional dependencies; record actual failures and skips in QA.",
+    "Retain the zero-dependency legacy path and verify live phone, Dot, channel and operations separately using participant-authorized private evidence."
   ]
 }

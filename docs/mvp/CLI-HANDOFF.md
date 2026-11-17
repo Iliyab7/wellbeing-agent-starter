@@ -1,60 +1,67 @@
-# Active delivery brief — 2026-11-17
+# Current implementation handoff — 0.2.0 candidate
 
-## User's actual request
+## Delivery contract
 
-Deliver a substantial working MVP, not a roadmap-only or conversation-only starter. The participant gives ONLY the GitHub repository URL to Dot or another capable assistant. That host autonomously discovers instructions, installs/resumes, requests only genuinely necessary permissions, and begins useful work. It must accept Apple Health data originating from diverse gadgets through the participant's iPhone, support sleep/activity/workout data and any selected Health categories, persist private memory, run the Manager/Analyst/Coach team and fully define an Emotional Wellbeing Companion, support meal photo/voice reporting and breakfast/lunch/dinner reminders through the existing host/WhatsApp, integrate OpenGym where appropriate, and be simply installable from GitHub. User explicitly requests research-based what/why/how decisions, actual implementation and testing, and delegates remaining development/planning to the separate Codex CLI account in PROTECT_APP mode. No app-account substantive implementation after handoff.
+The participant gives only this repository's root URL to **ChatGPT Dot**. The executing host follows [INSTALL](../../INSTALL.md), reuses an existing valid private installation and advances setup with actual tools. It asks only for missing participant decisions, device permissions, authentication, cost choices or a necessary connection. It does not ask the participant to select MCP versus API or copy another launch prompt.
 
-## Meeting requirements (public-safe abstraction)
+ChatGPT Dot is CoS outside the wellbeing team: relationship, authority, coordination and attention remain with it. Manager owns organization, bounded work and recording duties; Analyst owns correctable understanding; Coach owns feasible chosen help; Companion owns bounded emotional support. Roles are activated as needed. Native workers require real creation/execution receipts; otherwise disclose virtual role perspectives. Team work returns ready packets/links.
 
-- CoS is attention gate and coordinator, not the downloader/transcriber of many exercise videos. Team delivers ready packets/links.
-- A wellbeing section may feed the host's morning newsletter. Exact deadlines and 70/30 allocation were participant examples, not universal defaults.
-- Build first on the participant's actual available phone/host, show usable execution, then version it.
-- Initial bounded history import + incremental/replayed recent data. Corrections, duplicate input, delayed data and source failure must be explicit.
-- Gmail transport was suggested as an initial fallback. API, Shortcuts and HAE are candidate mechanisms, not the core product.
-- Memory is mandatory; Manager defines structure and role duties. SQLite private primary store is implemented; cloud mirrors must never be claimed without actual connector receipts.
-- Host inference/vision/transcription/WhatsApp are used if available. Do not require a new LLM provider subscription. Native subagents only with actual creation receipts; otherwise explicit host-executed role perspectives, never pretend spawned workers.
-- Do not require every domain to be a permanent agent or make all roles a mandatory pipeline.
-- iPhone grants and purchase choice are human steps. No account access, always-on service or exact background run frequency can be invented from a repository URL.
+## Current implementation boundary
 
-## Baseline and already implemented work
+The runtime supplied for integration includes private SQLite primary memory, authenticated selected HAE intake for eight categories, replay/corrections and revisions, scoped reads/entries, task/report/review, temporary pairing, generated HAE setup links and a leased delivery outbox. Meal reporting uses actual host text/vision/transcription capabilities; reminders are optional and retain quiet-hour, budget, suppression and delivery distinctions. OpenGym is optional configured tooling. The coordinator reported correcting its SDK client factory and adding a signature-bound regression.
 
-Existing public repository is `Iliyab7/wellbeing-agent-starter`, v0.1.0. Preserve legacy Python reference CLI/tests. Current new code:
+Bootstrap/dependency installation assets, root setup entrypoints and runtime integration have been prepared; obsolete earlier claims that these files or the SDK fix are missing are superseded. The final composition adds role/catalog reconciliation and meal precision changes. Verify those changes together, including [catalog compatibility tests](../../tests/test_role_catalog.py) and [meal precision tests](../../tests/test_meal_precision.py), before accepting the candidate.
 
-- `wellbeing/database.py`: separate SQLite primary state, participants, hashed role credentials, records/revisions, receipts, role entries, tasks, outbox and pairing.
-- `wellbeing/service.py`: category-authorized HAE ingestion of 8 categories, dedupe/correction, scoped reads, role entries, meal checks, reminder tick, leased delivery queue, task lifecycle, packet and deletion.
-- `wellbeing/api.py`: FastAPI API, OpenAPI, body limit, Bearer auth, temporary single-use iPhone pairing and explicit category choice, generated HAE deep links, in-process reminder producer.
-- `wellbeing/iphone.py`: setup URL generator based on official HAE parameter docs (correct headers syntax and cadence now present).
-- `wellbeing/mcp_server.py`: official MCP SDK v1.30 FastMCP stdio tools, local role-scoped service. Remote MVP uses REST/OpenAPI, no remote MCP yet.
-- `scripts/bootstrap.py`: idempotent private install skeleton/venv, private credentials/config output; does not yet install dependencies because requirements file missing.
-- `scripts/run_server.py`, `scripts/run_mcp.py`, `scripts/doctor.py`.
-- `INSTALL.md` defines one-link executor workflow, root discovery still needs README/START-HERE/CHAT-STARTER updates.
-- New companion role plus install/emotional-support/meal-intake skills. Registry/blueprint not updated yet.
-- `tests/test_mvp.py`: service and HTTP tests all PASSED locally on 2026-11-17 with synthetic fixtures (39 reported, but APITests inherits service tests causing duplicate execution; fix this).
-- `WORK-PLAN.md` is the initial dependency/acceptance plan.
+The standard-library JSON CLI remains a separate reference contract. SQLite state is private and outside the repository; neither state format is implicitly migrated or synchronized. Manager-owned Sheets/Notion mirrors require their own authorized adapter, readback, correction and deletion. There is no verified cloud synchronization.
 
-No real iPhone data, pairing, background measurement, Dot native agents, WhatsApp send, live cloud memory or deployment has been verified. No service has been exposed publicly. No real credentials/health data are in repository.
+## Working ChatGPT route
 
-## Tested dependencies and execution constraints
+Follow [the ChatGPT Dot adapter](../../adapters/chatgpt-dot.md) and [host contract](host-contract.md). Dot delegates a bounded task to an actual Work/Codex executor able to run private Python/service REST or supported local MCP stdio. Check capability, private persistence and service lifetime separately. A cloud computer or thread does not prove an always-on server or recurring trigger.
 
-App coordinator created a dedicated external Python 3.14 venv with FastAPI 0.163.1, uvicorn 0.54.0, MCP 1.30.0, httpx 0.28.1, tzdata 2026.6. MCP latest 2.x renamed FastMCP; use MCP==1.30.0 for current implementation, or deliberately migrate and test. Provide pinned `requirements-mvp.txt`, preserve zero-dependency legacy tests via optional import skips as needed. Docker daemon is currently stopped; do not claim Docker image tested. Public artifact worker does not run tools; return allowlisted complete edits and proposed verification commands. Bridge/app performs actual tests and integration. Never claim testsExecuted when not executed.
+ChatGPT web does not read local Codex MCP configuration or automatically turn OpenAPI into tools. The portable [plugin metadata](../../plugin.json) packages instructions; it does not prove registered or published tools. Authenticated remote MCP/OAuth is a pending adapter. Follow-up implementation would need a remote MCP transport/server module, OAuth protected-resource and authorization-server integration, audience/PKCE/redirect validation, deployment configuration and negative authorization/transport tests. Select names and contracts before implementing; do not document these as existing runtime files. Sensitive public MCP must not use unauthenticated access.
 
-## Work remaining: implementation and review
+Coordinator-provided official references: [Dot computers and apps](https://learn.chatgpt.com/docs/dots/computers-and-apps.md), [ChatGPT MCP](https://learn.chatgpt.com/docs/extend/mcp.md), [remote MCP server guide](https://developers.openai.com/api/docs/guides/custom-mcp-server.md), and [plugin authentication](https://developers.openai.com/plugins/build/auth.md). These describe platform mechanisms, not acceptance in this participant's account.
 
-1. Review/harden new code; add missing behavior with meaningful tests. Check SQLite transaction/schema startup/restart, scope revocation and retention of derived copies, stale packets, leases and retry honesty, idempotency, malformed inputs, credential recovery, permissions and no data-in-log leaks. Health data stored unencrypted at rest; document OS/disk/volume access limits honestly.
-2. Bootstrap: pin dependencies, smoke fresh install, don't silently recreate missing credentials, set public URL in MCP config where needed, add useful doctor/host capability receipts. Make pairing/status available through MCP too (currently only HTTP); refactor common operation instead of duplicating insecure logic.
-3. Native agent role dispatch is host-led. Scope tasks and reports, enforce capability/receipt distinctions; no invented model training or clinical competence. Meal intake is through actual host media tools, no fake image recognition/transcription.
-4. Outbox currently queues only meals/packets, not actual WhatsApp. A small executable host-side poll/delivery bridge or exact executable host job contract is needed; never assume HTTP 200 means user read. Preserve idempotency and uncertain-send reconciliation.
-5. Integrate OpenGym via optional real MCP adapter with configured private endpoint/token. Use official MCP client SDK transport; allow read/search/preview initially, writes behind separate permission. No automatic deployment of unneeded OpenGym. No licensed media extraction. Add synthetic/mocked adapter tests and exact installation guidance.
-6. Deployment: provide simple supervised run and Docker/reverse-proxy assets, stable HTTPS requirement, backup/restart process, no secret env in public files. No arbitrary paid host provisioning. Clear host-capability fallback if Dot can't execute or attach tools; don't degrade silently to a conversation and declare success.
-7. Nutrition reminders: select times/preferences, quiet hours, budget, suppress logged meals, preserve photo estimates, edits and unknowns. If meals skipped or reminders stopped, don't count as zero food. Explain gap between queue producer and real host scheduler/WhatsApp connector.
-8. Team catalog/blueprint and old active docs must reflect MVP/companion. Add full what/why/how roadmap, requirements matrix, source-referenced decisions, host install contract and device acceptance checklist. No raw transcripts, private IDs, names or accounts in public docs.
-9. Tests: full legacy suite + new unique service tests, HTTP integration, official MCP client process roundtrip, fresh bootstrap twice preserving secrets, task/packet/delivery path and synthetic E2E demonstrator. Cross-platform paths/tzdata. Package links/manifest/archives/build validation. Release docs not counted as actual device testing.
-10. Update root VERSION/pyproject/release assets to 0.2.0, build script ROOT_FILES allowlist for new root artifacts, CI dependencies before tests; concise public-safe `.second-brain/entries/` task result. App will verify/review/integrate, publish GitHub commit/release and reread actual remote. No push from artifact worker.
+## Source-backed decisions
 
-## Research already checked from primary sources
+[Research input](research-input.md), [decision research](research.md), [Persian roadmap](ROADMAP-FA.md) and [requirements](requirements.json) distinguish official source statements, implementation choices and unverified behavior. HAE REST was selected as the initial phone route; no fabricated signed Apple Shortcut is supplied. Runtime pairing generates exact private links. Bounded history plus incremental/replayed input must retain source identity, correction, freshness and unknown states. All-data selection is optional and explicit.
 
-Authoritative URLs and implementation findings are in `docs/mvp/research-input.md`. Use these as provided evidence; distinguish code main vs installed iOS app version. No unrelated product named Dot may be assumed to be this participant's assistant. Research context can be requested from the app through contextRequests if genuinely missing.
+Checked US HAE Premium pricing in the supplied research was a seven-day trial, $6.99/year or $24.99 lifetime. Check the actual local purchase screen; research is not purchase authority. OpenGym app/page links may be returned within scope; licensed media must not be independently extracted or forwarded.
 
-## Acceptance for completion
+Use useful ECC architecture/verification and V2 compact entry, progressive skills, bounded contracts and evidence-linked continuation selectively. The supplied V2 bundle is a laboratory proposal, not adopted policy. Existing code remains the authority for implemented behavior: do not infer CAS, event sourcing, automatic downstream deletion, global observers or new wellbeing roles from those references. Any required runtime addition needs an explicit source/test change.
 
-One URL leads a tool-capable host into INSTALL without extra user prompt. Fresh private bootstrap works twice without data/credential loss. Synthetic HAE payload arrives over actual HTTP, is durably readable through authenticated host tools across restart, duplicate doesn't double-count, corrected value stays linked, scopes/pause/delete enforced. Roles have complete contracts and bounded task lifecycle. Prepared Persian section is deliverable through leased outbox with actual host-receipt field. Meal reporting/quiet reminders tested. OpenGym integration has honest ready/not-configured states. iPhone/HAE/host/channel gaps remain prominently unverified until actual receipts exist. Deliver code/docs/tests/install artifacts together, not a claim of device operation.
+## Observed evidence and current status
+
+The coordinator reported:
+
+- **2026-11-17T12:34:27Z:** 92 unittest tests in 7.912 seconds, one skip; actual loopback TCP HTTP/restart smoke and legacy demo passed.
+- **2026-11-17T13:17:39Z:** latest baseline of 104 tests, one Windows symlink skip; loopback TCP/restart smoke and legacy demo passed.
+
+The role/documentation batch exposed a legacy catalog regression; its separately prepared fix must accept the bounded MVP catalog without expanding legacy permissions. Neither baseline verifies the final composed tree, new release tooling or artifacts. This artifact worker executed no checks and returned unapplied replacements. [QA](../../qa/mvp-verification.json) records the observations and pending results.
+
+## Final local verification
+
+Install optional dependencies, then run from the composed repository root:
+
+```bash
+python -m pip install -r requirements-mvp.txt
+python -m unittest discover -s tests -v
+python scripts/demo.py
+python scripts/mvp_smoke.py
+python scripts/build_release.py --source-revision 1c700e30fb172a254bd9884b4c2c98c14a08f0bb
+python scripts/validate_package.py
+```
+
+The explicit revision above is the coordinator-supplied input commit for this composition. Use the actual input code commit if the baseline changes. The builder can discover an exact checkout HEAD; an extracted archive may reuse its manifest's input revision or receive `--source-revision`. The manifest hashes identify packaged bytes; `source_revision` is input provenance, not a claim that uncommitted changes were tested at that commit or that a later metadata commit must equal it. Rebuilding unchanged input is deterministic.
+
+[The optional helper](../../scripts/ci_mvp.py) checks installed dependency pins and runs the same checks, stopping at the first failing command. It does not install packages or turn skipped tests into passes. Review skip reasons, validate the extracted ZIP, record final input revision/artifact hashes and update QA with actual results. The coordinator adds dependency installation to CI separately. Standard-library reference checks remain usable without HTTP/MCP dependencies.
+
+## Open live gates and next owner
+
+Before claiming an installed live service, the authorized host/operator must establish approved stable HTTPS, private persistent storage, supervised restart and tested backup/restore. SQLite is not encrypted by this package; OS/disk permissions, backups and host/provider exposure require an explicit deployment decision. Follow [deployment](deployment.md).
+
+Then use [the acceptance checklist](ACCEPTANCE-FA.md) with one real participant-approved phone: selected Health permissions, first upload/readback, history/replay/correction, delayed/background catch-up, pause/revocation/deletion and actual freshness. Verify ChatGPT Dot executor access, bounded task/report/review, native receipts or virtual disclosure, recurring trigger if selected and an actual channel delivery receipt. A queue item is not a WhatsApp send; sent is not read, adopted or executed. Uncertain sends require reconciliation before retry.
+
+Real iPhone/HAE, Dot account execution, WhatsApp, public deployment, Docker, real OpenGym-server behavior and participant usefulness remain unverified. Emotional support is nonclinical; no diagnosis, treatment change or monitored crisis coverage is claimed. Retain live evidence only within participant agreement and outside the public repository.
+
+Next owner: coordinator composes and checks the candidate, records actual failures/skips and reviews the release. Authorized host/operator then closes the separate deployment/device/host/participant gates. Publishing, deployment and account access are outside this artifact worker's scope.

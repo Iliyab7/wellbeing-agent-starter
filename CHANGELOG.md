@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.2.0 — host-installable MVP candidate — 2026-11-17
+
+- Direct a capable host from the repository root into INSTALL, with ChatGPT Dot delegating bounded execution to Work/Codex. Local MCP configuration and REST/OpenAPI are not ChatGPT web plugin registration.
+- Add a private SQLite service distinct from the preserved standard-library JSON reference CLI. No implicit migration or cloud synchronization.
+- Provide authenticated selected Health Auto Export intake, all eight documented categories, replay/correction handling, scoped records, private role entries, task reports, pairing and a leased delivery outbox.
+- Generate temporary private iPhone setup links at runtime; device permissions, selected categories and any purchase remain participant decisions.
+- Configure Manager, Analyst and Coach plus the bounded Emotional Companion. CoS remains outside the team and owns authority, relationship and attention. Native execution requires actual host receipts.
+- Support correctable meal reports through actual host text/vision/transcription capabilities and optional meal reminders. Estimates, missing information and skipped meals retain their distinct meanings.
+- Keep OpenGym an optional configured bridge. No upstream implementation or licensed exercise media is redistributed.
+- Add installation/deployment guidance, source-backed decisions, Persian roadmap, requirements and separate code/device/host acceptance gates.
+- Include installation assets in deterministic release archives, strengthen required-file checks and provide an optional full-check helper.
+
+Coordinator-observed baseline: 104 tests with one Windows symlink skip at 2026-11-17T13:17:39Z, passing loopback TCP/restart smoke and legacy demo. This precedes final composition of the role/documentation/runtime changes and does not verify this release candidate. Final composed checks are pending. Real iPhone/HAE background behavior, Dot account execution, WhatsApp delivery, public HTTPS deployment, Docker and a real OpenGym server remain unverified. See [verification evidence](qa/mvp-verification.json).
+
 ## 2026-11-08 — shared-memory design and host protocol
 
 - Integrate Manager-owned participant-specific Google Sheets memory into current roles,

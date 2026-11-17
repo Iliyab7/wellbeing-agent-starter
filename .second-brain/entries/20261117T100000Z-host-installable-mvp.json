@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "20261117T100000Z-host-installable-mvp",
+  "repository": "Iliyab7/wellbeing-agent-starter",
+  "date": "2026-11-17",
+  "timestamp_note": "The filename/id is the coordinator-assigned entry identifier, not a claimed execution timestamp. Observation times are recorded in evidence.",
+  "title": "Prepare the 0.2.0 host-installable MVP release composition",
+  "summary": "Prepared public release tooling, version metadata and evidence boundaries for the separately composed runtime, team configuration and installation documentation.",
+  "status": "artifact_prepared_final_composed_checks_pending",
+  "outcome": "Complete replacement artifacts returned unapplied. The artifact worker ran no tools or tests. Coordinator-observed synthetic baselines remain separate from final composition and live acceptance.",
+  "decisions": [
+    "ChatGPT Dot remains CoS outside the wellbeing team and delegates bounded execution to actual Work/Codex capabilities; local MCP and REST are not registered ChatGPT web plugins.",
+    "Retain Manager, Analyst and Coach as core responsibilities and add the bounded Emotional Companion without a mandatory pipeline or expanded legacy CLI consent roles.",
+    "Private SQLite is the MVP primary store; legacy JSON CLI state is a separate preserved contract. Sheets/Notion mirrors need an authorized verified adapter; no implicit migration or synchronization.",
+    "Use selected HAE data, bounded history and incremental replay/corrections; device background timing, freshness and unknowns require actual evidence.",
+    "Meal media understanding and channel delivery depend on actual host tools. Delivery, adoption, execution and observed outcome are separate.",
+    "Apply ECC separation of concerns and verification discipline plus V2 compact entry, bounded task contracts and evidence-linked continuation selectively. V2 is a laboratory proposal, not adopted company policy; no global hooks, observers or account settings are imported.",
+    "Manifest source_revision identifies an explicitly supplied or discovered input code commit. Release metadata may be committed later; no stale hardcoded source revision or self-referential manifest-HEAD requirement.",
+    "OpenGym remains optional configured tooling; upstream implementation and licensed exercise media are not redistributed."
+  ],
+  "source_references": [
+    "AGENTS.md",
+    "README.md",
+    "START-HERE.md",
+    "docs/architecture.md",
+    "docs/source-analysis.md",
+    "docs/harvey-handoff.md",
+    "docs/mvp/CLI-HANDOFF.md",
+    "docs/mvp/research-input.md",
+    "docs/mvp/research.md",
+    "docs/mvp/requirements.json",
+    "authorized V2 delivery-method, memory and verify-close excerpts supplied by the coordinator",
+    "authorized ECC architect and verification-loop excerpts supplied by the coordinator"
+  ],
+  "evidence": [
+    {
+      "origin": "coordinator supplied observation",
+      "observed_at": "2026-11-17T12:34:27Z",
+      "result": "92 unittest tests, one skip, 7.912 seconds; loopback TCP/restart smoke and legacy demo passed. OpenGym SDK keyword correction and regression were reported checked."
+    },
+    {
+      "origin": "coordinator supplied observation",
+      "observed_at": "2026-11-17T13:17:39Z",
+      "result": "Latest baseline: 104 tests with one Windows symlink skip; loopback TCP/restart smoke and legacy demo passed. This is not final composed verification."
+    },
+    {
+      "origin": "artifact worker",
+      "result": "No test executions or applied edits; final release checks pending.",
+      "paths": ["qa/mvp-verification.json", "scripts/ci_mvp.py", "scripts/build_release.py", "scripts/validate_package.py"]
+    }
+  ],
+  "blockers": [
+    "Final composed catalog compatibility, meal precision, package and regression checks have not been observed by this worker.",
+    "Real iPhone/HAE, ChatGPT Dot, channel delivery, deployment, Docker and OpenGym-server acceptance remain unverified.",
+    "Authenticated remote MCP/OAuth and cloud-memory mirror adapters remain separate pending work."
+  ],
+  "next_actions": [
+    "Compose the prepared batches and run full tests, legacy demo, TCP/restart MVP smoke, release build and integrity validation with pinned optional dependencies.",
+    "Record final exact input revision, artifact hashes, failures and skips in QA evidence; validate extracted release contents.",
+    "Add the authorized CI dependency-install step through the coordinator.",
+    "Complete participant-authorized one-phone HTTPS, upload/readback, background recovery, host execution and channel acceptance with minimum private evidence.",
+    "Review usefulness, burden, retention and stop/revocation behavior with the participant before claiming pilot acceptance."
+  ],
+  "privacy_boundary": "Public-safe project evidence only. This entry does not synchronize participant memory, contain private account identifiers or establish clinical validity."
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "version": "0.2.0",
+  "status": "final_composed_verification_pending",
+  "readiness": "code_acceptance_pending_coordinator_checks",
+  "evidence_origin": "Coordinator-supplied observations; artifact worker executed no tools or tests.",
+  "observed_baselines": [
+    {
+      "observed_at": "2026-11-17T12:34:27Z",
+      "source": "coordinator verification report supplied with the task",
+      "scope": "integrated runtime synthetic baseline before final release composition",
+      "unittest": {
+        "command": "python -m unittest discover -s tests -v",
+        "status": "passed",
+        "tests_run": 92,
+        "skipped": 1,
+        "duration_seconds": 7.912
+      },
+      "other_checks": [
+        {"check": "actual loopback TCP HTTP and restart smoke", "status": "passed"},
+        {"check": "legacy CLI demo", "status": "passed"}
+      ],
+      "correction": "Coordinator reported replacing unsupported OpenGym SDK http_client with httpx_client_factory and adding a signature-bound SDK-path regression; subsequent checks passed.",
+      "limits": "Synthetic code/transport observations only; not final composed or live acceptance."
+    },
+    {
+      "observed_at": "2026-11-17T13:17:39Z",
+      "source": "latest coordinator baseline supplied with the task",
+      "scope": "latest reported baseline before final role/documentation/runtime composition",
+      "unittest": {
+        "command": "python -m unittest discover -s tests -v",
+        "status": "passed",
+        "tests_run": 104,
+        "skipped": 1,
+        "skip_reason": "Windows symlink fixture unavailable"
+      },
+      "other_checks": [
+        {"check": "actual loopback TCP HTTP and restart smoke", "status": "passed"},
+        {"check": "legacy CLI demo", "status": "passed"}
+      ],
+      "limits": "The role/documentation composition exposed a legacy catalog compatibility regression. Its separately prepared correction and meal precision changes require final composed checks. Exact tested artifact hashes were not supplied."
+    }
+  ],
+  "final_composed_verification": {
+    "status": "pending",
+    "executed_by_artifact_worker": false,
+    "input_code_revision": null,
+    "artifact_sha256": null,
+    "observed_at": null,
+    "results": [],
+    "required_commands": [
+      "python -m pip install -r requirements-mvp.txt",
+      "python -m unittest discover -s tests -v",
+      "python scripts/demo.py",
+      "python scripts/mvp_smoke.py",
+      "python scripts/build_release.py --source-revision INPUT_CODE_COMMIT",
+      "python scripts/validate_package.py"
+    ],
+    "additional_review": [
+      "Verify tests/test_role_catalog.py and legacy CLI behavior after adding companion to the portable catalog; do not expand legacy consent roles.",
+      "Verify tests/test_meal_precision.py against the integrated runtime.",
+      "Validate the extracted release archive and record the archive SHA-256.",
+      "Record actual failures, skips, dependency versions and exact input revision; do not reuse baseline results for changed artifacts."
+    ]
+  },
+  "unverified_gates": [
+    {"gate": "public_https_deployment", "status": "unverified", "needed": "Approved always-on host, stable HTTPS, supervised restart and private persistent volume."},
+    {"gate": "backup_restore", "status": "unverified", "needed": "Consistent private SQLite backup and observed restore/readback."},
+    {"gate": "iphone_hae", "status": "unverified", "needed": "Participant-selected permissions, first real upload/readback, history/replay/correction and measured delayed/background catch-up."},
+    {"gate": "chatgpt_dot", "status": "unverified", "needed": "Actual account capability and Work/Codex executor receipts; private service access and scoped role task/report/review."},
+    {"gate": "native_agents", "status": "unverified", "needed": "Actual host creation and execution receipts; otherwise disclose virtual roles."},
+    {"gate": "whatsapp_or_selected_channel", "status": "unverified", "needed": "Authorized real send, receipt and uncertain-send reconciliation; user reading and action remain separate."},
+    {"gate": "durable_host_trigger", "status": "unverified", "needed": "Actual job creation/readback, timezone, cancellation and observed execution if selected."},
+    {"gate": "docker", "status": "unverified", "needed": "Actual image build, startup, restart and persistent-volume check."},
+    {"gate": "opengym_server", "status": "unverified", "needed": "Optional authorized configured-server read/preview and separately permitted write checks."},
+    {"gate": "cloud_memory_mirror", "status": "unimplemented_adapter", "needed": "Selected Sheets/Notion adapter with authorized readback, correction, revocation and deletion; no implicit synchronization."},
+    {"gate": "remote_chatgpt_mcp_oauth", "status": "pending_adapter", "needed": "Authenticated remote MCP transport and OAuth integration; REST/OpenAPI and local stdio do not register web tools."},
+    {"gate": "participant_acceptance", "status": "unverified", "needed": "Agreed purpose/scope/retention/attention and actual usefulness/burden feedback; agreement to retain minimum evidence."}
+  ],
+  "evidence_policy": [
+    "Synthetic fixtures only in the public repository.",
+    "No credentials, participant state, real health records, private Dot identifiers or transcripts in public evidence.",
+    "Manifest source_revision identifies the input code commit; a later generated-metadata commit may differ.",
+    "Package checks, fixture tests, live transport, device results and participant acceptance are separate evidence levels.",
+    "A second-brain project entry is not private memory synchronization or clinical validation."
+  ]
+}

@@ -4,10 +4,19 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wellbeing-agent-starter"
-version = "0.1.0"
-description = "Private local reference runtime for a host-led wellbeing pilot"
+version = "0.2.0"
+description = "Host-installable wellbeing MVP with a separate standard-library reference CLI"
 requires-python = ">=3.11"
 dependencies = []
+
+[project.optional-dependencies]
+mvp = [
+    "fastapi==0.163.1",
+    "uvicorn==0.54.0",
+    "mcp==1.30.0",
+    "httpx==0.28.1",
+    "tzdata==2026.6",
+]
 
 [tool.setuptools]
 packages = ["wellbeing"]

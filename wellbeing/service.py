@@ -1,6 +1,6 @@
 """Host-neutral operations; imported content is evidence, never executable instructions."""
 from __future__ import annotations
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 import json
 import re
 import secrets
@@ -52,6 +52,37 @@ def string_list(value, choices=None, limit=100):
     if len(value) != len(set(value)) or (choices is not None and set(value) - set(choices)):
         raise ValueError('Unknown or duplicate array values')
     return value
+
+
+def meal_day(payload, timezone_name):
+    """Validate occurrence precision; return a reminder date or no dated evidence."""
+    precision = payload.get('time_precision', 'exact')
+    if precision not in ('exact', 'day', 'unknown'):
+        raise ValueError('Unknown meal time precision')
+    zone_name = payload.get('timezone', timezone_name)
+    if not isinstance(zone_name, str):
+        raise ValueError('Meal timezone must be text')
+    participant_zone(zone_name)
+    if precision == 'unknown':
+        if 'occurred_at' in payload or 'occurred_date' in payload:
+            raise ValueError('Unknown precision cannot carry occurrence date/time')
+        return None
+    if precision == 'day':
+        if 'occurred_at' in payload:
+            raise ValueError('Day precision cannot carry a clock time')
+        value = payload.get('occurred_date')
+        if not isinstance(value, str) or not re.fullmatch(r'[0-9]{4}-[0-9]{2}-[0-9]{2}', value):
+            raise ValueError('Meal date must be YYYY-MM-DD')
+        try:
+            return date.fromisoformat(value)
+        except ValueError as exc:
+            raise ValueError('Invalid meal date') from exc
+    if 'occurred_date' in payload:
+        raise ValueError('Exact precision uses occurred_at only')
+    at = instant(payload.get('occurred_at'))
+    if not at:
+        raise ValueError('Exact meal occurrence requires a timezone-bearing timestamp')
+    return datetime.fromisoformat(at).astimezone(participant_zone(timezone_name)).date()
 
 
 class Service:
@@ -292,8 +323,8 @@ class Service:
         if len(body.encode('utf-8')) > 131072:
             raise ValueError('Entry too large; keep media in authorized private source')
         if kind == 'meal':
-            if payload.get('meal') not in ('breakfast', 'lunch', 'dinner', 'snack') or not instant(payload.get('occurred_at')):
-                raise ValueError('Meal type and timezone-bearing occurrence required')
+            if payload.get('meal') not in ('breakfast', 'lunch', 'dinner', 'snack'):
+                raise ValueError('Meal type required')
             if payload.get('source_kind') not in ('self_report', 'photo_estimate', 'label', 'weighed'):
                 raise ValueError('Meal provenance required')
             if payload['source_kind'] == 'photo_estimate' and payload.get('nutrient_certainty') != 'estimate':
@@ -304,6 +335,12 @@ class Service:
                 raise ValueError('Skipped/declined meal is not measured food')
         with self.db.connect() as c:
             cfg = self.active(p, c); pid = p['participant']; self._purge(c, pid, cfg)
+            if kind == 'meal':
+                payload = dict(payload)
+                if payload.get('time_precision') in ('day', 'unknown'):
+                    payload.setdefault('timezone', cfg['timezone'])
+                day = meal_day(payload, cfg['timezone'])
+                body = packed(payload)
             old = c.execute('SELECT * FROM entries WHERE participant=? AND id=?', (pid, eid)).fetchone()
             if old and (old['kind'] != kind or old['actor'] != p['role']):
                 raise Denied('Entry identity is bound to its original role and kind')
@@ -321,9 +358,8 @@ class Service:
                 delivery_id = 'packet:' + eid + ':' + digest(body)[:16]
                 # A cancelled historical content ID is never silently reactivated.
                 c.execute('INSERT OR IGNORE INTO outbox(participant,id,kind,payload,created_at) VALUES(?,?,?,?,?)', (pid, delivery_id, 'wellbeing_packet', body, now))
-            if kind == 'meal':
-                local = datetime.fromisoformat(instant(payload['occurred_at'])).astimezone(participant_zone(cfg['timezone']))
-                reminder = f"meal:{local.date()}:{payload['meal']}"
+            if kind == 'meal' and day is not None:
+                reminder = f"meal:{day}:{payload['meal']}"
                 c.execute("UPDATE outbox SET status='cancelled',claim_hash=NULL WHERE participant=? AND id=? AND status IN ('pending','leased')", (pid, reminder))
             receipt = self.db.receipt(c, pid, 'entry', {'kind': kind, 'actor': p['role']})
         return {'id': eid, 'receipt_id': receipt, 'status': 'stored'}
@@ -367,8 +403,8 @@ class Service:
                 day = due.date(); eid = f'meal:{day}:{meal}'
                 logged = False
                 for row in c.execute("SELECT payload FROM entries WHERE participant=? AND kind='meal'", (participant,)):
-                    v = json.loads(row[0]); at = instant(v.get('occurred_at'))
-                    if at and v.get('meal') == meal and datetime.fromisoformat(at).astimezone(zone).date() == day:
+                    v = json.loads(row[0])
+                    if v.get('meal') == meal and meal_day(v, cfg['timezone']) == day:
                         logged = True; break
                 if logged:
                     continue
@@ -380,6 +416,11 @@ class Service:
                            'meal': meal, 'expires_at': (due.astimezone(timezone.utc) + timedelta(minutes=r['grace_minutes'])).isoformat(),
                            'delivery': 'pending_real_host_channel'}
                 cur = c.execute('INSERT OR IGNORE INTO outbox(participant,id,kind,payload,created_at) VALUES(?,?,?,?,?)', (participant, eid, 'meal_reminder', packed(payload), now.isoformat()))
+                if not cur.rowcount:
+                    # Only unclaimed cancellations are demonstrably never attempted.
+                    cur = c.execute(
+                        "UPDATE outbox SET status='pending',payload=?,created_at=? WHERE participant=? AND id=? AND kind='meal_reminder' AND status='cancelled' AND lease_until IS NULL AND claim_hash IS NULL AND delivery_receipt IS NULL",
+                        (packed(payload), now.isoformat(), participant, eid))
                 if cur.rowcount:
                     created.append(eid)
             return created
