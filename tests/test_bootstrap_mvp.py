@@ -3,9 +3,17 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from scripts.bootstrap import bootstrap
 from scripts.doctor import doctor
 from wellbeing.database import Database
+
+try:
+    ZoneInfo('Asia/Tehran')
+except ZoneInfoNotFoundError:
+    HAS_TEHRAN_TIMEZONE = False
+else:
+    HAS_TEHRAN_TIMEZONE = True
 
 
 class BootstrapTests(unittest.TestCase):
@@ -13,6 +21,7 @@ class BootstrapTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
         self.home = Path(self.temp.name)
 
+    @unittest.skipUnless(HAS_TEHRAN_TIMEZONE, 'Asia/Tehran timezone unavailable; OS IANA data or installed tzdata required')
     def test_twice_preserves_secrets_data_and_public_url(self):
         first = bootstrap(self.home, 'https://synthetic.example.test')
         credentials = (self.home / 'credentials.private.json').read_bytes()
@@ -30,6 +39,7 @@ class BootstrapTests(unittest.TestCase):
             self.assertEqual(c.execute('SELECT COUNT(*) FROM entries').fetchone()[0], 1)
         self.assertNotIn(json.loads(credentials)['host'], json.dumps(second))
 
+    @unittest.skipUnless(HAS_TEHRAN_TIMEZONE, 'Asia/Tehran timezone unavailable; OS IANA data or installed tzdata required')
     def test_missing_credentials_does_not_reprovision(self):
         bootstrap(self.home)
         (self.home / 'credentials.private.json').unlink()

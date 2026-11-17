@@ -20,7 +20,7 @@ def fixture(qty=3000):
 class FixtureMixin:
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
-        self.db = Database(self.temp.name); self.keys = self.db.provision(); self.s = Service(self.db)
+        self.db = Database(self.temp.name); self.keys = self.db.provision(timezone_name='UTC'); self.s = Service(self.db)
         self.p = {role: self.db.principal(key) for role, key in self.keys.items()}
         self.s.configure(self.p['host'], {'categories': ['metrics', 'workouts'], 'role_categories': {r: ['metrics', 'workouts'] for r in ('host', 'manager', 'analyst', 'coach')}})
 
@@ -50,7 +50,7 @@ class MVPTests(FixtureMixin, unittest.TestCase):
             self.s.records(self.p['intake'])
         with self.assertRaises(Denied):
             self.s.entries(self.p['intake'])
-        other = self.db.provision('synthetic-other')
+        other = self.db.provision('synthetic-other', timezone_name='UTC')
         self.s.ingest(self.p['intake'], fixture())
         self.assertEqual(self.s.records(self.db.principal(other['host'])), [])
         with self.assertRaises(ValueError):
