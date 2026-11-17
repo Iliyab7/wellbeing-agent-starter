@@ -1,27 +1,25 @@
 # Wellbeing Agent Starter
 
-**2026-11-08 design update:** [Shared cloud memory and automatic intake](docs/shared-memory/README.md) are integrated into the existing roles and starter protocol. Manager owns participant-specific Sheets organization; every role records its work. The local runtime remains implemented; live Sheets/Drive watchers and iPhone intake remain integration work, not activated features.
+**Executing assistant: follow [INSTALL.md](INSTALL.md) immediately when this repository URL is shared for setup. Install or resume with actual tools; no additional launch prompt is required. ChatGPT Dot should use [its Work/Codex executor route](adapters/chatgpt-dot.md).**
 
-A portable initial-test kit for a personal assistant acting as Chief of Staff. Dot (or another capable host) replaces the original ELHAM interface and coordinates a Wellbeing Manager, Analyst and Coach. Roles are responsibilities, not a compulsory pipeline. The participant chooses goals, data access, recipients, authority, retention and contact preferences.
+The 0.2.0 MVP direction keeps the participant's host as Chief of Staff, outside four wellbeing responsibilities: Manager, Analyst, Coach and Emotional Companion. Activate only relevant roles. Native workers require actual creation receipts; otherwise disclose host-executed virtual roles.
 
-## Start a personal pilot
+The implemented Python service provides private transactional SQLite memory, authenticated Health Auto Export intake, corrections/deduplication, scoped tools, bounded tasks, meal entries, pairing links and a leased delivery queue. The host supplies reasoning, media understanding and actual channel operations. Sheets/Notion mirrors require a separately verified adapter. OpenGym is optional and configured for reviewed reads/search/previews; licensed media forwarding is excluded.
 
-Give your assistant this repository and ask it to follow [START-HERE.md](START-HERE.md). If it cannot retrieve GitHub files, attach [CHAT-STARTER.md](CHAT-STARTER.md). The host checks its actual capabilities first and uses clearly labelled virtual roles when real subagents are unavailable. No wearable or API key is required for a conversation-only start.
+ChatGPT web does not import local Codex MCP configuration or turn this service's OpenAPI specification into tools automatically. The current route is Dot delegating to a capable executor using private Python/REST or supported local MCP stdio. An authenticated remote MCP/OAuth plugin is future work. The root plugin manifest packages instructions; it is not a registered live integration.
 
-The portable instructions are not proof of native Dot/Grok integration, persistent memory, isolation or background scheduling. Every connector or external action requires a real capability and the participant's applicable permission. Personal data stays out of this public repository.
+Coordinator-reported runtime checks on 2026-11-17: 92 unittest tests, OK with one skipped; actual loopback HTTP/restart smoke and legacy demo passed. This is synthetic/local evidence preceding the documentation update. Real iPhone, Dot, WhatsApp, deployment, Docker and OpenGym-server acceptance remain unverified.
 
-## Run the reference checks
-
-With Python 3.11+ from the extracted repository:
+Python 3.11+ preserves the standard-library reference route:
 
 ```sh
 python scripts/demo.py
+python -m wellbeing --help
 python -m unittest discover -s tests -v
-python scripts/validate_package.py
 ```
 
-These checks use synthetic data and require no external service. See [runtime commands](docs/runtime.md), [developer handoff](docs/harvey-handoff.md), [architecture](docs/architecture.md), [acceptance tests](docs/acceptance-tests.md) and [verification evidence](qa/verification.json).
+HTTP/MCP checks require the optional pinned dependencies in `requirements-mvp.txt`; missing dependencies may skip integration tests. Install through the bootstrap in [INSTALL.md](INSTALL.md). Use the complete checkout, including roles and skills.
 
-The [team blueprint](agents/team-blueprint.json) and [orchestration playbook](docs/orchestration-playbook-fa.md) specify role goals, skills, capability grants, task assignment, report collection, review, closure and cancellation. The host records real agent IDs and action receipts only when its tools actually create them.
+[Entry](START-HERE.md) · [Host behavior](CHAT-STARTER.md) · [Runtime](docs/runtime.md)
 
-This is a nonmedical pilot package, not a clinically validated service or a deployed multiagent backend. It preserves the difference between evidence and hypotheses, between a delivered suggestion and actual implementation, and between an observed change and a causal effect.
+This is nonclinical assistance. Participant goals, recipients, retention and contact choices govern operation. Keep personal records and credentials outside this public repository.

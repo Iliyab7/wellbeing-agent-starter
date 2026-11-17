@@ -1,63 +1,63 @@
-# Agent: execute this when the user shares the repository URL
+# Executing assistant: install or resume now
 
-The user wants installation and first useful operation, not a repository summary. Treat sharing this package for installation as authorization for reversible setup within their workspace. Continue autonomously using available tools. Do not ask them to paste a launch prompt. Respect real account/device consent and costs.
+A repository URL shared for setup is enough to begin reversible installation within the authorized workspace. Do not ask for another prompt or ask the participant to choose MCP versus API. Respect their current scope and the host's execution rules. Human steps remain necessary for device grants, account connection, purchases and missing material preferences.
 
-## 1. Discover, persist, resume
+## 1. Select an actual executor
 
-- Read this file, `docs/mvp/host-contract.md`, and `agents/registry.json`.
-- Find actual tools: shell/private files, durable HTTP service, HTTPS deployment, REST or MCP connection, native subagents, scheduler, existing user channel, vision, transcription, private Drive/Sheets/Notion if offered.
-- Use actual calls and receipts; a product name is no evidence. Do not confuse unrelated products named Dot with this host.
-- Reuse an existing private installation and permissions. Never overwrite its credentials or Health records on resume.
-- Missing capabilities require the smallest concrete enablement step. A conversation-only simulation is NOT the installed MVP and must not be reported as such.
+For ChatGPT Dot follow [adapters/chatgpt-dot.md](adapters/chatgpt-dot.md). Use a bounded Work/Codex task capable of running this checkout, private Python operations, service REST or supported local MCP. Other hosts may execute directly when their tools support it. First inspect tools and existing private setup; do not overwrite or silently recover missing credentials.
 
-## 2. Install on the host's usable execution machine
+Read [CHAT-STARTER.md](CHAT-STARTER.md), then relevant role instructions/skills. Record observed execution and private-storage receipts. Continue independent setup while a phone or channel step is pending. If execution cannot be reached, identify the smallest actual connection step; conversation-only help must remain labelled incomplete installation.
 
-Use an existing Python 3.11+ machine, or a participant-approved always-on service. Clone this repository if not already present. Read commands before execution. From its root:
+## 2. Bootstrap privately
+
+Use the complete checkout on an authorized Python 3.11+ execution machine:
 
 ```sh
 python scripts/bootstrap.py --install
 ```
 
-This creates the private state outside Git, a private venv, six credentials and five MCP configurations. The output prints paths/status, not secret values. Existing JSON reference state is left intact. After installation use the private venv's Python for all MVP commands.
+Bootstrap installs pinned `requirements-mvp.txt` in a private venv and initializes/resumes `~/.wellbeing-mvp` by default. It produces private credentials, setup and local MCP configuration outside Git. Use `--home` for another authorized private location. The legacy `~/.wellbeing-starter` JSON workspace remains separate; no automatic migration is claimed.
 
-If shell is unavailable but an authorized deployment/remote-execution tool exists, run the same package there. If neither exists, request the single missing execution connection; do not make the participant choose a stack. Gmail/Drive-only is a documented fallback to test, not evidence of installed API/scheduler.
+Use the resulting venv Python and `setup.private.json` commands/environment. Preserve credentials on repeat bootstrap. A missing credential file beside an existing store requires deliberate recovery, not deletion or reprovisioning. Never print credentials into chat, logs or a public report. Protect OS permissions and disk/backups; SQLite encryption is not supplied.
 
-## 3. Start and verify the private service
+Run synthetic checks separately from participant state:
 
-Use `setup.private.json`'s `serve_command` and `required_environment`. With no public URL, local operations can be tested but phone connection remains pending.
+```sh
+python -m unittest discover -s tests -v
+python scripts/demo.py
+python scripts/mvp_smoke.py
+```
 
-Use an existing approved HTTPS reverse proxy or persistent tunnel to make port 8787 reachable by the iPhone. Do not expose a raw unauthenticated database or start a paid service without its applicable authorization. See `docs/mvp/deployment.md`. Supply the stable HTTPS base as `WELLBEING_PUBLIC_URL`, then restart the service and probe `/healthz` externally. Request logs must not store pairing URLs or authorization headers.
+Use the private venv Python in these commands. Missing optional dependencies or skipped integration checks must be reported. Full fresh dependency installation is distinct from the smoke script's repeated bootstrap.
 
-Configure a process supervisor/restart policy on the actual server; a temporary tool session is not always-on hosting. Verify an intentional restart preserves records. Do not assume this user's laptop stays awake.
+## 3. Connect execution and durable service
 
-## 4. Connect tools and prepare the team
+Current interfaces are local MCP stdio (`scripts/run_mcp.py`) and authenticated REST (`scripts/run_server.py`). Import only the relevant local server configuration if the executor actually supports it. Alternatively the executor uses private Python/REST calls. Give specialists their own role credential and minimum context, never the complete credential bundle.
 
-- Read credentials only into protected host connector/environment configuration, never chat or repository.
-- If local MCP is supported, import the required server(s) from `mcp.private.json`. Each role has its own credential. Do not mount every specialist credential into an isolated specialist.
-- For a remote host, register the service's `/openapi.json` and Bearer credential through its secure REST tool mechanism. REST tools are the remote MVP interface; no unauthenticated remote MCP is provided.
-- Load Manager, Analyst, Coach and Emotional Companion role instructions and selected skills. Create independent workers with the host's actual native mechanism when available; otherwise explicitly use host-run role perspectives. Record actual instance IDs and creation receipts; don't manufacture background agents.
-- Run bounded work via create → claim → report → review → close. Prepared is not dispatched, report_received is not verified, closed is not user delivery.
+**ChatGPT web does not read `mcp.private.json` or automatically import `/openapi.json`.** That REST schema documents the executor interface. A public ChatGPT remote MCP/OAuth adapter is not implemented. Do not expose sensitive tools without authentication or advertise a registered plugin.
 
-## 5. iPhone connection with minimal typing
+For phone intake use an existing authorized supervised machine and stable HTTPS reverse proxy/tunnel. Set `WELLBEING_PUBLIC_URL` to the actual base URL, repeat bootstrap with `--public-url` to update its private tool environment, and restart the service using the setup receipt. Verify `/healthz` externally and a controlled restart. Localhost, a persistent filesystem and a temporary task session do not establish an always-on reachable service.
 
-- Explain briefly what data/recipients/retention the setup page offers. Reuse already valid user choices.
-- Call `POST /v1/pairing` with host credentials. Privately give its expiring setup link to this participant.
-- Participant installs Health Auto Export and chooses trial/Premium themselves. They open the setup page, select scope, open the generated export links, grant Apple's permissions, and enable automations.
-- Do not buy the app, grant permissions or publish their setup link on their behalf.
-- First use Manual Upload for a bounded history window. Poll `/v1/status`; acknowledge connection ONLY after observing an actual intake receipt and event times. Synthetic smoke data must use a separate store.
-- Verify the generated HAE settings on this actual app version, especially headers, grouping, disabled-until-reviewed and source selection. Deep links were built from official docs; phone acceptance still matters.
-- Native Shortcuts are optional for recovery/event triggers. HAE is the initial transport. Do not create unsigned fake `.shortcut` files; use Apple Shortcuts on the device/Mac when genuinely needed.
+The deployment owner must check proxy limits, secret/path logging, TLS, restart and protected backups. Do not provision paid hosting without applicable authority. Docker/Compose assets exist but their operation has not been verified. No blanket deployment success follows from their presence.
 
-## 6. Meal reporting and low-interruption follow-up
+## 4. Prepare responsibilities and iPhone intake
 
-Use existing knowledge; obtain only missing meal times/timezone/attention choices. Configure chosen breakfast/lunch/dinner reminders, quiet hours and budget through `/v1/config`; reminders default OFF until selected. Use current WhatsApp/host channel, not a new bot identity.
+Load Manager, Analyst, Coach and Emotional Companion instructions; activate only needed roles. Record native IDs/receipts if genuinely created, otherwise virtual mode. Check scope before every actual transfer. Task claims require host execution and reports; they do not create workers.
 
-The service queues due reminders. The host MUST register a real recurring job (suggested every 5 minutes) that claims outbox, uses its actual channel tool, records the returned message receipt and acknowledges. If scheduling is unavailable, state reminders aren't live; API queueing alone is not notification delivery. Preserve the delivery ID as the channel idempotency key when supported; reconcile uncertain sends before retry.
+Use `wellbeing_pairing` or authenticated `POST /v1/pairing` after HTTPS is verified. Give the participant the private expiring setup link. They install Health Auto Export on the iPhone, choose trial/purchase, select categories/recipients/retention, grant Apple Health permissions and review/enable generated automations. Links contain an intake credential; keep them private. No fake signed `.shortcut` artifact is needed.
 
-When a photo/voice arrives, use actual host vision/transcription. Preserve source message ID and stated occurrence time; do not log guessed meal timing, ingredients, weights or calories as confirmed. Store through `wellbeing_record_entry`/`POST /v1/entries`. Ask only an ambiguity that changes useful help. Correct the same ID when the participant corrects it. Emotional notes use companion scope and minimized sharing.
+Explain category choices in ordinary language. All supported data is optional, never implied consent. The server enforces category scope; narrower metric selection is configured in HAE, not enforced by a server metric allowlist. Companion receives only State of Mind through standard pairing when selected; other selected recipients receive selected categories. Review those actual grants before confirmation.
 
-## 7. First value and ready receipt
+Choose a bounded history window within selected retention, then Manual Upload. Generated defaults replay today/yesterday with a requested hourly cadence; this is not guaranteed iOS background timing. Check actual HAE version/settings, source selection, units and aggregation. Observe receipt plus event times and scoped readback before claiming phone intake. A transport receipt alone does not independently verify device origin. Test later incremental/replayed/delayed data and corrections; missing is not zero.
 
-Manager uses real evidence to prepare a short Persian section or answer, with unknowns and next owner. CoS chooses how/when to present; it does not download fifteen videos or reconstruct analysis. Use OpenGym tools only when a real exercise task needs them (`docs/mvp/opengym.md`).
+## 5. Deliver first value and chosen follow-up
 
-Finish with a concise receipt: runtime, public reachability, private memory, actual native/virtual roles, iPhone last event/receipt, channel, scheduler, meal flow and open gaps. Continue all independent setup even when one device permission is pending. Do not label the whole installation blocked merely because the phone step needs its owner.
+Manager returns a concise ready answer/section with evidence, unknowns and next owner. CoS selects presentation time; team work handles any needed media preparation. Optional OpenGym use requires a configured reviewed bridge; use native links, never extract/forward licensed media.
+
+Use existing host/channel capabilities for meal photos, voice and text. Persist only supported estimates through entry tools; retain message ID and stated occurrence time. Ask only consequential ambiguities. Use the same original role and ID for corrections.
+
+Reminders default OFF. Configure participant-selected meal times, timezone, quiet hours and budget. The service's in-process ticker only produces queue entries while running. Register and read back a real host job for collection/delivery before claiming reminders are live. `scripts/host_tick.py --help` defines private collect/apply files when direct tools are unavailable; the host still performs real reasoning/channel calls. Protect and expire job/result files under the same retention scope.
+
+Claim outbox, check current authority and lease, send through the actual authorized channel, then acknowledge with its actual receipt. Preserve idempotency keys where supported. Unknown sends require channel reconciliation before retry; queue acknowledgement is not reading or action.
+
+Return a short component receipt: installed runtime/version, private persistence, service reachability/restart, native/virtual roles, actual phone event/receipt, media/channel capability, recurring-job evidence and open gaps. No real-phone, Dot, WhatsApp or deployment acceptance is currently established by the repository's synthetic tests.
