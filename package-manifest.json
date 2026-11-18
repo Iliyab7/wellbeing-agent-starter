@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "version": "0.2.0",
-  "source_revision": "0c0bfe0ee62d061d66feec76e6c4048d44973521",
+  "version": "0.3.0",
+  "source_revision": "8e7f3cf7283769ad2121d32109401e92000b7b21",
   "files": [
     {
       "path": ".gitattributes",
@@ -9,7 +9,7 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "d8abbbeee55bb1bd004a9b43b7da5c7b388983538d2b1d077f58d86dff5b30d2"
+      "sha256": "f633878128f63662d1b35d374246928cffd0c241bcdc15af45a74cc30598d0f0"
     },
     {
       "path": ".gitignore",
@@ -28,40 +28,52 @@
       "sha256": "68a0fefc84e2858bb9c5a70af26424756ccf39cdf4bdf3bd77db6f70854b4a34"
     },
     {
+      "path": ".second-brain/entries/20261118T203257Z-apple-health-inbox.json",
+      "sha256": "0b22539040eb7f5d91c900637151b474dc9a3a39a2c08ff5682b937f77c941bc"
+    },
+    {
       "path": "AGENTS.md",
-      "sha256": "3a6098cce9f6ce3bdee5c24db1044abe968a800aed020014818e8c49bc3d2b62"
+      "sha256": "d73649710df3789f08f3fa44964ce85f0bf6577cdd8d2d7efcb33e21c726fddf"
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "41c4d4c061fd943483f4cd57cb4f55d6261b37c6cc01eb51ac4832c6365e4b43"
+      "sha256": "961f01263f41a5944b037f1626438c40ea2250bd3489078f749ec3c796401225"
     },
     {
       "path": "CHAT-STARTER.md",
-      "sha256": "6f22c633cf57dab58a2a9754f297dc02dba71078db2d5ac20091d3452939e402"
+      "sha256": "0f6358474d3f84275e9f031f34435138a9ccd7ea5975c2b3740546d32660373c"
     },
     {
       "path": "Dockerfile",
       "sha256": "3e532d4e3d3aa904c96f46f577e46835ac8676aeb99645fa93b7b48f8de8b588"
     },
     {
+      "path": "INSTALL-HTTP.md",
+      "sha256": "62d24b234b5d7cc673b3875d3329ab6e789ef559574485a0dd22a79c87cab94b"
+    },
+    {
       "path": "INSTALL.md",
-      "sha256": "e2690bda20301b46cb288b1983490d538f9c3384859d445ca0a71bb98223e2f9"
+      "sha256": "8c1eb8bcd97bb000db068bc3cb32363e7f069dcd38928446e47caaf3cf2f3654"
+    },
+    {
+      "path": "PHONE-SETUP.md",
+      "sha256": "23074d0b1092a0699aa31b589dd750f01e2a0768757d0a4d8ee6f6e6b413bf30"
     },
     {
       "path": "README.en.md",
-      "sha256": "82ca921315819dd4adfa4707f89341d0530d57f9ab32ea9b0482cb8309c8cc70"
+      "sha256": "824a8a8e28474452d594c7e677d76526bee13d61bb32c1a6c8bfc95485c268a4"
     },
     {
       "path": "README.md",
-      "sha256": "a4e67818fa7ba49127ff40fe0324425b80de5d9bbd9a7a9b328eb47905b664d3"
+      "sha256": "31f12efc65dbb5b505487872fa31009a4a597d3b28d58c48728fb0f3bbb75a8f"
     },
     {
       "path": "START-HERE.md",
-      "sha256": "e5428295ea2b960174f73b7e129b978aad4556dbf89aa2945f34345177357ce5"
+      "sha256": "f0ebc64e465b146bbf2e640c933c3d3189ebd772615f7dad290e46ce946ebc2e"
     },
     {
       "path": "VERSION",
-      "sha256": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9"
+      "sha256": "d915cc95d6ca8f47ae297713ed46d4e5c5d99ddd29fc3c61e263bdf305f2b5b0"
     },
     {
       "path": "WORK-PLAN.md",
@@ -69,11 +81,11 @@
     },
     {
       "path": "adapters/chatgpt-dot.md",
-      "sha256": "5133b367f03053997211196d8371d2e36eb23edd66a927d723bfaba4724566df"
+      "sha256": "ad2816f4060d4f0611133d57ac3be99cd32d830db7e11c2f03666185aa91fc52"
     },
     {
       "path": "adapters/dot.md",
-      "sha256": "c0de148b98ce8737fe6664824e02ba7d4e949272ef86db7a134abf734894ea7e"
+      "sha256": "22c3e731bbc39a83f852d6f16fa25a672becc67326a6999073df28a62ef7faf7"
     },
     {
       "path": "adapters/grok.md",
@@ -81,7 +93,7 @@
     },
     {
       "path": "adapters/host-capabilities.md",
-      "sha256": "ad6a14e9aa82d4243afd3d187ca93f6dcc0d4eb2e0651576f58d936a8e027aca"
+      "sha256": "1ad6238c6216bce613e9553f3b6822645b9dd9381f0b44a28cf7d522f8acebe4"
     },
     {
       "path": "agents/analyst.md",
@@ -89,7 +101,7 @@
     },
     {
       "path": "agents/chief-of-staff.md",
-      "sha256": "c41eb50a0b9ba68e2c8853de4c5beb6248b70e9d0b4c337aef492f104952b136"
+      "sha256": "8071f5dd9b8db8fb1ad837f965c35682c56f24bcfb855f2eed633166ba36d11e"
     },
     {
       "path": "agents/coach.md",
@@ -121,11 +133,11 @@
     },
     {
       "path": "docs/architecture.md",
-      "sha256": "b7fc88c6f31ffbdabd098a1654c2551b858ac9acc2bd51f813119cd21c774008"
+      "sha256": "d52a34a4f3d19f1e1531046ddeed3af1bbc3c5a5ed1b7511b56f9483ac80b325"
     },
     {
       "path": "docs/harvey-handoff.md",
-      "sha256": "925eccc5133948b51fca82ff4463d52b82cf9b1a4da0b920f111fabb992923e6"
+      "sha256": "1da9aebd1e24adbdd9ed8f4f2c3f8a80dd5bfb332be248fb3fa5bf340f895eb8"
     },
     {
       "path": "docs/mvp/ACCEPTANCE-FA.md",
@@ -134,6 +146,10 @@
     {
       "path": "docs/mvp/CLI-HANDOFF.md",
       "sha256": "56840496c8746bec2bceed69e53c61646ccab011420cbc598a0ec61d5f1ae882"
+    },
+    {
+      "path": "docs/mvp/IOS-SHORTCUTS-FA.md",
+      "sha256": "e25bbfa1c65be6c28091658411143887d6c59d2675c048b76ca40756d6a0f45d"
     },
     {
       "path": "docs/mvp/ROADMAP-FA.md",
@@ -146,6 +162,10 @@
     {
       "path": "docs/mvp/host-contract.md",
       "sha256": "af6e81f3ad9c464a1d585a4bc78f722e36c0e2f95792f4bb85ea3848598f25c1"
+    },
+    {
+      "path": "docs/mvp/inbox-runtime.md",
+      "sha256": "021fc7d4fa52f7f9c88b94ace762810c31c4e36382a8458f693aa4b55e145d3b"
     },
     {
       "path": "docs/mvp/opengym.md",
@@ -213,7 +233,7 @@
     },
     {
       "path": "plugin.json",
-      "sha256": "0fa3b5036fd909f926626368f00a1cd7769bbd4f62d66111fac65e2f25174bc5"
+      "sha256": "ed178055a468086803beb115e05102925470378fd4b753cca151d1c51ec27c1e"
     },
     {
       "path": "prompts/BOOTSTRAP-EN.md",
@@ -229,7 +249,11 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "ce222c77ccb040aef34ea0659360c88837cd3055e8c6098c2bef2de963bf6dfa"
+      "sha256": "c44169d0ca2404dc101dbcdea74e8e210884fca3f515835b67b45b54d4eaeb4f"
+    },
+    {
+      "path": "qa/inbox-verification.json",
+      "sha256": "5813ec3aa32d71cf32624754be186cbfbcd6cbab6d1d0cfd84830963959dd26b"
     },
     {
       "path": "qa/mvp-verification.json",
@@ -265,11 +289,11 @@
     },
     {
       "path": "scripts/bootstrap.py",
-      "sha256": "0f0064ff40d1e7ebe0aae9d3a3b93615884809e646a54e47d54d859836d8cc26"
+      "sha256": "f45be0e3e2651309299763337310612a833004ad104fc45d5678641f7525f137"
     },
     {
       "path": "scripts/build_release.py",
-      "sha256": "00416f2ed7a616b4eb68683dfbeae7c51d5a39be6730f53be6d2f91d7f7435b3"
+      "sha256": "f1aa133a45e1852260197b95a1c35e82aa8df21d56dabcac54e112bf0465217c"
     },
     {
       "path": "scripts/ci_mvp.py",
@@ -292,6 +316,10 @@
       "sha256": "9af6cb08e1821726ace58ccc1919e7f4dac65bd5a9357653e160a5fde79bc775"
     },
     {
+      "path": "scripts/inbox.py",
+      "sha256": "f530366384b425b2293fa7028eb5dbf0e21e24d11841ab6577376a3e4eb7f256"
+    },
+    {
       "path": "scripts/mvp_smoke.py",
       "sha256": "bb23c9f05d55f3c2e119c01e8afbea1404129ab0a5a5ef5f9aa52e85f9a7b1e9"
     },
@@ -305,7 +333,7 @@
     },
     {
       "path": "scripts/validate_package.py",
-      "sha256": "bdf6599b4a9574eddc0509b91d290f4dd4781d22bf9e81a4fa04caeb908b1cb0"
+      "sha256": "fd2188b229236a64d8ec127662cfb217feb64578de307a65d26fb8c4908008e5"
     },
     {
       "path": "skills/wellbeing-analyze/SKILL.md",
@@ -428,6 +456,10 @@
       "sha256": "778dfd2851dec7d4efad8ac4a41b981e3472cf6e14d6accfc7b730063e3aed52"
     },
     {
+      "path": "tests/test_inbox.py",
+      "sha256": "8e92ca30a4eb28e791ba82c6c07171c804d9513adffdc18736aae7e4a5df67b6"
+    },
+    {
       "path": "tests/test_independent_review.py",
       "sha256": "f50ddf19e32c0915b4f74030f3fa46f82cdd1411983e008baa1cf872de28530f"
     },
@@ -461,7 +493,7 @@
     },
     {
       "path": "wellbeing/__init__.py",
-      "sha256": "202b7163b995a2df80efcb76ccae0b3b55fd9309d3a152f876ece0d2b4a5e6b1"
+      "sha256": "3ae9a3429782a1fcdfeef353d5bcc9aa775bdbb5eba72affb0b8b8d3e52bef83"
     },
     {
       "path": "wellbeing/__main__.py",
@@ -469,7 +501,7 @@
     },
     {
       "path": "wellbeing/api.py",
-      "sha256": "f405245ae9d578c16d7d0aaa4192b49a7dbac1c6a1b751076042d1bd9461ac0e"
+      "sha256": "20467d5ffc2825a54e1a6e62c7472adf2a5a7151b61f6fcdfb65f504dfe8c787"
     },
     {
       "path": "wellbeing/cli.py",
@@ -501,7 +533,7 @@
     },
     {
       "path": "wellbeing/service.py",
-      "sha256": "0e46a7e68c548585ac9891b819699dae8e2d4be7646359f58f0aee8492bf7777"
+      "sha256": "dab3fe97284269e87767a2437e58b7bccde727985d5cb2e0d14c52711d0d6011"
     },
     {
       "path": "wellbeing/tasks.py",
