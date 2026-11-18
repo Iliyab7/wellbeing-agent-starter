@@ -163,6 +163,8 @@ class Service:
         changed_scope = cfg['categories'] != previous['categories'] or cfg['role_categories'] != previous['role_categories']
         if changed_scope:
             permitted = set(cfg['categories'])
+            if permitted != set(previous['categories']):
+                c.execute("DELETE FROM receipts WHERE participant=? AND kind='health_file_import'", (pid,))
             for row in c.execute('SELECT id,category FROM records WHERE participant=?', (pid,)).fetchall():
                 if row['category'] not in permitted:
                     c.execute('DELETE FROM revisions WHERE participant=? AND id=?', (pid, row['id']))
@@ -207,8 +209,19 @@ class Service:
         if removed:
             self._invalidate(c, pid)
 
-    def ingest(self, p, payload):
+    def ingest(self, p, payload, *, file_import=None):
         require_role(p, 'intake', 'host')
+        if file_import is not None:
+            require_role(p, 'host')
+            if not isinstance(file_import, dict) or set(file_import) != {'sha256', 'stream', 'observed_at'}:
+                raise ValueError('File import requires a digest, source stream and observation time')
+            if not isinstance(file_import['sha256'], str) or not re.fullmatch(r'[0-9a-f]{64}', file_import['sha256']):
+                raise ValueError('Invalid file digest')
+            file_import = {'sha256': file_import['sha256'],
+                           'stream': text(file_import['stream'], 100),
+                           'observed_at': instant(file_import['observed_at'])}
+            if not file_import['observed_at']:
+                raise ValueError('Source time requires a timezone')
         data = health_data(payload)
         packed(payload)
         present = set(data)
@@ -218,6 +231,21 @@ class Service:
             self._purge(c, pid, cfg)
             if present - set(cfg['categories']):
                 raise Denied('Upload contains an unapproved category; no records saved')
+            if file_import is not None:
+                latest = None
+                for row in c.execute(
+                        "SELECT created_at,result FROM receipts WHERE participant=? AND kind='health_file_import'",
+                        (pid,)):
+                    previous = json.loads(row['result'])
+                    if (previous['sha256'] == file_import['sha256']
+                            and previous['stream'] == file_import['stream']):
+                        return {**counts, 'status': 'already_imported', 'receipt_id': previous['intake_receipt_id'],
+                                'received_at': row['created_at'], 'source': 'health_auto_export'}
+                    if previous['stream'] == file_import['stream']:
+                        latest = max(latest or previous['observed_at'], previous['observed_at'])
+                if latest and file_import['observed_at'] <= latest:
+                    return {**counts, 'status': 'older_export', 'receipt_id': None,
+                            'received_at': None, 'source': 'health_auto_export'}
             items = []
             for category in sorted(present):
                 if not isinstance(data[category], list):
@@ -269,7 +297,12 @@ class Service:
             if counts['updated']:
                 self._invalidate(c, pid)
             receipt = self.db.receipt(c, pid, 'health_intake', counts)
-        return {**counts, 'receipt_id': receipt, 'received_at': now, 'source': 'health_auto_export'}
+            if file_import is not None:
+                self.db.receipt(c, pid, 'health_file_import', {**file_import, 'intake_receipt_id': receipt})
+        result = {**counts, 'receipt_id': receipt, 'received_at': now, 'source': 'health_auto_export'}
+        if file_import is not None:
+            result['status'] = 'imported'
+        return result
 
     def records(self, p, category=None, metric=None, limit=100):
         require_role(p, *READ_KINDS)

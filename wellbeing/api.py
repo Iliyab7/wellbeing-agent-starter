@@ -9,6 +9,7 @@ from urllib.parse import parse_qs, urlsplit
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import HTMLResponse, JSONResponse
+from . import __version__
 from .database import CATEGORIES, Database, Denied, utcnow
 from .iphone import validate_public_url
 from .service import Service, require_role, READ_KINDS
@@ -62,7 +63,7 @@ def create_app(home=None, public_url=None, scheduler=True):
                 except asyncio.CancelledError:
                     pass
 
-    app = FastAPI(title='Wellbeing MVP tools', version='0.2.0', lifespan=lifespan)
+    app = FastAPI(title='Wellbeing MVP tools', version=__version__, lifespan=lifespan)
     app.state.db = db; app.state.service = service
     app.state.scheduler_error = None; app.state.scheduler_last_tick = None
 
@@ -123,7 +124,7 @@ def create_app(home=None, public_url=None, scheduler=True):
     def healthz():
         with db.connect() as c:
             c.execute('SELECT 1').fetchone()
-        return {'service': 'wellbeing-mvp', 'version': '0.2.0', 'ok': app.state.scheduler_error is None,
+        return {'service': 'wellbeing-mvp', 'version': __version__, 'ok': app.state.scheduler_error is None,
                 'queue_producer': {'enabled': scheduler, 'last_tick': app.state.scheduler_last_tick, 'error': app.state.scheduler_error},
                 'channel_delivery': 'external_host_required'}
 

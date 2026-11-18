@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "20261118T203257Z-apple-health-inbox",
+  "repository": "Iliyab7/wellbeing-agent-starter",
+  "occurred_at": "2026-11-18T20:32:57Z",
+  "title": "Switch Wellbeing phone setup to a private inbox",
+  "summary": "The previous Dot setup reached a code installation and stopped at the hosted intake dependency. Version 0.3 starts with actual inbox lookup and a first iPhone export.",
+  "outcome": "127 local tests with one platform skip, inbox synthetic replay/reopen demo, and optional HTTP/restart smoke passed. The Dot inbox probe reported Gmail and Drive search available, with no matching Health attachment.",
+  "status": "local-tested",
+  "decisions": [
+    "Use direct Gmail intake by default where the verified connection can open an attachment, or approved private Drive.",
+    "Reuse the existing scope and SQLite implementation for optional offline imports, with replay receipts and source ordering.",
+    "Use ECC's separation of transport and processing and AI Delivery Method V2's first observable outcome and verification evidence."
+  ],
+  "blockers": ["The first phone file and its actual readback are pending. Apple Shortcuts sharing and scheduled phone delivery require device validation."],
+  "next_actions": ["Grant chosen Health permissions on iPhone, send a limited test export and inspect the actual attachment in Dot. Save the approved schedule after the first real read."],
+  "evidence": ["INSTALL.md", "PHONE-SETUP.md", "qa/inbox-verification.json"]
+}

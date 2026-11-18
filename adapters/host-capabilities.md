@@ -1,6 +1,6 @@
 # Host capability and provisioning contract
 
-For ChatGPT Dot use [the executor route](chatgpt-dot.md) and [INSTALL](../INSTALL.md). Discover the actual session's tools before asking for information already available. Do not inspect personal accounts or health records merely to prove a capability.
+For ChatGPT Dot start in [INSTALL](../INSTALL.md) with the actual inbox connector. The execution and service checks below apply when the participant uses the optional private importer or hosted API.
 
 | Capability | Required evidence |
 |---|---|

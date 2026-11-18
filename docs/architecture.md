@@ -1,5 +1,7 @@
 # MVP 0.2 architecture
 
+For the 0.3 default phone route see [Inbox setup](../INSTALL.md) and [private attachment processing](mvp/inbox-runtime.md). The architecture below describes the optional hosted service.
+
 ChatGPT Dot is the requested first host. The participant shares the repository URL; the executing host follows [INSTALL](../INSTALL.md) through [the actual Dot executor route](../adapters/chatgpt-dot.md). CoS remains the relationship, authority, coordination and attention gate outside the wellbeing team.
 
 | Responsibility | Accountable result |

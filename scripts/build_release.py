@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ROOT_FILES = {
     "README.md", "README.en.md", "START-HERE.md", "CHAT-STARTER.md", "AGENTS.md",
     "CHANGELOG.md", "VERSION", "pyproject.toml", ".gitignore", ".gitattributes",
-    "INSTALL.md", "WORK-PLAN.md", "requirements-mvp.txt", "Dockerfile",
+    "INSTALL.md", "INSTALL-HTTP.md", "PHONE-SETUP.md", "WORK-PLAN.md", "requirements-mvp.txt", "Dockerfile",
     "compose.yaml", "plugin.json", "LICENSE", "LICENSE.md", "LICENSE.txt",
 }
 PUBLIC_DIRS = {"agents", "skills", "adapters", "prompts", "templates", "docs", "wellbeing",

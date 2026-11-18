@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0 — Apple Health inbox — 2026-11-19
+
+- Start phone setup with a private Gmail or Drive destination. Dot uses its existing read connector and checks the first attachment before scheduling.
+- Add a standard-library attachment importer with private SQLite persistence, ordered file receipts, replay detection and a disposable demo.
+- Provide a short iPhone setup card and four optional Apple Shortcuts recipes. The hosted HTTP route is available separately.
+
 ## 0.2.0 — host-installable MVP candidate — 2026-11-17
 
 - Direct a capable host from the repository root into INSTALL, with ChatGPT Dot delegating bounded execution to Work/Codex. Local MCP configuration and REST/OpenAPI are not ChatGPT web plugin registration.

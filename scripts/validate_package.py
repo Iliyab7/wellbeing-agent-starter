@@ -34,6 +34,8 @@ REQUIRED = (
     "schemas/task-contract.schema.json", "schemas/task-report.schema.json",
     "examples/task.synthetic.json", "examples/task-report.synthetic.json",
     "INSTALL.md", "WORK-PLAN.md", "requirements-mvp.txt", "Dockerfile", "compose.yaml", "plugin.json",
+    "INSTALL-HTTP.md", "PHONE-SETUP.md", "scripts/inbox.py", "docs/mvp/inbox-runtime.md",
+    "docs/mvp/IOS-SHORTCUTS-FA.md", "qa/inbox-verification.json", "tests/test_inbox.py",
     "adapters/chatgpt-dot.md", "agents/companion.md",
     "wellbeing/database.py", "wellbeing/service.py", "wellbeing/hae.py", "wellbeing/api.py",
     "wellbeing/iphone.py", "wellbeing/mcp_server.py", "wellbeing/opengym.py",

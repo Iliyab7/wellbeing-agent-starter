@@ -1,16 +1,16 @@
 # Wellbeing Agent Starter
 
-**Executing AI / ChatGPT Dot: when the participant shares this repository URL for setup, immediately follow [INSTALL.md](INSTALL.md). Start installation or resume using actual tools; do not request another launch prompt or merely summarize the repository. For ChatGPT Dot, use [the Dot executor route](adapters/chatgpt-dot.md).**
+**ChatGPT Dot: open [INSTALL.md](INSTALL.md) and start with step 1 when you receive this link for Wellbeing. Use the connected Gmail or Drive to get the first Apple Health export.**
 
-بستهٔ MVP ول‌بینگ برای دستیار شخصی — نسخهٔ ۰٫۲٫۰ با آزمون محلی
+بستهٔ ول‌بینگ برای دات، نسخهٔ ۰٫۳٫۰
 
-برای شروع، فقط نشانی همین مخزن را به **ChatGPT Dot** بده. دات باید امکانات واقعی خود را بررسی کند، نصب یا ادامهٔ نصب را پیش ببرد و فقط تصمیم‌های لازم دربارهٔ داده، نگهداری، تماس، مجوز دستگاه یا هزینه را از تو بخواهد. نیازی نیست بین MCP و API انتخاب کنی یا پرامپت دیگری کپی کنی.
+مسیر ساده **Apple Health → Health Auto Export → Gmail یا Drive خصوصی → دات** است. با یک خروجی کوتاه شروع کن. بعد از خواندن فایل، دات دریافت را در زمان دلخواه پیگیری می‌کند. [تنظیم آیفون](PHONE-SETUP.md)
 
 دات رابط اصلی و «چیف‌آف‌استاف» تو می‌ماند. تیم چهار مسئولیت دارد: **مدیر، تحلیلگر، مربی و همراه هیجانی**. فقط مسئولیت لازم برای هر کار فعال می‌شود؛ ایجنت مستقل فقط با ابزار واقعی و رسید ساخت آن اعلام می‌شود. تیم باید نتیجه و لینک آماده تحویل دهد تا دات دربارهٔ ارزش و زمان ارائه تصمیم بگیرد.
 
-حافظهٔ اصلی MVP، SQLite خصوصی خارج از مخزن است. دریافت انتخابی Apple Health از آیفون با Health Auto Export، ثبت اصلاح‌پذیر غذا و صف یادآوری در کد وجود دارد. فهم عکس و ویس، اجرای نقش‌ها و ارسال در کانال فعلی را امکانات واقعی میزبان فراهم می‌کنند. Sheets یا Notion فقط پس از ساخت و آزمون اتصال می‌توانند آینهٔ انتخابی باشند؛ همگام‌سازی ابری فعال ادعا نمی‌شود.
+دات می‌تواند از اولین پیوست شروع کند. پردازشگر فایل و حافظهٔ SQLite خصوصی برای ادامهٔ ساختاریافته در دسترس‌اند. اجرای نقش‌ها، عکس و ویس و ارسال پیام به امکانات متصل به دات بستگی دارد. مسیر [HTTP](INSTALL-HTTP.md) فقط برای کسی است که خودش استقرار API می‌خواهد.
 
-**وضعیت واقعی:** کد نسخهٔ ۰٫۲٫۰، سازگاری نقش‌ها، سه دقت زمانی غذا و اصلاح یادآوری محلی آزموده شده‌اند؛ preflight ساخت بسته، اعتبارسنجی ۱۲۷ فایل، تکرارپذیری build و اعتبارسنجی نسخهٔ استخراج‌شده موفق بوده‌اند. نتایج، skipها و وضعیت بازبینی نهایی metadata در [QA](qa/mvp-verification.json) ثبت می‌شوند. این شاهد کد و دادهٔ ساختگی است؛ پذیرش گوشی، حساب دات، کانال/زمان‌بند، HTTPS عمومی، Docker، OpenGym زنده و backup/restore هنوز بازند. نصب محلی به‌تنهایی سرویس دائمی ایجاد نمی‌کند؛ آداپتورهای آینهٔ ابری و remote MCP/OAuth پیاده نشده‌اند.
+وضعیت حساب و گوشی با اولین فایل واقعی مشخص می‌شود. [بررسی مسیر جدید](qa/inbox-verification.json)
 
 [شروع](START-HERE.md) · [نصب برای دستیار](INSTALL.md) · [پروتکل رفتار](CHAT-STARTER.md) · [اجرای مرجع](docs/runtime.md) · [English](README.en.md)
 

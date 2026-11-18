@@ -1,0 +1,17 @@
+{
+  "version": "0.3.0",
+  "local_checks": [
+    {"command": "python -m unittest discover -s tests -v", "result": "passed", "total": 127, "skipped": 1, "skip_reason": "Windows symlink privilege"},
+    {"command": "python -S scripts/inbox.py demo", "result": "passed", "scope": "synthetic attachment import, store reopen, replay and coverage"},
+    {"command": "python scripts/mvp_smoke.py", "result": "passed", "scope": "existing optional local HTTP and restart"}
+  ],
+  "dot_check": {
+    "evidence": "Read-only check requested in the existing Dot chat; result relayed by the participant.",
+    "gmail": "Search succeeded with an empty result; attachment reader reported available.",
+    "drive": "Search reported available; no health folder or file tested.",
+    "first_phone_export": "pending",
+    "attachment_readback": "pending",
+    "recurring_job": "pending first successful read"
+  },
+  "shortcut_distribution": "Four editable recipes; no signed Apple shortcut file or tested iCloud link."
+}

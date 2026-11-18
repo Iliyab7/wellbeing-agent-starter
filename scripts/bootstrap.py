@@ -10,11 +10,12 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from wellbeing.core import atomic_json, read_json
+from wellbeing import __version__
 from wellbeing.database import Database, ROLES, Denied
 from wellbeing.iphone import validate_public_url
 
 
-def bootstrap(home=None, public_url=None):
+def bootstrap(home=None, public_url=None, *, timezone_name='Asia/Tehran'):
     # Validate before creating state, credentials or a venv.
     chosen = validate_public_url(public_url) if public_url else None
     db = Database(home)
@@ -51,7 +52,7 @@ def bootstrap(home=None, public_url=None):
             with db.connect() as c:
                 if c.execute('SELECT COUNT(*) FROM participants').fetchone()[0] or c.execute('SELECT COUNT(*) FROM tokens').fetchone()[0]:
                     raise ValueError('Credentials missing from existing store; explicit recovery needed')
-            credentials = db.provision()
+            credentials = db.provision(timezone_name=timezone_name)
             atomic_json(credentials_path, credentials)
         caps = db.home / 'capabilities.private.json'
         if not caps.exists():
@@ -67,7 +68,8 @@ def bootstrap(home=None, public_url=None):
                     'env': {**required, 'WELLBEING_ROLE_TOKEN': token}}
         mcp_path = db.home / 'mcp.private.json'
         atomic_json(mcp_path, {'mcpServers': servers})
-        receipt = {'version': '0.2.0', 'private_home': str(db.home), 'database': 'initialized',
+        receipt = {'version': __version__,
+            'private_home': str(db.home), 'database': 'initialized',
             'credentials': 'preserved_in_private_file', 'mcp_config': str(mcp_path),
             'capabilities': 'actual_host_receipts_required', 'agents': 'definitions_not_spawned',
             'iphone': 'awaiting_actual_device_intake', 'channel': 'actual_host_connector_required',

@@ -1,10 +1,10 @@
 # Working on Wellbeing Agent Starter
 
-This public implementation provides the 0.2.0 host-installable MVP with locally verified code and transport; package and live acceptance gates are tracked in qa/mvp-verification.json. Before changing behavior read README.md, START-HERE.md, docs/architecture.md, docs/source-analysis.md and docs/harvey-handoff.md. Participant-host instructions live in INSTALL.md, CHAT-STARTER.md and agents/. During integration, reconcile older design documents with actual runtime source and the current delivery brief; do not present historical intentions as implemented features.
+Version 0.3.0 starts with private Gmail or Drive intake in INSTALL.md and PHONE-SETUP.md. Before changing behavior read README.md, START-HERE.md, docs/architecture.md, docs/source-analysis.md and docs/harvey-handoff.md. The 0.2 implementation remains an optional path in INSTALL-HTTP.md. Current evidence for the inbox path is in qa/inbox-verification.json.
 
 The requested first host is ChatGPT Dot. CoS remains outside the wellbeing team and owns the relationship, authority, coordination and attention gate. Retain Manager, Analyst and Coach as the three core roles and the explicitly requested Emotional Companion as a fourth bounded responsibility. Roles are not a mandatory pipeline; domains do not each need permanent agents. Team work returns ready packets/links. Native workers require actual host support and creation receipts; otherwise disclose virtual roles.
 
-The current Dot route delegates to an actual Work/Codex executor using private Python/REST or supported local MCP stdio. ChatGPT web does not import local Codex MCP configuration or automatically turn OpenAPI into tools. Remote authenticated MCP/OAuth is a separate pending adapter. Never claim registered plugins, persistent workers, connectors, schedules or clinical validity without evidence.
+The default Dot route uses actual connected Gmail or Drive tools to open a participant-authorized file and report one useful observation. A Work/Codex executor is optional for persistent file processing. Prove connector access, file contents and recurring execution through observed receipts.
 
 SQLite private transactional memory is the MVP primary store, outside the repository. Preserve the legacy standard-library CLI, its JSON state, commands and tests as a distinct reference contract. No implicit migration or local/cloud synchronization. Manager owns organization and recording duties; Sheets/Notion mirrors need their own authorized adapter and verified readback/correction/deletion.
 

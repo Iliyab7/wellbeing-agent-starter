@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "wellbeing-agent-starter",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Portable wellbeing instructions and skills. Follow INSTALL.md when shared for setup. Uses a verified host executor and private runtime; this manifest does not register a ChatGPT remote MCP plugin or activate accounts, agents, channels or schedules."
 }
