@@ -61,7 +61,7 @@
     },
     {
       "path": "README.en.md",
-      "sha256": "824a8a8e28474452d594c7e677d76526bee13d61bb32c1a6c8bfc95485c268a4"
+      "sha256": "e19f3f1f14c3cd221cc521a4a0068d64c274d1d78359d500267406326b4a8f41"
     },
     {
       "path": "README.md",
@@ -81,11 +81,11 @@
     },
     {
       "path": "adapters/chatgpt-dot.md",
-      "sha256": "ad2816f4060d4f0611133d57ac3be99cd32d830db7e11c2f03666185aa91fc52"
+      "sha256": "b1e9c84d982d5ff407603cfa5e44dc1f525330da37e6ee31fff2d24ceff1d66d"
     },
     {
       "path": "adapters/dot.md",
-      "sha256": "22c3e731bbc39a83f852d6f16fa25a672becc67326a6999073df28a62ef7faf7"
+      "sha256": "9892b8fde3024ba226f3e9dbef8d104880c37ca11d0f7dba3eb5d1f82b4401c8"
     },
     {
       "path": "adapters/grok.md",
