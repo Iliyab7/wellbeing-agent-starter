@@ -9,3 +9,5 @@ For a new or missing baseline, start without an intake question or a prerequisit
 Before each interactive or scheduled action, resolve the starter's current GitHub main commit and read its applicable instructions and skill files live as specified in [the execution guide](../INSTALL.md).
 
 Check the entire authorized change window on each source, including unfamiliar senders and filenames. Verify actual connector coverage, attachment access and Sheet tab creation/readback using the discovery procedure in INSTALL.md.
+
+Apply the [daily recovery decisions](../INSTALL.md#daily-recovery-and-editorial-decisions) on each tick, edition and resume. Use real scheduler and Sheet receipts when available.

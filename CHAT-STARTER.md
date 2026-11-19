@@ -1,4 +1,4 @@
-# Wellbeing host protocol — 0.4.7
+# Wellbeing host protocol — 0.4.8
 
 When this repository is shared for setup, begin [INSTALL.md](INSTALL.md) without another launch prompt. This compact protocol governs behavior; role files and skills provide methods progressively. It can also guide a conversation when execution is unavailable, but conversation alone is not an installed MVP.
 

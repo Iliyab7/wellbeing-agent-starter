@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.8 — daily recovery and quiet editions
+
+Define source-failure notices, fair historical recovery, manual Sheet edit handling, missed-run reconciliation and quiet editorial days.
+
 ## 0.4.7 — discover emerging health streams
 
 Inspect all authorized changes, classify unfamiliar data, and let the Manager organize verified observations in the same private workbook.
