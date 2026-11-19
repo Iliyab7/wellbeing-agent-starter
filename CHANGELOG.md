@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1 — baseline discovery and quiet follow-up
+
+The host now discovers authorized context independently, verifies it in the existing Sheet and reconciles a single agreed monitoring job.
+
 ## 0.4.0 — personal newspaper pilot — 2026-11-19
 
 - Start from the participant's goal and available authorized evidence. Deliver a usable health section in the first conversation, even when a preferred data source is missing.

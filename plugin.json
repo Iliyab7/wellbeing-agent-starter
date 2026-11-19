@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "wellbeing-agent-starter",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Portable wellbeing instructions and skills. Follow INSTALL.md when shared for setup. Recover the goal from the authorized private Sheet, prepare a health section and verify continuation through host tools."
 }

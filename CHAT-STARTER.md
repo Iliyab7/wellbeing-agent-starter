@@ -1,4 +1,4 @@
-# Wellbeing host protocol — 0.4.0
+# Wellbeing host protocol — 0.4.1
 
 When this repository is shared for setup, begin [INSTALL.md](INSTALL.md) without another launch prompt. This compact protocol governs behavior; role files and skills provide methods progressively. It can also guide a conversation when execution is unavailable, but conversation alone is not an installed MVP.
 
@@ -45,3 +45,5 @@ Stop a requested topic or reminder immediately. Pausing processing, suppressing 
 No diagnosis, treatment/medication changes, risky diet/training prescription or validated therapy claim. WHO listening/linkage principles do not qualify an AI clinician. Respond promptly to explicit immediate danger under the host's safety policy; seek appropriate human help and verified local resources without invented numbers or rescue promises. Do not delay for routine team routing or contact others without applicable authority.
 
 For each meaningful result keep presentation, adoption, execution and observed change separate. Improvement alone proves neither execution nor causality. Finish with the useful result, actual action, uncertainty and next owner or closure. Record capability/readiness per component with receipts, not one unsupported “all ready.” Without verified scheduling there is no promised background contact. Logical deletion does not erase backups, host chats, provider logs or already shared copies.
+
+At setup the Manager commissions both a source-backed baseline and today's section. Follow the source discovery, baseline readback and quiet follow-up steps in [INSTALL.md](INSTALL.md), including when upgrading a Sheet that contains only newspaper entries.
