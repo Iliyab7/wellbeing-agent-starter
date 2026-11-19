@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "version": "0.4.4",
-  "source_revision": "fd7f5c3ca6b288cb6f2658038e4c712b8d1d45c7",
+  "version": "0.4.5",
+  "source_revision": "3b4cee9d0491050a05a0152e906d949dd1a13124",
   "files": [
     {
       "path": ".gitattributes",
@@ -32,6 +32,10 @@
       "sha256": "5f3cc9de343f26cd277f4a75461d3549dda9b20e10942a7cafb3fb0b70d65508"
     },
     {
+      "path": ".second-brain/entries/2026-11-20-private-preparation.md",
+      "sha256": "dc1b91dbbe5f74006c9128959a3e18f1a6f01abac5b7536df40ce0e917e74c89"
+    },
+    {
       "path": ".second-brain/entries/20261106T232655Z-wellbeing-public-pilot.json",
       "sha256": "6ab48a8a92318a41114eccd880a6db6b48190da1d8fe70b74802bf8590ebd5a4"
     },
@@ -57,11 +61,11 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "8b5f8fad96a8f679f1c2d35fc98f44d55512cbcbc8a42e37f8e15505ba798541"
+      "sha256": "e2ee9c7b6ba14ce81679c3b8c458bc8e0d5664998bd8db4233980e46bcbf5f6c"
     },
     {
       "path": "CHAT-STARTER.md",
-      "sha256": "9a29e6d6c87b406189eb5002d2ac7318d6e7fe4ea476ca4c270137444e9bb022"
+      "sha256": "b4ae15ebe3b943ad25666b8203e47af981d6f58c911c88c90f370a274c5f22fa"
     },
     {
       "path": "Dockerfile",
@@ -73,7 +77,7 @@
     },
     {
       "path": "INSTALL.md",
-      "sha256": "09452c8048645a79dba81cd2846f1d9eb7c74ccdafc1d3c35544884afae8428f"
+      "sha256": "3a5216908fe9ceb1ab9f7b8bc0f95a8167113bbaf35b90dbfb25caada8872ab1"
     },
     {
       "path": "PHONE-SETUP.md",
@@ -85,15 +89,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "ea941d69166966df08ed353e5fd2494dc04d5de393726de764b0478cc98d19f5"
+      "sha256": "54987a778e45f2f975a721c34955fbed38bab156e3f516a29ff6b0bcb7e51a29"
     },
     {
       "path": "START-HERE.md",
-      "sha256": "5414cc78fa2a9c2ba1b98626b191036aaf4a512090fb2faac907c8736988b5a5"
+      "sha256": "2c2432d99dc661338047771ba80e1926d82237365ab07ede50c1dbfd90b46b5c"
     },
     {
       "path": "VERSION",
-      "sha256": "175307e07ac7f0bdc0f3dba371ba3a202aaf3c0117368a93d2331e1bea4af4f3"
+      "sha256": "345a551b61a5dc33388b9bf40df339c9a0d9446ced7eeaeb576e3dbf4321918e"
     },
     {
       "path": "WORK-PLAN.md",
@@ -101,7 +105,7 @@
     },
     {
       "path": "adapters/chatgpt-dot.md",
-      "sha256": "50b6c07d37495bb34cc0b621391fa321d6222f19f388103ef1cd65192061bebb"
+      "sha256": "58e22db6893346e30213eeafab071481f9171143eef0501893d5cc76a5563bb1"
     },
     {
       "path": "adapters/dot.md",
@@ -209,7 +213,7 @@
     },
     {
       "path": "docs/participant-pilot-fa.md",
-      "sha256": "f34e0f931ec03d3f8cfbb10a914f5450cdad274bba2fa2c1e254e9d959f3fc90"
+      "sha256": "c7692942a60dd99386eba1a1fb5cedf40ca564ac04e22aae2389e0f6d68342c2"
     },
     {
       "path": "docs/privacy-and-safety.md",
@@ -253,7 +257,7 @@
     },
     {
       "path": "plugin.json",
-      "sha256": "bef9ec05a407ec34611e5372a97a25115a26d809084ad9399f0e5537658f959d"
+      "sha256": "796eda01972586401e68efd4f55bc567cda6a38dca1ad91ff26d39640eb06240"
     },
     {
       "path": "prompts/BOOTSTRAP-EN.md",
@@ -269,7 +273,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "46925585aa00c445e7a440b828a29719b675e0899fb471226fb1823237328770"
+      "sha256": "abf31e2d493475e1632de228448c28e43210717c6e713eeeef972d49e15390e4"
     },
     {
       "path": "qa/inbox-verification.json",
@@ -513,7 +517,7 @@
     },
     {
       "path": "wellbeing/__init__.py",
-      "sha256": "64c7b5c960dcde56741d5d2ce10dff31619f329f56dfeaea05ec5b88bf48f105"
+      "sha256": "16509008f4339b64238d8810847697e1126b17279302a65e5703875d4873d66f"
     },
     {
       "path": "wellbeing/__main__.py",
