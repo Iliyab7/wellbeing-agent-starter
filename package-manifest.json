@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "version": "0.3.0",
-  "source_revision": "8e7f3cf7283769ad2121d32109401e92000b7b21",
+  "version": "0.4.0",
+  "source_revision": "b5bb3118d61720bb088f6c630927b35e5a257fda",
   "files": [
     {
       "path": ".gitattributes",
@@ -32,16 +32,20 @@
       "sha256": "0b22539040eb7f5d91c900637151b474dc9a3a39a2c08ff5682b937f77c941bc"
     },
     {
+      "path": ".second-brain/entries/20261119T154501Z-newspaper-first-run.json",
+      "sha256": "82b15aeae531bfc9942f6b4f24be74458a773db459cf1f2d39b67d4af96003ca"
+    },
+    {
       "path": "AGENTS.md",
-      "sha256": "d73649710df3789f08f3fa44964ce85f0bf6577cdd8d2d7efcb33e21c726fddf"
+      "sha256": "afa5ba1e3c23e9c0bef80ef8cdd6d37b9899856606a5219ded8b039c55a74aae"
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "961f01263f41a5944b037f1626438c40ea2250bd3489078f749ec3c796401225"
+      "sha256": "65ec9263fe49dff9d190367121959026aaae308e36e1c42f5b42fb8574d9a30e"
     },
     {
       "path": "CHAT-STARTER.md",
-      "sha256": "0f6358474d3f84275e9f031f34435138a9ccd7ea5975c2b3740546d32660373c"
+      "sha256": "cf61df3d8165326a73f1bf3743b363acd4de8e044d32184fc7ecd7dd5e6ae0f8"
     },
     {
       "path": "Dockerfile",
@@ -53,7 +57,7 @@
     },
     {
       "path": "INSTALL.md",
-      "sha256": "8c1eb8bcd97bb000db068bc3cb32363e7f069dcd38928446e47caaf3cf2f3654"
+      "sha256": "c9f8026f1a3d0679c22e99e8b3d916754150940746d1316ca87ce76f0f4b43a8"
     },
     {
       "path": "PHONE-SETUP.md",
@@ -61,19 +65,19 @@
     },
     {
       "path": "README.en.md",
-      "sha256": "e19f3f1f14c3cd221cc521a4a0068d64c274d1d78359d500267406326b4a8f41"
+      "sha256": "4576d40523fd3cf7eb8dde83434fa004a54141de1ce63c5186c9c3a479805429"
     },
     {
       "path": "README.md",
-      "sha256": "31f12efc65dbb5b505487872fa31009a4a597d3b28d58c48728fb0f3bbb75a8f"
+      "sha256": "be4b93b30a931f5b921dd93d55961c5ed8659a61298c695865c098f5660632bf"
     },
     {
       "path": "START-HERE.md",
-      "sha256": "f0ebc64e465b146bbf2e640c933c3d3189ebd772615f7dad290e46ce946ebc2e"
+      "sha256": "f85c433156b7d39df642f97709a9098774c108339d4c6c4f5687e4d4333f624e"
     },
     {
       "path": "VERSION",
-      "sha256": "d915cc95d6ca8f47ae297713ed46d4e5c5d99ddd29fc3c61e263bdf305f2b5b0"
+      "sha256": "40b8eb4000a913a7791090535f291d3d369874162a89ef3c9e3d4e887a1b9e79"
     },
     {
       "path": "WORK-PLAN.md",
@@ -81,11 +85,11 @@
     },
     {
       "path": "adapters/chatgpt-dot.md",
-      "sha256": "b1e9c84d982d5ff407603cfa5e44dc1f525330da37e6ee31fff2d24ceff1d66d"
+      "sha256": "7106ae1f23b754885b0a10a49593f57441c5c2fe8af50fd57174fa304f2aea37"
     },
     {
       "path": "adapters/dot.md",
-      "sha256": "9892b8fde3024ba226f3e9dbef8d104880c37ca11d0f7dba3eb5d1f82b4401c8"
+      "sha256": "8bff0f7a2e3d85e89230c015a17916913479dbbdc6d024b37373fa3337a52f3e"
     },
     {
       "path": "adapters/grok.md",
@@ -93,7 +97,7 @@
     },
     {
       "path": "adapters/host-capabilities.md",
-      "sha256": "1ad6238c6216bce613e9553f3b6822645b9dd9381f0b44a28cf7d522f8acebe4"
+      "sha256": "37c2c31ece452e9ab0ec6bf24828acd5db782c5766279ea837c1cd6f91c08cf2"
     },
     {
       "path": "agents/analyst.md",
@@ -101,7 +105,7 @@
     },
     {
       "path": "agents/chief-of-staff.md",
-      "sha256": "8071f5dd9b8db8fb1ad837f965c35682c56f24bcfb855f2eed633166ba36d11e"
+      "sha256": "8b75fec47c4077c238468e2647c1e4d950402f1818d3cf9ea63bab8ea5c81a0a"
     },
     {
       "path": "agents/coach.md",
@@ -113,15 +117,15 @@
     },
     {
       "path": "agents/manager.md",
-      "sha256": "ccfe74eee28dee736eec436ff3da03fc1d7e50655281d77ec9298dc00bbab2b1"
+      "sha256": "f5d9ea49db302552c0f070ddea5f4984af2d92c8df83f08604d9a4c9c0ab3868"
     },
     {
       "path": "agents/registry.json",
-      "sha256": "73b9ab3b24f46ec01ffd47912b7be319cea2fe6384419d546484b79a3ed29636"
+      "sha256": "502dea1e8bbbdc154606cef361844e431f51c833fba92ad6892e3783570ec400"
     },
     {
       "path": "agents/team-blueprint.json",
-      "sha256": "4f1561f7517df5187a5d2342b258878a94bcf1a63852df4a96b9629699cfa8d7"
+      "sha256": "aa2082c77e5970a390ed5cdf6a0d453e50593ca018216f0dc933cd019a3ce6e7"
     },
     {
       "path": "compose.yaml",
@@ -129,15 +133,15 @@
     },
     {
       "path": "docs/acceptance-tests.md",
-      "sha256": "f16095091d2a5743b5630b379ac1d7796e54bff0f402334bd1ea31f948c2f7f5"
+      "sha256": "63e8257f1f578b251067da64e5cf3d46769d69735a950f691e7f1ecd8c16daa4"
     },
     {
       "path": "docs/architecture.md",
-      "sha256": "d52a34a4f3d19f1e1531046ddeed3af1bbc3c5a5ed1b7511b56f9483ac80b325"
+      "sha256": "1dc6d3bb7b65f276b036264ac84143583f7678e589f4ed322f7655b516658289"
     },
     {
       "path": "docs/harvey-handoff.md",
-      "sha256": "1da9aebd1e24adbdd9ed8f4f2c3f8a80dd5bfb332be248fb3fa5bf340f895eb8"
+      "sha256": "3944bf24284357093af67ffb934e6206e6e42ad2a5cf02118f7f18d409f0494f"
     },
     {
       "path": "docs/mvp/ACCEPTANCE-FA.md",
@@ -161,7 +165,7 @@
     },
     {
       "path": "docs/mvp/host-contract.md",
-      "sha256": "af6e81f3ad9c464a1d585a4bc78f722e36c0e2f95792f4bb85ea3848598f25c1"
+      "sha256": "039ce5aec2e38d9522cdf5f485b2c00f06bce955e4df0d43ffd516e0296eabfb"
     },
     {
       "path": "docs/mvp/inbox-runtime.md",
@@ -189,7 +193,7 @@
     },
     {
       "path": "docs/participant-pilot-fa.md",
-      "sha256": "3393b324a7b6a31a913c04c8f6009eefd7b9f5beffcec25c7430393746b1da1a"
+      "sha256": "dbfa3ec67ea2f09db89750a5c55ecf24b3ca9902044a1a8d73b0690d22c21518"
     },
     {
       "path": "docs/privacy-and-safety.md",
@@ -197,7 +201,7 @@
     },
     {
       "path": "docs/requirements-traceability.md",
-      "sha256": "e96a2233218a24ed8c621305f6f77c65aec071452529cb50e7db1b0e7de8f216"
+      "sha256": "924bfcb34de46ba35a7cab48b022257c9e9a69ffe5907c779860b2c2249b5250"
     },
     {
       "path": "docs/runtime.md",
@@ -205,7 +209,7 @@
     },
     {
       "path": "docs/shared-memory/README.md",
-      "sha256": "18350718bba26e9d25176c4772dd5a9ecd93a61a99e7475bec7c3f91037ebee2"
+      "sha256": "90817cb09c80f995d9cec812d90bf0f726347b1aecb615e1f02a03cace606158"
     },
     {
       "path": "docs/shared-memory/acceptance.md",
@@ -217,7 +221,7 @@
     },
     {
       "path": "docs/source-analysis.md",
-      "sha256": "8224f19586db04351643520b8b2293a7092161f084dd1f1bbba966139cb19f62"
+      "sha256": "0be2d6e988a688b486bdd7eeffd1b7c77a55236a74d42b064c4ebcbd9c56d728"
     },
     {
       "path": "examples/policy.synthetic.json",
@@ -233,23 +237,23 @@
     },
     {
       "path": "plugin.json",
-      "sha256": "ed178055a468086803beb115e05102925470378fd4b753cca151d1c51ec27c1e"
+      "sha256": "db4b7ac228a0e7460369d9ea1db9c65bc21eec726a884a8a407f8983cd57a856"
     },
     {
       "path": "prompts/BOOTSTRAP-EN.md",
-      "sha256": "11d8392b77a916e43bd1dd9c62bc4512cfceb3cb5be7cad0c3c47e94197350c2"
+      "sha256": "307aee5eed19ae7c439acf4c39fa7ce1d9c5d49a1f0c73c9efa15f39a7602240"
     },
     {
       "path": "prompts/BOOTSTRAP-FA.md",
-      "sha256": "4c1318fd23457ee77125b2bf2c2b58181b44da834456336fb83d9be8d2bacb3d"
+      "sha256": "36f1f22f4d8c4e8b4818f28b478dfb4bbb3582b0df6e4b62b4e22649872dd9b7"
     },
     {
       "path": "prompts/RESUME-FA.md",
-      "sha256": "e0546816aeaa9547934a6bb40905406d205ad6bfef4441f6444dc29e76383e1e"
+      "sha256": "fe6f147d8dcc65b27ebc9af050df637b8391e3bec89f51ede868b2d550b67c34"
     },
     {
       "path": "pyproject.toml",
-      "sha256": "c44169d0ca2404dc101dbcdea74e8e210884fca3f515835b67b45b54d4eaeb4f"
+      "sha256": "a7cfa5a0251f32f955be813d1e09b974cc3dc00ef047a95667e11f44c0571b34"
     },
     {
       "path": "qa/inbox-verification.json",
@@ -373,11 +377,11 @@
     },
     {
       "path": "skills/wellbeing-install/SKILL.md",
-      "sha256": "9376083196ce18413610a0e7bc17abaf9160d752cdc3917c28ecdd1a0046555c"
+      "sha256": "31d6e47b4feb8e62a3cd35636b571f8dd20185d5f01061e64b02a46924b8d481"
     },
     {
       "path": "skills/wellbeing-intake/SKILL.md",
-      "sha256": "4c9abc2879e578a394cd48d21743d415482843093eec9d113026889eb3e2acf4"
+      "sha256": "cd818a835ccecea8913407739d3d873c2c6facd8d388904fa539f4b710eefe2c"
     },
     {
       "path": "skills/wellbeing-intake/references/examples.md",
@@ -493,7 +497,7 @@
     },
     {
       "path": "wellbeing/__init__.py",
-      "sha256": "3ae9a3429782a1fcdfeef353d5bcc9aa775bdbb5eba72affb0b8b8d3e52bef83"
+      "sha256": "75c4c047a48dc0b5a6c51cf113c432511f05c245f33bc94929a236331f2c9030"
     },
     {
       "path": "wellbeing/__main__.py",
