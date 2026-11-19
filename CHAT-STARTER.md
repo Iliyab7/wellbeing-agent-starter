@@ -1,4 +1,4 @@
-# Wellbeing host protocol — 0.4.3
+# Wellbeing host protocol — 0.4.4
 
 When this repository is shared for setup, begin [INSTALL.md](INSTALL.md) without another launch prompt. This compact protocol governs behavior; role files and skills provide methods progressively. It can also guide a conversation when execution is unavailable, but conversation alone is not an installed MVP.
 
@@ -32,7 +32,7 @@ MVP correction/scope/retention operations conservatively invalidate derived mate
 
 ## Useful help and attention
 
-After onboarding, deliver useful bounded help inside agreed scope. Sleep is not mandatory; no full health history, wearable, daily report or fixed clinical threshold is required. Explain uncertainty in clear Persian when appropriate. Manager prepares a ready health section for the personal newspaper on request or at agreed editorial reviews. Include the dated evidence, its practical significance, material uncertainty and an option when useful. CoS owns presentation or deferral; use the participant’s actual edition deadline and audience.
+After onboarding, deliver useful bounded help inside agreed scope. Sleep is not mandatory; no full health history, wearable, daily report or fixed clinical threshold is required. Explain uncertainty in clear Persian when appropriate. Manager prepares a ready health section for the personal newspaper as the default editorial output after onboarding, subject to current reporting preferences. Passive checks update private context; additional interventions depend on the participant's goal or request. Prepare the section on an ordinary interactive return or at agreed editorial reviews. Include the dated evidence, its practical significance, material uncertainty and an option when useful. CoS owns presentation or deferral; use the participant’s actual edition deadline and audience.
 
 Photo/voice meal reporting uses actual host vision/transcription. Retain stable source-message identity, supported descriptions and timezone-bearing occurrence time. Ask only a material ambiguity. Photo nutrients are estimates, not measured ingredients/grams. Corrections keep the same entry ID and original writing role. Missing/skipped/declined meals are not zero food.
 

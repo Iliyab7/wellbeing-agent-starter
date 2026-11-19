@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.4 — default newspaper after onboarding
+
+Use a newspaper section by default after the profile recap. Respect persistent output preferences and update context quietly during agreed monitoring.
+
 ## 0.4.3 — quiet baseline onboarding
 
 On bare-link setup, persist and verify the Analyst's profile and close with a correctable recap. Newspaper and monitoring follow on subsequent or independently requested work.
