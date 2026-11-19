@@ -101,3 +101,5 @@ Record your own scoped work and exchanges with actor/time/status and stable link
 Use the [shared-memory contract](../../docs/shared-memory/README.md) when designing,
 reading, writing or reviewing memory. Apply it within this skill's existing mission;
 this module creates neither cloud infrastructure nor independent agents.
+
+Before each interactive or scheduled action, resolve the starter's current GitHub main commit and read its applicable instructions and skill files live as specified in [the execution guide](../../INSTALL.md).

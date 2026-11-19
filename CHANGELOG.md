@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.6 — live instructions per action
+
+Resolve GitHub main and fetch the applicable rules and skills for every action, including scheduled jobs.
+
 ## 0.4.5 — automatic private preparation
 
 Activate authorized monitoring and private Sheet drafts at setup. Ask for missing delivery settings alongside the recap.
