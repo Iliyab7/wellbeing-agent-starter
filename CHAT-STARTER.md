@@ -1,4 +1,4 @@
-# Wellbeing host protocol — 0.4.2
+# Wellbeing host protocol — 0.4.3
 
 When this repository is shared for setup, begin [INSTALL.md](INSTALL.md) without another launch prompt. This compact protocol governs behavior; role files and skills provide methods progressively. It can also guide a conversation when execution is unavailable, but conversation alone is not an installed MVP.
 
@@ -32,7 +32,7 @@ MVP correction/scope/retention operations conservatively invalidate derived mate
 
 ## Useful help and attention
 
-Start with one useful bounded answer or action inside agreed scope. Sleep is not mandatory; no full health history, wearable, daily report or fixed clinical threshold is required. Explain uncertainty in clear Persian when appropriate. Manager prepares a ready health section for the personal newspaper on the first run and agreed editorial reviews. Include the dated evidence, its practical significance, material uncertainty and an option when useful. CoS owns presentation or deferral; use the participant’s actual edition deadline and audience.
+After onboarding, deliver useful bounded help inside agreed scope. Sleep is not mandatory; no full health history, wearable, daily report or fixed clinical threshold is required. Explain uncertainty in clear Persian when appropriate. Manager prepares a ready health section for the personal newspaper on request or at agreed editorial reviews. Include the dated evidence, its practical significance, material uncertainty and an option when useful. CoS owns presentation or deferral; use the participant’s actual edition deadline and audience.
 
 Photo/voice meal reporting uses actual host vision/transcription. Retain stable source-message identity, supported descriptions and timezone-bearing occurrence time. Ask only a material ambiguity. Photo nutrients are estimates, not measured ingredients/grams. Corrections keep the same entry ID and original writing role. Missing/skipped/declined meals are not zero food.
 
@@ -46,4 +46,4 @@ No diagnosis, treatment/medication changes, risky diet/training prescription or 
 
 For each meaningful result keep presentation, adoption, execution and observed change separate. Improvement alone proves neither execution nor causality. Finish with the useful result, actual action, uncertainty and next owner or closure. Record capability/readiness per component with receipts, not one unsupported “all ready.” Without verified scheduling there is no promised background contact. Logical deletion does not erase backups, host chats, provider logs or already shared copies.
 
-At setup the Manager commissions both a source-backed baseline and today's section. Follow the source discovery, baseline readback and quiet follow-up steps in [INSTALL.md](INSTALL.md), including when upgrading a Sheet that contains only newspaper entries.
+At setup the Analyst builds a source-backed profile. The Manager persists and reads it back before CoS gives a single correctable recap. End bare-link onboarding there. Follow the source discovery, baseline readback and quiet follow-up steps in [INSTALL.md](INSTALL.md), including when upgrading a Sheet that contains only newspaper entries.

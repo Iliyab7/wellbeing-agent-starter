@@ -1,6 +1,6 @@
 # Working on Wellbeing Agent Starter
 
-The default pilot starts in INSTALL.md. Deliver a source-backed health section and resume from the participant’s designated private Google Sheet. Read README.md, START-HERE.md and the first-run acceptance in docs/participant-pilot-fa.md before changing this behavior. docs/source-analysis.md records design provenance.
+The default pilot starts in INSTALL.md. Verify a source-backed baseline and summarize it on setup. Deliver a health section on request or agreed review and resume from the participant’s designated private Google Sheet. Read README.md, START-HERE.md and the first-run acceptance in docs/participant-pilot-fa.md before changing this behavior. docs/source-analysis.md records design provenance.
 
 The requested first host is ChatGPT Dot. CoS remains outside the wellbeing team and owns the relationship, authority, coordination and attention gate. Retain Manager, Analyst and Coach as the three core roles and the explicitly requested Emotional Companion as a fourth bounded responsibility. Roles are not a mandatory pipeline; domains do not each need permanent agents. Team work returns ready packets/links. Native workers require actual host support and creation receipts; otherwise disclose virtual roles.
 

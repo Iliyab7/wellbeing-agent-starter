@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.3 — quiet baseline onboarding
+
+On bare-link setup, persist and verify the Analyst's profile and close with a correctable recap. Newspaper and monitoring follow on subsequent or independently requested work.
+
 ## 0.4.2 — evidence before intake
 
 Start from authorized sources even without a goal or Sheet. Personalize the first result and any necessary question.
