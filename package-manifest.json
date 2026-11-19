@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "version": "0.4.1",
-  "source_revision": "43d5de0542bae04035a19e3d2b5a5bde5c9b54b9",
+  "version": "0.4.2",
+  "source_revision": "f4c746aae9f111aacb47b16c67aa28c3a7cb9597",
   "files": [
     {
       "path": ".gitattributes",
@@ -14,6 +14,10 @@
     {
       "path": ".gitignore",
       "sha256": "8992bcc3b10794f447ad8d59326e405305ca492a30c873ad8f99835a63d385b4"
+    },
+    {
+      "path": ".second-brain/entries/2026-11-19-first-encounter.md",
+      "sha256": "e2a7cef6afe48973332f6a7cbe47c4ae5c2b311c7ea29d2eef576eb031f7228d"
     },
     {
       "path": ".second-brain/entries/2026-11-19-passive-baseline.md",
@@ -45,11 +49,11 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "3c4d1086a30220cbc5739c0b3c9ebb38f85bf68236ff1890c6dfcaa595937fd9"
+      "sha256": "b263d50a1304703d721c3c4eb38551a423a911e28fa3f8f142b58bbbe7d7940c"
     },
     {
       "path": "CHAT-STARTER.md",
-      "sha256": "a282a7330cc641530fe07993ef59f93349176f314692a8cc05c537dba037219e"
+      "sha256": "28744e352eb82c9ec6044f27929e36f18ee3dc37ab185a90c35b9c23dd66ae41"
     },
     {
       "path": "Dockerfile",
@@ -61,7 +65,7 @@
     },
     {
       "path": "INSTALL.md",
-      "sha256": "fe609b8d0a60b3106d1bda4b0af19785fb92936e9cc334ec7072f628a22f913d"
+      "sha256": "d4995861ac884349d5bd0fa2205c3efc1df19d5337380519d3a0b2062a500939"
     },
     {
       "path": "PHONE-SETUP.md",
@@ -69,19 +73,19 @@
     },
     {
       "path": "README.en.md",
-      "sha256": "4576d40523fd3cf7eb8dde83434fa004a54141de1ce63c5186c9c3a479805429"
+      "sha256": "5d870c59f9a1cd8a7485c95eedfb9ee7cf6aaa9b4f15ee57a51dcd692406971d"
     },
     {
       "path": "README.md",
-      "sha256": "05d51105eb8533b466c520ac3268526204f00c54f0b6df484784820d29a4f4a0"
+      "sha256": "b38270cb04e57e2f076ca9a38558d60c0850b8fc62157968897021e4a88eb330"
     },
     {
       "path": "START-HERE.md",
-      "sha256": "f85c433156b7d39df642f97709a9098774c108339d4c6c4f5687e4d4333f624e"
+      "sha256": "f0fe2502889b1bc6a563ff6503fbc6d6ca14e1e3ccd4a2fe4effd2768f567df4"
     },
     {
       "path": "VERSION",
-      "sha256": "f62184cee8787f2f6941c82041a5725d4edc9aa293ebe5dbf664406e82ec1fe1"
+      "sha256": "e2f7bb608ebc9e24092ffcb796ad0aa83f0015afe23635f017df52273150f00d"
     },
     {
       "path": "WORK-PLAN.md",
@@ -89,7 +93,7 @@
     },
     {
       "path": "adapters/chatgpt-dot.md",
-      "sha256": "24fe344a0a9debebfb0996848c588c41c53bb51e5b9ffd6b0fb5e97c6e09c58f"
+      "sha256": "b67f06ca282c96f02965ac64bf8ab30819579bf263136792dbc9053d1407bba6"
     },
     {
       "path": "adapters/dot.md",
@@ -197,7 +201,7 @@
     },
     {
       "path": "docs/participant-pilot-fa.md",
-      "sha256": "c5571130b9b988ccaaa521acd5a387b205ec1e84d97202d3fa5f0f8c95764deb"
+      "sha256": "3f2832c9e431d8c163a6a6653d3be25133c2c4f46880eb8095d9ac939423ef3b"
     },
     {
       "path": "docs/privacy-and-safety.md",
@@ -241,7 +245,7 @@
     },
     {
       "path": "plugin.json",
-      "sha256": "8ba515bd9cda84c5d29b2b841b32e8b81ceb737a4fb2994ba7567e7e58887144"
+      "sha256": "ac26c1338748811aaab41dc90bbaf8f1115b00ae7e865ce15083cf6e69e719f5"
     },
     {
       "path": "prompts/BOOTSTRAP-EN.md",
@@ -257,7 +261,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "762ad10be6ce125d75884c6ce6ca043f36aa5e4a55cf6d6a6270f9662bcf09a0"
+      "sha256": "d3a58048cd71065b642ea38a7a8f6babd6360a361cc7b6c5d644bcd0197d2b03"
     },
     {
       "path": "qa/inbox-verification.json",
@@ -501,7 +505,7 @@
     },
     {
       "path": "wellbeing/__init__.py",
-      "sha256": "c5a77899fb4fa74f7639c7a041c0c79be3897211ebbdb7ec3afae8f362c889a5"
+      "sha256": "0d935ba4bc5211003c19c444aea39f64e43de47556620417f7bb74f56f035821"
     },
     {
       "path": "wellbeing/__main__.py",
