@@ -1,8 +1,8 @@
 # Development handoff — MVP 0.2
 
-For the current 0.3 handoff, start in [INSTALL](../INSTALL.md) and [inbox verification](../qa/inbox-verification.json). The sections below record the hosted 0.2 work.
+For the current host workflow start at [INSTALL](../INSTALL.md) and [the two-run pilot](participant-pilot-fa.md). The sections below record the optional hosted implementation.
 
-The active scope is [CLI-HANDOFF](mvp/CLI-HANDOFF.md), reconciled with current runtime source and [AGENTS](../AGENTS.md). Historical roadmap statements are not implementation evidence. The participant supplies only the GitHub root URL; the host immediately follows [INSTALL](../INSTALL.md). ChatGPT Dot is the requested first host via [an actual Work/Codex executor](../adapters/chatgpt-dot.md).
+For a separately selected service deployment, use [the CLI handoff](mvp/CLI-HANDOFF.md) and [HTTP installation](../INSTALL-HTTP.md).
 
 ## Delivered contract
 

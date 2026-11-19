@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0 — personal newspaper pilot — 2026-11-19
+
+- Start from the participant's goal and available authorized evidence. Deliver a usable health section in the first conversation, even when a preferred data source is missing.
+- Resume from the same private Sheet and verify written findings and feedback by readback. Phone exports and local/hosted processing remain available on demand.
+- Provide a two-visit acceptance test for Dot; live pilot outcomes require participant-side verification.
+
 ## 0.3.0 — Apple Health inbox — 2026-11-19
 
 - Start phone setup with a private Gmail or Drive destination. Dot uses its existing read connector and checks the first attachment before scheduling.

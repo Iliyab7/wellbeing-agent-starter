@@ -1,5 +1,7 @@
 # Requirements traceability
 
+Current host pilot: goal and authorized context first; Manager-owned Sheet and feedback across visits; a ready newspaper health section routed through CoS. [Execution](../INSTALL.md) · [Participant acceptance](participant-pilot-fa.md).
+
 This matrix maps the reconciled source design to inspectable pilot behavior. Source IDs refer to [source-analysis.md](source-analysis.md). “Local check” means a deterministic implementation or package check; “host exercise” means an actual run with the participant's chosen assistant. A specification or a synthetic fixture does not count as a passed live integration.
 
 The release's observed results belong in its validation report. This table states what must be checked and why; it does not assert that all host exercises have already run.

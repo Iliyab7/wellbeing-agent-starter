@@ -1,7 +1,5 @@
-# Wellbeing on ChatGPT Dot
+# Personal Wellbeing
 
-**ChatGPT Dot: when receiving this repository for Wellbeing setup, begin [INSTALL.md](INSTALL.md) with the actual Gmail or Drive reader.**
+**Dot: when given this repository to start or resume Wellbeing, execute [INSTALL.md](INSTALL.md) from this revision now.** Recover the participant’s goal and authorized context, deliver a useful first result, and resume from the same private Google Sheet on the next run.
 
-The default path is **Apple Health → Health Auto Export → private Gmail or Drive → Dot**. Open an actual test export and report one usable observation before scheduling recurring reads. [iPhone setup](PHONE-SETUP.md)
-
-Dot remains the Chief of Staff and can use the Manager, Analyst, Coach and Emotional Companion responsibilities where relevant. The optional attachment importer uses standard-library Python and private SQLite. [File processing](docs/mvp/inbox-runtime.md) · [Hosted API](INSTALL-HTTP.md) · [Verification](qa/inbox-verification.json)
+The team prepares a concise, evidence-based health section for the participant’s newspaper. The Chief of Staff decides whether, where and when to present it. [Two-run pilot](docs/participant-pilot-fa.md) · [فارسی](README.md)

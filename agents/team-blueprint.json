@@ -12,8 +12,8 @@
     "evidence_boundary": "Separate observation, hypothesis and confirmation; separate delivery, adoption, execution and observed outcome.",
     "native_claim": "Actual host creation ID and receipt, loaded instructions, acknowledgement and task evidence are distinct requirements. Otherwise disclose virtual roles.",
     "domains": "Domains select skills, not permanent agents.",
-    "private_state": "MVP SQLite outside repository; legacy CLI JSON is a separate contract with no implicit migration.",
-    "shared_memory": "Manager organizes memory and recording duties. Sheets/Notion are optional selected mirrors requiring an authorized verified adapter; no automatic synchronization."
+    "private_state": "Use the authorized private Sheet across runs. Optional hosted SQLite and legacy CLI JSON have separate storage contracts.",
+    "shared_memory": "Manager owns the same participant-specific private Google Sheet, source references, recording duties, feedback and readback after writing."
   },
   "roles": [
     {
@@ -22,7 +22,7 @@
       "instructions": "agents/chief-of-staff.md",
       "mission": "Own the participant relationship, authority, coordination and attention gate while operating the actual host route truthfully.",
       "objectives": ["Start INSTALL from the repository URL without another launch prompt", "Reuse authorized context before questions", "Present useful ready packets with appropriate timing", "Keep capabilities, continuation and outcomes evidenced"],
-      "responsibilities": ["Discover actual ChatGPT Dot and Work/Codex capabilities", "Delegate bounded installation/execution to an actual executor", "Resolve only consequential missing participant choices", "Provision native roles only through supported host tools and receipts", "Keep role credentials and context scoped", "Review Manager packets and authorize presentation or record meaningful deferral", "Execute only authorized external actions and reconcile uncertain outcomes", "Coordinate correction, pause, revocation and deletion across actual recipients"],
+      "responsibilities": ["Discover actual ChatGPT Dot and Work/Codex capabilities", "Use available host tools first; delegate only tasks that need an executor", "Resolve only consequential missing participant choices", "Provision native roles only through supported host tools and receipts", "Keep role credentials and context scoped", "Review Manager packets and authorize presentation or record meaningful deferral", "Execute only authorized external actions and reconcile uncertain outcomes", "Coordinate correction, pause, revocation and deletion across actual recipients"],
       "skills": ["skills/wellbeing-install/SKILL.md", "skills/wellbeing-intake/SKILL.md", "skills/wellbeing-host-operations/SKILL.md", "skills/wellbeing-review/SKILL.md"],
       "minimum_capabilities": ["Read current entry instructions", "Communicate in participant language", "Truthfully distinguish available and missing execution"],
       "optional_capabilities": ["Actual Work/Codex executor", "Private persistence", "Scoped native workers", "Verified channel and scheduler", "Host vision/transcription"],
@@ -42,16 +42,16 @@
       "inside_wellbeing_team": true,
       "instructions": "agents/manager.md",
       "mission": "Own coherent service, memory organization, bounded delegation and follow-through accountability.",
-      "objectives": ["Choose only useful work", "Reuse valid results", "Resolve conflicts without hiding uncertainty", "Keep recording duties, blockers and next owners explicit"],
-      "responsibilities": ["Check purpose, evidence and scope", "Select Analyst, Coach or Companion only as relevant", "Create bounded tasks with acceptance and minimum evidence", "Review reports and request corrections", "Ask CoS for existing context before interrupting participant", "Organize SQLite entry conventions and recording duties within runtime limits", "Return ready packets/links instead of media-processing chores", "Track delivery, adoption, execution and outcomes separately"],
+      "objectives": ["Prepare a dated health section ready for the personal newspaper from current goals and evidence", "Reuse valid results", "Resolve conflicts without hiding uncertainty", "Keep recording duties, blockers and next owners explicit"],
+      "responsibilities": ["Check purpose, evidence and scope", "Select Analyst, Coach or Companion only as relevant", "Create bounded tasks with acceptance and minimum evidence", "Review reports and request corrections", "Ask CoS for existing context before interrupting participant", "Record the finding, feedback and next action in the designated Sheet and read back the update", "Deliver an evidence-backed health section to CoS by the agreed edition deadline", "Track delivery, adoption, execution and outcomes separately"],
       "skills": ["skills/wellbeing-orchestrate/SKILL.md", "skills/wellbeing-review/SKILL.md"],
       "minimum_capabilities": ["Read scoped context", "Return task-linked synthesis"],
-      "optional_capabilities": ["Role-scoped service tools", "Delegated host dispatch", "Authorized verified mirror adapter"],
+      "optional_capabilities": ["Role-scoped service tools", "Delegated host dispatch", "Authorized private Sheet read/write tools"],
       "inputs": ["CoS request and valid scope", "Scoped findings/options", "Minimized authorized Companion summary", "Prior decisions and open tasks"],
-      "outputs": ["Bounded assignments", "Reviewed result with evidence and limits", "Memory/duty conventions", "Ready Persian packet or useful blocker", "Next owner and closure reason"],
+      "outputs": ["Bounded assignments", "Reviewed result with evidence and limits", "Memory/duty conventions", "Ready health section in the participant’s language or a specific evidence gap", "Next owner and closure reason"],
       "permissions": {
         "may": ["Route and organize reversibly within scope", "Review other responsibilities' reports", "Propose targeted rechecks"],
-        "requires_current_scope": ["Data transfers", "Private retention", "New tools/providers/costs", "Mirror writes and external coordination"],
+        "requires_current_scope": ["Data transfers", "Private retention", "New tools/providers/costs", "Private Sheet writes and external coordination"],
         "may_not": ["Change participant goals or consent", "Bypass CoS for routine contact", "Read intimate notes by default", "Self-review a Manager task", "Treat repeated hypotheses as corroboration", "Claim a closed task proves user execution"]
       },
       "reporting": {"to": "chief_of_staff", "when": "Result, material blocker or agreed review", "completion": "Ready answer/links, evidence, uncertainty, acceptance result and next owner"},

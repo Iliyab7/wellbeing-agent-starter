@@ -13,7 +13,7 @@
     {
       "id": "manager",
       "instructions": "agents/manager.md",
-      "accountability": "coherent service, memory organization and owned commitments",
+      "accountability": "ready personal newspaper health section, shared Sheet, follow-through and feedback",
       "skills": ["skills/wellbeing-orchestrate/SKILL.md", "skills/wellbeing-review/SKILL.md"]
     },
     {

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "20261119T154501Z-newspaper-first-run",
+  "repository": "Iliyab7/wellbeing-agent-starter",
+  "occurred_at": "2026-11-19T15:45:01Z",
+  "title": "Start the personal newspaper pilot from the participant's goal",
+  "summary": "The host entry point recovers a goal and authorized evidence, prepares a ready health section, and resumes via the same private Sheet.",
+  "outcome": "Reviewed the participant entry point, role goals, fallback paths and manual pilot protocol. Local suite ran 127 tests with one skip. Synthetic CLI, attachment import/replay and HTTP restart checks passed. Live Dot URL interpretation, Sheet readback and fresh-chat continuation remain untested on this revision.",
+  "status": "local-tested",
+  "decisions": [
+    "Use the private Sheet as team memory in the Dot pilot. Keep optional service storage separate.",
+    "Manager owns the ready section and the Chief of Staff controls newspaper delivery and timing."
+  ],
+  "blockers": [],
+  "next_actions": [
+    "Run the two-visit participant test and record any necessary steering."
+  ],
+  "evidence": [
+    "INSTALL.md",
+    "agents/manager.md",
+    "docs/participant-pilot-fa.md"
+  ]
+}

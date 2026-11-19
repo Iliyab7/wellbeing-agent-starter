@@ -2,7 +2,11 @@
 
 This pilot turns the existing Wellbeing design into a portable package that a personal assistant can load and a development team can inspect. The participant's assistant acts as the **Chief of Staff**. Dot is one possible host for that role; the package does not depend on a product merely having that name.
 
-## Provenance and interpretation
+## Current pilot decisions
+
+Version 0.4 follows the private definition's shared-memory revision `0284729efd3a578ee66513300cc0a5424f99e6b1`. The first pilot uses the designated Google Sheet. Later participant and editorial requirements make the Manager responsible for a ready personal-newspaper health section. The host tests this with existing evidence and a second visit. Phone transport, issue timing and presentation channel can vary with the participant. [Pilot test](participant-pilot-fa.md).
+
+## Provenance and interpretation of the original pilot
 
 The design baseline is `Iliyab7/wellbeing-agent-definition` at commit `e43881ec638d7d01afbe4a609954577f187b1558`, whose current documentation was reconciled on 5 November 2026. The new request on 7 November 2026 authorizes a separate public pilot and makes the host assistant the executor and team coordinator. It does not turn historical examples into consent to process a participant's private data.
 

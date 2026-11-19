@@ -5,10 +5,7 @@ description: Start or resume a personal nonmedical wellbeing pilot. Discover hos
 
 # Begin a useful collaboration
 
-1. Identify the actual host's file/repository reading, code execution, private persistence,
-   subagent, scheduler and connector capabilities. Mark unavailable, unverified or blocked
-   capabilities honestly. Product names are not evidence. Do not access personal data to
-   test a connector before its relevant permission exists.
+1. Use the host tools needed for the immediate task: the authorized Sheet, its relevant evidence references and a channel for a useful answer. Check execution or scheduling only when the work needs it.
 2. Use the participant's current request and already-authorized relevant knowledge first.
    Keep the source, age and uncertainty. Avoid repeating a known goal or valid permission.
 3. Establish the purpose in the participant's words: what should become easier, clearer,

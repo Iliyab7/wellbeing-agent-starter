@@ -1,5 +1,7 @@
 # Initial-trial acceptance tests
 
+For the released Dot entry point, run the [two-visit personal pilot](participant-pilot-fa.md) first. Record link-only launch, first useful health section, Sheet readback and fresh-chat continuation separately.
+
 Use synthetic records first. Then, only if the participant chooses, run a bounded personal trial through the host. These tests evaluate faithful behavior and usefulness, not medical effectiveness. Passing the Python suite does not establish that Dot or Grok created real agents, delivered a notification or connected to a device.
 
 ## Evidence levels

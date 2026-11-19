@@ -1,12 +1,12 @@
 # Working on Wellbeing Agent Starter
 
-Version 0.3.0 starts with private Gmail or Drive intake in INSTALL.md and PHONE-SETUP.md. Before changing behavior read README.md, START-HERE.md, docs/architecture.md, docs/source-analysis.md and docs/harvey-handoff.md. The 0.2 implementation remains an optional path in INSTALL-HTTP.md. Current evidence for the inbox path is in qa/inbox-verification.json.
+The default pilot starts in INSTALL.md. Deliver a source-backed health section and resume from the participant’s designated private Google Sheet. Read README.md, START-HERE.md and the first-run acceptance in docs/participant-pilot-fa.md before changing this behavior. docs/source-analysis.md records design provenance.
 
 The requested first host is ChatGPT Dot. CoS remains outside the wellbeing team and owns the relationship, authority, coordination and attention gate. Retain Manager, Analyst and Coach as the three core roles and the explicitly requested Emotional Companion as a fourth bounded responsibility. Roles are not a mandatory pipeline; domains do not each need permanent agents. Team work returns ready packets/links. Native workers require actual host support and creation receipts; otherwise disclose virtual roles.
 
-The default Dot route uses actual connected Gmail or Drive tools to open a participant-authorized file and report one useful observation. A Work/Codex executor is optional for persistent file processing. Prove connector access, file contents and recurring execution through observed receipts.
+Use scoped host connectors for existing evidence, Sheet writes and readback. Prove actual scheduling and channel delivery independently. Phone intake and a Work/Codex executor can support selected tasks.
 
-SQLite private transactional memory is the MVP primary store, outside the repository. Preserve the legacy standard-library CLI, its JSON state, commands and tests as a distinct reference contract. No implicit migration or local/cloud synchronization. Manager owns organization and recording duties; Sheets/Notion mirrors need their own authorized adapter and verified readback/correction/deletion.
+The Manager owns the Sheet structure, recording duties and continuity. The optional hosted service retains private SQLite; the legacy CLI retains its separate JSON contract. No automatic migration or sync.
 
 Goals, purpose, data scope, retention, actual recipients/providers, authority and attention are participant decisions. Reuse valid authorized context before questions. Reversible internal organization may proceed within scope; new sources, recipients and external effects require applicable authority. No mandatory daily reporting or generic clinical thresholds. Separate observation, hypothesis and participant confirmation; separate delivery, adoption, execution and observed outcome.
 

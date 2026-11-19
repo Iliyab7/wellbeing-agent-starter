@@ -1,8 +1,6 @@
 ---
 name: wellbeing-install
-description: Install or resume the Wellbeing MVP when a participant shares its GitHub URL or asks to connect Apple Health to their existing assistant and WhatsApp. Execute the package bootstrap, private tools, device pairing and host capability checks.
+description: Start or resume personal Wellbeing when the participant shares the repository. Recover the chosen goal, use authorized evidence and the same Sheet, and deliver the health section of the personal newspaper.
 ---
 
-Read [INSTALL.md](../../INSTALL.md) and execute it. Sharing the package URL for setup is enough to start; do not require an additional prompt. Preserve existing private state and credentials. Return receipts, not a summary of intentions.
-
-Use the host's inference and channel capabilities; don't replace its chief of staff. Native agent creation must have actual IDs/receipts; otherwise label roles virtual. Installing tool definitions does not create persistent workers. The participant alone grants iOS permissions and chooses purchases. Do not claim a real iPhone upload from synthetic tests.
+Execute [the host guide](../../INSTALL.md). Open the designated private Sheet when authorized and use actual connector results. Keep the first turn focused on useful help and record the next action. Device setup and hosted services are optional paths for a separately chosen task.

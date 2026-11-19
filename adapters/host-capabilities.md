@@ -1,6 +1,6 @@
 # Host capability and provisioning contract
 
-For ChatGPT Dot start in [INSTALL](../INSTALL.md) with the actual inbox connector. The execution and service checks below apply when the participant uses the optional private importer or hosted API.
+Start in [INSTALL](../INSTALL.md) with the participant’s goal and authorized evidence. The execution and service checks below apply to optional private processing or hosted deployment.
 
 | Capability | Required evidence |
 |---|---|
