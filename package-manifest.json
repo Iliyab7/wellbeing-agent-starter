@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "version": "0.4.2",
-  "source_revision": "f4c746aae9f111aacb47b16c67aa28c3a7cb9597",
+  "version": "0.4.3",
+  "source_revision": "83bf6368010c4bc294bc83f9fd22ea389412f0c2",
   "files": [
     {
       "path": ".gitattributes",
@@ -22,6 +22,10 @@
     {
       "path": ".second-brain/entries/2026-11-19-passive-baseline.md",
       "sha256": "41ef98baddbd168ed30367f0daba00ebf04ea6b8933fb92e9de89e84bfca1a1c"
+    },
+    {
+      "path": ".second-brain/entries/2026-11-19-quiet-onboarding.md",
+      "sha256": "5f3cc9de343f26cd277f4a75461d3549dda9b20e10942a7cafb3fb0b70d65508"
     },
     {
       "path": ".second-brain/entries/20261106T232655Z-wellbeing-public-pilot.json",
@@ -45,15 +49,15 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "afa5ba1e3c23e9c0bef80ef8cdd6d37b9899856606a5219ded8b039c55a74aae"
+      "sha256": "339dd4cc2682f83d05307e6cabb04e215e74ba203794f16b90506946d9a8e890"
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "b263d50a1304703d721c3c4eb38551a423a911e28fa3f8f142b58bbbe7d7940c"
+      "sha256": "558e271a0d12688d2bff9e7f02f519acd4fb9c3075ba1568a6289a98c7b2cd1f"
     },
     {
       "path": "CHAT-STARTER.md",
-      "sha256": "28744e352eb82c9ec6044f27929e36f18ee3dc37ab185a90c35b9c23dd66ae41"
+      "sha256": "71a6b8ddafa59402bd828c7fa336c6f7302ceae030f58d34ff6e597015273454"
     },
     {
       "path": "Dockerfile",
@@ -65,7 +69,7 @@
     },
     {
       "path": "INSTALL.md",
-      "sha256": "d4995861ac884349d5bd0fa2205c3efc1df19d5337380519d3a0b2062a500939"
+      "sha256": "580b1a11075bd5a7674de4ffc67db92302c7fe2e0dcd5ab56fffa8ee49be5bb4"
     },
     {
       "path": "PHONE-SETUP.md",
@@ -73,19 +77,19 @@
     },
     {
       "path": "README.en.md",
-      "sha256": "5d870c59f9a1cd8a7485c95eedfb9ee7cf6aaa9b4f15ee57a51dcd692406971d"
+      "sha256": "3471f514a0b266c9eac9d010cf6a007b5210ae7a4ff8312fd9c8ac3e4b5808d1"
     },
     {
       "path": "README.md",
-      "sha256": "b38270cb04e57e2f076ca9a38558d60c0850b8fc62157968897021e4a88eb330"
+      "sha256": "50f68be05c88a69241885ec64afc559ac8c19a299f6f1631b6ee5e115214e061"
     },
     {
       "path": "START-HERE.md",
-      "sha256": "f0fe2502889b1bc6a563ff6503fbc6d6ca14e1e3ccd4a2fe4effd2768f567df4"
+      "sha256": "5414cc78fa2a9c2ba1b98626b191036aaf4a512090fb2faac907c8736988b5a5"
     },
     {
       "path": "VERSION",
-      "sha256": "e2f7bb608ebc9e24092ffcb796ad0aa83f0015afe23635f017df52273150f00d"
+      "sha256": "520a19075780a38b440395e2c70e20d7cddd96b8c2e2c2403b265cbb74a1b333"
     },
     {
       "path": "WORK-PLAN.md",
@@ -93,7 +97,7 @@
     },
     {
       "path": "adapters/chatgpt-dot.md",
-      "sha256": "b67f06ca282c96f02965ac64bf8ab30819579bf263136792dbc9053d1407bba6"
+      "sha256": "d3a01573a94f19e49db47216d69ee1df64415a3d399feb00b84fe8d6e83a51e4"
     },
     {
       "path": "adapters/dot.md",
@@ -201,7 +205,7 @@
     },
     {
       "path": "docs/participant-pilot-fa.md",
-      "sha256": "3f2832c9e431d8c163a6a6653d3be25133c2c4f46880eb8095d9ac939423ef3b"
+      "sha256": "c3d25242a9737736588924e6f2bff3c3a81e2ec95414d80ec7c1f472efc2ad6d"
     },
     {
       "path": "docs/privacy-and-safety.md",
@@ -245,7 +249,7 @@
     },
     {
       "path": "plugin.json",
-      "sha256": "ac26c1338748811aaab41dc90bbaf8f1115b00ae7e865ce15083cf6e69e719f5"
+      "sha256": "6a0504a9e48d8c2027eb749c1052ba979c2f634e4ca6085d16f0e70556ff06d6"
     },
     {
       "path": "prompts/BOOTSTRAP-EN.md",
@@ -261,7 +265,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "d3a58048cd71065b642ea38a7a8f6babd6360a361cc7b6c5d644bcd0197d2b03"
+      "sha256": "bd65cc7e262ccdd229d4d69c6293fb3e48d34fefe3d0a7f0df4f622ccec13801"
     },
     {
       "path": "qa/inbox-verification.json",
@@ -505,7 +509,7 @@
     },
     {
       "path": "wellbeing/__init__.py",
-      "sha256": "0d935ba4bc5211003c19c444aea39f64e43de47556620417f7bb74f56f035821"
+      "sha256": "9f4b2cbe6554376a9c98a43fc34f7d3fded8e426a4d6d1af93021398e301c4aa"
     },
     {
       "path": "wellbeing/__main__.py",
