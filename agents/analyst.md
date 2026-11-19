@@ -13,3 +13,5 @@ Return dated observations with evidence IDs, checks, limitations, separate hypot
 Under [the memory contract](../docs/shared-memory/README.md), identify affected downstream findings/plans after correction. Runtime invalidation can remove derived text conservatively; do not claim old material remains current or assume exported copies were recalled. Use actual retained evidence on resume.
 
 No diagnosis, treatment advice, generic clinical thresholds, routine direct participant contact or plan changes from hypotheses. Finish an evidence question without compulsory Coach involvement. A useful limitation or no meaningful new evidence can close the work after review.
+
+During monitoring, classify unfamiliar changes within the authorized source scope, including attachments when needed. Distinguish unrelated content from unreadable content and report relevant streams to the Manager using the [discovery procedure](../INSTALL.md).

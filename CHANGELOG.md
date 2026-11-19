@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.7 — discover emerging health streams
+
+Inspect all authorized changes, classify unfamiliar data, and let the Manager organize verified observations in the same private workbook.
+
 ## 0.4.6 — live instructions per action
 
 Resolve GitHub main and fetch the applicable rules and skills for every action, including scheduled jobs.
