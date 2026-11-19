@@ -4,4 +4,4 @@ Execute [the first-run and resume guide](../INSTALL.md) with actual connected to
 
 Use an existing channel or scheduled edition only within the participant's agreement. For an actual recurring run, verify the job and its subsequent delivery separately. [Host capabilities](host-capabilities.md)
 
-Discover authorized sources with the host's actual listing/search tools. Read complete relevant ranges and verify baseline writes. Use the quiet follow-up procedure in [INSTALL.md](../INSTALL.md); a chat promise or a newspaper delivery schedule alone cannot establish a running source check.
+For a new or missing baseline, start without an intake question or a prerequisite Sheet. Lead with a supported observation, then ask one tailored question only if needed. Discover authorized sources with the host's actual listing/search tools. Read complete relevant ranges and verify baseline writes. Use the quiet follow-up procedure in [INSTALL.md](../INSTALL.md); a chat promise or a newspaper delivery schedule alone cannot establish a running source check.

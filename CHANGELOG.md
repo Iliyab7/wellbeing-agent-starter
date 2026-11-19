@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2 — evidence before intake
+
+Start from authorized sources even without a goal or Sheet. Personalize the first result and any necessary question.
+
 ## 0.4.1 — baseline discovery and quiet follow-up
 
 The host now discovers authorized context independently, verifies it in the existing Sheet and reconciles a single agreed monitoring job.
