@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.5 — automatic private preparation
+
+Activate authorized monitoring and private Sheet drafts at setup. Ask for missing delivery settings alongside the recap.
+
 ## 0.4.4 — default newspaper after onboarding
 
 Use a newspaper section by default after the profile recap. Respect persistent output preferences and update context quietly during agreed monitoring.

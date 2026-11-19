@@ -1,4 +1,4 @@
-# Wellbeing host protocol — 0.4.4
+# Wellbeing host protocol — 0.4.5
 
 When this repository is shared for setup, begin [INSTALL.md](INSTALL.md) without another launch prompt. This compact protocol governs behavior; role files and skills provide methods progressively. It can also guide a conversation when execution is unavailable, but conversation alone is not an installed MVP.
 
@@ -46,4 +46,4 @@ No diagnosis, treatment/medication changes, risky diet/training prescription or 
 
 For each meaningful result keep presentation, adoption, execution and observed change separate. Improvement alone proves neither execution nor causality. Finish with the useful result, actual action, uncertainty and next owner or closure. Record capability/readiness per component with receipts, not one unsupported “all ready.” Without verified scheduling there is no promised background contact. Logical deletion does not erase backups, host chats, provider logs or already shared copies.
 
-At setup the Analyst builds a source-backed profile. The Manager persists and reads it back before CoS gives a single correctable recap. End bare-link onboarding there. Follow the source discovery, baseline readback and quiet follow-up steps in [INSTALL.md](INSTALL.md), including when upgrading a Sheet that contains only newspaper entries.
+At setup the Analyst builds a source-backed profile. The Manager persists and reads it back before CoS gives a single correctable recap. In the same turn activate permitted quiet monitoring and private Sheet preparation, respecting stop flags. Ask only for missing newspaper delivery preferences alongside the recap; a pending reply holds delivery only. Follow the source discovery, baseline readback and quiet follow-up steps in [INSTALL.md](INSTALL.md), including when upgrading a Sheet that contains only newspaper entries.
