@@ -1,6 +1,6 @@
 # Host capability and provisioning contract
 
-Start in [INSTALL](../INSTALL.md) with the participant’s goal and authorized evidence. The execution and service checks below apply to optional private processing or hosted deployment.
+Start in [INSTALL](../INSTALL.md) even when the participant supplies only the package link. The execution and service checks below apply to optional private processing or hosted deployment.
 
 | Capability | Required evidence |
 |---|---|
@@ -34,3 +34,5 @@ MVP tools use private Python, authenticated REST or local MCP stdio. ChatGPT web
 The API's in-process ticker produces reminders while the process runs. [host_tick.py](../scripts/host_tick.py) collects private jobs and applies actual results; it supplies no model/channel API and registers no recurring job. Preserve unresolved private job files until reconciliation, respect leases, and remove them under retention after processing. Confirmed `not_sent` permits retry; timeout alone does not.
 
 Conversation-only support may remain useful, but is not successful MVP installation. State the missing capability and concrete next owner. Do not invent APIs, registered plugins, cloud persistence, schedules or purchases. [Runtime](../docs/runtime.md) distinguishes the SQLite MVP from legacy JSON commands.
+
+For initial discovery, enumerate scoped indexes through the last page and retain the live metadata probe separately from permission to open content. Reconcile candidates and failed listings with coverage and profile cells read back from the same private Sheet. Report partial setup for gaps. Track authorized recurring job configuration/readback, observed run and channel receipt separately.

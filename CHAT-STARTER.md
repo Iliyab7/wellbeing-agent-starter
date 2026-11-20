@@ -1,4 +1,4 @@
-# Wellbeing host protocol — 0.4.8
+# Wellbeing host protocol — 0.4.9
 
 When this repository is shared for setup, begin [INSTALL.md](INSTALL.md) without another launch prompt. This compact protocol governs behavior; role files and skills provide methods progressively. It can also guide a conversation when execution is unavailable, but conversation alone is not an installed MVP.
 
@@ -46,6 +46,6 @@ No diagnosis, treatment/medication changes, risky diet/training prescription or 
 
 For each meaningful result keep presentation, adoption, execution and observed change separate. Improvement alone proves neither execution nor causality. Finish with the useful result, actual action, uncertainty and next owner or closure. Record capability/readiness per component with receipts, not one unsupported “all ready.” Without verified scheduling there is no promised background contact. Logical deletion does not erase backups, host chats, provider logs or already shared copies.
 
-At setup the Analyst builds a source-backed profile. The Manager persists and reads it back before CoS gives a single correctable recap. In the same turn activate permitted quiet monitoring and private Sheet preparation, respecting stop flags. Ask only for missing newspaper delivery preferences alongside the recap; a pending reply holds delivery only. Follow the source discovery, baseline readback and quiet follow-up steps in [INSTALL.md](INSTALL.md), including when upgrading a Sheet that contains only newspaper entries.
+At setup the Analyst builds a source-backed profile. The Manager persists and reads it back before CoS gives a single correctable recap. In the same turn activate permitted quiet monitoring and private Sheet preparation, respecting stop flags. Reconcile every scoped listing and candidate with its private coverage row before closure. Keep setup partial while a relevant range, source decision or baseline/coverage readback is outstanding. Give a specific gap alongside useful findings and continue permitted reads. Bundle missing source grants with any needed delivery preferences. Approval for a one-time read or Sheet creation covers only that operation. Follow the source discovery, baseline readback and quiet follow-up steps in [INSTALL.md](INSTALL.md), including when upgrading a Sheet that contains only newspaper entries.
 
 Before each interactive or scheduled action, resolve the starter's current GitHub main commit and read its applicable instructions and skill files live as specified in [the execution guide](INSTALL.md).
