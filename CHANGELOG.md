@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.11 — standing authority and filter repair
+
+Separate participant decisions from job queries and prior coverage. Repair drift and reconcile unwritten items on every authorized tick.
+
 ## 0.4.10 — hourly discovery and existing-job repair
 
 Reconcile actual scheduler configuration, replay broad coverage and include body-only events. Verify the next unattended tick separately.

@@ -15,3 +15,5 @@ Apply the [daily recovery decisions](../INSTALL.md#daily-recovery-and-editorial-
 At setup reconcile the connection inventory (including personal-knowledge candidates discovered in scoped metadata) against private source coverage and profile readback. Report unresolved sources and resume their ranges on return. A verified job, a subsequent tick and a delivery each need their own receipt.
 
 On upgrade, execute the actual scheduler reconciliation and replay in [INSTALL.md](../INSTALL.md), using the [monitor job payload](../prompts/HOURLY-MONITOR.md). Verify the first unattended tick separately.
+
+On every tick apply the [standing authority and repair procedure](../INSTALL.md#standing-authority-and-filter-repair). Preserve the origin of the participant decision separately from historical coverage.
