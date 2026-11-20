@@ -13,3 +13,5 @@ Check the entire authorized change window on each source, including unfamiliar s
 Apply the [daily recovery decisions](../INSTALL.md#daily-recovery-and-editorial-decisions) on each tick, edition and resume. Use real scheduler and Sheet receipts when available.
 
 At setup reconcile the connection inventory (including personal-knowledge candidates discovered in scoped metadata) against private source coverage and profile readback. Report unresolved sources and resume their ranges on return. A verified job, a subsequent tick and a delivery each need their own receipt.
+
+On upgrade, execute the actual scheduler reconciliation and replay in [INSTALL.md](../INSTALL.md), using the [monitor job payload](../prompts/HOURLY-MONITOR.md). Verify the first unattended tick separately.

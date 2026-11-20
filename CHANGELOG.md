@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.10 — hourly discovery and existing-job repair
+
+Reconcile actual scheduler configuration, replay broad coverage and include body-only events. Verify the next unattended tick separately.
+
 ## 0.4.9 — initial source coverage
 
 Reconcile scoped source discovery, historical profile extraction and same-Sheet readback before closing setup. Add a portable reference gate and synthetic link-only regression cases.
