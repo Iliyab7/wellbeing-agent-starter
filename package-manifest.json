@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "version": "0.4.9",
-  "source_revision": "b978a9897790af95772ff946cf55b812d517d643",
+  "version": "0.4.10",
+  "source_revision": "285117e492a6e3c2e74b778efead258e1210562a",
   "files": [
     {
       "path": ".gitattributes",
@@ -21,7 +21,7 @@
     },
     {
       "path": ".second-brain/entries/2026-11-19-first-encounter.md",
-      "sha256": "57955564c02780427b0b48f0168c4413083a0d132a518571f6e1f942d42c9909"
+      "sha256": "e2a7cef6afe48973332f6a7cbe47c4ae5c2b311c7ea29d2eef576eb031f7228d"
     },
     {
       "path": ".second-brain/entries/2026-11-19-passive-baseline.md",
@@ -52,6 +52,10 @@
       "sha256": "dc1b91dbbe5f74006c9128959a3e18f1a6f01abac5b7536df40ce0e917e74c89"
     },
     {
+      "path": ".second-brain/entries/2026-11-21-hourly-discovery.md",
+      "sha256": "76a2bcc1c407893e45fe1439081ad92a17fc16af3a5ec141ee1f870db9637fd7"
+    },
+    {
       "path": ".second-brain/entries/20261106T232655Z-wellbeing-public-pilot.json",
       "sha256": "6ab48a8a92318a41114eccd880a6db6b48190da1d8fe70b74802bf8590ebd5a4"
     },
@@ -77,11 +81,11 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "d9949e160a8217849a8e8c5d99b24db0f9bb136cdfba41278af425c918d5d977"
+      "sha256": "028f9108beaee8d382e803c47e30b83c8b431dea14641176cd95478d12913bb5"
     },
     {
       "path": "CHAT-STARTER.md",
-      "sha256": "f210dff8ccca25b7610e5d9e24c61582d304caf6f0844a90342b8988166e48d1"
+      "sha256": "13cbbc39a84e5022937ffdcb844e3b00d183ec4b0c9e0d9b407e07f3e45d7272"
     },
     {
       "path": "Dockerfile",
@@ -93,11 +97,11 @@
     },
     {
       "path": "INSTALL.md",
-      "sha256": "226fe90043db30a95218a60667655e37c3322abe6a72e28470ef0967bcd883e9"
+      "sha256": "2fcee8f10c62febf731ba407360e80aa64cfb38f8fcb926c2ce0af2f3341017a"
     },
     {
       "path": "PHONE-SETUP.md",
-      "sha256": "23074d0b1092a0699aa31b589dd750f01e2a0768757d0a4d8ee6f6e6b413bf30"
+      "sha256": "28fa1c6fe125932523c283525819928cfdde1c421f6a229a3c1214f2cfaed2f1"
     },
     {
       "path": "README.en.md",
@@ -105,7 +109,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "aa254e26de543275fe4a0b04aab0e0683814f4afff899922bd5d196b1bc85dae"
+      "sha256": "725a59b04d13de5137de4c6fb83fc0811890c04e1267c3e285f26b168a9b82fa"
     },
     {
       "path": "START-HERE.md",
@@ -113,7 +117,7 @@
     },
     {
       "path": "VERSION",
-      "sha256": "1c43c7b1a49f08db663e5ab8b3fc9e3ff84743543ce0b5e2a5fc3c2d33c574e6"
+      "sha256": "1f979b9c4243b652f0c2caea91c392779120eca0fb28f518f7c8daed590cb9fd"
     },
     {
       "path": "WORK-PLAN.md",
@@ -121,7 +125,7 @@
     },
     {
       "path": "adapters/chatgpt-dot.md",
-      "sha256": "6a29949076a3124744d847826feceace1afd31e49c6badf349236a43dbeeb9b8"
+      "sha256": "952385a6b90e91048322ce826087be5af8bb2d109cf0f517e780da899d5af69d"
     },
     {
       "path": "adapters/dot.md",
@@ -229,7 +233,7 @@
     },
     {
       "path": "docs/participant-pilot-fa.md",
-      "sha256": "1404ced85d0df735da28d536d1712440af87ee717e3a0b4d41efe63e55949aa1"
+      "sha256": "d99c1b7529f77cc47bbc1d862415c5b59d08a9c227e629d87bf14f506a62a018"
     },
     {
       "path": "docs/privacy-and-safety.md",
@@ -273,7 +277,7 @@
     },
     {
       "path": "plugin.json",
-      "sha256": "8b6351f49813d51c3353c93b995bfd157c9e8335b141f9b743d275bb12ecd862"
+      "sha256": "fca6cd1c1ddc08e5030467cee87c86e420cf4743d788fbc3d485aee6f81bae1c"
     },
     {
       "path": "prompts/BOOTSTRAP-EN.md",
@@ -284,12 +288,16 @@
       "sha256": "36f1f22f4d8c4e8b4818f28b478dfb4bbb3582b0df6e4b62b4e22649872dd9b7"
     },
     {
+      "path": "prompts/HOURLY-MONITOR.md",
+      "sha256": "f372947c0c550cc72f22e02aecce2a534259bfb117f3083a65c7645d3dbb6ac8"
+    },
+    {
       "path": "prompts/RESUME-FA.md",
       "sha256": "161d56a37692d056cadf3fe0dea6f7e3e7288765fe08ad465eb5003b91548575"
     },
     {
       "path": "pyproject.toml",
-      "sha256": "d7f59671aa6839dbcc964cd893d3be77cf37599483b6cdb018ec98ad0e0c275e"
+      "sha256": "ac4629921f4a2d92b19bbce929ca3f4fc5d828a770455ddfe51ab0bb5431819f"
     },
     {
       "path": "qa/inbox-verification.json",
@@ -537,7 +545,7 @@
     },
     {
       "path": "wellbeing/__init__.py",
-      "sha256": "073dcbdec76dd1ef86fe072d06e55ca2ce4d1410fc59195375eff0618b8fa350"
+      "sha256": "6563fbafc59effe2cb96ec6fab5dfe0c312a9ffa62a4178327f08b2713680656"
     },
     {
       "path": "wellbeing/__main__.py",
