@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "version": "0.4.8",
-  "source_revision": "e1e9645b7707c264d55201638659b9ee66439eda",
+  "version": "0.4.9",
+  "source_revision": "b978a9897790af95772ff946cf55b812d517d643",
   "files": [
     {
       "path": ".gitattributes",
@@ -21,7 +21,7 @@
     },
     {
       "path": ".second-brain/entries/2026-11-19-first-encounter.md",
-      "sha256": "e2a7cef6afe48973332f6a7cbe47c4ae5c2b311c7ea29d2eef576eb031f7228d"
+      "sha256": "57955564c02780427b0b48f0168c4413083a0d132a518571f6e1f942d42c9909"
     },
     {
       "path": ".second-brain/entries/2026-11-19-passive-baseline.md",
@@ -42,6 +42,10 @@
     {
       "path": ".second-brain/entries/2026-11-20-live-instructions.md",
       "sha256": "bf0881a2769ffcffeafd58b662708fde277d4fa7c22ecc8fe0f4870915026b1f"
+    },
+    {
+      "path": ".second-brain/entries/2026-11-20-onboarding-coverage.md",
+      "sha256": "380b8c8a43b0085ae844db101c59565665d45e2d9b867eae2af10769b6d46036"
     },
     {
       "path": ".second-brain/entries/2026-11-20-private-preparation.md",
@@ -73,11 +77,11 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "831682752f95bfa94195df11657ac2aa68ae720d07341cb0246f868e9c5dc5c1"
+      "sha256": "d9949e160a8217849a8e8c5d99b24db0f9bb136cdfba41278af425c918d5d977"
     },
     {
       "path": "CHAT-STARTER.md",
-      "sha256": "af65a210a8ebfb3e0ec2eb201e51602c2568677028150e1d0417d791f2cc62a5"
+      "sha256": "f210dff8ccca25b7610e5d9e24c61582d304caf6f0844a90342b8988166e48d1"
     },
     {
       "path": "Dockerfile",
@@ -89,7 +93,7 @@
     },
     {
       "path": "INSTALL.md",
-      "sha256": "644751fbe0bc90369af81f070e59c92c4a4a60012063318ec4e413dad69d0f95"
+      "sha256": "226fe90043db30a95218a60667655e37c3322abe6a72e28470ef0967bcd883e9"
     },
     {
       "path": "PHONE-SETUP.md",
@@ -101,15 +105,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "3bf561576700bd9f8d36ddd3d8070bbbf98c01dcc87a585a8f768afaec50162c"
+      "sha256": "aa254e26de543275fe4a0b04aab0e0683814f4afff899922bd5d196b1bc85dae"
     },
     {
       "path": "START-HERE.md",
-      "sha256": "3f1378deafe8771c93b56e5a0e22cd2d52b1299b9a01b0f93750c77684841bc0"
+      "sha256": "d26d5c2d4b04f1be219fa9703aa1851eb8c2737c751e0dd84742f8b0fa8071c5"
     },
     {
       "path": "VERSION",
-      "sha256": "8dc19b59c6f48b20d0e0a6c88776e3ba06ec397e58c41694a785ad610ba67df2"
+      "sha256": "1c43c7b1a49f08db663e5ab8b3fc9e3ff84743543ce0b5e2a5fc3c2d33c574e6"
     },
     {
       "path": "WORK-PLAN.md",
@@ -117,7 +121,7 @@
     },
     {
       "path": "adapters/chatgpt-dot.md",
-      "sha256": "d974605eac7173101d0f25eaa777bee3bc5dc2f483329eaab113decf75d8c0f0"
+      "sha256": "6a29949076a3124744d847826feceace1afd31e49c6badf349236a43dbeeb9b8"
     },
     {
       "path": "adapters/dot.md",
@@ -129,15 +133,15 @@
     },
     {
       "path": "adapters/host-capabilities.md",
-      "sha256": "37c2c31ece452e9ab0ec6bf24828acd5db782c5766279ea837c1cd6f91c08cf2"
+      "sha256": "3b33bd2a506091d1d61f80665c3e28740d903a4609acc4d81137587a73810f07"
     },
     {
       "path": "agents/analyst.md",
-      "sha256": "42c69c9299e4d1d02516dd82b26c43e71cff99c38cd252d7d85ffaecab6d2948"
+      "sha256": "34841917c29bbc420f187bf6d23a082854238866b07998893348558286e8d297"
     },
     {
       "path": "agents/chief-of-staff.md",
-      "sha256": "8b75fec47c4077c238468e2647c1e4d950402f1818d3cf9ea63bab8ea5c81a0a"
+      "sha256": "99c204b5e0a0e437450732d80595290333d9b59ee8a635ffe36048269dd7c051"
     },
     {
       "path": "agents/coach.md",
@@ -149,7 +153,7 @@
     },
     {
       "path": "agents/manager.md",
-      "sha256": "d3e9724d0ee24c53842dfc1c53232161c82c57bbdf36a862f171f0ea6b738e9c"
+      "sha256": "3da9c33e151f892113e7a80ecdbfc523bcd87c0f0627248a0c74fa79fe758acd"
     },
     {
       "path": "agents/registry.json",
@@ -225,7 +229,7 @@
     },
     {
       "path": "docs/participant-pilot-fa.md",
-      "sha256": "82a1ac426fad97c448a68be9f9014f03f51eb9e73eaf55f9d178a3d187935710"
+      "sha256": "1404ced85d0df735da28d536d1712440af87ee717e3a0b4d41efe63e55949aa1"
     },
     {
       "path": "docs/privacy-and-safety.md",
@@ -269,7 +273,7 @@
     },
     {
       "path": "plugin.json",
-      "sha256": "6022ee1e383c148c0f371a2abb7f7ba1ac1ff277e2433da37ab6500acf48f343"
+      "sha256": "8b6351f49813d51c3353c93b995bfd157c9e8335b141f9b743d275bb12ecd862"
     },
     {
       "path": "prompts/BOOTSTRAP-EN.md",
@@ -285,7 +289,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "6cd1f93f065b73216e1f12c2c823dc949ada710f70d973ae3b2d8f4603e9ddc1"
+      "sha256": "d7f59671aa6839dbcc964cd893d3be77cf37599483b6cdb018ec98ad0e0c275e"
     },
     {
       "path": "qa/inbox-verification.json",
@@ -409,7 +413,7 @@
     },
     {
       "path": "skills/wellbeing-install/SKILL.md",
-      "sha256": "31d6e47b4feb8e62a3cd35636b571f8dd20185d5f01061e64b02a46924b8d481"
+      "sha256": "2e7212f1ae2311c1836b58eb641a5d36efd126bea53e1c2b2ab77845806c122b"
     },
     {
       "path": "skills/wellbeing-intake/SKILL.md",
@@ -512,6 +516,10 @@
       "sha256": "cfc5a34e589a130c2a7820465497813f9e09e18a92b1ac0fe27aaf08a805afcd"
     },
     {
+      "path": "tests/test_onboarding.py",
+      "sha256": "18642b8e48a694076b7812d14aeccc9508a0bbaf792691eef0555e539f0fe6ad"
+    },
+    {
       "path": "tests/test_opengym_mvp.py",
       "sha256": "667a733a69040d68294baa0f2f4bc8a248a6a4a5b2d5b68e7e15d56df5706dbb"
     },
@@ -529,7 +537,7 @@
     },
     {
       "path": "wellbeing/__init__.py",
-      "sha256": "02bc1efa7a070127f0e6f55e0f54179b316d8068c38c13769418a958ca18278f"
+      "sha256": "073dcbdec76dd1ef86fe072d06e55ca2ce4d1410fc59195375eff0618b8fa350"
     },
     {
       "path": "wellbeing/__main__.py",
@@ -562,6 +570,10 @@
     {
       "path": "wellbeing/mcp_server.py",
       "sha256": "9d40f4b5cc081ceca084f61dfabbd78a9a80814543555fa461cecc50d5c20158"
+    },
+    {
+      "path": "wellbeing/onboarding.py",
+      "sha256": "8611ddeff4b92af114c1a87b52d8590744ed6dece77a442f7aeb7fbb1282a80a"
     },
     {
       "path": "wellbeing/opengym.py",
