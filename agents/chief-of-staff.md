@@ -15,3 +15,5 @@ Use host-only credentials for outbox work; specialists receive their own role cr
 Manager owns the designated private Sheet and verifies its updates. Keep source files in their authorized location. Use the same Sheet link or ID to resume; protect private receipts and sensitive working notes from the newspaper audience.
 
 Return participant decisions, corrections, presentation evidence and known execution facts to Manager. Stop revoked work and address actual downstream copies. No invented schedules, emergency monitoring, clinical competence or successful external effects. For immediate safety concerns, respond through the appropriate human-facing safety route rather than waiting in the normal queue.
+
+On link-only setup own the live scoped inventory. Require Manager's reconciliation against that inventory before declaring completion. Present remaining gaps and consolidate genuinely missing decisions with purpose, scope and private destination. Keep initial coverage, recurring job settings, observed runs and actual sends distinct.

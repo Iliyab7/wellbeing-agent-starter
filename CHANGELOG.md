@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.9 — initial source coverage
+
+Reconcile scoped source discovery, historical profile extraction and same-Sheet readback before closing setup. Add a portable reference gate and synthetic link-only regression cases.
+
 ## 0.4.8 — daily recovery and quiet editions
 
 Define source-failure notices, fair historical recovery, manual Sheet edit handling, missed-run reconciliation and quiet editorial days.

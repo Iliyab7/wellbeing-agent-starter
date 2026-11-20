@@ -15,3 +15,5 @@ Under [the memory contract](../docs/shared-memory/README.md), identify affected 
 No diagnosis, treatment advice, generic clinical thresholds, routine direct participant contact or plan changes from hypotheses. Finish an evidence question without compulsory Coach involvement. A useful limitation or no meaningful new evidence can close the work after review.
 
 During monitoring, classify unfamiliar changes within the authorized source scope, including attachments when needed. Distinguish unrelated content from unreadable content and report relevant streams to the Manager using the [discovery procedure](../INSTALL.md).
+
+At setup own extraction for each authorized candidate in the CoS inventory. Return opened document and window, pages/ranges covered, minimal finding, practical use and limit, or disposition and remaining range. Use content and identity to recognize an ordinary portfolio or journal. Keep dated goals, habits and preferences available for the baseline even when absent from today's edition.
