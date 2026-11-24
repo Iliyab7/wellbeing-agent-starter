@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "version": "0.4.11",
-  "source_revision": "3a2d12054e3381f5028c38d799fbf62cee1d8e7f",
+  "version": "0.4.12",
+  "source_revision": "6b00bd60bfd0ce59bc4e5cb6dc72e5f8825d13d3",
   "files": [
     {
       "path": ".gitattributes",
@@ -60,6 +60,10 @@
       "sha256": "b14ca4613933a58fb0b0c8d1583086a4402772bfc7594d1cd229db9ebe5dd038"
     },
     {
+      "path": ".second-brain/entries/2026-11-24-partial-report-followup.md",
+      "sha256": "a8749e76818bb3912c533f0701d0978d41de55654ac2b73ce353e6b94ec3fef0"
+    },
+    {
       "path": ".second-brain/entries/20261106T232655Z-wellbeing-public-pilot.json",
       "sha256": "6ab48a8a92318a41114eccd880a6db6b48190da1d8fe70b74802bf8590ebd5a4"
     },
@@ -85,11 +89,11 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "35c46e8bbd478568728e0e8071ecd6e718a23e7787d24cb6f135fe24713302b0"
+      "sha256": "dba52ce0d02c768b076de2f9c9ab0cdfe7a9c597c4890c0e1fbeb3375b1517d8"
     },
     {
       "path": "CHAT-STARTER.md",
-      "sha256": "c550513ea049f5354edbf2b5f3e113f575df76d8011a36509f71400aaec1666b"
+      "sha256": "312574220ebe00730894a5020ca99b7b95d02609c4a714c014b14ceeecc1b394"
     },
     {
       "path": "Dockerfile",
@@ -101,7 +105,7 @@
     },
     {
       "path": "INSTALL.md",
-      "sha256": "3281c84d806a452492513636fc64f1f10558bfcf742640e425d2cb8707204c08"
+      "sha256": "f5c05f4dcdd096dd3f658f8aa2dc6af881e785b2ab18a04fd0ed0f62a6b149a4"
     },
     {
       "path": "PHONE-SETUP.md",
@@ -121,7 +125,7 @@
     },
     {
       "path": "VERSION",
-      "sha256": "07ce142af9edc6149ac02398590e3b03438b8ba179170bbab93716a3a9707d7b"
+      "sha256": "a60a8c791b9362219fcdc36c9ab4d8a1a09226397978f053a91c3db817d9ad5c"
     },
     {
       "path": "WORK-PLAN.md",
@@ -161,7 +165,7 @@
     },
     {
       "path": "agents/manager.md",
-      "sha256": "3da9c33e151f892113e7a80ecdbfc523bcd87c0f0627248a0c74fa79fe758acd"
+      "sha256": "25b2fa965b18e9d54511acac5fa0edebd94ca97695665e89ee1d78e688dd87ed"
     },
     {
       "path": "agents/registry.json",
@@ -237,7 +241,7 @@
     },
     {
       "path": "docs/participant-pilot-fa.md",
-      "sha256": "189a6df9456d650e2d0cdaeff823a2d95d08589d005cb2659c412f21e911b0b5"
+      "sha256": "91dac207a70cf77cbc603a86194e5abf4d002259ac490ed8dbc79fbd49243094"
     },
     {
       "path": "docs/privacy-and-safety.md",
@@ -253,7 +257,7 @@
     },
     {
       "path": "docs/shared-memory/README.md",
-      "sha256": "90817cb09c80f995d9cec812d90bf0f726347b1aecb615e1f02a03cace606158"
+      "sha256": "20eb3171a36966691fcdd32753bded4fee130f3cab197658ad7aeda80c38768c"
     },
     {
       "path": "docs/shared-memory/acceptance.md",
@@ -281,7 +285,7 @@
     },
     {
       "path": "plugin.json",
-      "sha256": "b11203da837e4bb13edc15251e1c26bf20ef35d336f84a247b5980c297b3046e"
+      "sha256": "954327faa2a82da15d897d74067f8a00b86aef7ce79f5227614267df4ef87e7a"
     },
     {
       "path": "prompts/BOOTSTRAP-EN.md",
@@ -293,7 +297,7 @@
     },
     {
       "path": "prompts/HOURLY-MONITOR.md",
-      "sha256": "0345942e9543520482034db085bdaeade34b533a84323314f943ae699f6be9e8"
+      "sha256": "26127426015d6c0c169ccf318d781ea535241457edfe6b6981f6b4d7e7068534"
     },
     {
       "path": "prompts/RESUME-FA.md",
@@ -301,7 +305,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "d3c6691dbd3830af79cc1ba46e8ee82acefe1e8f27957b646baddc3da16b27fb"
+      "sha256": "ab9da8710030b3e411a045ffdf0a4575f3dc2751ca3b39ea9a55969d75ff39db"
     },
     {
       "path": "qa/inbox-verification.json",
@@ -389,7 +393,7 @@
     },
     {
       "path": "skills/wellbeing-analyze/SKILL.md",
-      "sha256": "b9eb9fa04ef7da0d2a17c34aa86f4af762a5ac7e01b338160adafedbbb7aaf61"
+      "sha256": "173d0f2c9be9bca38f099f9a84aa00dcf6de8b69716ad7e1fb2cf5ed22ca2372"
     },
     {
       "path": "skills/wellbeing-analyze/references/quality.md",
@@ -549,7 +553,7 @@
     },
     {
       "path": "wellbeing/__init__.py",
-      "sha256": "6033667fa064df1ba15d1fcb5ab22530b9af6011c9f7b937beb18e942cb0c080"
+      "sha256": "cd3862ba8b72fb3c24c06f6de57c25e1feda63956d391fd748944cd52b7bd8ac"
     },
     {
       "path": "wellbeing/__main__.py",
