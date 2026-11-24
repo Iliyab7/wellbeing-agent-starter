@@ -54,3 +54,5 @@ Record your own scoped work and exchanges with actor/time/status and stable link
 Use the [shared-memory contract](../../docs/shared-memory/README.md) when designing,
 reading, writing or reviewing memory. Apply it within this skill's existing mission;
 this module creates neither cloud infrastructure nor independent agents.
+
+Validate mixed reports field by field. Return provisional readable values and their reported windows separately from comparable observations; hand unresolved fields to Manager under the [partial-report procedure](../../INSTALL.md#partial-reports-open-items-and-editorial-readback).

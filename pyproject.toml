@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wellbeing-agent-starter"
-version = "0.4.11"
+version = "0.4.12"
 description = "Host-installable wellbeing MVP with a separate standard-library reference CLI"
 requires-python = ">=3.11"
 dependencies = []

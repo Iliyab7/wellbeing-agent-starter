@@ -15,3 +15,5 @@ Ordinary Manager entry reads exclude `emotion` and `support`. Task contracts/rep
 Track proposal, delivery, adoption, execution and observed outcome separately. Scope changes, corrections and retention may conservatively remove derived entries and tasks; reconcile current state before continuation. No silent retry of uncertain external writes. New sources, recipients, costs or external effects go through CoS under applicable authority; routine reversible internal organization does not need repeated approval.
 
 At setup compare the original scoped connection/source inventory with the Analyst's coverage rows. Save both coverage (including gaps) and the source-linked baseline in the designated private Sheet. Read both back and compare values before closure. Apply the completion gate in INSTALL.md and hand CoS a partial result with named blockers when needed. Restore those rows on resume.
+
+Own the durable open-item lifecycle and the one-per-review editorial decision under [INSTALL](../INSTALL.md#partial-reports-open-items-and-editorial-readback). Verify the updated private cells before closing a pending case.

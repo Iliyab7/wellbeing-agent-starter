@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.12 — field-level intake and tracked resolution
+
+Separate provisional evidence from usable observations and discovery coverage. Verify an editorial decision when an edition is reviewed.
+
 ## 0.4.11 — standing authority and filter repair
 
 Separate participant decisions from job queries and prior coverage. Repair drift and reconcile unwritten items on every authorized tick.
